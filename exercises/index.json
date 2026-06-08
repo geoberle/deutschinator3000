@@ -1,17 +1,17 @@
 [
+  { 
+    "id": "aktiv-passiv-zeiten-1",
+    "name": "Aktiv/Passiv + Zeitform 1",
+    "description": "Bestimme Aktiv/Passiv und die Zeitform des Satzes",
+    "file": "aktiv-passiv-zeiten-1.json",
+    "count": 12,
+    "category": "Aktiv/Passiv"
+  },
   {
     "id": "aktiv-passiv",
     "name": "Aktiv Passiv erkennen 1",
     "description": "Bestimme ob der Satz im Aktiv, Vorgangspassiv oder Zustandspassiv steht",
     "file": "aktiv-passiv-erkennen-1.json",
-    "count": 12,
-    "category": "Aktiv/Passiv"
-  },
-  {
-    "id": "aktiv-passiv-zeiten-1",
-    "name": "Aktiv/Passiv + Zeitform 1",
-    "description": "Bestimme Aktiv/Passiv und die Zeitform des Satzes",
-    "file": "aktiv-passiv-zeiten-1.json",
     "count": 12,
     "category": "Aktiv/Passiv"
   },
@@ -30,13 +30,5 @@
     "file": "adverbien-1.json",
     "count": 10,
     "category": "Adverb"
-  },
-  {
-    "id": "demo",
-    "name": "Demo",
-    "description": "Demo-Übung zum Testen (Zeitformen, 4 Fragen)",
-    "file": "demo.json",
-    "count": 4,
-    "category": "Sonstiges"
   }
 ]

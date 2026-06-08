@@ -4,20 +4,31 @@
     "name": "Aktiv Passiv erkennen 1",
     "description": "Bestimme ob der Satz im Aktiv, Vorgangspassiv oder Zustandspassiv steht",
     "file": "aktiv-passiv-erkennen-1.json",
-    "count": 12
+    "count": 12,
+    "category": "Grammatik"
   },
   {
     "id": "zeiten-erkennen-1",
     "name": "Zeiten erkennen 1",
     "description": "Erkenne die Zeitform des Satzes (Präsens, Präteritum, Perfekt, Plusquamperfekt, Futur I)",
     "file": "zeiten-erkennen-1.json",
-    "count": 20
+    "count": 20,
+    "category": "Grammatik"
+  },
+  {
+    "id": "adverbien-1",
+    "name": "Adverbien erkennen 1",
+    "description": "Finde das Adverb im Satz",
+    "file": "adverbien-1.json",
+    "count": 15,
+    "category": "Wortarten"
   },
   {
     "id": "demo",
     "name": "Demo",
     "description": "Demo-Übung zum Testen (Zeitformen, 4 Fragen)",
     "file": "demo.json",
-    "count": 4
+    "count": 4,
+    "category": "Sonstiges"
   }
 ]

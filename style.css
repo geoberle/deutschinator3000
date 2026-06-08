@@ -51,6 +51,15 @@ header h1 {
   gap: 0.75rem;
 }
 
+.set-category {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #999;
+  margin-top: 0.5rem;
+}
+
 .set-card {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
@@ -109,6 +118,88 @@ header h1 {
 .dot-active {
   height: 10px;
   margin-top: -2px;
+}
+
+/* Word-tap exercise */
+
+.words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.classify-question {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 1rem 0 0.5rem;
+}
+
+.word-hint {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 0.5rem;
+}
+
+.word-pill {
+  padding: 0.5rem 0.875rem;
+  border-radius: 999px;
+  border: 2px solid #e0e0e0;
+  background: #fff;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1rem;
+  transition: border-color 0.15s, background-color 0.15s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.word-pill:hover:not(.answered) {
+  border-color: #999;
+}
+
+.word-pill.selected {
+  background: #e3f2fd;
+  border-color: #1976d2;
+}
+
+.word-pill.word-correct {
+  background: #e8f5e9;
+  border-color: #2e7d32;
+}
+
+.word-pill.word-wrong {
+  background: #ffebee;
+  border-color: #c62828;
+}
+
+.word-pill.word-missed {
+  border-color: #2e7d32;
+  border-style: dashed;
+}
+
+.word-pill.answered {
+  cursor: default;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.875rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  min-height: 48px;
+}
+
+.submit-btn:hover {
+  background: #1565c0;
 }
 
 /* Review navigation */

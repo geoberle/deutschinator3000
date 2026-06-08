@@ -1,0 +1,240 @@
+{
+  "id": "adverbien-1",
+  "name": "Adverbien erkennen 1",
+  "type": "word-tap",
+  "question": "Welches Wort ist das Adverb?",
+  "exercises": [
+    {
+      "words": [
+        "Der",
+        "Hund",
+        "schläft",
+        "draußen."
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "«draußen» ist ein Lokaladverb (Wo? → draußen).",
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": [
+          "Lokaladverb",
+          "Temporaladverb",
+          "Modaladverb",
+          "Kausaladverb"
+        ],
+        "correct": 0
+      }
+    },
+    {
+      "words": [
+        "Wir",
+        "gehen",
+        "morgen",
+        "ins",
+        "Kino."
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "«morgen» ist ein Temporaladverb (Wann? → morgen).",
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": [
+          "Lokaladverb",
+          "Temporaladverb",
+          "Modaladverb",
+          "Kausaladverb"
+        ],
+        "correct": 1
+      }
+    },
+    {
+      "words": [
+        "Sie",
+        "singt",
+        "sehr",
+        "schön."
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "«sehr» ist ein Gradadverb, es verstärkt das Adjektiv «schön».",
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": [
+          "Lokaladverb",
+          "Temporaladverb",
+          "Modaladverb",
+          "Kausaladverb"
+        ],
+        "correct": 2
+      }
+    },
+    {
+      "words": [
+        "Er",
+        "kommt",
+        "trotzdem",
+        "zur",
+        "Schule."
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "«trotzdem» ist ein Kausaladverb (Warum/Unter welchem Umstand? → trotzdem).",
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": [
+          "Lokaladverb",
+          "Temporaladverb",
+          "Modaladverb",
+          "Kausaladverb"
+        ],
+        "correct": 3
+      }
+    },
+    {
+      "words": [
+        "Ich",
+        "habe",
+        "gestern",
+        "einen",
+        "Brief",
+        "geschrieben."
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "«gestern» ist ein Temporaladverb (Wann? → gestern).",
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": [
+          "Lokaladverb",
+          "Temporaladverb",
+          "Modaladverb",
+          "Kausaladverb"
+        ],
+        "correct": 1
+      }
+    },
+    {
+      "words": [
+        "Wir",
+        "fahren",
+        "dorthin",
+        "in",
+        "den",
+        "Urlaub."
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "«dorthin» ist ein Lokaladverb (Wohin? → dorthin).",
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": [
+          "Lokaladverb",
+          "Temporaladverb",
+          "Modaladverb",
+          "Kausaladverb"
+        ],
+        "correct": 0
+      }
+    },
+    {
+      "words": [
+        "Er",
+        "hat",
+        "deshalb",
+        "nicht",
+        "teilgenommen."
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "«deshalb» ist ein Kausaladverb (Warum? → deshalb).",
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": [
+          "Lokaladverb",
+          "Temporaladverb",
+          "Modaladverb",
+          "Kausaladverb"
+        ],
+        "correct": 3
+      }
+    },
+    {
+      "words": [
+        "Meine",
+        "Schwester",
+        "kommt",
+        "oft",
+        "zu",
+        "Besuch."
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "«oft» ist ein Temporaladverb (Wie oft? → oft).",
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": [
+          "Lokaladverb",
+          "Temporaladverb",
+          "Modaladverb",
+          "Kausaladverb"
+        ],
+        "correct": 1
+      }
+    },
+    {
+      "words": [
+        "Die",
+        "Vögel",
+        "singen",
+        "überall",
+        "im",
+        "Park."
+      ],
+      "correct": [
+        3
+      ],
+      "explanation": "«überall» ist ein Lokaladverb (Wo? → überall).",
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": [
+          "Lokaladverb",
+          "Temporaladverb",
+          "Modaladverb",
+          "Kausaladverb"
+        ],
+        "correct": 0
+      }
+    },
+    {
+      "words": [
+        "Er",
+        "spricht",
+        "leider",
+        "kein",
+        "Deutsch."
+      ],
+      "correct": [
+        2
+      ],
+      "explanation": "«leider» ist ein Modaladverb, das eine Bewertung ausdrückt.",
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": [
+          "Lokaladverb",
+          "Temporaladverb",
+          "Modaladverb",
+          "Kausaladverb"
+        ],
+        "correct": 2
+      }
+    }
+  ]
+}

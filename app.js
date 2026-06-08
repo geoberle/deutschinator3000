@@ -11,6 +11,7 @@
   var index = 0;
   var results = [];
   var answered = false;
+  var selectedWords = [];
 
   // Review mode state (shared result navigation)
   var reviewSet = null;
@@ -48,7 +49,13 @@
       .then(function (data) {
         sets = data;
         var html = '<div class="set-list">';
+        var lastCategory = "";
         for (var i = 0; i < sets.length; i++) {
+          var cat = sets[i].category || "";
+          if (cat && cat !== lastCategory) {
+            html += '<div class="set-category">' + esc(cat) + "</div>";
+            lastCategory = cat;
+          }
           html +=
             '<div class="set-card" data-index="' + i + '">' +
               "<h2>" + esc(sets[i].name) + "</h2>" +
@@ -119,21 +126,47 @@
   function showQuestion() {
     var ex = exercises[index];
     var total = exercises.length;
+    var isWordTap = currentSet.type === "word-tap";
 
-    app.innerHTML = renderProgressDots(total, results, index) +
-      '<div class="question-label">' + esc(currentSet.question) + "</div>" +
-      '<div class="sentence">' + esc(ex.sentence) + "</div>" +
-      '<div class="options" id="options"></div>' +
-      '<div id="feedback"></div>';
+    var html = renderProgressDots(total, results, index) +
+      '<div class="question-label">' + esc(currentSet.question) + "</div>";
 
-    var optionsEl = document.getElementById("options");
-    for (var i = 0; i < ex.options.length; i++) {
-      var btn = document.createElement("button");
-      btn.className = "option-btn";
-      btn.textContent = ex.options[i];
-      btn.setAttribute("data-index", i);
-      btn.addEventListener("click", onOptionClick);
-      optionsEl.appendChild(btn);
+    if (isWordTap) {
+      if (ex.correct.length > 1) {
+        html += '<div class="word-hint">(' + ex.correct.length + " Wörter)</div>";
+      }
+      html += '<div class="words" id="words">';
+      for (var w = 0; w < ex.words.length; w++) {
+        html += '<span class="word-pill" data-idx="' + w + '">' + esc(ex.words[w]) + "</span>";
+      }
+      html += "</div>" +
+        '<button class="submit-btn" id="submit-btn">Prüfen</button>' +
+        '<div id="feedback"></div>';
+    } else {
+      html += '<div class="sentence">' + esc(ex.sentence) + "</div>" +
+        '<div class="options" id="options"></div>' +
+        '<div id="feedback"></div>';
+    }
+
+    app.innerHTML = html;
+    selectedWords = [];
+
+    if (isWordTap) {
+      var pills = document.querySelectorAll(".word-pill");
+      for (var p = 0; p < pills.length; p++) {
+        pills[p].addEventListener("click", onWordTap);
+      }
+      document.getElementById("submit-btn").addEventListener("click", onWordTapSubmit);
+    } else {
+      var optionsEl = document.getElementById("options");
+      for (var i = 0; i < ex.options.length; i++) {
+        var btn = document.createElement("button");
+        btn.className = "option-btn";
+        btn.textContent = ex.options[i];
+        btn.setAttribute("data-index", i);
+        btn.addEventListener("click", onOptionClick);
+        optionsEl.appendChild(btn);
+      }
     }
   }
 
@@ -161,12 +194,116 @@
     var feedback = document.getElementById("feedback");
     feedback.innerHTML =
       '<div class="explanation ' + (correct ? "explanation-correct" : "explanation-wrong") + '">' +
-        "<strong>" + (correct ? "Richtig!" : "Leider falsch.") + "</strong>" +
+        "<strong>" + (correct ? randomPraise() : "Leider falsch.") + "</strong>" +
         esc(ex.explanation) +
       "</div>" +
       '<button class="next-btn" id="next-btn">' +
         (isLast ? "Ergebnis anzeigen" : "Weiter") +
       "</button>";
+
+    document.getElementById("next-btn").addEventListener("click", nextQuestion);
+  }
+
+  function onWordTap(e) {
+    if (answered) return;
+    var idx = parseInt(e.currentTarget.getAttribute("data-idx"), 10);
+    var pos = selectedWords.indexOf(idx);
+    if (pos > -1) {
+      selectedWords.splice(pos, 1);
+      e.currentTarget.classList.remove("selected");
+    } else {
+      selectedWords.push(idx);
+      e.currentTarget.classList.add("selected");
+    }
+  }
+
+  function onWordTapSubmit() {
+    if (answered) return;
+    answered = true;
+
+    var ex = exercises[index];
+    var wordsCorrect = arraysEqual(selectedWords, ex.correct);
+
+    var pills = document.querySelectorAll(".word-pill");
+    for (var i = 0; i < pills.length; i++) {
+      pills[i].classList.add("answered");
+      var idx = parseInt(pills[i].getAttribute("data-idx"), 10);
+      var isTarget = ex.correct.indexOf(idx) > -1;
+      var wasSelected = selectedWords.indexOf(idx) > -1;
+      if (wasSelected && isTarget) pills[i].classList.add("word-correct");
+      else if (wasSelected && !isTarget) pills[i].classList.add("word-wrong");
+      else if (!wasSelected && isTarget) pills[i].classList.add("word-missed");
+    }
+
+    document.getElementById("submit-btn").style.display = "none";
+
+    if (wordsCorrect && ex.classify) {
+      var feedback = document.getElementById("feedback");
+      feedback.innerHTML =
+        '<div class="explanation explanation-correct">' +
+          "<strong>" + randomPraise() + "</strong>" +
+        "</div>" +
+        '<div class="classify-question">' + esc(ex.classify.question) + "</div>" +
+        '<div class="options" id="classify-options"></div>';
+
+      var optionsEl = document.getElementById("classify-options");
+      for (var c = 0; c < ex.classify.options.length; c++) {
+        var btn = document.createElement("button");
+        btn.className = "option-btn";
+        btn.textContent = ex.classify.options[c];
+        btn.setAttribute("data-index", c);
+        btn.addEventListener("click", onClassifyClick);
+        optionsEl.appendChild(btn);
+      }
+    } else {
+      finalizeWordTap(wordsCorrect, -1);
+    }
+  }
+
+  function onClassifyClick(e) {
+    var chosen = parseInt(e.currentTarget.getAttribute("data-index"), 10);
+    var ex = exercises[index];
+    var classifyCorrect = chosen === ex.classify.correct;
+
+    var buttons = document.querySelectorAll("#classify-options .option-btn");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].classList.add("answered");
+      if (i === ex.classify.correct) buttons[i].classList.add("correct");
+      if (i === chosen && !classifyCorrect) buttons[i].classList.add("wrong");
+    }
+
+    finalizeWordTap(classifyCorrect, chosen);
+  }
+
+  function finalizeWordTap(correct, classifyChoice) {
+    var ex = exercises[index];
+    results.push(correct);
+
+    if (ex.classify) {
+      chosenAnswers.push({words: selectedWords.slice(), classify: classifyChoice});
+    } else {
+      chosenAnswers.push(selectedWords.slice());
+    }
+
+    var dots = document.querySelectorAll(".progress-dot");
+    dots[index].className = "progress-dot " + (correct ? "dot-correct" : "dot-wrong");
+
+    var isLast = index >= exercises.length - 1;
+    var explanationHtml =
+      '<div class="explanation ' + (correct ? "explanation-correct" : "explanation-wrong") + '">' +
+        "<strong>" + (correct ? randomPraise() : "Leider falsch.") + "</strong>" +
+        esc(ex.explanation) +
+      "</div>" +
+      '<button class="next-btn" id="next-btn">' +
+        (isLast ? "Ergebnis anzeigen" : "Weiter") +
+      "</button>";
+
+    var feedback = document.getElementById("feedback");
+    if (classifyChoice >= 0) {
+      feedback.innerHTML += explanationHtml;
+    } else {
+      feedback.innerHTML = explanationHtml;
+    }
 
     document.getElementById("next-btn").addEventListener("click", nextQuestion);
   }
@@ -213,14 +350,31 @@
   }
 
   function retrySet() {
-    initQuiz(currentSet);
+    var wrongIndices = [];
+    for (var i = 0; i < results.length; i++) {
+      if (!results[i]) wrongIndices.push(exerciseOrder[i]);
+    }
+    if (wrongIndices.length === 0) {
+      initQuiz(currentSet);
+    } else {
+      exerciseOrder = shuffle(wrongIndices.slice());
+      exercises = [];
+      for (var j = 0; j < exerciseOrder.length; j++) {
+        exercises.push(currentSet.exercises[exerciseOrder[j]]);
+      }
+      index = 0;
+      results = [];
+      chosenAnswers = [];
+      answered = false;
+    }
     setHeaderTitle(currentSet.name);
     setHeaderBack(true);
     showQuestion();
   }
 
   function shareResult(correctCount, total) {
-    var payload = exerciseOrder.join(",") + "|" + chosenAnswers.join(",");
+    var encodedAnswers = chosenAnswers.map(encodeAnswer).join(",");
+    var payload = exerciseOrder.join(",") + "|" + encodedAnswers;
     var encoded = btoa(payload);
     var url =
       location.origin + location.pathname +
@@ -257,7 +411,19 @@
             var decoded = atob(encoded);
             var halves = decoded.split("|");
             var order = halves[0].split(",").map(Number);
-            var answers = halves[1].split(",").map(Number);
+            var isWordTap = data.type === "word-tap";
+            var answers;
+            if (isWordTap) {
+              answers = halves[1].split(",").map(function (s) {
+                if (s.indexOf("+") > -1) {
+                  var pts = s.split("+");
+                  return {words: pts[0].split(":").map(Number), classify: Number(pts[1])};
+                }
+                return s.split(":").map(Number);
+              });
+            } else {
+              answers = halves[1].split(",").map(Number);
+            }
 
             reviewSet = data;
             reviewExercises = [];
@@ -268,7 +434,11 @@
 
             var reviewResults = [];
             for (var k = 0; k < reviewExercises.length; k++) {
-              reviewResults.push(answers[k] === reviewExercises[k].correct);
+              if (isWordTap) {
+                reviewResults.push(isWordTapCorrect(answers[k], reviewExercises[k]));
+              } else {
+                reviewResults.push(answers[k] === reviewExercises[k].correct);
+              }
             }
 
             var correctCount = 0;
@@ -315,12 +485,19 @@
     setHeaderBack(true);
     var ex = reviewExercises[reviewIndex];
     var chosen = reviewAnswers[reviewIndex];
-    var correct = chosen === ex.correct;
+    var isWordTap = reviewSet.type === "word-tap";
+    var correct = isWordTap
+      ? isWordTapCorrect(chosen, ex)
+      : chosen === ex.correct;
     var total = reviewExercises.length;
 
     var reviewResults = [];
     for (var k = 0; k < total; k++) {
-      reviewResults.push(reviewAnswers[k] === reviewExercises[k].correct);
+      if (isWordTap) {
+        reviewResults.push(isWordTapCorrect(reviewAnswers[k], reviewExercises[k]));
+      } else {
+        reviewResults.push(reviewAnswers[k] === reviewExercises[k].correct);
+      }
     }
 
     var dotsHtml = '<div class="progress-dots">';
@@ -332,24 +509,60 @@
     }
     dotsHtml += "</div>";
 
-    app.innerHTML = dotsHtml +
-      '<div class="question-label">' + esc(reviewSet.question) + "</div>" +
-      '<div class="sentence">' + esc(ex.sentence) + "</div>" +
-      '<div class="options" id="options"></div>' +
+    var contentHtml = dotsHtml +
+      '<div class="question-label">' + esc(reviewSet.question) + "</div>";
+
+    if (isWordTap) {
+      var chosenWords = (chosen && !Array.isArray(chosen)) ? chosen.words : chosen;
+      var chosenClassify = (chosen && !Array.isArray(chosen)) ? chosen.classify : -1;
+
+      contentHtml += '<div class="words">';
+      for (var w = 0; w < ex.words.length; w++) {
+        var pillCls = "word-pill answered";
+        var isTarget = ex.correct.indexOf(w) > -1;
+        var wasSelected = chosenWords.indexOf(w) > -1;
+        if (wasSelected && isTarget) pillCls += " word-correct";
+        else if (wasSelected && !isTarget) pillCls += " word-wrong";
+        else if (!wasSelected && isTarget) pillCls += " word-missed";
+        contentHtml += '<span class="' + pillCls + '">' + esc(ex.words[w]) + "</span>";
+      }
+      contentHtml += "</div>";
+
+      if (ex.classify) {
+        contentHtml += '<div class="classify-question">' + esc(ex.classify.question) + "</div>" +
+          '<div class="options">';
+        for (var c = 0; c < ex.classify.options.length; c++) {
+          var optCls = "option-btn answered";
+          if (c === ex.classify.correct) optCls += " correct";
+          if (c === chosenClassify && chosenClassify !== ex.classify.correct) optCls += " wrong";
+          contentHtml += '<button class="' + optCls + '">' + esc(ex.classify.options[c]) + "</button>";
+        }
+        contentHtml += "</div>";
+      }
+    } else {
+      contentHtml += '<div class="sentence">' + esc(ex.sentence) + "</div>" +
+        '<div class="options" id="options"></div>';
+    }
+
+    contentHtml +=
       '<div class="explanation ' + (correct ? "explanation-correct" : "explanation-wrong") + '">' +
-        "<strong>" + (correct ? "Richtig!" : "Leider falsch.") + "</strong>" +
+        "<strong>" + (correct ? randomPraise() : "Leider falsch.") + "</strong>" +
         esc(ex.explanation) +
       "</div>" +
       '<div class="review-nav" id="review-nav"></div>';
 
-    var optionsEl = document.getElementById("options");
-    for (var i = 0; i < ex.options.length; i++) {
-      var btn = document.createElement("button");
-      btn.className = "option-btn answered";
-      btn.textContent = ex.options[i];
-      if (i === ex.correct) btn.classList.add("correct");
-      if (i === chosen && !correct) btn.classList.add("wrong");
-      optionsEl.appendChild(btn);
+    app.innerHTML = contentHtml;
+
+    if (!isWordTap) {
+      var optionsEl = document.getElementById("options");
+      for (var i = 0; i < ex.options.length; i++) {
+        var btn = document.createElement("button");
+        btn.className = "option-btn answered";
+        btn.textContent = ex.options[i];
+        if (i === ex.correct) btn.classList.add("correct");
+        if (i === chosen && !correct) btn.classList.add("wrong");
+        optionsEl.appendChild(btn);
+      }
     }
 
     var navEl = document.getElementById("review-nav");
@@ -428,6 +641,42 @@
       arr[j] = tmp;
     }
     return arr;
+  }
+
+  function isWordTapCorrect(answer, exercise) {
+    var words, classifyChoice;
+    if (answer && typeof answer === "object" && !Array.isArray(answer)) {
+      words = answer.words;
+      classifyChoice = answer.classify;
+    } else {
+      words = answer;
+      classifyChoice = -1;
+    }
+    if (!arraysEqual(words, exercise.correct)) return false;
+    if (exercise.classify) return classifyChoice === exercise.classify.correct;
+    return true;
+  }
+
+  function encodeAnswer(a) {
+    if (a && typeof a === "object" && !Array.isArray(a)) {
+      return a.words.join(":") + "+" + a.classify;
+    }
+    return Array.isArray(a) ? a.join(":") : String(a);
+  }
+
+  function arraysEqual(a, b) {
+    var sa = a.slice().sort(function (x, y) { return x - y; });
+    var sb = b.slice().sort(function (x, y) { return x - y; });
+    if (sa.length !== sb.length) return false;
+    for (var i = 0; i < sa.length; i++) {
+      if (sa[i] !== sb[i]) return false;
+    }
+    return true;
+  }
+
+  var PRAISE = ["Richtig!", "Super!", "Genau!", "Sehr gut!", "Perfekt!"];
+  function randomPraise() {
+    return PRAISE[Math.floor(Math.random() * PRAISE.length)];
   }
 
   function esc(str) {

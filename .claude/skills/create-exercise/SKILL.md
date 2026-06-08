@@ -12,15 +12,20 @@ Generate a new exercise set JSON file for Deutschinator 3000 and register it in 
 
 Before generating anything, ask the user these questions **one at a time**. Use AskUserQuestion for each. Provide your recommended answer.
 
-1. **Topic**: What grammar topic? (e.g., Zeitformen, Aktiv/Passiv, Kasus, Konjunktiv, Satzglieder)
-2. **Question**: What is the question asked per exercise? (e.g., "In welcher Zeitform steht dieser Satz?")
-3. **Options**: What are the fixed answer options? (e.g., ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"])
-4. **Count**: How many exercises? (recommend 12-15)
-5. **Difficulty**: School level / age range? (e.g., 4. Klasse, 6. Klasse, Gymnasium)
+1. **Type**: Multiple choice or word-tap? (multiple-choice = pick from options, word-tap = tap words in a sentence)
+2. **Topic**: What grammar topic? (e.g., Zeitformen, Aktiv/Passiv, Kasus, Konjunktiv, Satzglieder, Adverbien)
+3. **Question**: What is the question asked per exercise? (e.g., "In welcher Zeitform steht dieser Satz?" or "Welches Wort ist das Adverb?")
+4. **Options** (multiple-choice only): What are the fixed answer options?
+5. **Count**: How many exercises? (recommend 12-15)
+6. **Difficulty**: School level / age range? (e.g., 4. Klasse, 6. Klasse, Gymnasium)
 
-## Exercise File Format
+## Exercise File Formats
 
-Each exercise set is a self-contained JSON file in `exercises/`:
+Each exercise set is a self-contained JSON file in `exercises/`. Two types supported:
+
+### Type: multiple-choice (default)
+
+User picks one option from a list. No `type` field needed (backward compat).
 
 ```json
 {
@@ -32,20 +37,51 @@ Each exercise set is a self-contained JSON file in `exercises/`:
       "sentence": "A German sentence to analyze.",
       "options": ["Option A", "Option B", "Option C"],
       "correct": 0,
-      "explanation": "Short explanation of why this is the correct answer. Use «guillemets» for inline quotes of words from the sentence (NOT regular double quotes — those break JSON)."
+      "explanation": "Short explanation. Use «guillemets» for inline quotes."
     }
   ]
 }
 ```
 
+### Type: word-tap
+
+User taps words in a sentence to select them. Used for Satzglieder, Wortarten, etc.
+
+```json
+{
+  "id": "kebab-case-id",
+  "name": "Human-readable name",
+  "type": "word-tap",
+  "question": "Welches Wort ist das Adverb?",
+  "exercises": [
+    {
+      "words": ["Der", "Hund", "schläft", "draußen."],
+      "correct": [3],
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"],
+        "correct": 0
+      },
+      "explanation": "«draußen» ist ein Lokaladverb (Wo? → draußen)."
+    }
+  ]
+}
+```
+
+- `words`: pre-tokenized sentence. Each element = one tappable pill. Punctuation attached to the word it follows (e.g., `"draußen."` not `"draußen"` + `"."`).
+- `correct`: array of indices into `words`. Supports multi-word answers (e.g., `[3, 4, 5]` for "auf dem Sofa") and non-contiguous selections (e.g., `[1, 5]` for trennbare Verben).
+- `classify` (optional): two-step exercise. After correct word selection, MC classification appears. Has `question`, `options`, and `correct` (index). If absent, exercise is single-step word-tap only.
+- No `sentence` or `options` fields at exercise level (classify has its own options).
+
 ### Critical Rules for Exercise Content
 
 - **Sentence quality**: Use natural, age-appropriate German sentences. Vary subjects, tenses, complexity.
-- **Balance**: Distribute correct answers roughly evenly across all options. Don't cluster.
-- **Explanations**: Always explain the WHY. Point out the key grammatical signal (verb form, word order, etc.). Keep it 1-2 sentences.
-- **Quoting**: Use «guillemets» (« and ») when quoting words from the sentence in explanations. NEVER use ASCII double quotes inside JSON string values — they break the JSON.
+- **Balance**: Distribute correct answers. Don't cluster same position repeatedly.
+- **Explanations**: Always explain the WHY. Point out the key grammatical signal. Keep it 1-2 sentences.
+- **Quoting**: Use «guillemets» (« and ») when quoting words in explanations. NEVER use ASCII double quotes inside JSON string values — they break the JSON.
 - **Validate JSON**: After writing the file, validate it with `python3 -c "import json; json.load(open('exercises/FILENAME.json'))"`.
-- **Option order**: Keep options in a logical/consistent order across all exercises in the set.
+- **Option order** (multiple-choice): Keep options in a logical/consistent order across all exercises.
+- **Word tokenization** (word-tap): Split on spaces. Keep punctuation attached to the preceding word. Each token becomes one tappable pill.
 
 ## Manifest Format
 
@@ -76,7 +112,7 @@ The manifest at `exercises/index.json` is an array of set descriptors:
 Before finishing, verify:
 - [ ] JSON is valid (python3 validation passes)
 - [ ] No ASCII double quotes inside string values (use «guillemets» for inline quotes)
-- [ ] `correct` index matches the right option for every exercise
-- [ ] Answer distribution is roughly balanced
+- [ ] `correct` index/indices match the right answer for every exercise
+- [ ] Answer distribution is roughly balanced (position of correct words varies)
 - [ ] Exercise count in manifest matches actual count in file
 - [ ] `id` in the exercise file matches `id` in the manifest entry

@@ -1,9 +1,9 @@
 [
   {
     "id": "aktiv-passiv",
-    "name": "Aktiv und Passiv",
+    "name": "Aktiv Passiv erkennen 1",
     "description": "Bestimme ob der Satz im Aktiv, Vorgangspassiv oder Zustandspassiv steht",
-    "file": "aktiv-passiv.json",
+    "file": "aktiv-passiv-erkennen-1.json",
     "count": 12
   },
   {

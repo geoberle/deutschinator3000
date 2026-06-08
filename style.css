@@ -106,6 +106,30 @@ header h1 {
   background: #c62828;
 }
 
+.dot-active {
+  height: 10px;
+  margin-top: -2px;
+}
+
+/* Review navigation */
+
+.review-nav {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.review-nav .btn-primary,
+.review-nav .btn-secondary {
+  flex: 1;
+}
+
+.set-name {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
 /* Quiz — question */
 
 .question-label {

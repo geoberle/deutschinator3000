@@ -79,6 +79,7 @@ Current encoding formats:
 - MC: `"2"` (option index as string)
 - word-tap: `"3"` or `"1:4"` (colon-separated word indices)
 - word-tap+classify: `"3+0"` (word indices + classify choice)
+- classify: `"1:0"` (colon-separated step indices, `-1` for unattempted)
 
 ```javascript
 function encodeAnswer(a) {

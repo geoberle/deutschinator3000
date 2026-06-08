@@ -12,6 +12,7 @@
   var results = [];
   var answered = false;
   var selectedWords = [];
+  var classifyStepAnswers = [];
 
   var reviewSet = null;
   var reviewExercises = [];
@@ -34,6 +35,9 @@
     var type = exType(ex);
     if (type === "word-tap") {
       return renderWordTap(ex);
+    }
+    if (type === "classify") {
+      return renderClassify(ex);
     }
     return renderMC(ex);
   }
@@ -77,12 +81,98 @@
     }};
   }
 
+  function renderClassify(ex) {
+    var html = '<div class="sentence">' + esc(ex.sentence) + "</div>" +
+      '<div id="classify-steps"></div>' +
+      '<div id="feedback"></div>';
+    return { html: html, bind: function () {
+      classifyStepAnswers = [];
+      appendClassifyStep(ex, 0);
+    }};
+  }
+
+  function appendClassifyStep(ex, stepIdx) {
+    var step = ex.steps[stepIdx];
+    var container = document.getElementById("classify-steps");
+    var stepDiv = document.createElement("div");
+    stepDiv.className = "classify-step";
+    stepDiv.innerHTML =
+      '<div class="classify-question">' + esc(step.question) + "</div>" +
+      '<div class="options"></div>';
+    container.appendChild(stepDiv);
+
+    var optionsEl = stepDiv.querySelector(".options");
+    for (var i = 0; i < step.options.length; i++) {
+      var btn = document.createElement("button");
+      btn.className = "option-btn";
+      btn.textContent = step.options[i];
+      btn.setAttribute("data-index", i);
+      btn.setAttribute("data-step", stepIdx);
+      btn.addEventListener("click", onClassifyStepClick);
+      optionsEl.appendChild(btn);
+    }
+  }
+
+  function onClassifyStepClick(e) {
+    var stepIdx = parseInt(e.currentTarget.getAttribute("data-step"), 10);
+    if (answered || classifyStepAnswers.length > stepIdx) return;
+
+    var chosen = parseInt(e.currentTarget.getAttribute("data-index"), 10);
+    var ex = exercises[index];
+    var step = ex.steps[stepIdx];
+    var stepCorrect = chosen === step.correct;
+
+    classifyStepAnswers.push(chosen);
+
+    var stepDiv = e.currentTarget.closest(".classify-step");
+    var buttons = stepDiv.querySelectorAll(".option-btn");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].classList.add("answered");
+      if (i === step.correct) buttons[i].classList.add("correct");
+      if (i === chosen && !stepCorrect) buttons[i].classList.add("wrong");
+    }
+
+    if (!stepCorrect) {
+      answered = true;
+      for (var r = stepIdx + 1; r < ex.steps.length; r++) {
+        classifyStepAnswers.push(-1);
+      }
+      finalizeClassify(false);
+    } else if (stepIdx < ex.steps.length - 1) {
+      setTimeout(function () {
+        for (var b = buttons.length - 1; b >= 0; b--) {
+          if (parseInt(buttons[b].getAttribute("data-index"), 10) !== step.correct) {
+            buttons[b].remove();
+          }
+        }
+        appendClassifyStep(ex, stepIdx + 1);
+      }, 400);
+    } else {
+      answered = true;
+      finalizeClassify(true);
+    }
+  }
+
+  function finalizeClassify(correct) {
+    var ex = exercises[index];
+    results.push(correct);
+    chosenAnswers.push(classifyStepAnswers.slice());
+
+    var dots = document.querySelectorAll(".progress-dot");
+    dots[index].className = "progress-dot " + (correct ? "dot-correct" : "dot-wrong");
+
+    showFeedback(correct, ex.explanation);
+  }
+
   // --- Check correctness ---
 
   function isCorrect(ex, answer) {
     var type = ex.type || (currentSet && currentSet.type) || (reviewSet && reviewSet.type) || "multiple-choice";
     if (type === "word-tap") {
       return isWordTapCorrect(answer, ex);
+    }
+    if (type === "classify") {
+      return isClassifyCorrect(answer, ex);
     }
     return answer === ex.correct;
   }
@@ -101,6 +191,14 @@
     return true;
   }
 
+  function isClassifyCorrect(answer, exercise) {
+    if (!Array.isArray(answer)) return false;
+    for (var i = 0; i < exercise.steps.length; i++) {
+      if (answer[i] !== exercise.steps[i].correct) return false;
+    }
+    return true;
+  }
+
   // --- Encode / decode answers for share URLs ---
 
   function encodeAnswer(a) {
@@ -112,6 +210,9 @@
 
   function decodeAnswer(str, ex) {
     var type = ex.type || (reviewSet && reviewSet.type) || "multiple-choice";
+    if (type === "classify") {
+      return str.split(":").map(Number);
+    }
     if (type === "word-tap") {
       if (str.indexOf("+") > -1) {
         var pts = str.split("+");
@@ -128,6 +229,9 @@
     var type = reviewExType(ex);
     if (type === "word-tap") {
       return renderReviewWordTap(ex, chosen);
+    }
+    if (type === "classify") {
+      return renderReviewClassify(ex, chosen);
     }
     return renderReviewMC(ex, chosen);
   }
@@ -176,6 +280,37 @@
         html += '<button class="' + optCls + '">' + esc(ex.classify.options[c]) + "</button>";
       }
       html += "</div>";
+    }
+
+    return { html: html, correct: correct, bind: function () {} };
+  }
+
+  function renderReviewClassify(ex, chosen) {
+    var correct = isClassifyCorrect(chosen, ex);
+    var html = '<div class="sentence">' + esc(ex.sentence) + "</div>";
+
+    for (var s = 0; s < ex.steps.length; s++) {
+      var step = ex.steps[s];
+      var chosenIdx = Array.isArray(chosen) ? chosen[s] : -1;
+      var stepCorrect = chosenIdx === step.correct;
+      var unattempted = chosenIdx === -1;
+
+      html += '<div class="classify-question">' + esc(step.question) + "</div>";
+      html += '<div class="options">';
+
+      for (var i = 0; i < step.options.length; i++) {
+        var cls = "option-btn answered";
+        if (!unattempted) {
+          if (i === step.correct) cls += " correct";
+          if (i === chosenIdx && !stepCorrect) cls += " wrong";
+        }
+        html += '<button class="' + cls + '">' + esc(step.options[i]) + "</button>";
+      }
+      html += "</div>";
+
+      if (unattempted) {
+        html += '<div class="classify-unattempted">nicht beantwortet</div>';
+      }
     }
 
     return { html: html, correct: correct, bind: function () {} };
@@ -277,11 +412,11 @@
   function showQuestion() {
     var ex = exercises[index];
     var total = exercises.length;
-    var question = ex.question || currentSet.question;
+    var question = ex.question || currentSet.question || "";
 
     var rendered = renderExercise(ex);
     app.innerHTML = renderProgressDots(total, results, index) +
-      '<div class="question-label">' + esc(question) + "</div>" +
+      (question ? '<div class="question-label">' + esc(question) + "</div>" : "") +
       rendered.html;
     rendered.bind();
   }
@@ -626,11 +761,11 @@
     }
     dotsHtml += "</div>";
 
-    var question = ex.question || reviewSet.question;
+    var question = ex.question || reviewSet.question || "";
     var rendered = renderReviewExercise(ex, chosen);
 
     app.innerHTML = dotsHtml +
-      '<div class="question-label">' + esc(question) + "</div>" +
+      (question ? '<div class="question-label">' + esc(question) + "</div>" : "") +
       rendered.html +
       '<div class="explanation ' + (rendered.correct ? "explanation-correct" : "explanation-wrong") + '">' +
         "<strong>" + (rendered.correct ? randomPraise() : "Leider falsch.") + "</strong>" +

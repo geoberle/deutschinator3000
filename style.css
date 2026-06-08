@@ -136,6 +136,17 @@ header h1 {
   margin: 1rem 0 0.5rem;
 }
 
+.classify-step + .classify-step {
+  margin-top: 0.75rem;
+}
+
+.classify-unattempted {
+  font-size: 0.85rem;
+  color: #999;
+  font-style: italic;
+  margin-top: 0.25rem;
+}
+
 .word-hint {
   font-size: 0.85rem;
   color: #999;

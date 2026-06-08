@@ -12,7 +12,7 @@ Generate a new exercise set JSON file for Deutschinator 3000 and register it in 
 
 Before generating anything, ask the user these questions **one at a time**. Use AskUserQuestion for each. Provide your recommended answer.
 
-1. **Type(s)**: Which exercise types? Can be one or mixed. (multiple-choice = pick from options, word-tap = tap words in a sentence, word-tap+classify = tap word then classify it)
+1. **Type(s)**: Which exercise types? Can be one or mixed. (multiple-choice = pick from options, word-tap = tap words in a sentence, word-tap+classify = tap word then classify it, classify = multi-step classification of a sentence)
 2. **Topic**: What grammar topic? (e.g., Zeitformen, Aktiv/Passiv, Kasus, Konjunktiv, Satzglieder, Adverbien)
 3. **Question**: Default question for the set. Individual exercises can override this with their own `question` field.
 4. **Options** (multiple-choice only): What are the fixed answer options?
@@ -94,6 +94,34 @@ User taps words in a sentence to select them. Used for Satzglieder, Wortarten, e
 - `classify` (optional): two-step exercise. After correct word selection, MC classification appears. Has `question`, `options`, and `correct` (index). If absent, exercise is single-step word-tap only.
 - No `sentence` or `options` fields at exercise level (classify has its own options).
 
+### Type: classify
+
+User classifies a sentence across multiple dimensions in sequence (e.g., voice + tense). Steps are presented one at a time. Correct step keeps the answer visible and advances to the next step. Wrong step bails out immediately (remaining steps marked unattempted).
+
+```json
+{
+  "id": "aktiv-passiv-zeiten-1",
+  "name": "Aktiv/Passiv + Zeitform 1",
+  "type": "classify",
+  "exercises": [
+    {
+      "sentence": "Der Kuchen wird von der Mutter gebacken.",
+      "steps": [
+        { "question": "Aktiv oder Passiv?", "options": ["Aktiv", "Vorgangspassiv", "Zustandspassiv"], "correct": 1 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"], "correct": 0 }
+      ],
+      "explanation": "«wird gebacken» → werden + Partizip II = Vorgangspassiv Präsens."
+    }
+  ]
+}
+```
+
+- `steps`: array of classification steps, each with `question`, `options`, and `correct` (index). Steps are per-exercise (not set-level) so different exercises can have different options.
+- No set-level `question` — each step carries its own question.
+- Scoring is binary: all steps correct = right, any step wrong = wrong.
+- Supports any number of steps (2 is typical).
+- Answer encoding: colon-separated step indices (e.g., `"1:0"`). Unattempted steps = `-1` (e.g., `"2:-1"`).
+
 ### Mixed-type set example
 
 ```json
@@ -142,10 +170,13 @@ The manifest at `exercises/index.json` is an array of set descriptors:
     "name": "Zeitformen erkennen",
     "description": "Erkenne die Zeitform des Satzes",
     "file": "zeitformen.json",
-    "count": 15
+    "count": 15,
+    "category": "Zeiten"
   }
 ]
 ```
+
+**Ordering matters**: The home screen renders entries in manifest order. Category headers are shown when the category changes from the previous entry. Sets with the same `category` MUST be adjacent in the array — otherwise the category header renders multiple times.
 
 ## Generation Steps
 

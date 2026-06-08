@@ -13,9 +13,23 @@
   function init() {
     if (location.hash.startsWith("#share/")) {
       showSharedResult();
+    } else if (location.hash.startsWith("#set/")) {
+      startSetById(decodeURIComponent(location.hash.replace("#set/", "")));
     } else {
       showHome();
     }
+  }
+
+  function startSetById(setId) {
+    fetch("exercises/index.json")
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        sets = data;
+        for (var i = 0; i < sets.length; i++) {
+          if (sets[i].id === setId) { startSet(i); return; }
+        }
+        showHome();
+      });
   }
 
   function showHome() {
@@ -46,7 +60,7 @@
   function onCardClick(e) {
     var card = e.currentTarget;
     var idx = parseInt(card.getAttribute("data-index"), 10);
-    startSet(idx);
+    location.hash = "#set/" + encodeURIComponent(sets[idx].id);
   }
 
   function startSet(idx) {
@@ -274,6 +288,8 @@
       showHome();
     } else if (location.hash.startsWith("#share/")) {
       showSharedResult();
+    } else if (location.hash.startsWith("#set/")) {
+      startSetById(decodeURIComponent(location.hash.replace("#set/", "")));
     }
   });
 

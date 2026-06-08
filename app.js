@@ -18,6 +18,10 @@
   var wordBankPool = [];
   var wordBankCurrentStep = 0;
 
+  var challengeDef = null;
+  var challengeSetIndex = 0;
+  var challengeScores = [];
+
   var reviewSet = null;
   var reviewExercises = [];
   var reviewAnswers = [];
@@ -567,6 +571,8 @@
       showSharedResult();
     } else if (location.hash.startsWith("#set/")) {
       startSetById(decodeURIComponent(location.hash.replace("#set/", "")));
+    } else if (location.hash === "#challenge") {
+      startChallenge();
     } else {
       showHome();
     }
@@ -587,32 +593,74 @@
   function showHome() {
     setHeaderTitle(null);
     setHeaderBack(false);
-    fetch("exercises/index.json")
+    challengeDef = null;
+
+    Promise.all([
+      fetch("exercises/index.json").then(function (r) { return r.json(); }),
+      fetch("exercises/challenges.json").then(function (r) {
+        return r.ok ? r.json() : null;
+      }).catch(function () { return null; })
+    ]).then(function (both) {
+      sets = both[0];
+      var challenge = both[1];
+
+      var html = "";
+
+      if (challenge && challenge.sets && challenge.sets.length > 0) {
+        var totalCount = 0;
+        for (var c = 0; c < challenge.sets.length; c++) {
+          for (var s = 0; s < sets.length; s++) {
+            if (sets[s].id === challenge.sets[c]) {
+              totalCount += sets[s].count;
+              break;
+            }
+          }
+        }
+        html += '<div class="challenge-card" id="challenge-card">' +
+          "<h2>" + esc(challenge.name) + "</h2>" +
+          "<p>" + challenge.sets.length + " Übungen · " + totalCount + " Aufgaben</p>" +
+          "</div>";
+      }
+
+      html += '<div class="set-list">';
+      var lastCategory = "";
+      for (var i = 0; i < sets.length; i++) {
+        var cat = sets[i].category || "";
+        if (cat && cat !== lastCategory) {
+          html += '<div class="set-category">' + esc(cat) + "</div>";
+          lastCategory = cat;
+        }
+        html +=
+          '<div class="set-card" data-index="' + i + '">' +
+            "<h2>" + esc(sets[i].name) + "</h2>" +
+            "<p>" + esc(sets[i].description) + "</p>" +
+            '<div class="count">' + sets[i].count + " Aufgaben</div>" +
+          "</div>";
+      }
+      html += "</div>";
+      app.innerHTML = html;
+
+      if (document.getElementById("challenge-card")) {
+        document.getElementById("challenge-card").addEventListener("click", function () {
+          location.hash = "#challenge";
+        });
+      }
+
+      var cards = app.querySelectorAll(".set-card");
+      for (var j = 0; j < cards.length; j++) {
+        cards[j].addEventListener("click", onCardClick);
+      }
+    });
+  }
+
+  function startChallenge() {
+    fetch("exercises/challenges.json")
       .then(function (r) { return r.json(); })
       .then(function (data) {
-        sets = data;
-        var html = '<div class="set-list">';
-        var lastCategory = "";
-        for (var i = 0; i < sets.length; i++) {
-          var cat = sets[i].category || "";
-          if (cat && cat !== lastCategory) {
-            html += '<div class="set-category">' + esc(cat) + "</div>";
-            lastCategory = cat;
-          }
-          html +=
-            '<div class="set-card" data-index="' + i + '">' +
-              "<h2>" + esc(sets[i].name) + "</h2>" +
-              "<p>" + esc(sets[i].description) + "</p>" +
-              '<div class="count">' + sets[i].count + " Aufgaben</div>" +
-            "</div>";
-        }
-        html += "</div>";
-        app.innerHTML = html;
-
-        var cards = app.querySelectorAll(".set-card");
-        for (var j = 0; j < cards.length; j++) {
-          cards[j].addEventListener("click", onCardClick);
-        }
+        challengeDef = data;
+        challengeSetIndex = 0;
+        challengeScores = [];
+        startSetById(data.sets[0]);
       });
   }
 
@@ -849,15 +897,27 @@
     }
     var total = results.length;
 
+    var actionsHtml =
+      '<button class="btn-primary" id="btn-retry">Nochmal</button>' +
+      '<button class="btn-share" id="btn-share">Ergebnis teilen</button>';
+
+    if (challengeDef) {
+      if (challengeSetIndex < challengeDef.sets.length - 1) {
+        actionsHtml += '<button class="btn-primary" id="btn-next-challenge">Nächste Übung</button>';
+      } else {
+        actionsHtml += '<button class="btn-primary" id="btn-finish-challenge">Fertig!</button>';
+      }
+    }
+
+    actionsHtml += '<button class="btn-secondary" id="btn-back">Zurück</button>';
+
     app.innerHTML =
       '<div class="summary">' +
         renderProgressDots(total, results, -1) +
         '<div class="score">' + correctCount + " / " + total + "</div>" +
         '<div class="score-label">richtig beantwortet</div>' +
         '<div class="summary-actions">' +
-          '<button class="btn-primary" id="btn-retry">Nochmal</button>' +
-          '<button class="btn-share" id="btn-share">Ergebnis teilen</button>' +
-          '<button class="btn-secondary" id="btn-back">Zurück</button>' +
+          actionsHtml +
         "</div>" +
       "</div>";
 
@@ -865,6 +925,14 @@
     document.getElementById("btn-share").addEventListener("click", function () {
       shareResult(correctCount, total);
     });
+
+    var advanceBtn = document.getElementById("btn-next-challenge") || document.getElementById("btn-finish-challenge");
+    if (advanceBtn) {
+      advanceBtn.addEventListener("click", function () {
+        advanceChallenge(correctCount, total);
+      });
+    }
+
     document.getElementById("btn-back").addEventListener("click", function () {
       location.hash = "";
       showHome();
@@ -892,6 +960,51 @@
     setHeaderTitle(currentSet.name);
     setHeaderBack(true);
     showQuestion();
+  }
+
+  function advanceChallenge(correctCount, total) {
+    challengeScores.push({name: currentSet.name, correct: correctCount, total: total});
+    challengeSetIndex++;
+    if (challengeSetIndex >= challengeDef.sets.length) {
+      showCelebration();
+    } else {
+      startSetById(challengeDef.sets[challengeSetIndex]);
+    }
+  }
+
+  function showCelebration() {
+    setHeaderTitle(null);
+    setHeaderBack(false);
+    var totalCorrect = 0;
+    var totalQuestions = 0;
+    for (var i = 0; i < challengeScores.length; i++) {
+      totalCorrect += challengeScores[i].correct;
+      totalQuestions += challengeScores[i].total;
+    }
+
+    var breakdownHtml = "";
+    for (var s = 0; s < challengeScores.length; s++) {
+      breakdownHtml += '<div class="challenge-set-score">' +
+        esc(challengeScores[s].name) + ": " +
+        challengeScores[s].correct + "/" + challengeScores[s].total +
+        "</div>";
+    }
+
+    app.innerHTML =
+      '<div class="summary celebration">' +
+        '<div class="celebration-title">' + esc(challengeDef.name) + " geschafft!</div>" +
+        '<div class="score">' + totalCorrect + " / " + totalQuestions + "</div>" +
+        '<div class="score-label">richtig beantwortet</div>' +
+        '<div class="challenge-breakdown">' + breakdownHtml + "</div>" +
+        '<div class="summary-actions">' +
+          '<button class="btn-secondary" id="btn-back">Zurück</button>' +
+        "</div>" +
+      "</div>";
+
+    document.getElementById("btn-back").addEventListener("click", function () {
+      location.hash = "";
+      showHome();
+    });
   }
 
   function shareResult(correctCount, total) {
@@ -1132,6 +1245,8 @@
       showSharedResult();
     } else if (location.hash.startsWith("#set/")) {
       startSetById(decodeURIComponent(location.hash.replace("#set/", "")));
+    } else if (location.hash === "#challenge") {
+      startChallenge();
     }
   });
 

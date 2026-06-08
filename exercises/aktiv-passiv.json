@@ -1,0 +1,127 @@
+{
+  "id": "aktiv-passiv",
+  "name": "Aktiv und Passiv",
+  "question": "Steht dieser Satz im Aktiv, Vorgangspassiv oder Zustandspassiv?",
+  "exercises": [
+    {
+      "sentence": "Der Hund frisst den Knochen.",
+      "options": [
+        "Aktiv",
+        "Vorgangspassiv",
+        "Zustandspassiv"
+      ],
+      "correct": 0,
+      "explanation": "Das Subjekt (der Hund) führt die Handlung selbst aus → Aktiv."
+    },
+    {
+      "sentence": "Der Knochen wird vom Hund gefressen.",
+      "options": [
+        "Aktiv",
+        "Vorgangspassiv",
+        "Zustandspassiv"
+      ],
+      "correct": 1,
+      "explanation": "«wird» + Partizip II («gefressen») → Vorgangspassiv. Die Handlung geschieht gerade."
+    },
+    {
+      "sentence": "Die Tür ist geschlossen.",
+      "options": [
+        "Aktiv",
+        "Vorgangspassiv",
+        "Zustandspassiv"
+      ],
+      "correct": 2,
+      "explanation": "«ist» + Partizip II («geschlossen») → Zustandspassiv. Es beschreibt das Ergebnis einer abgeschlossenen Handlung."
+    },
+    {
+      "sentence": "Die Lehrerin erklärt die Aufgabe.",
+      "options": [
+        "Aktiv",
+        "Vorgangspassiv",
+        "Zustandspassiv"
+      ],
+      "correct": 0,
+      "explanation": "Das Subjekt (die Lehrerin) handelt selbst → Aktiv."
+    },
+    {
+      "sentence": "Die Aufgabe wird von der Lehrerin erklärt.",
+      "options": [
+        "Aktiv",
+        "Vorgangspassiv",
+        "Zustandspassiv"
+      ],
+      "correct": 1,
+      "explanation": "«wird» + Partizip II («erklärt») → Vorgangspassiv. Der Vorgang des Erklärens findet statt."
+    },
+    {
+      "sentence": "Das Fenster ist geöffnet.",
+      "options": [
+        "Aktiv",
+        "Vorgangspassiv",
+        "Zustandspassiv"
+      ],
+      "correct": 2,
+      "explanation": "«ist» + Partizip II («geöffnet») → Zustandspassiv. Das Fenster befindet sich im Zustand des Geöffnetseins."
+    },
+    {
+      "sentence": "Mein Bruder repariert das Fahrrad.",
+      "options": [
+        "Aktiv",
+        "Vorgangspassiv",
+        "Zustandspassiv"
+      ],
+      "correct": 0,
+      "explanation": "Das Subjekt (mein Bruder) führt die Handlung aus → Aktiv."
+    },
+    {
+      "sentence": "Das Fahrrad wird von meinem Bruder repariert.",
+      "options": [
+        "Aktiv",
+        "Vorgangspassiv",
+        "Zustandspassiv"
+      ],
+      "correct": 1,
+      "explanation": "«wird» + Partizip II («repariert») → Vorgangspassiv. Die Reparatur findet gerade statt."
+    },
+    {
+      "sentence": "Der Brief ist geschrieben.",
+      "options": [
+        "Aktiv",
+        "Vorgangspassiv",
+        "Zustandspassiv"
+      ],
+      "correct": 2,
+      "explanation": "«ist» + Partizip II («geschrieben») → Zustandspassiv. Der Brief ist fertig, der Zustand ist das Ergebnis."
+    },
+    {
+      "sentence": "Die Kinder bauen eine Sandburg.",
+      "options": [
+        "Aktiv",
+        "Vorgangspassiv",
+        "Zustandspassiv"
+      ],
+      "correct": 0,
+      "explanation": "Das Subjekt (die Kinder) handelt selbst → Aktiv."
+    },
+    {
+      "sentence": "Die Sandburg wird von den Kindern gebaut.",
+      "options": [
+        "Aktiv",
+        "Vorgangspassiv",
+        "Zustandspassiv"
+      ],
+      "correct": 1,
+      "explanation": "«wird» + Partizip II («gebaut») → Vorgangspassiv. Der Bauvorgang findet statt."
+    },
+    {
+      "sentence": "Das Auto ist gewaschen.",
+      "options": [
+        "Aktiv",
+        "Vorgangspassiv",
+        "Zustandspassiv"
+      ],
+      "correct": 2,
+      "explanation": "«ist» + Partizip II («gewaschen») → Zustandspassiv. Das Auto befindet sich im sauberen Zustand."
+    }
+  ]
+}

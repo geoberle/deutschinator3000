@@ -1,0 +1,117 @@
+{
+  "id": "passiv-rueckwaerts-1",
+  "name": "Der Rückwärtsgang: Passiv → Aktiv 1",
+  "type": "word-bank",
+  "exercises": [
+    {
+      "sentence": "Die Suppe wird vom Koch gewürzt.",
+      "steps": [
+        {
+          "question": "Forme ins Aktiv um:",
+          "answer": ["Der", "Koch", "würzt", "die", "Suppe"],
+          "distractors": ["gewürzt", "wird"]
+        }
+      ],
+      "explanation": "«vom Koch» → «Der Koch» (Subjekt). «wird gewürzt» → «würzt» (Aktiv Präsens). «Die Suppe» wird zum Akkusativobjekt."
+    },
+    {
+      "sentence": "Der Kuchen wird von der Mutter gebacken.",
+      "steps": [
+        {
+          "question": "Forme ins Aktiv um:",
+          "answer": ["Die", "Mutter", "backt", "den", "Kuchen"],
+          "distractors": ["gebacken", "wird"]
+        }
+      ],
+      "explanation": "«von der Mutter» → «Die Mutter». «Der Kuchen» wird zu «den Kuchen» — maskulin Nominativ → Akkusativ!"
+    },
+    {
+      "sentence": "Die Blumen werden vom Mädchen gegossen.",
+      "steps": [
+        {
+          "question": "Forme ins Aktiv um:",
+          "answer": ["Das", "Mädchen", "gießt", "die", "Blumen"],
+          "distractors": ["gegossen", "werden"]
+        }
+      ],
+      "explanation": "«vom Mädchen» → «Das Mädchen». «gegossen» ist Partizip II — im Aktiv braucht man «gießt» (Präsens)."
+    },
+    {
+      "sentence": "Das Fenster wird von der Lehrerin geschlossen.",
+      "steps": [
+        {
+          "question": "Forme ins Aktiv um:",
+          "answer": ["Die", "Lehrerin", "schließt", "das", "Fenster"],
+          "distractors": ["geschlossen", "wird"]
+        }
+      ],
+      "explanation": "«von der Lehrerin» → «Die Lehrerin». «Das Fenster» bleibt «das Fenster» — sächlich ändert sich nicht im Akkusativ."
+    },
+    {
+      "sentence": "Der Hund wird vom Mädchen gefüttert.",
+      "steps": [
+        {
+          "question": "Forme ins Aktiv um:",
+          "answer": ["Das", "Mädchen", "füttert", "den", "Hund"],
+          "distractors": ["gefüttert", "wird"]
+        }
+      ],
+      "explanation": "«Der Hund» wird zu «den Hund» — maskulin Nominativ → Akkusativ. «vom Mädchen» → «Das Mädchen» (Subjekt)."
+    },
+    {
+      "sentence": "Das Auto wurde vom Vater gewaschen.",
+      "steps": [
+        {
+          "question": "Forme ins Aktiv um:",
+          "answer": ["Der", "Vater", "wusch", "das", "Auto"],
+          "distractors": ["gewaschen", "wurde"]
+        }
+      ],
+      "explanation": "Präteritum bleibt Präteritum! «wurde gewaschen» → «wusch» (Aktiv Präteritum von «waschen»)."
+    },
+    {
+      "sentence": "Die Tafel wurde vom Schüler geputzt.",
+      "steps": [
+        {
+          "question": "Forme ins Aktiv um:",
+          "answer": ["Der", "Schüler", "putzte", "die", "Tafel"],
+          "distractors": ["geputzt", "wurde"]
+        }
+      ],
+      "explanation": "Präteritum: «wurde geputzt» → «putzte». «vom Schüler» → «Der Schüler» (Dativ → Nominativ)."
+    },
+    {
+      "sentence": "Der Schal wurde von der Oma gestrickt.",
+      "steps": [
+        {
+          "question": "Forme ins Aktiv um:",
+          "answer": ["Die", "Oma", "strickte", "den", "Schal"],
+          "distractors": ["gestrickt", "wurde"]
+        }
+      ],
+      "explanation": "«Der Schal» → «den Schal» (maskulin Akkusativ). «wurde gestrickt» → «strickte» (Aktiv Präteritum)."
+    },
+    {
+      "sentence": "Das Fahrrad wurde vom Opa repariert.",
+      "steps": [
+        {
+          "question": "Forme ins Aktiv um:",
+          "answer": ["Der", "Opa", "reparierte", "das", "Fahrrad"],
+          "distractors": ["repariert", "wurde"]
+        }
+      ],
+      "explanation": "Achtung: «repariert» ist Partizip II, «reparierte» ist Aktiv Präteritum — nur ein Buchstabe Unterschied!"
+    },
+    {
+      "sentence": "Das Essen wurde von der Oma gekocht.",
+      "steps": [
+        {
+          "question": "Forme ins Aktiv um:",
+          "answer": ["Die", "Oma", "kochte", "das", "Essen"],
+          "distractors": ["gekocht", "wurde"]
+        }
+      ],
+      "explanation": "«wurde gekocht» → «kochte» (Aktiv Präteritum). «von der Oma» → «Die Oma» wird zum Subjekt."
+    }
+  ]
+}

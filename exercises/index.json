@@ -1,5 +1,5 @@
 [
-  { 
+  {
     "id": "aktiv-passiv-zeiten-1",
     "name": "Aktiv/Passiv + Zeitform 1",
     "description": "Bestimme Aktiv/Passiv und die Zeitform des Satzes",
@@ -13,6 +13,54 @@
     "description": "Bestimme ob der Satz im Aktiv, Vorgangspassiv oder Zustandspassiv steht",
     "file": "aktiv-passiv-erkennen-1.json",
     "count": 12,
+    "category": "Aktiv/Passiv"
+  },
+  {
+    "id": "passiv-arten-1",
+    "name": "Der Detektiv-Blick: Passiv-Arten 1",
+    "description": "Erkenne Vorgangspassiv oder Zustandspassiv und bestimme die Zeitform (Präsens/Präteritum)",
+    "file": "passiv-arten-1.json",
+    "count": 12,
+    "category": "Aktiv/Passiv"
+  },
+  {
+    "id": "passiv-umformen-1",
+    "name": "Die Verwandlung: Passiv bilden 1",
+    "description": "Forme Aktiv-Sätze in Vorgangspassiv und Zustandspassiv um (Präsens/Präteritum)",
+    "file": "passiv-umformen-1.json",
+    "count": 10,
+    "category": "Aktiv/Passiv"
+  },
+  {
+    "id": "passiv-zeiten-mix-1",
+    "name": "Der Zeiten-Mix: Vorgangspassiv 1",
+    "description": "Setze Vorgangspassiv-Sätze in verschiedene Zeitformen (Präteritum, Perfekt, Plusquamperfekt, Futur I)",
+    "file": "passiv-zeiten-mix-1.json",
+    "count": 10,
+    "category": "Aktiv/Passiv"
+  },
+  {
+    "id": "passiv-futur-1",
+    "name": "Die Zukunfts-Mission: Futur I Passiv 1",
+    "description": "Bilde Vorgangspassiv und Zustandspassiv im Futur I (werden + PII + werden/sein)",
+    "file": "passiv-futur-1.json",
+    "count": 10,
+    "category": "Aktiv/Passiv"
+  },
+  {
+    "id": "sein-falle-1",
+    "name": "Die «sein»-Falle: ZP oder Aktiv Perfekt? 1",
+    "description": "Unterscheide Zustandspassiv von Aktiv Perfekt — beides nutzt «sein» + Partizip II",
+    "file": "sein-falle-1.json",
+    "count": 14,
+    "category": "Aktiv/Passiv"
+  },
+  {
+    "id": "passiv-rueckwaerts-1",
+    "name": "Der Rückwärtsgang: Passiv → Aktiv 1",
+    "description": "Forme Passivsätze zurück ins Aktiv — mit korrekter Zeitform und Kasus",
+    "file": "passiv-rueckwaerts-1.json",
+    "count": 10,
     "category": "Aktiv/Passiv"
   },
   {

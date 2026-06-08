@@ -13,6 +13,10 @@
   var answered = false;
   var selectedWords = [];
   var classifyStepAnswers = [];
+  var wordBankStepResults = [];
+  var wordBankPlaced = [];
+  var wordBankPool = [];
+  var wordBankCurrentStep = 0;
 
   var reviewSet = null;
   var reviewExercises = [];
@@ -38,6 +42,9 @@
     }
     if (type === "classify") {
       return renderClassify(ex);
+    }
+    if (type === "word-bank") {
+      return renderWordBank(ex);
     }
     return renderMC(ex);
   }
@@ -149,6 +156,11 @@
       }, 400);
     } else {
       answered = true;
+      for (var b = buttons.length - 1; b >= 0; b--) {
+        if (parseInt(buttons[b].getAttribute("data-index"), 10) !== step.correct) {
+          buttons[b].remove();
+        }
+      }
       finalizeClassify(true);
     }
   }
@@ -157,6 +169,196 @@
     var ex = exercises[index];
     results.push(correct);
     chosenAnswers.push(classifyStepAnswers.slice());
+
+    var dots = document.querySelectorAll(".progress-dot");
+    dots[index].className = "progress-dot " + (correct ? "dot-correct" : "dot-wrong");
+
+    showFeedback(correct, ex.explanation);
+  }
+
+  function renderWordBank(ex) {
+    var html = '<div class="sentence">' + esc(ex.sentence) + "</div>" +
+      '<div id="word-bank-steps"></div>' +
+      '<div id="feedback"></div>';
+    return { html: html, bind: function () {
+      wordBankStepResults = [];
+      appendWordBankStep(ex, 0);
+    }};
+  }
+
+  function appendWordBankStep(ex, stepIdx) {
+    var step = ex.steps[stepIdx];
+    var scaffold = step.scaffold || 0;
+    var pool = step.answer.slice(scaffold).concat(step.distractors || []);
+    shuffle(pool);
+    wordBankPool = pool;
+    wordBankPlaced = [];
+    wordBankCurrentStep = stepIdx;
+
+    var container = document.getElementById("word-bank-steps");
+    var stepDiv = document.createElement("div");
+    stepDiv.className = "word-bank-step";
+
+    var questionDiv = document.createElement("div");
+    questionDiv.className = "classify-question";
+    questionDiv.textContent = step.question;
+    stepDiv.appendChild(questionDiv);
+
+    var answerDiv = document.createElement("div");
+    answerDiv.className = "word-bank-answer";
+    answerDiv.id = "word-bank-answer";
+    for (var s = 0; s < scaffold; s++) {
+      var sp = document.createElement("span");
+      sp.className = "word-pill word-scaffold";
+      sp.textContent = step.answer[s];
+      answerDiv.appendChild(sp);
+    }
+    var hint = document.createElement("span");
+    hint.className = "word-bank-hint";
+    hint.id = "word-bank-hint";
+    hint.textContent = "Tippe die Wörter in der richtigen Reihenfolge.";
+    answerDiv.appendChild(hint);
+    var period = document.createElement("span");
+    period.className = "word-bank-period";
+    period.textContent = ".";
+    answerDiv.appendChild(period);
+    stepDiv.appendChild(answerDiv);
+
+    var poolDiv = document.createElement("div");
+    poolDiv.className = "word-bank-pool";
+    poolDiv.id = "word-bank-pool";
+    for (var p = 0; p < pool.length; p++) {
+      var pill = document.createElement("span");
+      pill.className = "word-pill";
+      pill.textContent = pool[p];
+      pill.setAttribute("data-pool-idx", p);
+      pill.addEventListener("click", onWordBankTap);
+      poolDiv.appendChild(pill);
+    }
+    stepDiv.appendChild(poolDiv);
+
+    var submitBtn = document.createElement("button");
+    submitBtn.className = "submit-btn";
+    submitBtn.id = "word-bank-submit";
+    submitBtn.textContent = "Prüfen";
+    submitBtn.addEventListener("click", onWordBankSubmit);
+    stepDiv.appendChild(submitBtn);
+
+    container.appendChild(stepDiv);
+  }
+
+  function onWordBankTap(e) {
+    if (answered) return;
+    var poolIdx = parseInt(e.currentTarget.getAttribute("data-pool-idx"), 10);
+    e.currentTarget.classList.add("word-used");
+
+    var answerDiv = document.getElementById("word-bank-answer");
+    var pill = document.createElement("span");
+    pill.className = "word-pill word-placed";
+    pill.textContent = wordBankPool[poolIdx];
+    pill.setAttribute("data-pool-idx", poolIdx);
+    pill.addEventListener("click", onWordBankRemove);
+    answerDiv.appendChild(pill);
+
+    wordBankPlaced.push(poolIdx);
+
+    var hint = document.getElementById("word-bank-hint");
+    if (hint) hint.style.display = "none";
+  }
+
+  function onWordBankRemove(e) {
+    if (answered) return;
+    var poolIdx = parseInt(e.currentTarget.getAttribute("data-pool-idx"), 10);
+    e.currentTarget.remove();
+
+    var poolPills = document.querySelectorAll("#word-bank-pool .word-pill");
+    for (var i = 0; i < poolPills.length; i++) {
+      if (parseInt(poolPills[i].getAttribute("data-pool-idx"), 10) === poolIdx) {
+        poolPills[i].classList.remove("word-used");
+        break;
+      }
+    }
+
+    var pos = wordBankPlaced.indexOf(poolIdx);
+    if (pos > -1) wordBankPlaced.splice(pos, 1);
+
+    if (wordBankPlaced.length === 0) {
+      var hint = document.getElementById("word-bank-hint");
+      if (hint) hint.style.display = "";
+    }
+  }
+
+  function onWordBankSubmit() {
+    if (answered) return;
+    answered = true;
+
+    var ex = exercises[index];
+    var stepIdx = wordBankCurrentStep;
+    var step = ex.steps[stepIdx];
+    var scaffold = step.scaffold || 0;
+    var expected = step.answer.slice(scaffold);
+
+    var correct = wordBankPlaced.length === expected.length;
+    if (correct) {
+      for (var i = 0; i < expected.length; i++) {
+        if (wordBankPool[wordBankPlaced[i]] !== expected[i]) {
+          correct = false;
+          break;
+        }
+      }
+    }
+
+    wordBankStepResults.push(correct ? 1 : 0);
+
+    var answerDiv = document.getElementById("word-bank-answer");
+    var poolDiv = document.getElementById("word-bank-pool");
+    var submitBtn = document.getElementById("word-bank-submit");
+    var hint = document.getElementById("word-bank-hint");
+    if (hint) hint.remove();
+
+    if (correct) {
+      var pills = answerDiv.querySelectorAll(".word-pill");
+      for (var g = 0; g < pills.length; g++) {
+        pills[g].classList.add("answered", "word-correct");
+      }
+      poolDiv.remove();
+      submitBtn.remove();
+      answerDiv.removeAttribute("id");
+
+      if (stepIdx < ex.steps.length - 1) {
+        setTimeout(function () {
+          answered = false;
+          appendWordBankStep(ex, stepIdx + 1);
+        }, 400);
+      } else {
+        finalizeWordBank(true);
+      }
+    } else {
+      for (var r = stepIdx + 1; r < ex.steps.length; r++) {
+        wordBankStepResults.push(-1);
+      }
+      answerDiv.innerHTML = "";
+      answerDiv.classList.add("answered");
+      for (var c = 0; c < step.answer.length; c++) {
+        var cp = document.createElement("span");
+        cp.className = "word-pill answered word-correct";
+        cp.textContent = step.answer[c];
+        answerDiv.appendChild(cp);
+      }
+      var cp2 = document.createElement("span");
+      cp2.className = "word-bank-period";
+      cp2.textContent = ".";
+      answerDiv.appendChild(cp2);
+      poolDiv.remove();
+      submitBtn.remove();
+      finalizeWordBank(false);
+    }
+  }
+
+  function finalizeWordBank(correct) {
+    var ex = exercises[index];
+    results.push(correct);
+    chosenAnswers.push(wordBankStepResults.slice());
 
     var dots = document.querySelectorAll(".progress-dot");
     dots[index].className = "progress-dot " + (correct ? "dot-correct" : "dot-wrong");
@@ -173,6 +375,9 @@
     }
     if (type === "classify") {
       return isClassifyCorrect(answer, ex);
+    }
+    if (type === "word-bank") {
+      return isWordBankCorrect(answer, ex);
     }
     return answer === ex.correct;
   }
@@ -199,6 +404,14 @@
     return true;
   }
 
+  function isWordBankCorrect(answer, exercise) {
+    if (!Array.isArray(answer)) return false;
+    for (var i = 0; i < exercise.steps.length; i++) {
+      if (answer[i] !== 1) return false;
+    }
+    return true;
+  }
+
   // --- Encode / decode answers for share URLs ---
 
   function encodeAnswer(a) {
@@ -210,7 +423,7 @@
 
   function decodeAnswer(str, ex) {
     var type = ex.type || (reviewSet && reviewSet.type) || "multiple-choice";
-    if (type === "classify") {
+    if (type === "classify" || type === "word-bank") {
       return str.split(":").map(Number);
     }
     if (type === "word-tap") {
@@ -232,6 +445,9 @@
     }
     if (type === "classify") {
       return renderReviewClassify(ex, chosen);
+    }
+    if (type === "word-bank") {
+      return renderReviewWordBank(ex, chosen);
     }
     return renderReviewMC(ex, chosen);
   }
@@ -306,6 +522,34 @@
         }
         html += '<button class="' + cls + '">' + esc(step.options[i]) + "</button>";
       }
+      html += "</div>";
+
+      if (unattempted) {
+        html += '<div class="classify-unattempted">nicht beantwortet</div>';
+      }
+    }
+
+    return { html: html, correct: correct, bind: function () {} };
+  }
+
+  function renderReviewWordBank(ex, chosen) {
+    var correct = isWordBankCorrect(chosen, ex);
+    var html = '<div class="sentence">' + esc(ex.sentence) + "</div>";
+
+    for (var s = 0; s < ex.steps.length; s++) {
+      var step = ex.steps[s];
+      var stepResult = Array.isArray(chosen) ? chosen[s] : -1;
+      var stepCorrect = stepResult === 1;
+      var unattempted = stepResult === -1;
+
+      html += '<div class="classify-question">' + esc(step.question) + "</div>";
+      html += '<div class="word-bank-answer answered">';
+      for (var w = 0; w < step.answer.length; w++) {
+        var cls = "word-pill answered";
+        if (stepCorrect) cls += " word-correct";
+        html += '<span class="' + cls + '">' + esc(step.answer[w]) + "</span>";
+      }
+      html += '<span class="word-bank-period">.</span>';
       html += "</div>";
 
       if (unattempted) {
@@ -439,6 +683,12 @@
       buttons[i].classList.add("answered");
       if (i === ex.correct) buttons[i].classList.add("correct");
       if (i === chosen && !correct) buttons[i].classList.add("wrong");
+    }
+
+    if (correct) {
+      for (var j = buttons.length - 1; j >= 0; j--) {
+        if (j !== ex.correct) buttons[j].remove();
+      }
     }
 
     showFeedback(correct, ex.explanation);

@@ -43,18 +43,17 @@ for entry in manifest:
     if actual != entry["count"]:
         err(f"Count mismatch: manifest={entry['count']}, actual={actual}")
 
-    # Question exists
-    if not data.get("question"):
-        err("Missing 'question' field")
-
     set_type = data.get("type", "multiple-choice")
+
+    # Question exists (not required for classify/word-bank — steps carry their own)
+    if set_type not in ("classify", "word-bank") and not data.get("question"):
+        err("Missing 'question' field")
 
     for i, ex in enumerate(data.get("exercises", [])):
         prefix = f"  Exercise {i+1}: "
         ex_type = ex.get("type", set_type)
 
         if ex_type == "word-tap":
-            # word-tap checks
             words = ex.get("words")
             if not words or not isinstance(words, list):
                 err(f"{prefix}Missing or invalid 'words' array")
@@ -66,7 +65,6 @@ for entry in manifest:
             for idx in correct:
                 if idx < 0 or idx >= len(words):
                     err(f"{prefix}correct index {idx} out of range (0-{len(words)-1})")
-            # classify (optional)
             classify = ex.get("classify")
             if classify:
                 if not classify.get("question"):
@@ -80,8 +78,41 @@ for entry in manifest:
                         err(f"{prefix}classify 'correct' is not an integer")
                     elif cidx < 0 or cidx >= len(copts):
                         err(f"{prefix}classify correct {cidx} out of range (0-{len(copts)-1})")
+        elif ex_type == "classify":
+            if not ex.get("sentence"):
+                err(f"{prefix}Missing 'sentence'")
+            steps = ex.get("steps")
+            if not steps or not isinstance(steps, list):
+                err(f"{prefix}Missing or invalid 'steps' array")
+                continue
+            for si, step in enumerate(steps):
+                sp = f"{prefix}step {si+1}: "
+                if not step.get("question"):
+                    err(f"{sp}missing 'question'")
+                sopts = step.get("options")
+                if not sopts or not isinstance(sopts, list):
+                    err(f"{sp}missing or invalid 'options'")
+                else:
+                    sc = step.get("correct")
+                    if not isinstance(sc, int):
+                        err(f"{sp}'correct' is not an integer")
+                    elif sc < 0 or sc >= len(sopts):
+                        err(f"{sp}correct {sc} out of range (0-{len(sopts)-1})")
+        elif ex_type == "word-bank":
+            if not ex.get("sentence"):
+                err(f"{prefix}Missing 'sentence'")
+            steps = ex.get("steps")
+            if not steps or not isinstance(steps, list):
+                err(f"{prefix}Missing or invalid 'steps' array")
+                continue
+            for si, step in enumerate(steps):
+                sp = f"{prefix}step {si+1}: "
+                if not step.get("question"):
+                    err(f"{sp}missing 'question'")
+                answer = step.get("answer")
+                if not answer or not isinstance(answer, list):
+                    err(f"{sp}missing or invalid 'answer' array")
         else:
-            # multiple-choice checks
             if not ex.get("sentence"):
                 err(f"{prefix}Missing 'sentence'")
             options = ex.get("options")
@@ -102,7 +133,7 @@ for entry in manifest:
 # Check for orphan files
 manifest_files = {e["file"] for e in manifest}
 for p in BASE.glob("*.json"):
-    if p.name != "index.json" and p.name not in manifest_files:
+    if p.name not in ("index.json", "challenges.json") and p.name not in manifest_files:
         err(f"Orphan file not in manifest: {p.name}")
 
 print(f"\n{'All valid!' if errors == 0 else f'{errors} error(s) found.'}")

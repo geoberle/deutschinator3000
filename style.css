@@ -136,6 +136,63 @@ header h1 {
   margin: 1rem 0 0.5rem;
 }
 
+/* Word-bank exercise */
+
+.word-bank-step + .word-bank-step {
+  margin-top: 0.75rem;
+}
+
+.word-bank-answer {
+  min-height: 3rem;
+  border: 2px dashed #e0e0e0;
+  border-radius: 8px;
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 0.75rem;
+  align-items: center;
+}
+
+.word-bank-answer.answered {
+  border-style: solid;
+}
+
+.word-bank-pool {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.word-scaffold {
+  background: #f5f5f5;
+  border-color: #e0e0e0;
+  color: #999;
+  cursor: default;
+}
+
+.word-used {
+  visibility: hidden;
+}
+
+.word-placed {
+  cursor: pointer;
+}
+
+.word-bank-hint {
+  color: #999;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.word-bank-period {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-left: -2px;
+}
+
 .classify-step + .classify-step {
   margin-top: 0.75rem;
 }

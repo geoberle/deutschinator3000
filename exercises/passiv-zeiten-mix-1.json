@@ -1,0 +1,187 @@
+{
+  "id": "passiv-zeiten-mix-1",
+  "name": "Der Zeiten-Mix: Vorgangspassiv 1",
+  "type": "word-bank",
+  "exercises": [
+    {
+      "sentence": "Das Fenster wird geöffnet.",
+      "steps": [
+        {
+          "question": "Bilde das Präteritum:",
+          "answer": ["Das", "Fenster", "wurde", "geöffnet"],
+          "distractors": ["war", "worden"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Perfekt:",
+          "answer": ["Das", "Fenster", "ist", "geöffnet", "worden"],
+          "distractors": ["wurde"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "Präteritum: «wurde» + Partizip II. Perfekt: «ist» + Partizip II + «worden»."
+    },
+    {
+      "sentence": "Der Hund wird gefüttert.",
+      "steps": [
+        {
+          "question": "Bilde das Plusquamperfekt:",
+          "answer": ["Der", "Hund", "war", "gefüttert", "worden"],
+          "distractors": ["ist"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Futur I:",
+          "answer": ["Der", "Hund", "wird", "gefüttert", "werden"],
+          "distractors": ["worden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "Plusquamperfekt: «war» + Partizip II + «worden». Futur I: «wird» + Partizip II + «werden» (nicht «worden»!)."
+    },
+    {
+      "sentence": "Die Suppe wird gekocht.",
+      "steps": [
+        {
+          "question": "Bilde das Präteritum:",
+          "answer": ["Die", "Suppe", "wurde", "gekocht"],
+          "distractors": ["war", "worden"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Futur I:",
+          "answer": ["Die", "Suppe", "wird", "gekocht", "werden"],
+          "distractors": ["worden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "Präteritum: «wurde» + Partizip II (einfach!). Futur I: «wird» + Partizip II + «werden»."
+    },
+    {
+      "sentence": "Der Brief wird geschrieben.",
+      "steps": [
+        {
+          "question": "Bilde das Perfekt:",
+          "answer": ["Der", "Brief", "ist", "geschrieben", "worden"],
+          "distractors": ["wurde"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Plusquamperfekt:",
+          "answer": ["Der", "Brief", "war", "geschrieben", "worden"],
+          "distractors": ["ist"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "Perfekt: «ist» + Partizip II + «worden». Plusquamperfekt: «war» statt «ist» — gleiche Struktur, nur die Vergangenheit der Vergangenheit."
+    },
+    {
+      "sentence": "Das Buch wird gelesen.",
+      "steps": [
+        {
+          "question": "Bilde das Präteritum:",
+          "answer": ["Das", "Buch", "wurde", "gelesen"],
+          "distractors": ["war", "worden"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Perfekt:",
+          "answer": ["Das", "Buch", "ist", "gelesen", "worden"],
+          "distractors": ["wurde"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "Präteritum: nur «wurde» + Partizip II. Perfekt braucht drei Teile: «ist» + Partizip II + «worden»."
+    },
+    {
+      "sentence": "Die Tafel wird geputzt.",
+      "steps": [
+        {
+          "question": "Bilde das Futur I:",
+          "answer": ["Die", "Tafel", "wird", "geputzt", "werden"],
+          "distractors": ["worden"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Plusquamperfekt:",
+          "answer": ["Die", "Tafel", "war", "geputzt", "worden"],
+          "distractors": ["ist", "werden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "Futur I: «wird» + Partizip II + «werden». Plusquamperfekt: «war» + Partizip II + «worden». Achte auf «werden» vs. «worden»!"
+    },
+    {
+      "sentence": "Der Kuchen wird gebacken.",
+      "steps": [
+        {
+          "question": "Bilde das Perfekt:",
+          "answer": ["Der", "Kuchen", "ist", "gebacken", "worden"],
+          "distractors": ["wurde", "war"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Futur I:",
+          "answer": ["Der", "Kuchen", "wird", "gebacken", "werden"],
+          "distractors": ["worden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "Perfekt: «ist» + Partizip II + «worden». Futur I: «wird» + Partizip II + «werden». Merke: «worden» für Vergangenheit, «werden» für Zukunft."
+    },
+    {
+      "sentence": "Das Auto wird gewaschen.",
+      "steps": [
+        {
+          "question": "Bilde das Präteritum:",
+          "answer": ["Das", "Auto", "wurde", "gewaschen"],
+          "distractors": ["war", "worden"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Plusquamperfekt:",
+          "answer": ["Das", "Auto", "war", "gewaschen", "worden"],
+          "distractors": ["wurde"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "Präteritum: «wurde» + Partizip II. Plusquamperfekt: «war» + Partizip II + «worden» — die Vorvergangenheit."
+    },
+    {
+      "sentence": "Die Tür wird geschlossen.",
+      "steps": [
+        {
+          "question": "Bilde das Perfekt:",
+          "answer": ["Die", "Tür", "ist", "geschlossen", "worden"],
+          "distractors": ["war"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Futur I:",
+          "answer": ["Die", "Tür", "wird", "geschlossen", "werden"],
+          "distractors": ["worden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "Perfekt: «ist» + Partizip II + «worden». Futur I: «wird» + Partizip II + «werden»."
+    },
+    {
+      "sentence": "Das Licht wird ausgeschaltet.",
+      "steps": [
+        {
+          "question": "Bilde das Präteritum:",
+          "answer": ["Das", "Licht", "wurde", "ausgeschaltet"],
+          "distractors": ["war", "worden"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Plusquamperfekt:",
+          "answer": ["Das", "Licht", "war", "ausgeschaltet", "worden"],
+          "distractors": ["wurde"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "Präteritum: «wurde» + Partizip II. Plusquamperfekt: «war» + Partizip II + «worden»."
+    }
+  ]
+}

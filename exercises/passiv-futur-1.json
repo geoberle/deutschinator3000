@@ -1,0 +1,187 @@
+{
+  "id": "passiv-futur-1",
+  "name": "Die Zukunfts-Mission: Futur I Passiv 1",
+  "type": "word-bank",
+  "exercises": [
+    {
+      "sentence": "Der Koch würzt die Suppe.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Futur I:",
+          "answer": ["Die", "Suppe", "wird", "gewürzt", "werden"],
+          "distractors": ["sein"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Zustandspassiv im Futur I:",
+          "answer": ["Die", "Suppe", "wird", "gewürzt", "sein"],
+          "distractors": ["werden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "VP Futur I: «wird» + Partizip II + «werden». ZP Futur I: «wird» + Partizip II + «sein». Der Unterschied steckt im letzten Wort!"
+    },
+    {
+      "sentence": "Der Lehrer korrigiert die Tests.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Futur I:",
+          "answer": ["Die", "Tests", "werden", "korrigiert", "werden"],
+          "distractors": ["sein"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Zustandspassiv im Futur I:",
+          "answer": ["Die", "Tests", "werden", "korrigiert", "sein"],
+          "distractors": ["werden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "Plural: «werden» + Partizip II + «werden» (VP) bzw. «sein» (ZP). Bei VP kommt «werden» zweimal vor!"
+    },
+    {
+      "sentence": "Die Mutter backt den Kuchen.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Futur I:",
+          "answer": ["Der", "Kuchen", "wird", "gebacken", "werden"],
+          "distractors": ["sein", "backt"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Zustandspassiv im Futur I:",
+          "answer": ["Der", "Kuchen", "wird", "gebacken", "sein"],
+          "distractors": ["werden", "backt"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«backen» → Partizip II: «gebacken». VP endet auf «werden», ZP endet auf «sein». «backt» gehört zum Aktiv!"
+    },
+    {
+      "sentence": "Die Kinder malen die Bilder.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Futur I:",
+          "answer": ["Die", "Bilder", "werden", "gemalt", "werden"],
+          "distractors": ["sein"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Zustandspassiv im Futur I:",
+          "answer": ["Die", "Bilder", "werden", "gemalt", "sein"],
+          "distractors": ["werden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "Plural: «werden» + Partizip II + «werden» (VP). Achtung: Beim ZP steht am Ende «sein», nicht «werden»."
+    },
+    {
+      "sentence": "Der Vater wäscht das Auto.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Futur I:",
+          "answer": ["Das", "Auto", "wird", "gewaschen", "werden"],
+          "distractors": ["sein", "wäscht"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Zustandspassiv im Futur I:",
+          "answer": ["Das", "Auto", "wird", "gewaschen", "sein"],
+          "distractors": ["werden", "wäscht"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«waschen» → Partizip II: «gewaschen». «wäscht» ist Aktiv Präsens — im Passiv Futur I braucht man das Partizip II."
+    },
+    {
+      "sentence": "Die Schüler lesen die Bücher.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Futur I:",
+          "answer": ["Die", "Bücher", "werden", "gelesen", "werden"],
+          "distractors": ["sein"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Zustandspassiv im Futur I:",
+          "answer": ["Die", "Bücher", "werden", "gelesen", "sein"],
+          "distractors": ["werden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "Plural: «werden» + «gelesen» + «werden» (VP) bzw. «sein» (ZP). Das erste «werden» ist das Futur-Hilfsverb."
+    },
+    {
+      "sentence": "Das Mädchen gießt die Pflanze.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Futur I:",
+          "answer": ["Die", "Pflanze", "wird", "gegossen", "werden"],
+          "distractors": ["sein"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Zustandspassiv im Futur I:",
+          "answer": ["Die", "Pflanze", "wird", "gegossen", "sein"],
+          "distractors": ["werden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "Singular: «wird» + Partizip II + «werden» (VP) bzw. «sein» (ZP)."
+    },
+    {
+      "sentence": "Die Handwerker streichen die Wände.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Futur I:",
+          "answer": ["Die", "Wände", "werden", "gestrichen", "werden"],
+          "distractors": ["sein"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Zustandspassiv im Futur I:",
+          "answer": ["Die", "Wände", "werden", "gestrichen", "sein"],
+          "distractors": ["werden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "Plural: «werden» + «gestrichen» + «werden» (VP). Beim ZP tauscht man das letzte «werden» gegen «sein»."
+    },
+    {
+      "sentence": "Die Lehrerin schließt die Tür.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Futur I:",
+          "answer": ["Die", "Tür", "wird", "geschlossen", "werden"],
+          "distractors": ["sein", "schließt"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Zustandspassiv im Futur I:",
+          "answer": ["Die", "Tür", "wird", "geschlossen", "sein"],
+          "distractors": ["werden", "schließt"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«schließen» → Partizip II: «geschlossen». «schließt» ist Aktiv — im Passiv fällt es weg."
+    },
+    {
+      "sentence": "Die Eltern packen die Koffer.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Futur I:",
+          "answer": ["Die", "Koffer", "werden", "gepackt", "werden"],
+          "distractors": ["sein"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Zustandspassiv im Futur I:",
+          "answer": ["Die", "Koffer", "werden", "gepackt", "sein"],
+          "distractors": ["werden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "Plural: VP endet auf «werden», ZP endet auf «sein». Das erste «werden» bleibt gleich — es ist das Futur-Hilfsverb."
+    }
+  ]
+}

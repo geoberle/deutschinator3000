@@ -1,0 +1,103 @@
+{
+  "id": "passiv-arten-1",
+  "name": "Der Detektiv-Blick: Passiv-Arten 1",
+  "type": "classify",
+  "exercises": [
+    {
+      "sentence": "Das Fenster wird geöffnet.",
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 0 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum"], "correct": 0 }
+      ],
+      "explanation": "«wird geöffnet» → «werden» + Partizip II = Vorgangspassiv Präsens. Jemand öffnet das Fenster gerade."
+    },
+    {
+      "sentence": "Die Tür ist geschlossen.",
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 1 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum"], "correct": 0 }
+      ],
+      "explanation": "«ist geschlossen» → «sein» + Partizip II = Zustandspassiv Präsens. Die Tür ist bereits zu — der Zustand ist das Ergebnis."
+    },
+    {
+      "sentence": "Der Brief wurde geschrieben.",
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 0 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum"], "correct": 1 }
+      ],
+      "explanation": "«wurde geschrieben» → «werden» im Präteritum + Partizip II = Vorgangspassiv Präteritum."
+    },
+    {
+      "sentence": "Das Bild war gemalt.",
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 1 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum"], "correct": 1 }
+      ],
+      "explanation": "«war gemalt» → «sein» im Präteritum + Partizip II = Zustandspassiv Präteritum. Das Bild war schon fertig."
+    },
+    {
+      "sentence": "Die Blumen werden gegossen.",
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 0 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum"], "correct": 0 }
+      ],
+      "explanation": "«werden gegossen» → «werden» + Partizip II = Vorgangspassiv Präsens. Jemand gießt die Blumen gerade."
+    },
+    {
+      "sentence": "Der Tisch ist gedeckt.",
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 1 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum"], "correct": 0 }
+      ],
+      "explanation": "«ist gedeckt» → «sein» + Partizip II = Zustandspassiv Präsens. Der Tisch ist fertig gedeckt — bereit zum Essen."
+    },
+    {
+      "sentence": "Die Hausaufgaben wurden kontrolliert.",
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 0 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum"], "correct": 1 }
+      ],
+      "explanation": "«wurden kontrolliert» → «werden» im Präteritum + Partizip II = Vorgangspassiv Präteritum."
+    },
+    {
+      "sentence": "Das Auto war gewaschen.",
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 1 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum"], "correct": 1 }
+      ],
+      "explanation": "«war gewaschen» → «sein» im Präteritum + Partizip II = Zustandspassiv Präteritum. Das Auto war schon sauber."
+    },
+    {
+      "sentence": "Der Hund wird gefüttert.",
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 0 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum"], "correct": 0 }
+      ],
+      "explanation": "«wird gefüttert» → «werden» + Partizip II = Vorgangspassiv Präsens. Jemand füttert den Hund gerade."
+    },
+    {
+      "sentence": "Die Tafel war geputzt.",
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 1 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum"], "correct": 1 }
+      ],
+      "explanation": "«war geputzt» → «sein» im Präteritum + Partizip II = Zustandspassiv Präteritum. Die Tafel war schon sauber."
+    },
+    {
+      "sentence": "Das Buch wurde gelesen.",
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 0 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum"], "correct": 1 }
+      ],
+      "explanation": "«wurde gelesen» → «werden» im Präteritum + Partizip II = Vorgangspassiv Präteritum."
+    },
+    {
+      "sentence": "Die Fenster sind geputzt.",
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 1 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum"], "correct": 0 }
+      ],
+      "explanation": "«sind geputzt» → «sein» + Partizip II = Zustandspassiv Präsens. Die Fenster sind bereits sauber."
+    }
+  ]
+}

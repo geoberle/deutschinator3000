@@ -1,0 +1,167 @@
+{
+  "id": "passiv-umformen-1",
+  "name": "Die Verwandlung: Passiv bilden 1",
+  "type": "word-bank",
+  "exercises": [
+    {
+      "sentence": "Der Lehrer korrigiert die Tests.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv:",
+          "answer": ["Die", "Tests", "werden", "korrigiert"],
+          "distractors": ["sind"]
+        },
+        {
+          "question": "Bilde das Zustandspassiv:",
+          "answer": ["Die", "Tests", "sind", "korrigiert"],
+          "distractors": ["werden"]
+        }
+      ],
+      "explanation": "Vorgangspassiv: «werden» + Partizip II → «werden korrigiert». Zustandspassiv: «sein» + Partizip II → «sind korrigiert»."
+    },
+    {
+      "sentence": "Die Kinder malten ein Bild.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv:",
+          "answer": ["Ein", "Bild", "wurde", "gemalt"],
+          "distractors": ["war"]
+        },
+        {
+          "question": "Bilde das Zustandspassiv:",
+          "answer": ["Ein", "Bild", "war", "gemalt"],
+          "distractors": ["wurde"]
+        }
+      ],
+      "explanation": "Präteritum: Vorgangspassiv mit «wurde» + Partizip II. Zustandspassiv mit «war» + Partizip II."
+    },
+    {
+      "sentence": "Die Mutter backt den Kuchen.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv:",
+          "answer": ["Der", "Kuchen", "wird", "gebacken"],
+          "distractors": ["ist", "backt"]
+        },
+        {
+          "question": "Bilde das Zustandspassiv:",
+          "answer": ["Der", "Kuchen", "ist", "gebacken"],
+          "distractors": ["wird", "backt"]
+        }
+      ],
+      "explanation": "«backen» → Partizip II: «gebacken». Nicht «backt» — das ist Aktiv Präsens!"
+    },
+    {
+      "sentence": "Der Vater wusch das Auto.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv:",
+          "answer": ["Das", "Auto", "wurde", "gewaschen"],
+          "distractors": ["war", "wusch"]
+        },
+        {
+          "question": "Bilde das Zustandspassiv:",
+          "answer": ["Das", "Auto", "war", "gewaschen"],
+          "distractors": ["wurde", "wusch"]
+        }
+      ],
+      "explanation": "«waschen» → Partizip II: «gewaschen». «wusch» ist Aktiv Präteritum — im Passiv braucht man das Partizip II."
+    },
+    {
+      "sentence": "Das Mädchen gießt die Blumen.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv:",
+          "answer": ["Die", "Blumen", "werden", "gegossen"],
+          "distractors": ["sind"]
+        },
+        {
+          "question": "Bilde das Zustandspassiv:",
+          "answer": ["Die", "Blumen", "sind", "gegossen"],
+          "distractors": ["werden"]
+        }
+      ],
+      "explanation": "«gießen» → Partizip II: «gegossen». Vorgangspassiv: «werden gegossen». Zustandspassiv: «sind gegossen»."
+    },
+    {
+      "sentence": "Der Opa reparierte das Fahrrad.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv:",
+          "answer": ["Das", "Fahrrad", "wurde", "repariert"],
+          "distractors": ["war"]
+        },
+        {
+          "question": "Bilde das Zustandspassiv:",
+          "answer": ["Das", "Fahrrad", "war", "repariert"],
+          "distractors": ["wurde"]
+        }
+      ],
+      "explanation": "Präteritum: «wurde repariert» (Vorgang) vs. «war repariert» (fertiger Zustand)."
+    },
+    {
+      "sentence": "Die Lehrerin schließt die Tür.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv:",
+          "answer": ["Die", "Tür", "wird", "geschlossen"],
+          "distractors": ["ist", "schließt"]
+        },
+        {
+          "question": "Bilde das Zustandspassiv:",
+          "answer": ["Die", "Tür", "ist", "geschlossen"],
+          "distractors": ["wird", "schließt"]
+        }
+      ],
+      "explanation": "«schließen» → Partizip II: «geschlossen». «schließt» gehört zum Aktiv — im Passiv fällt es weg."
+    },
+    {
+      "sentence": "Die Kinder putzten die Tafel.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv:",
+          "answer": ["Die", "Tafel", "wurde", "geputzt"],
+          "distractors": ["war"]
+        },
+        {
+          "question": "Bilde das Zustandspassiv:",
+          "answer": ["Die", "Tafel", "war", "geputzt"],
+          "distractors": ["wurde"]
+        }
+      ],
+      "explanation": "Präteritum: «wurde geputzt» (der Putz-Vorgang) vs. «war geputzt» (die Tafel war danach sauber)."
+    },
+    {
+      "sentence": "Der Koch würzt die Suppe.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv:",
+          "answer": ["Die", "Suppe", "wird", "gewürzt"],
+          "distractors": ["ist"]
+        },
+        {
+          "question": "Bilde das Zustandspassiv:",
+          "answer": ["Die", "Suppe", "ist", "gewürzt"],
+          "distractors": ["wird"]
+        }
+      ],
+      "explanation": "«würzen» → Partizip II: «gewürzt». Vorgangspassiv: «wird gewürzt». Zustandspassiv: «ist gewürzt»."
+    },
+    {
+      "sentence": "Die Oma strickte den Schal.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv:",
+          "answer": ["Der", "Schal", "wurde", "gestrickt"],
+          "distractors": ["war"]
+        },
+        {
+          "question": "Bilde das Zustandspassiv:",
+          "answer": ["Der", "Schal", "war", "gestrickt"],
+          "distractors": ["wurde"]
+        }
+      ],
+      "explanation": "Präteritum: «wurde gestrickt» (Vorgang in der Vergangenheit) vs. «war gestrickt» (der Schal war fertig)."
+    }
+  ]
+}

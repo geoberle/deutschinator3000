@@ -122,6 +122,45 @@ User classifies a sentence across multiple dimensions in sequence (e.g., voice +
 - Supports any number of steps (2 is typical).
 - Answer encoding: colon-separated step indices (e.g., `"1:0"`). Unattempted steps = `-1` (e.g., `"2:-1"`).
 
+### Type: word-bank
+
+User builds a sentence by tapping words from a shuffled pool into an answer area. Supports multi-step (e.g., build Vorgangspassiv then Zustandspassiv), scaffolding (pre-placed leading words), and distractors.
+
+```json
+{
+  "id": "aktiv-passiv-umwandeln-1",
+  "name": "Passiv bilden 1",
+  "type": "word-bank",
+  "exercises": [
+    {
+      "sentence": "Die Mutter backt den Kuchen.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv:",
+          "answer": ["Der", "Kuchen", "wird", "gebacken"],
+          "distractors": ["ist", "backt"],
+          "scaffold": 2
+        },
+        {
+          "question": "Bilde das Zustandspassiv:",
+          "answer": ["Der", "Kuchen", "ist", "gebacken"],
+          "distractors": ["wird", "backt"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "Vorgangspassiv: «werden» + Partizip II. Zustandspassiv: «sein» + Partizip II."
+    }
+  ]
+}
+```
+
+- `steps`: array of build steps, each with `question`, `answer`, `distractors`, and optional `scaffold`.
+- `answer`: the correct sentence as a word array in order. **Do NOT include trailing punctuation (period) on the last word** — it reveals which word goes last. A period is auto-appended by the UI.
+- `distractors`: extra words mixed into the pool. Keep to 1-2 for ADHD-friendliness.
+- `scaffold` (optional): number of leading words from `answer` pre-placed in the answer area. These appear as muted/locked pills. Reduces working memory load.
+- Keep sentences short (4-5 words in answer). Fewer words = less cognitive load.
+- Scoring is binary per exercise. Answer encoding: per-step correctness (`1`/`0`/`-1`).
+
 ### Mixed-type set example
 
 ```json

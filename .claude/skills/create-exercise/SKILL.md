@@ -12,32 +12,53 @@ Generate a new exercise set JSON file for Deutschinator 3000 and register it in 
 
 Before generating anything, ask the user these questions **one at a time**. Use AskUserQuestion for each. Provide your recommended answer.
 
-1. **Type**: Multiple choice or word-tap? (multiple-choice = pick from options, word-tap = tap words in a sentence)
+1. **Type(s)**: Which exercise types? Can be one or mixed. (multiple-choice = pick from options, word-tap = tap words in a sentence, word-tap+classify = tap word then classify it)
 2. **Topic**: What grammar topic? (e.g., Zeitformen, Aktiv/Passiv, Kasus, Konjunktiv, Satzglieder, Adverbien)
-3. **Question**: What is the question asked per exercise? (e.g., "In welcher Zeitform steht dieser Satz?" or "Welches Wort ist das Adverb?")
+3. **Question**: Default question for the set. Individual exercises can override this with their own `question` field.
 4. **Options** (multiple-choice only): What are the fixed answer options?
 5. **Count**: How many exercises? (recommend 12-15)
 6. **Difficulty**: School level / age range? (e.g., 4. Klasse, 6. Klasse, Gymnasium)
 
 ## Exercise File Formats
 
-Each exercise set is a self-contained JSON file in `exercises/`. Two types supported:
+Each exercise set is a self-contained JSON file in `exercises/`.
+
+### Type resolution
+
+Type is resolved per exercise: `exercise.type || set.type || "multiple-choice"`. This means:
+- Set-level `type` applies to all exercises that don't specify their own
+- Individual exercises can override with their own `type` field
+- **Mixed types in one set are supported** — e.g., some MC, some word-tap
+
+### Question resolution
+
+Question is resolved per exercise: `exercise.question || set.question`. This means:
+- Set-level `question` is the default shown above each exercise
+- Individual exercises can override with their own `question` field
+- Useful in mixed sets or when exercises need different prompts
 
 ### Type: multiple-choice (default)
 
-User picks one option from a list. No `type` field needed (backward compat).
+User picks one option from a list.
 
 ```json
 {
   "id": "kebab-case-id",
   "name": "Human-readable name",
-  "question": "The question shown above each sentence",
+  "question": "Default question for all exercises",
   "exercises": [
     {
       "sentence": "A German sentence to analyze.",
       "options": ["Option A", "Option B", "Option C"],
       "correct": 0,
       "explanation": "Short explanation. Use «guillemets» for inline quotes."
+    },
+    {
+      "question": "Override question for this specific exercise",
+      "sentence": "Another sentence.",
+      "options": ["Option A", "Option B"],
+      "correct": 1,
+      "explanation": "..."
     }
   ]
 }
@@ -73,13 +94,40 @@ User taps words in a sentence to select them. Used for Satzglieder, Wortarten, e
 - `classify` (optional): two-step exercise. After correct word selection, MC classification appears. Has `question`, `options`, and `correct` (index). If absent, exercise is single-step word-tap only.
 - No `sentence` or `options` fields at exercise level (classify has its own options).
 
+### Mixed-type set example
+
+```json
+{
+  "id": "grammatik-mix",
+  "name": "Grammatik-Mix",
+  "question": "Beantworte die Frage",
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "In welcher Zeitform steht der Satz?",
+      "sentence": "Ich habe das Buch gelesen.",
+      "options": ["Präsens", "Präteritum", "Perfekt"],
+      "correct": 2,
+      "explanation": "«habe» + «gelesen» (Partizip II) → Perfekt."
+    },
+    {
+      "type": "word-tap",
+      "question": "Welches Wort ist das Verb?",
+      "words": ["Die", "Katze", "schläft.", ],
+      "correct": [2],
+      "explanation": "«schläft» ist das Verb (Was tut die Katze?)."
+    }
+  ]
+}
+```
+
 ### Critical Rules for Exercise Content
 
 - **Sentence quality**: Use natural, age-appropriate German sentences. Vary subjects, tenses, complexity.
 - **Balance**: Distribute correct answers. Don't cluster same position repeatedly.
 - **Explanations**: Always explain the WHY. Point out the key grammatical signal. Keep it 1-2 sentences.
 - **Quoting**: Use «guillemets» (« and ») when quoting words in explanations. NEVER use ASCII double quotes inside JSON string values — they break the JSON.
-- **Validate JSON**: After writing the file, validate it with `python3 -c "import json; json.load(open('exercises/FILENAME.json'))"`.
+- **Validate**: After writing the file and updating the manifest, run `python3 validate.py` to check all exercises (JSON validity, type resolution, correct indices, orphan files).
 - **Option order** (multiple-choice): Keep options in a logical/consistent order across all exercises.
 - **Word tokenization** (word-tap): Split on spaces. Keep punctuation attached to the preceding word. Each token becomes one tappable pill.
 
@@ -103,14 +151,14 @@ The manifest at `exercises/index.json` is an array of set descriptors:
 
 1. Ask all gathering questions (one at a time)
 2. Generate the exercise JSON file at `exercises/{id}.json`
-3. Validate the JSON with Python
-4. Read `exercises/index.json`, add the new entry, write it back
+3. Read `exercises/index.json`, add the new entry, write it back
+4. Run `python3 validate.py` — must pass with 0 errors
 5. Report: filename, exercise count, topic summary
 
 ## Validation Checklist
 
 Before finishing, verify:
-- [ ] JSON is valid (python3 validation passes)
+- [ ] `python3 validate.py` passes with 0 errors
 - [ ] No ASCII double quotes inside string values (use «guillemets» for inline quotes)
 - [ ] `correct` index/indices match the right answer for every exercise
 - [ ] Answer distribution is roughly balanced (position of correct words varies)

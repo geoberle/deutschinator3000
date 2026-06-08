@@ -13,11 +13,175 @@
   var answered = false;
   var selectedWords = [];
 
-  // Review mode state (shared result navigation)
   var reviewSet = null;
   var reviewExercises = [];
   var reviewAnswers = [];
   var reviewIndex = 0;
+
+  // --- Exercise type dispatch ---
+
+  function exType(ex) {
+    return ex.type || (currentSet && currentSet.type) || "multiple-choice";
+  }
+
+  function reviewExType(ex) {
+    return ex.type || (reviewSet && reviewSet.type) || "multiple-choice";
+  }
+
+  // --- Render exercise (quiz mode) ---
+
+  function renderExercise(ex) {
+    var type = exType(ex);
+    if (type === "word-tap") {
+      return renderWordTap(ex);
+    }
+    return renderMC(ex);
+  }
+
+  function renderMC(ex) {
+    var html = '<div class="sentence">' + esc(ex.sentence) + "</div>" +
+      '<div class="options" id="options"></div>' +
+      '<div id="feedback"></div>';
+    return { html: html, bind: function () {
+      var optionsEl = document.getElementById("options");
+      for (var i = 0; i < ex.options.length; i++) {
+        var btn = document.createElement("button");
+        btn.className = "option-btn";
+        btn.textContent = ex.options[i];
+        btn.setAttribute("data-index", i);
+        btn.addEventListener("click", onOptionClick);
+        optionsEl.appendChild(btn);
+      }
+    }};
+  }
+
+  function renderWordTap(ex) {
+    var html = "";
+    if (ex.correct.length > 1) {
+      html += '<div class="word-hint">(' + ex.correct.length + " Wörter)</div>";
+    }
+    html += '<div class="words" id="words">';
+    for (var w = 0; w < ex.words.length; w++) {
+      html += '<span class="word-pill" data-idx="' + w + '">' + esc(ex.words[w]) + "</span>";
+    }
+    html += "</div>" +
+      '<button class="submit-btn" id="submit-btn">Prüfen</button>' +
+      '<div id="feedback"></div>';
+    return { html: html, bind: function () {
+      selectedWords = [];
+      var pills = document.querySelectorAll(".word-pill");
+      for (var p = 0; p < pills.length; p++) {
+        pills[p].addEventListener("click", onWordTap);
+      }
+      document.getElementById("submit-btn").addEventListener("click", onWordTapSubmit);
+    }};
+  }
+
+  // --- Check correctness ---
+
+  function isCorrect(ex, answer) {
+    var type = ex.type || (currentSet && currentSet.type) || (reviewSet && reviewSet.type) || "multiple-choice";
+    if (type === "word-tap") {
+      return isWordTapCorrect(answer, ex);
+    }
+    return answer === ex.correct;
+  }
+
+  function isWordTapCorrect(answer, exercise) {
+    var words, classifyChoice;
+    if (answer && typeof answer === "object" && !Array.isArray(answer)) {
+      words = answer.words;
+      classifyChoice = answer.classify;
+    } else {
+      words = answer;
+      classifyChoice = -1;
+    }
+    if (!arraysEqual(words, exercise.correct)) return false;
+    if (exercise.classify) return classifyChoice === exercise.classify.correct;
+    return true;
+  }
+
+  // --- Encode / decode answers for share URLs ---
+
+  function encodeAnswer(a) {
+    if (a && typeof a === "object" && !Array.isArray(a)) {
+      return a.words.join(":") + "+" + a.classify;
+    }
+    return Array.isArray(a) ? a.join(":") : String(a);
+  }
+
+  function decodeAnswer(str, ex) {
+    var type = ex.type || (reviewSet && reviewSet.type) || "multiple-choice";
+    if (type === "word-tap") {
+      if (str.indexOf("+") > -1) {
+        var pts = str.split("+");
+        return {words: pts[0].split(":").map(Number), classify: Number(pts[1])};
+      }
+      return str.split(":").map(Number);
+    }
+    return Number(str);
+  }
+
+  // --- Render review (shared result navigation) ---
+
+  function renderReviewExercise(ex, chosen) {
+    var type = reviewExType(ex);
+    if (type === "word-tap") {
+      return renderReviewWordTap(ex, chosen);
+    }
+    return renderReviewMC(ex, chosen);
+  }
+
+  function renderReviewMC(ex, chosen) {
+    var correct = chosen === ex.correct;
+    var html = '<div class="sentence">' + esc(ex.sentence) + "</div>" +
+      '<div class="options" id="options"></div>';
+    return { html: html, correct: correct, bind: function () {
+      var optionsEl = document.getElementById("options");
+      for (var i = 0; i < ex.options.length; i++) {
+        var btn = document.createElement("button");
+        btn.className = "option-btn answered";
+        btn.textContent = ex.options[i];
+        if (i === ex.correct) btn.classList.add("correct");
+        if (i === chosen && !correct) btn.classList.add("wrong");
+        optionsEl.appendChild(btn);
+      }
+    }};
+  }
+
+  function renderReviewWordTap(ex, chosen) {
+    var chosenWords = (chosen && typeof chosen === "object" && !Array.isArray(chosen)) ? chosen.words : chosen;
+    var chosenClassify = (chosen && typeof chosen === "object" && !Array.isArray(chosen)) ? chosen.classify : -1;
+    var correct = isWordTapCorrect(chosen, ex);
+
+    var html = '<div class="words">';
+    for (var w = 0; w < ex.words.length; w++) {
+      var pillCls = "word-pill answered";
+      var isTarget = ex.correct.indexOf(w) > -1;
+      var wasSelected = chosenWords.indexOf(w) > -1;
+      if (wasSelected && isTarget) pillCls += " word-correct";
+      else if (wasSelected && !isTarget) pillCls += " word-wrong";
+      else if (!wasSelected && isTarget) pillCls += " word-missed";
+      html += '<span class="' + pillCls + '">' + esc(ex.words[w]) + "</span>";
+    }
+    html += "</div>";
+
+    if (ex.classify) {
+      html += '<div class="classify-question">' + esc(ex.classify.question) + "</div>" +
+        '<div class="options">';
+      for (var c = 0; c < ex.classify.options.length; c++) {
+        var optCls = "option-btn answered";
+        if (c === ex.classify.correct) optCls += " correct";
+        if (c === chosenClassify && chosenClassify !== ex.classify.correct) optCls += " wrong";
+        html += '<button class="' + optCls + '">' + esc(ex.classify.options[c]) + "</button>";
+      }
+      html += "</div>";
+    }
+
+    return { html: html, correct: correct, bind: function () {} };
+  }
+
+  // --- Routing & home ---
 
   function init() {
     if (location.hash.startsWith("#share/")) {
@@ -79,6 +243,8 @@
     location.hash = "#set/" + encodeURIComponent(sets[idx].id);
   }
 
+  // --- Quiz flow ---
+
   function startSet(idx) {
     var set = sets[idx];
     fetch("exercises/" + set.file)
@@ -108,66 +274,16 @@
     answered = false;
   }
 
-  function renderProgressDots(total, resultsArr, currentIdx) {
-    var html = '<div class="progress-dots">';
-    for (var p = 0; p < total; p++) {
-      var cls = "progress-dot";
-      if (p < resultsArr.length) {
-        cls += resultsArr[p] ? " dot-correct" : " dot-wrong";
-      } else if (p === currentIdx) {
-        cls += " dot-current";
-      }
-      html += '<div class="' + cls + '"></div>';
-    }
-    html += "</div>";
-    return html;
-  }
-
   function showQuestion() {
     var ex = exercises[index];
     var total = exercises.length;
-    var isWordTap = currentSet.type === "word-tap";
+    var question = ex.question || currentSet.question;
 
-    var html = renderProgressDots(total, results, index) +
-      '<div class="question-label">' + esc(currentSet.question) + "</div>";
-
-    if (isWordTap) {
-      if (ex.correct.length > 1) {
-        html += '<div class="word-hint">(' + ex.correct.length + " Wörter)</div>";
-      }
-      html += '<div class="words" id="words">';
-      for (var w = 0; w < ex.words.length; w++) {
-        html += '<span class="word-pill" data-idx="' + w + '">' + esc(ex.words[w]) + "</span>";
-      }
-      html += "</div>" +
-        '<button class="submit-btn" id="submit-btn">Prüfen</button>' +
-        '<div id="feedback"></div>';
-    } else {
-      html += '<div class="sentence">' + esc(ex.sentence) + "</div>" +
-        '<div class="options" id="options"></div>' +
-        '<div id="feedback"></div>';
-    }
-
-    app.innerHTML = html;
-    selectedWords = [];
-
-    if (isWordTap) {
-      var pills = document.querySelectorAll(".word-pill");
-      for (var p = 0; p < pills.length; p++) {
-        pills[p].addEventListener("click", onWordTap);
-      }
-      document.getElementById("submit-btn").addEventListener("click", onWordTapSubmit);
-    } else {
-      var optionsEl = document.getElementById("options");
-      for (var i = 0; i < ex.options.length; i++) {
-        var btn = document.createElement("button");
-        btn.className = "option-btn";
-        btn.textContent = ex.options[i];
-        btn.setAttribute("data-index", i);
-        btn.addEventListener("click", onOptionClick);
-        optionsEl.appendChild(btn);
-      }
-    }
+    var rendered = renderExercise(ex);
+    app.innerHTML = renderProgressDots(total, results, index) +
+      '<div class="question-label">' + esc(question) + "</div>" +
+      rendered.html;
+    rendered.bind();
   }
 
   function onOptionClick(e) {
@@ -190,18 +306,7 @@
       if (i === chosen && !correct) buttons[i].classList.add("wrong");
     }
 
-    var isLast = index >= exercises.length - 1;
-    var feedback = document.getElementById("feedback");
-    feedback.innerHTML =
-      '<div class="explanation ' + (correct ? "explanation-correct" : "explanation-wrong") + '">' +
-        "<strong>" + (correct ? randomPraise() : "Leider falsch.") + "</strong>" +
-        esc(ex.explanation) +
-      "</div>" +
-      '<button class="next-btn" id="next-btn">' +
-        (isLast ? "Ergebnis anzeigen" : "Weiter") +
-      "</button>";
-
-    document.getElementById("next-btn").addEventListener("click", nextQuestion);
+    showFeedback(correct, ex.explanation);
   }
 
   function onWordTap(e) {
@@ -308,6 +413,21 @@
     document.getElementById("next-btn").addEventListener("click", nextQuestion);
   }
 
+  function showFeedback(correct, explanation) {
+    var isLast = index >= exercises.length - 1;
+    var feedback = document.getElementById("feedback");
+    feedback.innerHTML =
+      '<div class="explanation ' + (correct ? "explanation-correct" : "explanation-wrong") + '">' +
+        "<strong>" + (correct ? randomPraise() : "Leider falsch.") + "</strong>" +
+        esc(explanation) +
+      "</div>" +
+      '<button class="next-btn" id="next-btn">' +
+        (isLast ? "Ergebnis anzeigen" : "Weiter") +
+      "</button>";
+
+    document.getElementById("next-btn").addEventListener("click", nextQuestion);
+  }
+
   function nextQuestion() {
     index++;
     answered = false;
@@ -316,6 +436,23 @@
     } else {
       showQuestion();
     }
+  }
+
+  // --- Summary & sharing ---
+
+  function renderProgressDots(total, resultsArr, currentIdx) {
+    var html = '<div class="progress-dots">';
+    for (var p = 0; p < total; p++) {
+      var cls = "progress-dot";
+      if (p < resultsArr.length) {
+        cls += resultsArr[p] ? " dot-correct" : " dot-wrong";
+      } else if (p === currentIdx) {
+        cls += " dot-current";
+      }
+      html += '<div class="' + cls + '"></div>';
+    }
+    html += "</div>";
+    return html;
   }
 
   function showSummary() {
@@ -411,34 +548,22 @@
             var decoded = atob(encoded);
             var halves = decoded.split("|");
             var order = halves[0].split(",").map(Number);
-            var isWordTap = data.type === "word-tap";
-            var answers;
-            if (isWordTap) {
-              answers = halves[1].split(",").map(function (s) {
-                if (s.indexOf("+") > -1) {
-                  var pts = s.split("+");
-                  return {words: pts[0].split(":").map(Number), classify: Number(pts[1])};
-                }
-                return s.split(":").map(Number);
-              });
-            } else {
-              answers = halves[1].split(",").map(Number);
-            }
+            var answerStrs = halves[1].split(",");
 
             reviewSet = data;
             reviewExercises = [];
-            reviewAnswers = answers;
             for (var j = 0; j < order.length; j++) {
               reviewExercises.push(data.exercises[order[j]]);
             }
 
+            reviewAnswers = [];
+            for (var a = 0; a < answerStrs.length; a++) {
+              reviewAnswers.push(decodeAnswer(answerStrs[a], reviewExercises[a]));
+            }
+
             var reviewResults = [];
             for (var k = 0; k < reviewExercises.length; k++) {
-              if (isWordTap) {
-                reviewResults.push(isWordTapCorrect(answers[k], reviewExercises[k]));
-              } else {
-                reviewResults.push(answers[k] === reviewExercises[k].correct);
-              }
+              reviewResults.push(isCorrect(reviewExercises[k], reviewAnswers[k]));
             }
 
             var correctCount = 0;
@@ -485,19 +610,11 @@
     setHeaderBack(true);
     var ex = reviewExercises[reviewIndex];
     var chosen = reviewAnswers[reviewIndex];
-    var isWordTap = reviewSet.type === "word-tap";
-    var correct = isWordTap
-      ? isWordTapCorrect(chosen, ex)
-      : chosen === ex.correct;
     var total = reviewExercises.length;
 
     var reviewResults = [];
     for (var k = 0; k < total; k++) {
-      if (isWordTap) {
-        reviewResults.push(isWordTapCorrect(reviewAnswers[k], reviewExercises[k]));
-      } else {
-        reviewResults.push(reviewAnswers[k] === reviewExercises[k].correct);
-      }
+      reviewResults.push(isCorrect(reviewExercises[k], reviewAnswers[k]));
     }
 
     var dotsHtml = '<div class="progress-dots">';
@@ -509,61 +626,19 @@
     }
     dotsHtml += "</div>";
 
-    var contentHtml = dotsHtml +
-      '<div class="question-label">' + esc(reviewSet.question) + "</div>";
+    var question = ex.question || reviewSet.question;
+    var rendered = renderReviewExercise(ex, chosen);
 
-    if (isWordTap) {
-      var chosenWords = (chosen && !Array.isArray(chosen)) ? chosen.words : chosen;
-      var chosenClassify = (chosen && !Array.isArray(chosen)) ? chosen.classify : -1;
-
-      contentHtml += '<div class="words">';
-      for (var w = 0; w < ex.words.length; w++) {
-        var pillCls = "word-pill answered";
-        var isTarget = ex.correct.indexOf(w) > -1;
-        var wasSelected = chosenWords.indexOf(w) > -1;
-        if (wasSelected && isTarget) pillCls += " word-correct";
-        else if (wasSelected && !isTarget) pillCls += " word-wrong";
-        else if (!wasSelected && isTarget) pillCls += " word-missed";
-        contentHtml += '<span class="' + pillCls + '">' + esc(ex.words[w]) + "</span>";
-      }
-      contentHtml += "</div>";
-
-      if (ex.classify) {
-        contentHtml += '<div class="classify-question">' + esc(ex.classify.question) + "</div>" +
-          '<div class="options">';
-        for (var c = 0; c < ex.classify.options.length; c++) {
-          var optCls = "option-btn answered";
-          if (c === ex.classify.correct) optCls += " correct";
-          if (c === chosenClassify && chosenClassify !== ex.classify.correct) optCls += " wrong";
-          contentHtml += '<button class="' + optCls + '">' + esc(ex.classify.options[c]) + "</button>";
-        }
-        contentHtml += "</div>";
-      }
-    } else {
-      contentHtml += '<div class="sentence">' + esc(ex.sentence) + "</div>" +
-        '<div class="options" id="options"></div>';
-    }
-
-    contentHtml +=
-      '<div class="explanation ' + (correct ? "explanation-correct" : "explanation-wrong") + '">' +
-        "<strong>" + (correct ? randomPraise() : "Leider falsch.") + "</strong>" +
+    app.innerHTML = dotsHtml +
+      '<div class="question-label">' + esc(question) + "</div>" +
+      rendered.html +
+      '<div class="explanation ' + (rendered.correct ? "explanation-correct" : "explanation-wrong") + '">' +
+        "<strong>" + (rendered.correct ? randomPraise() : "Leider falsch.") + "</strong>" +
         esc(ex.explanation) +
       "</div>" +
       '<div class="review-nav" id="review-nav"></div>';
 
-    app.innerHTML = contentHtml;
-
-    if (!isWordTap) {
-      var optionsEl = document.getElementById("options");
-      for (var i = 0; i < ex.options.length; i++) {
-        var btn = document.createElement("button");
-        btn.className = "option-btn answered";
-        btn.textContent = ex.options[i];
-        if (i === ex.correct) btn.classList.add("correct");
-        if (i === chosen && !correct) btn.classList.add("wrong");
-        optionsEl.appendChild(btn);
-      }
-    }
+    rendered.bind();
 
     var navEl = document.getElementById("review-nav");
     if (reviewIndex > 0) {
@@ -641,27 +716,6 @@
       arr[j] = tmp;
     }
     return arr;
-  }
-
-  function isWordTapCorrect(answer, exercise) {
-    var words, classifyChoice;
-    if (answer && typeof answer === "object" && !Array.isArray(answer)) {
-      words = answer.words;
-      classifyChoice = answer.classify;
-    } else {
-      words = answer;
-      classifyChoice = -1;
-    }
-    if (!arraysEqual(words, exercise.correct)) return false;
-    if (exercise.classify) return classifyChoice === exercise.classify.correct;
-    return true;
-  }
-
-  function encodeAnswer(a) {
-    if (a && typeof a === "object" && !Array.isArray(a)) {
-      return a.words.join(":") + "+" + a.classify;
-    }
-    return Array.isArray(a) ? a.join(":") : String(a);
   }
 
   function arraysEqual(a, b) {

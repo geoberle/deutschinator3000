@@ -471,6 +471,7 @@ header h1 {
   font-weight: 600;
   color: #1a1a1a;
   margin-left: -2px;
+  order: 999;
 }
 
 .classify-step + .classify-step {

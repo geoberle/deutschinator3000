@@ -279,13 +279,54 @@ header h1 {
   gap: 0.75rem;
 }
 
-.set-category {
+.set-category-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0.25rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.set-category-header:hover {
+  opacity: 0.7;
+}
+
+.set-category-chevron {
+  font-size: 1.25rem;
+  color: #999;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.set-category-header.expanded .set-category-chevron {
+  transform: rotate(90deg);
+}
+
+.set-category-name {
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #999;
-  margin-top: 0.5rem;
+}
+
+.set-category-count {
+  font-size: 0.75rem;
+  color: #bbb;
+  margin-left: auto;
+}
+
+.set-category-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.set-category-body.collapsed {
+  display: none;
 }
 
 .set-card {

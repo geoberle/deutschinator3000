@@ -729,20 +729,40 @@
           "</div>";
       }
 
-      html += '<div class="set-list">';
-      var lastCategory = "";
+      var groups = [];
+      var curGroup = null;
       for (var i = 0; i < sets.length; i++) {
         var cat = sets[i].category || "";
-        if (cat && cat !== lastCategory) {
-          html += '<div class="set-category">' + esc(cat) + "</div>";
-          lastCategory = cat;
+        if (!curGroup || cat !== curGroup.cat) {
+          curGroup = { cat: cat, items: [] };
+          groups.push(curGroup);
         }
-        html +=
-          '<div class="set-card" data-index="' + i + '">' +
-            "<h2>" + esc(sets[i].name) + "</h2>" +
-            "<p>" + esc(sets[i].description) + "</p>" +
-            '<div class="count">' + sets[i].count + " Aufgaben</div>" +
-          "</div>";
+        curGroup.items.push({ set: sets[i], index: i });
+      }
+
+      html += '<div class="set-list">';
+      for (var g = 0; g < groups.length; g++) {
+        var grp = groups[g];
+        if (grp.cat) {
+          var totalCount = 0;
+          for (var c = 0; c < grp.items.length; c++) totalCount += grp.items[c].set.count;
+          html += '<div class="set-category-header" data-group="' + g + '">' +
+            '<span class="set-category-chevron">&#x25B8;</span>' +
+            '<span class="set-category-name">' + esc(grp.cat) + '</span>' +
+            '<span class="set-category-count">' + grp.items.length + ' Übungen · ' + totalCount + ' Aufgaben</span>' +
+          '</div>';
+          html += '<div class="set-category-body collapsed" data-group="' + g + '">';
+        }
+        for (var k = 0; k < grp.items.length; k++) {
+          var s = grp.items[k];
+          html +=
+            '<div class="set-card" data-index="' + s.index + '">' +
+              "<h2>" + esc(s.set.name) + "</h2>" +
+              "<p>" + esc(s.set.description) + "</p>" +
+              '<div class="count">' + s.set.count + " Aufgaben</div>" +
+            "</div>";
+        }
+        if (grp.cat) html += '</div>';
       }
       html += "</div>";
       app.innerHTML = html;
@@ -750,6 +770,16 @@
       if (document.getElementById("challenge-card")) {
         document.getElementById("challenge-card").addEventListener("click", function () {
           location.hash = "#challenge";
+        });
+      }
+
+      var headers = app.querySelectorAll(".set-category-header");
+      for (var h = 0; h < headers.length; h++) {
+        headers[h].addEventListener("click", function () {
+          var grpId = this.getAttribute("data-group");
+          var body = app.querySelector('.set-category-body[data-group="' + grpId + '"]');
+          var isOpen = this.classList.toggle("expanded");
+          body.classList.toggle("collapsed", !isOpen);
         });
       }
 

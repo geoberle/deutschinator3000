@@ -24,7 +24,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "Präteritum: «wurde» + Partizip II. Perfekt: «ist» + Partizip II + «worden»."
+      "explanation": "«wurde geöffnet» = Präteritum, «ist geöffnet worden» = Perfekt.\n**Merke:** Perfekt braucht drei Teile: «ist» + Partizip II + «worden»."
     },
     {
       "sentence": "Der Hund wird gefüttert.",
@@ -42,7 +42,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "Plusquamperfekt: «war» + Partizip II + «worden». Futur I: «wird» + Partizip II + «werden» (nicht «worden»!)."
+      "explanation": "«war gefüttert worden» = Vorvergangenheit, «wird gefüttert werden» = Zukunft.\n**Merke:** Vergangenheit endet auf «worden», Zukunft auf «werden»!"
     },
     {
       "sentence": "Die Suppe wird gekocht.",
@@ -60,7 +60,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "Präteritum: «wurde» + Partizip II (einfach!). Futur I: «wird» + Partizip II + «werden»."
+      "explanation": "«wurde gekocht» = Präteritum (nur 2 Wörter), «wird gekocht werden» = Futur I (3 Wörter).\n**Merke:** Futur I braucht «werden» am Ende extra."
     },
     {
       "sentence": "Der Brief wird geschrieben.",
@@ -78,7 +78,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "Perfekt: «ist» + Partizip II + «worden». Plusquamperfekt: «war» statt «ist» — gleiche Struktur, nur die Vergangenheit der Vergangenheit."
+      "explanation": "«ist geschrieben worden» = Perfekt, «war geschrieben worden» = Plusquamperfekt.\n**Merke:** Gleiche Struktur — nur «ist» wird zu «war» für die Vorvergangenheit."
     },
     {
       "sentence": "Das Buch wird gelesen.",
@@ -96,7 +96,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "Präteritum: nur «wurde» + Partizip II. Perfekt braucht drei Teile: «ist» + Partizip II + «worden»."
+      "explanation": "«wurde gelesen» = Präteritum (2 Teile), «ist gelesen worden» = Perfekt (3 Teile).\n**Merke:** Perfekt braucht immer «worden» am Ende."
     },
     {
       "sentence": "Die Tafel wird geputzt.",
@@ -114,7 +114,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "Futur I: «wird» + Partizip II + «werden». Plusquamperfekt: «war» + Partizip II + «worden». Achte auf «werden» vs. «worden»!"
+      "explanation": "«wird geputzt werden» = Zukunft, «war geputzt worden» = Vorvergangenheit.\n**Merke:** Zukunft endet auf «werden», Vergangenheit auf «worden»!"
     },
     {
       "sentence": "Der Kuchen wird gebacken.",
@@ -132,7 +132,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "Perfekt: «ist» + Partizip II + «worden». Futur I: «wird» + Partizip II + «werden». Merke: «worden» für Vergangenheit, «werden» für Zukunft."
+      "explanation": "«ist gebacken worden» = Perfekt, «wird gebacken werden» = Futur I.\n**Merke:** «worden» = Vergangenheit, «werden» = Zukunft."
     },
     {
       "sentence": "Das Auto wird gewaschen.",
@@ -150,7 +150,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "Präteritum: «wurde» + Partizip II. Plusquamperfekt: «war» + Partizip II + «worden» — die Vorvergangenheit."
+      "explanation": "«wurde gewaschen» = Präteritum, «war gewaschen worden» = Plusquamperfekt.\n**Merke:** Plusquamperfekt: «war» + Partizip II + «worden»."
     },
     {
       "sentence": "Die Tür wird geschlossen.",
@@ -168,7 +168,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "Perfekt: «ist» + Partizip II + «worden». Futur I: «wird» + Partizip II + «werden»."
+      "explanation": "«ist geschlossen worden» = Perfekt, «wird geschlossen werden» = Futur I.\n**Merke:** «worden» = Vergangenheit, «werden» = Zukunft."
     },
     {
       "sentence": "Das Licht wird ausgeschaltet.",
@@ -186,7 +186,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "Präteritum: «wurde» + Partizip II. Plusquamperfekt: «war» + Partizip II + «worden»."
+      "explanation": "«wurde ausgeschaltet» = Präteritum, «war ausgeschaltet worden» = Plusquamperfekt.\n**Merke:** Plusquamperfekt: «war» + Partizip II + «worden»."
     }
   ]
 }

@@ -24,7 +24,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "VP Futur I: «wird» + Partizip II + «werden». ZP Futur I: «wird» + Partizip II + «sein». Der Unterschied steckt im letzten Wort!"
+      "explanation": "«wird gewürzt werden» = Vorgang, «wird gewürzt sein» = fertig.\n**Merke:** Letztes Wort entscheidet: «werden» = VP, «sein» = ZP."
     },
     {
       "sentence": "Der Lehrer korrigiert die Tests.",
@@ -42,7 +42,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "Plural: «werden» + Partizip II + «werden» (VP) bzw. «sein» (ZP). Bei VP kommt «werden» zweimal vor!"
+      "explanation": "«werden korrigiert werden» → «werden» kommt zweimal vor!\n**Merke:** Plural-VP: «werden» + Partizip II + «werden»."
     },
     {
       "sentence": "Die Mutter backt den Kuchen.",
@@ -60,7 +60,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "«backen» → Partizip II: «gebacken». VP endet auf «werden», ZP endet auf «sein». «backt» gehört zum Aktiv!"
+      "explanation": "«backt» ist Aktiv — im Passiv braucht man «gebacken».\n**Merke:** VP endet auf «werden», ZP endet auf «sein»."
     },
     {
       "sentence": "Die Kinder malen die Bilder.",
@@ -78,7 +78,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "Plural: «werden» + Partizip II + «werden» (VP). Achtung: Beim ZP steht am Ende «sein», nicht «werden»."
+      "explanation": "«werden gemalt werden» = VP, «werden gemalt sein» = ZP.\n**Merke:** Beim ZP steht am Ende «sein», nicht «werden»."
     },
     {
       "sentence": "Der Vater wäscht das Auto.",
@@ -96,7 +96,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "«waschen» → Partizip II: «gewaschen». «wäscht» ist Aktiv Präsens — im Passiv Futur I braucht man das Partizip II."
+      "explanation": "«wäscht» ist Aktiv — im Passiv braucht man «gewaschen».\n**Merke:** Partizip II von «waschen» = «gewaschen»."
     },
     {
       "sentence": "Die Schüler lesen die Bücher.",
@@ -114,7 +114,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "Plural: «werden» + «gelesen» + «werden» (VP) bzw. «sein» (ZP). Das erste «werden» ist das Futur-Hilfsverb."
+      "explanation": "«werden gelesen werden» = VP, «werden gelesen sein» = ZP.\n**Merke:** Erstes «werden» = Futur-Hilfsverb, letztes Wort = Passiv-Art."
     },
     {
       "sentence": "Das Mädchen gießt die Pflanze.",
@@ -132,7 +132,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "Singular: «wird» + Partizip II + «werden» (VP) bzw. «sein» (ZP)."
+      "explanation": "«wird gegossen werden» = VP, «wird gegossen sein» = ZP.\n**Merke:** Letztes Wort entscheidet: «werden» = VP, «sein» = ZP."
     },
     {
       "sentence": "Die Handwerker streichen die Wände.",
@@ -150,7 +150,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "Plural: «werden» + «gestrichen» + «werden» (VP). Beim ZP tauscht man das letzte «werden» gegen «sein»."
+      "explanation": "«werden gestrichen werden» = VP, «werden gestrichen sein» = ZP.\n**Merke:** Letztes «werden» gegen «sein» tauschen = ZP."
     },
     {
       "sentence": "Die Lehrerin schließt die Tür.",
@@ -168,7 +168,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "«schließen» → Partizip II: «geschlossen». «schließt» ist Aktiv — im Passiv fällt es weg."
+      "explanation": "«schließt» ist Aktiv — im Passiv braucht man «geschlossen».\n**Merke:** Partizip II von «schließen» = «geschlossen»."
     },
     {
       "sentence": "Die Eltern packen die Koffer.",
@@ -186,7 +186,7 @@
           "scaffold": 2
         }
       ],
-      "explanation": "Plural: VP endet auf «werden», ZP endet auf «sein». Das erste «werden» bleibt gleich — es ist das Futur-Hilfsverb."
+      "explanation": "«werden gepackt werden» = VP, «werden gepackt sein» = ZP.\n**Merke:** Erstes «werden» = Futur-Hilfsverb, letztes Wort = Passiv-Art."
     }
   ]
 }

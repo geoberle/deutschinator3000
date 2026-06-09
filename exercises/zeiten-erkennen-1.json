@@ -11,121 +11,121 @@
       "sentence": "Die Vögel singen am Morgen wunderschön.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 0,
-      "explanation": "«singen» steht in der Gegenwartsform → Präsens."
+      "explanation": "«singen» = Gegenwartsform, passiert jetzt.\n**Merke:** Einfaches Verb ohne Hilfsverb = Präsens."
     },
     {
       "sentence": "Der Hund lief schnell über die Wiese.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 1,
-      "explanation": "«lief» ist die einfache Vergangenheitsform von «laufen» → Präteritum."
+      "explanation": "«lief» = einfache Vergangenheit von «laufen».\n**Merke:** Ein Wort, Vergangenheit, kein Hilfsverb = Präteritum."
     },
     {
       "sentence": "Ich habe gestern einen Kuchen gebacken.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 2,
-      "explanation": "«habe» (Hilfsverb) + «gebacken» (Partizip II) → Perfekt."
+      "explanation": "«habe» + «gebacken» → zwei Teile.\n**Merke:** «haben/sein» + Partizip II = Perfekt."
     },
     {
       "sentence": "Sie hatte schon gegessen, als wir kamen.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 3,
-      "explanation": "«hatte» (Hilfsverb im Präteritum) + «gegessen» (Partizip II) → Plusquamperfekt."
+      "explanation": "«hatte» + «gegessen» → Hilfsverb steht im Präteritum!\n**Merke:** «hatte/war» + Partizip II = Plusquamperfekt (Vorvergangenheit)."
     },
     {
       "sentence": "Wir werden nächste Woche ins Kino gehen.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 4,
-      "explanation": "«werden» (Hilfsverb) + «gehen» (Infinitiv) → Futur I."
+      "explanation": "«werden» + «gehen» → Zukunft.\n**Merke:** «werden» + Infinitiv = Futur I."
     },
     {
       "sentence": "Mein Bruder liest jeden Abend ein Buch.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 0,
-      "explanation": "«liest» steht in der Gegenwartsform → Präsens."
+      "explanation": "«liest» = Gegenwartsform, passiert jetzt.\n**Merke:** Einfaches Verb ohne Hilfsverb = Präsens."
     },
     {
       "sentence": "Die Kinder tanzten fröhlich im Regen.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 1,
-      "explanation": "«tanzten» ist die einfache Vergangenheitsform von «tanzen» → Präteritum."
+      "explanation": "«tanzten» = einfache Vergangenheit von «tanzen».\n**Merke:** Ein Wort, Vergangenheit, kein Hilfsverb = Präteritum."
     },
     {
       "sentence": "Sie hat das ganze Buch gelesen.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 2,
-      "explanation": "«hat» (Hilfsverb) + «gelesen» (Partizip II) → Perfekt."
+      "explanation": "«hat» + «gelesen» → zwei Teile.\n**Merke:** «haben/sein» + Partizip II = Perfekt."
     },
     {
       "sentence": "Er hatte das Bild gemalt, bevor die Stunde anfing.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 3,
-      "explanation": "«hatte» (Hilfsverb im Präteritum) + «gemalt» (Partizip II) → Plusquamperfekt."
+      "explanation": "«hatte» + «gemalt» → Hilfsverb steht im Präteritum!\n**Merke:** «hatte/war» + Partizip II = Plusquamperfekt."
     },
     {
       "sentence": "Er wird das Buch bald lesen.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 4,
-      "explanation": "«wird» (Hilfsverb) + «lesen» (Infinitiv) → Futur I."
+      "explanation": "«wird» + «lesen» → Zukunft.\n**Merke:** «werden» + Infinitiv = Futur I."
     },
     {
       "sentence": "Wir fahren am Wochenende zu den Großeltern.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 0,
-      "explanation": "«fahren» steht in der Gegenwartsform → Präsens."
+      "explanation": "«fahren» = Gegenwartsform, passiert jetzt.\n**Merke:** Einfaches Verb ohne Hilfsverb = Präsens."
     },
     {
       "sentence": "Wir sangen gemeinsam ein Lied.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 1,
-      "explanation": "«sangen» ist die einfache Vergangenheitsform von «singen» → Präteritum."
+      "explanation": "«sangen» = einfache Vergangenheit von «singen».\n**Merke:** Ein Wort, Vergangenheit, kein Hilfsverb = Präteritum."
     },
     {
       "sentence": "Wir haben im Park gespielt.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 2,
-      "explanation": "«haben» (Hilfsverb) + «gespielt» (Partizip II) → Perfekt."
+      "explanation": "«haben» + «gespielt» → zwei Teile.\n**Merke:** «haben/sein» + Partizip II = Perfekt."
     },
     {
       "sentence": "Wir hatten den Weg gefunden, bevor es dunkel wurde.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 3,
-      "explanation": "«hatten» (Hilfsverb im Präteritum) + «gefunden» (Partizip II) → Plusquamperfekt."
+      "explanation": "«hatten» + «gefunden» → Hilfsverb steht im Präteritum!\n**Merke:** «hatte/war» + Partizip II = Plusquamperfekt."
     },
     {
       "sentence": "Die Mannschaft wird das Spiel gewinnen.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 4,
-      "explanation": "«wird» (Hilfsverb) + «gewinnen» (Infinitiv) → Futur I."
+      "explanation": "«wird» + «gewinnen» → Zukunft.\n**Merke:** «werden» + Infinitiv = Futur I."
     },
     {
       "sentence": "Die Schüler schreiben gerade einen Test.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 0,
-      "explanation": "«schreiben» steht in der Gegenwartsform → Präsens."
+      "explanation": "«schreiben» = Gegenwartsform, passiert jetzt.\n**Merke:** Einfaches Verb ohne Hilfsverb = Präsens."
     },
     {
       "sentence": "Er fand den Schatz unter dem alten Baum.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 1,
-      "explanation": "«fand» ist die einfache Vergangenheitsform von «finden» → Präteritum."
+      "explanation": "«fand» = einfache Vergangenheit von «finden».\n**Merke:** Ein Wort, Vergangenheit, kein Hilfsverb = Präteritum."
     },
     {
       "sentence": "Er ist ins kalte Wasser gesprungen.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 2,
-      "explanation": "«ist» (Hilfsverb) + «gesprungen» (Partizip II) → Perfekt. Bei Bewegungsverben wird «sein» als Hilfsverb verwendet."
+      "explanation": "«ist» + «gesprungen» → zwei Teile. «springen» = Bewegungsverb!\n**Merke:** Bewegungsverben bilden Perfekt mit «sein» statt «haben»."
     },
     {
       "sentence": "Ich hatte den Tisch gedeckt, als die Gäste klingelten.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 3,
-      "explanation": "«hatte» (Hilfsverb im Präteritum) + «gedeckt» (Partizip II) → Plusquamperfekt."
+      "explanation": "«hatte» + «gedeckt» → Hilfsverb steht im Präteritum!\n**Merke:** «hatte/war» + Partizip II = Plusquamperfekt."
     },
     {
       "sentence": "Ich werde dir morgen bei den Hausaufgaben helfen.",
       "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
       "correct": 4,
-      "explanation": "«werde» (Hilfsverb) + «helfen» (Infinitiv) → Futur I."
+      "explanation": "«werde» + «helfen» → Zukunft.\n**Merke:** «werden» + Infinitiv = Futur I."
     }
   ]
 }

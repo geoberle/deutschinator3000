@@ -27,7 +27,7 @@
           "correct": 0
         }
       ],
-      "explanation": "Das Fenster ist offen — es beschreibt einen Zustand. Jemand hat es geöffnet, aber der Satz sagt nur, WIE es gerade ist.",
+      "explanation": "Das Fenster ist offen — der Satz sagt nur, WIE es gerade ist.\n**Merke:** Frage «Von wem?» passt → Zustandspassiv.",
       "reveal": [
         2
       ]
@@ -52,7 +52,7 @@
           "correct": 1
         }
       ],
-      "explanation": "Der Hund hat etwas getan: Er ist weggelaufen. «weglaufen» ist ein Bewegungsverb — es bildet das Perfekt mit «sein».",
+      "explanation": "Der Hund hat etwas getan: Er ist weggelaufen.\n**Merke:** Bewegungsverben bilden Perfekt mit «sein» → Aktiv Perfekt.",
       "reveal": [
         2
       ]
@@ -77,7 +77,7 @@
           "correct": 1
         }
       ],
-      "explanation": "Die Katze hat etwas getan: Sie ist geklettert. «klettern» ist ein Bewegungsverb → Perfekt mit «sein».",
+      "explanation": "Die Katze hat etwas getan: Sie ist geklettert.\n**Merke:** «klettern» = Bewegungsverb → Perfekt mit «sein» = Aktiv.",
       "reveal": [
         2
       ]
@@ -102,7 +102,7 @@
           "correct": 0
         }
       ],
-      "explanation": "Die Tür ist zu — das ist ein Zustand. Man kann fragen: «Von wem ist sie geschlossen?» → Zustandspassiv.",
+      "explanation": "Die Tür ist zu — ein Zustand, keine Handlung.\n**Merke:** Frage «Von wem?» passt → Zustandspassiv.",
       "reveal": [
         2
       ]
@@ -127,7 +127,7 @@
           "correct": 1
         }
       ],
-      "explanation": "Oma hat etwas getan: Sie ist angekommen. «ankommen» ist ein Bewegungsverb → Perfekt mit «sein».",
+      "explanation": "Oma hat etwas getan: Sie ist angekommen.\n**Merke:** «ankommen» = Bewegungsverb → Perfekt mit «sein» = Aktiv.",
       "reveal": [
         1
       ]
@@ -152,7 +152,7 @@
           "correct": 0
         }
       ],
-      "explanation": "Der Tisch ist fertig gedeckt — er beschreibt, WIE der Tisch gerade ist. Jemand hat ihn gedeckt → Zustandspassiv.",
+      "explanation": "Der Tisch ist fertig — der Satz beschreibt WIE er ist.\n**Merke:** Jemand hat ihn gedeckt → Frage «Von wem?» passt → Zustandspassiv.",
       "reveal": [
         2
       ]
@@ -177,7 +177,7 @@
           "correct": 0
         }
       ],
-      "explanation": "Das Auto ist sauber — ein Zustand. Man kann fragen: «Von wem ist es gewaschen?» → Zustandspassiv.",
+      "explanation": "Das Auto ist sauber — ein Zustand, keine Handlung.\n**Merke:** Frage «Von wem?» passt → Zustandspassiv.",
       "reveal": [
         2
       ]
@@ -202,7 +202,7 @@
           "correct": 1
         }
       ],
-      "explanation": "Die Blume hat etwas getan: Sie ist gewachsen. Niemand hat sie «gewachsen» — sie hat sich selbst verändert → Aktiv Perfekt.",
+      "explanation": "Die Blume ist von selbst gewachsen — niemand hat sie «gewachsen».\n**Merke:** Frage «Von wem?» passt NICHT → Aktiv Perfekt.",
       "reveal": [
         2
       ]
@@ -227,7 +227,7 @@
           "correct": 1
         }
       ],
-      "explanation": "Der Schneemann ist geschmolzen — es ist etwas passiert. «schmelzen» beschreibt eine Veränderung → Aktiv Perfekt mit «sein».",
+      "explanation": "Der Schneemann ist von selbst geschmolzen — eine Veränderung.\n**Merke:** Frage «Von wem?» passt NICHT → Aktiv Perfekt.",
       "reveal": [
         2
       ]
@@ -252,7 +252,7 @@
           "correct": 0
         }
       ],
-      "explanation": "Die Wand ist frisch gestrichen — ein Zustand. Jemand hat sie gestrichen → Zustandspassiv.",
+      "explanation": "Die Wand ist frisch gestrichen — ein Zustand.\n**Merke:** Jemand hat sie gestrichen → Frage «Von wem?» passt → Zustandspassiv.",
       "reveal": [
         2
       ]
@@ -277,7 +277,7 @@
           "correct": 1
         }
       ],
-      "explanation": "Die Kinder haben etwas getan: Sie sind gegangen. «gehen» ist ein Bewegungsverb → Perfekt mit «sein».",
+      "explanation": "Die Kinder haben etwas getan: Sie sind gegangen.\n**Merke:** «gehen» = Bewegungsverb → Perfekt mit «sein» = Aktiv.",
       "reveal": [
         2
       ]
@@ -302,7 +302,7 @@
           "correct": 0
         }
       ],
-      "explanation": "Das Essen ist fertig — ein Zustand. Man kann fragen: «Von wem ist es gekocht?» → Zustandspassiv.",
+      "explanation": "Das Essen ist fertig — ein Zustand, keine Handlung.\n**Merke:** Frage «Von wem?» passt → Zustandspassiv.",
       "reveal": [
         2
       ]
@@ -327,7 +327,7 @@
           "correct": 1
         }
       ],
-      "explanation": "Papa hat etwas getan: Er ist gefahren. «fahren» ist ein Bewegungsverb → Perfekt mit «sein».",
+      "explanation": "Papa hat etwas getan: Er ist gefahren.\n**Merke:** «fahren» = Bewegungsverb → Perfekt mit «sein» = Aktiv.",
       "reveal": [
         1
       ]
@@ -352,7 +352,7 @@
           "correct": 0
         }
       ],
-      "explanation": "Der Kuchen ist fertig gebacken — ein Zustand. Jemand hat ihn gebacken → Zustandspassiv.",
+      "explanation": "Der Kuchen ist fertig — ein Zustand.\n**Merke:** Jemand hat ihn gebacken → Frage «Von wem?» passt → Zustandspassiv.",
       "reveal": [
         2
       ]

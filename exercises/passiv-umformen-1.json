@@ -22,7 +22,7 @@
           "distractors": ["werden"]
         }
       ],
-      "explanation": "Vorgangspassiv: «werden» + Partizip II → «werden korrigiert». Zustandspassiv: «sein» + Partizip II → «sind korrigiert»."
+      "explanation": "«werden korrigiert» = Vorgang, «sind korrigiert» = fertig.\n**Merke:** Vorgangspassiv mit «werden», Zustandspassiv mit «sein»."
     },
     {
       "sentence": "Die Kinder malten ein Bild.",
@@ -38,7 +38,7 @@
           "distractors": ["wurde"]
         }
       ],
-      "explanation": "Präteritum: Vorgangspassiv mit «wurde» + Partizip II. Zustandspassiv mit «war» + Partizip II."
+      "explanation": "«wurde gemalt» = Vorgang, «war gemalt» = fertig.\n**Merke:** Präteritum: «wurde» (Vorgang) vs. «war» (Zustand)."
     },
     {
       "sentence": "Die Mutter backt den Kuchen.",
@@ -54,7 +54,7 @@
           "distractors": ["wird", "backt"]
         }
       ],
-      "explanation": "«backen» → Partizip II: «gebacken». Nicht «backt» — das ist Aktiv Präsens!"
+      "explanation": "«backt» ist Aktiv — im Passiv braucht man «gebacken».\n**Merke:** Partizip II von «backen» = «gebacken»."
     },
     {
       "sentence": "Der Vater wusch das Auto.",
@@ -70,7 +70,7 @@
           "distractors": ["wurde", "wusch"]
         }
       ],
-      "explanation": "«waschen» → Partizip II: «gewaschen». «wusch» ist Aktiv Präteritum — im Passiv braucht man das Partizip II."
+      "explanation": "«wusch» ist Aktiv — im Passiv braucht man «gewaschen».\n**Merke:** Partizip II von «waschen» = «gewaschen»."
     },
     {
       "sentence": "Das Mädchen gießt die Blumen.",
@@ -86,7 +86,7 @@
           "distractors": ["werden"]
         }
       ],
-      "explanation": "«gießen» → Partizip II: «gegossen». Vorgangspassiv: «werden gegossen». Zustandspassiv: «sind gegossen»."
+      "explanation": "«werden gegossen» = Vorgang, «sind gegossen» = fertig.\n**Merke:** Partizip II von «gießen» = «gegossen»."
     },
     {
       "sentence": "Der Opa reparierte das Fahrrad.",
@@ -102,7 +102,7 @@
           "distractors": ["wurde"]
         }
       ],
-      "explanation": "Präteritum: «wurde repariert» (Vorgang) vs. «war repariert» (fertiger Zustand)."
+      "explanation": "«wurde repariert» = Vorgang, «war repariert» = fertig.\n**Merke:** Präteritum: «wurde» (Vorgang) vs. «war» (Zustand)."
     },
     {
       "sentence": "Die Lehrerin schließt die Tür.",
@@ -118,7 +118,7 @@
           "distractors": ["wird", "schließt"]
         }
       ],
-      "explanation": "«schließen» → Partizip II: «geschlossen». «schließt» gehört zum Aktiv — im Passiv fällt es weg."
+      "explanation": "«schließt» ist Aktiv — im Passiv braucht man «geschlossen».\n**Merke:** Partizip II von «schließen» = «geschlossen»."
     },
     {
       "sentence": "Die Kinder putzten die Tafel.",
@@ -134,7 +134,7 @@
           "distractors": ["wurde"]
         }
       ],
-      "explanation": "Präteritum: «wurde geputzt» (der Putz-Vorgang) vs. «war geputzt» (die Tafel war danach sauber)."
+      "explanation": "«wurde geputzt» = Vorgang, «war geputzt» = die Tafel war sauber.\n**Merke:** Präteritum: «wurde» (Vorgang) vs. «war» (Zustand)."
     },
     {
       "sentence": "Der Koch würzt die Suppe.",
@@ -150,7 +150,7 @@
           "distractors": ["wird"]
         }
       ],
-      "explanation": "«würzen» → Partizip II: «gewürzt». Vorgangspassiv: «wird gewürzt». Zustandspassiv: «ist gewürzt»."
+      "explanation": "«wird gewürzt» = Vorgang, «ist gewürzt» = fertig.\n**Merke:** Partizip II von «würzen» = «gewürzt»."
     },
     {
       "sentence": "Die Oma strickte den Schal.",
@@ -166,7 +166,7 @@
           "distractors": ["wurde"]
         }
       ],
-      "explanation": "Präteritum: «wurde gestrickt» (Vorgang in der Vergangenheit) vs. «war gestrickt» (der Schal war fertig)."
+      "explanation": "«wurde gestrickt» = Vorgang, «war gestrickt» = der Schal war fertig.\n**Merke:** Präteritum: «wurde» (Vorgang) vs. «war» (Zustand)."
     }
   ]
 }

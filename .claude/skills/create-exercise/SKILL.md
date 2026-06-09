@@ -59,14 +59,14 @@ User picks one option from a list.
       "sentence": "A German sentence to analyze.",
       "options": ["Option A", "Option B", "Option C"],
       "correct": 0,
-      "explanation": "Short explanation. Use «guillemets» for inline quotes."
+      "explanation": "«singen» = Gegenwartsform, passiert jetzt.\n**Merke:** Einfaches Verb ohne Hilfsverb = Präsens."
     },
     {
       "question": "Override question for this specific exercise",
       "sentence": "Another sentence.",
       "options": ["Option A", "Option B"],
       "correct": 1,
-      "explanation": "..."
+      "explanation": "«lief» = einfache Vergangenheit von «laufen».\n**Merke:** Ein Wort, Vergangenheit, kein Hilfsverb = Präteritum."
     }
   ]
 }
@@ -91,7 +91,7 @@ User taps words in a sentence to select them. Used for Satzglieder, Wortarten, e
         "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"],
         "correct": 0
       },
-      "explanation": "«draußen» ist ein Lokaladverb (Wo? → draußen)."
+      "explanation": "«draußen» beantwortet die Frage: Wo?\n**Merke:** Wo/Wohin/Woher → Lokaladverb."
     }
   ]
 }
@@ -118,7 +118,7 @@ User classifies a sentence across multiple dimensions in sequence (e.g., voice +
         { "question": "Aktiv oder Passiv?", "options": ["Aktiv", "Vorgangspassiv", "Zustandspassiv"], "correct": 1 },
         { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"], "correct": 0 }
       ],
-      "explanation": "«wird gebacken» → werden + Partizip II = Vorgangspassiv Präsens."
+      "explanation": "«wird gebacken» → jemand backt gerade.\n**Merke:** «werden» + Partizip II = Vorgangspassiv Präsens."
     }
   ]
 }
@@ -156,7 +156,7 @@ User builds a sentence by tapping words from a shuffled pool into an answer area
           "scaffold": 2
         }
       ],
-      "explanation": "Vorgangspassiv: «werden» + Partizip II. Zustandspassiv: «sein» + Partizip II."
+      "explanation": "«wird gebacken» = Vorgang, «ist gebacken» = fertig.\n**Merke:** Vorgangspassiv mit «werden», Zustandspassiv mit «sein»."
     }
   ]
 }
@@ -183,14 +183,14 @@ User builds a sentence by tapping words from a shuffled pool into an answer area
       "sentence": "Ich habe das Buch gelesen.",
       "options": ["Präsens", "Präteritum", "Perfekt"],
       "correct": 2,
-      "explanation": "«habe» + «gelesen» (Partizip II) → Perfekt."
+      "explanation": "«habe» + «gelesen» → zwei Teile.\n**Merke:** «haben/sein» + Partizip II = Perfekt."
     },
     {
       "type": "word-tap",
       "question": "Welches Wort ist das Verb?",
       "words": ["Die", "Katze", "schläft.", ],
       "correct": [2],
-      "explanation": "«schläft» ist das Verb (Was tut die Katze?)."
+      "explanation": "«schläft» beantwortet: Was tut die Katze?\n**Merke:** Das Verb sagt, was jemand tut oder was passiert."
     }
   ]
 }
@@ -217,7 +217,14 @@ Any exercise with a `sentence` field (MC, classify, word-bank) can include `"rev
 
 - **Sentence quality**: Use natural, age-appropriate German sentences. Vary subjects, tenses, complexity.
 - **Balance**: Distribute correct answers. Don't cluster same position repeatedly.
-- **Explanations**: Always explain the WHY. Point out the key grammatical signal. Keep it 1-2 sentences.
+- **Explanations**: Markdown-enabled via snarkdown. Structure for ADHD:
+  - **Line 1:** What happened in THIS sentence — concrete, specific (e.g., `«wird geöffnet» → jemand öffnet das Fenster gerade.`)
+  - **Line 2:** `**Merke:**` + the abstract grammar rule (e.g., `**Merke:** «werden» + Partizip II = Vorgangspassiv.`)
+  - **Line 3 (optional):** Only for complex topics that genuinely need it
+  - Use `\n` for line breaks between lines
+  - Keep «guillemets» plain — no extra bold/code on quoted words
+  - Max 3 lines. Most exercises need only 2. Short, direct, no filler.
+  - Example: `"explanation": "«wird geöffnet» → jemand öffnet das Fenster gerade.\n**Merke:** «werden» + Partizip II = Vorgangspassiv."`
 - **Quoting**: Use «guillemets» (« and ») when quoting words in explanations. NEVER use ASCII double quotes inside JSON string values — they break the JSON.
 - **Validate**: After writing the file and updating the manifest, run `python3 validate.py` to check all exercises (JSON validity, type resolution, correct indices, orphan files).
 - **Option order** (multiple-choice): Keep options in a logical/consistent order across all exercises.

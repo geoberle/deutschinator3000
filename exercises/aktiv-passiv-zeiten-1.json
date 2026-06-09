@@ -31,7 +31,7 @@
           "correct": 0
         }
       ],
-      "explanation": "Das Subjekt (die Kinder) handelt selbst → Aktiv. «spielen» ist Präsens.",
+      "explanation": "Die Kinder handeln selbst → Aktiv. «spielen» = Gegenwartsform.\n**Merke:** Subjekt tut etwas = Aktiv, Präsens.",
       "reveal": [
         2
       ]
@@ -60,7 +60,7 @@
           "correct": 0
         }
       ],
-      "explanation": "«wird gebacken» → werden + Partizip II = Vorgangspassiv Präsens.",
+      "explanation": "«wird gebacken» → jemand backt gerade.\n**Merke:** «werden» + Partizip II = Vorgangspassiv Präsens.",
       "reveal": [
         2
       ]
@@ -89,7 +89,7 @@
           "correct": 0
         }
       ],
-      "explanation": "«ist geöffnet» → sein + Partizip II = Zustandspassiv Präsens. Das Fenster befindet sich im Zustand des Geöffnetseins.",
+      "explanation": "«ist geöffnet» → das Fenster ist schon offen.\n**Merke:** «sein» + Partizip II = Zustandspassiv Präsens.",
       "reveal": [
         2
       ]
@@ -118,7 +118,7 @@
           "correct": 1
         }
       ],
-      "explanation": "Das Subjekt (der Lehrer) handelt selbst → Aktiv. «erklärte» ist Präteritum.",
+      "explanation": "Der Lehrer handelt selbst → Aktiv. «erklärte» = einfache Vergangenheit.\n**Merke:** Subjekt tut etwas = Aktiv, Präteritum.",
       "reveal": [
         2
       ]
@@ -147,7 +147,7 @@
           "correct": 1
         }
       ],
-      "explanation": "«wurde gelesen» → wurde + Partizip II = Vorgangspassiv Präteritum.",
+      "explanation": "«wurde gelesen» → das Lesen fand in der Vergangenheit statt.\n**Merke:** «wurde» + Partizip II = Vorgangspassiv Präteritum.",
       "reveal": [
         2
       ]
@@ -176,7 +176,7 @@
           "correct": 1
         }
       ],
-      "explanation": "«war geschlossen» → war + Partizip II = Zustandspassiv Präteritum.",
+      "explanation": "«war geschlossen» → die Tür war schon zu.\n**Merke:** «war» + Partizip II = Zustandspassiv Präteritum.",
       "reveal": [
         2
       ]
@@ -205,7 +205,7 @@
           "correct": 2
         }
       ],
-      "explanation": "Das Subjekt (wir) handelt selbst → Aktiv. «haben gesehen» = Perfekt.",
+      "explanation": "Wir handeln selbst → Aktiv. «haben gesehen» = Hilfsverb + Partizip II.\n**Merke:** Subjekt tut etwas = Aktiv, Perfekt.",
       "reveal": [
         1
       ]
@@ -234,7 +234,7 @@
           "correct": 2
         }
       ],
-      "explanation": "«ist geschrieben worden» → ist + Partizip II + worden = Vorgangspassiv Perfekt.",
+      "explanation": "«ist geschrieben worden» → der Brief wurde fertiggeschrieben.\n**Merke:** «ist» + Partizip II + «worden» = Vorgangspassiv Perfekt.",
       "reveal": [
         2
       ]
@@ -263,7 +263,7 @@
           "correct": 3
         }
       ],
-      "explanation": "Das Subjekt (sie) handelt selbst → Aktiv. «hatte gebacken» = Plusquamperfekt.",
+      "explanation": "Sie handelt selbst → Aktiv. «hatte gebacken» = Vorvergangenheit.\n**Merke:** «hatte» + Partizip II = Aktiv Plusquamperfekt.",
       "reveal": [
         1
       ]
@@ -292,7 +292,7 @@
           "correct": 4
         }
       ],
-      "explanation": "«wird gebaut werden» → wird + Partizip II + werden = Vorgangspassiv Futur I.",
+      "explanation": "«wird gebaut werden» → das Bauen liegt in der Zukunft.\n**Merke:** «wird» + Partizip II + «werden» = Vorgangspassiv Futur I.",
       "reveal": [
         2
       ]
@@ -321,7 +321,7 @@
           "correct": 4
         }
       ],
-      "explanation": "Das Subjekt (er) handelt selbst → Aktiv. «wird ankommen» = Futur I.",
+      "explanation": "Er handelt selbst → Aktiv. «wird ankommen» = Zukunft.\n**Merke:** «wird» + Infinitiv = Aktiv Futur I.",
       "reveal": [
         1
       ]
@@ -350,7 +350,7 @@
           "correct": 1
         }
       ],
-      "explanation": "«wurden gemacht» → wurde + Partizip II = Vorgangspassiv Präteritum.",
+      "explanation": "«wurden gemacht» → die Hausaufgaben wurden erledigt.\n**Merke:** «wurde» + Partizip II = Vorgangspassiv Präteritum.",
       "reveal": [
         2
       ]

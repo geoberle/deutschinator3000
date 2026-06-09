@@ -17,7 +17,7 @@
           "distractors": ["gewürzt", "wird"]
         }
       ],
-      "explanation": "«vom Koch» → «Der Koch» (Subjekt). «wird gewürzt» → «würzt» (Aktiv Präsens). «Die Suppe» wird zum Akkusativobjekt."
+      "explanation": "«vom Koch» → «Der Koch» wird Subjekt. «wird gewürzt» → «würzt».\n**Merke:** Passiv-Objekt wird Aktiv-Subjekt, Partizip II wird Verbform."
     },
     {
       "sentence": "Der Kuchen wird von der Mutter gebacken.",
@@ -28,7 +28,7 @@
           "distractors": ["gebacken", "wird"]
         }
       ],
-      "explanation": "«von der Mutter» → «Die Mutter». «Der Kuchen» wird zu «den Kuchen» — maskulin Nominativ → Akkusativ!"
+      "explanation": "«Der Kuchen» wird zu «den Kuchen» — maskulin ändert sich im Akkusativ!\n**Merke:** Passiv-Subjekt wird im Aktiv zum Akkusativobjekt."
     },
     {
       "sentence": "Die Blumen werden vom Mädchen gegossen.",
@@ -39,7 +39,7 @@
           "distractors": ["gegossen", "werden"]
         }
       ],
-      "explanation": "«vom Mädchen» → «Das Mädchen». «gegossen» ist Partizip II — im Aktiv braucht man «gießt» (Präsens)."
+      "explanation": "«gegossen» ist Partizip II → im Aktiv wird daraus «gießt».\n**Merke:** Partizip II zurück in die passende Zeitform umwandeln."
     },
     {
       "sentence": "Das Fenster wird von der Lehrerin geschlossen.",
@@ -50,7 +50,7 @@
           "distractors": ["geschlossen", "wird"]
         }
       ],
-      "explanation": "«von der Lehrerin» → «Die Lehrerin». «Das Fenster» bleibt «das Fenster» — sächlich ändert sich nicht im Akkusativ."
+      "explanation": "«Das Fenster» bleibt «das Fenster» — sächlich ändert sich nicht im Akkusativ.\n**Merke:** Nur maskulin ändert sich: «der» → «den»."
     },
     {
       "sentence": "Der Hund wird vom Mädchen gefüttert.",
@@ -61,7 +61,7 @@
           "distractors": ["gefüttert", "wird"]
         }
       ],
-      "explanation": "«Der Hund» wird zu «den Hund» — maskulin Nominativ → Akkusativ. «vom Mädchen» → «Das Mädchen» (Subjekt)."
+      "explanation": "«Der Hund» → «den Hund» — maskulin ändert sich im Akkusativ!\n**Merke:** «vom Mädchen» wird zum Subjekt «Das Mädchen»."
     },
     {
       "sentence": "Das Auto wurde vom Vater gewaschen.",
@@ -72,7 +72,7 @@
           "distractors": ["gewaschen", "wurde"]
         }
       ],
-      "explanation": "Präteritum bleibt Präteritum! «wurde gewaschen» → «wusch» (Aktiv Präteritum von «waschen»)."
+      "explanation": "«wurde gewaschen» → «wusch» (Aktiv Präteritum von «waschen»).\n**Merke:** Zeitform muss beim Umbau gleich bleiben!"
     },
     {
       "sentence": "Die Tafel wurde vom Schüler geputzt.",
@@ -83,7 +83,7 @@
           "distractors": ["geputzt", "wurde"]
         }
       ],
-      "explanation": "Präteritum: «wurde geputzt» → «putzte». «vom Schüler» → «Der Schüler» (Dativ → Nominativ)."
+      "explanation": "«wurde geputzt» → «putzte». «vom Schüler» → «Der Schüler».\n**Merke:** «von + Dativ» im Passiv wird zum Nominativ-Subjekt im Aktiv."
     },
     {
       "sentence": "Der Schal wurde von der Oma gestrickt.",
@@ -94,7 +94,7 @@
           "distractors": ["gestrickt", "wurde"]
         }
       ],
-      "explanation": "«Der Schal» → «den Schal» (maskulin Akkusativ). «wurde gestrickt» → «strickte» (Aktiv Präteritum)."
+      "explanation": "«Der Schal» → «den Schal» — maskulin ändert sich im Akkusativ.\n**Merke:** «wurde gestrickt» → «strickte» (Aktiv Präteritum)."
     },
     {
       "sentence": "Das Fahrrad wurde vom Opa repariert.",
@@ -105,7 +105,7 @@
           "distractors": ["repariert", "wurde"]
         }
       ],
-      "explanation": "Achtung: «repariert» ist Partizip II, «reparierte» ist Aktiv Präteritum — nur ein Buchstabe Unterschied!"
+      "explanation": "«repariert» = Partizip II, «reparierte» = Aktiv Präteritum — nur ein Buchstabe!\n**Merke:** Nicht verwechseln: Partizip II ≠ Präteritum."
     },
     {
       "sentence": "Das Essen wurde von der Oma gekocht.",
@@ -116,7 +116,7 @@
           "distractors": ["gekocht", "wurde"]
         }
       ],
-      "explanation": "«wurde gekocht» → «kochte» (Aktiv Präteritum). «von der Oma» → «Die Oma» wird zum Subjekt."
+      "explanation": "«wurde gekocht» → «kochte». «von der Oma» → «Die Oma» wird Subjekt.\n**Merke:** Partizip II zurück in Aktiv-Präteritum umwandeln."
     }
   ]
 }

@@ -1156,6 +1156,7 @@
   }
 
   function finalizeWordTap(correct, classifyChoice) {
+    if (correct) playCorrectSound(); else playWrongSound();
     var ex = exercises[index];
     results.push(correct);
 
@@ -1171,7 +1172,7 @@
     var isLast = index >= exercises.length - 1;
     var explanationHtml =
       '<div class="explanation ' + (correct ? "explanation-correct" : "explanation-wrong") + '">' +
-        "<strong>" + (correct ? randomPraise() : "Leider falsch.") + "</strong>" +
+        "<strong>" + (correct ? randomPraise() : randomEncourage()) + "</strong>" +
         snarkdown(ex.explanation) +
       "</div>" +
       '<button class="next-btn" id="next-btn">' +
@@ -1189,11 +1190,12 @@
   }
 
   function showFeedback(correct, explanation) {
+    if (correct) playCorrectSound(); else playWrongSound();
     var isLast = index >= exercises.length - 1;
     var feedback = document.getElementById("feedback");
     feedback.innerHTML =
       '<div class="explanation ' + (correct ? "explanation-correct" : "explanation-wrong") + '">' +
-        "<strong>" + (correct ? randomPraise() : "Leider falsch.") + "</strong>" +
+        "<strong>" + (correct ? randomPraise() : randomEncourage()) + "</strong>" +
         snarkdown(explanation) +
       "</div>" +
       '<button class="next-btn" id="next-btn">' +
@@ -1249,9 +1251,24 @@
       actionsHtml += '<button class="btn-secondary" id="btn-back">Zurück</button>';
     }
 
+    var ratio = correctCount / total;
+    var summaryMsg = "";
+    var summaryCls = "summary";
+    if (ratio === 1) {
+      summaryMsg = '<div class="summary-message summary-perfect">Perfekt! Alles richtig!</div>';
+      summaryCls += " summary-celebrate";
+    } else if (ratio >= 0.8) {
+      summaryMsg = '<div class="summary-message summary-great">Stark! Fast alles richtig!</div>';
+    } else if (ratio >= 0.5) {
+      summaryMsg = '<div class="summary-message summary-ok">Guter Anfang — weiter üben!</div>';
+    } else {
+      summaryMsg = '<div class="summary-message summary-try">Übung macht den Meister!</div>';
+    }
+
     app.innerHTML =
-      '<div class="summary">' +
+      '<div class="' + summaryCls + '">' +
         renderProgressDots(total, results, -1) +
+        summaryMsg +
         '<div class="score">' + correctCount + " / " + total + "</div>" +
         '<div class="score-label">richtig beantwortet</div>' +
         '<div class="summary-actions">' +
@@ -1442,7 +1459,7 @@
       (question ? '<div class="question-label">' + esc(question) + "</div>" : "") +
       rendered.html +
       '<div class="explanation ' + (rendered.correct ? "explanation-correct" : "explanation-wrong") + '">' +
-        "<strong>" + (rendered.correct ? randomPraise() : "Leider falsch.") + "</strong>" +
+        "<strong>" + (rendered.correct ? randomPraise() : randomEncourage()) + "</strong>" +
         snarkdown(ex.explanation) +
       "</div>" +
       '<div class="review-nav" id="review-nav"></div>';
@@ -1542,8 +1559,45 @@
   }
 
   var PRAISE = ["Richtig!", "Super!", "Genau!", "Sehr gut!", "Perfekt!"];
+  var ENCOURAGE = ["Knapp daneben!", "Fast!", "Nicht ganz.", "Schau mal:"];
   function randomPraise() {
     return PRAISE[Math.floor(Math.random() * PRAISE.length)];
+  }
+  function randomEncourage() {
+    return ENCOURAGE[Math.floor(Math.random() * ENCOURAGE.length)];
+  }
+
+  var audioCtx = null;
+  function getAudioCtx() {
+    if (!audioCtx) {
+      try { audioCtx = new (window.AudioContext || window.webkitAudioContext)(); }
+      catch (e) { return null; }
+    }
+    return audioCtx;
+  }
+
+  function playTone(freq, duration, type) {
+    var ctx = getAudioCtx();
+    if (!ctx) return;
+    var osc = ctx.createOscillator();
+    var gain = ctx.createGain();
+    osc.type = type || "sine";
+    osc.frequency.value = freq;
+    gain.gain.value = 0.12;
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(ctx.currentTime);
+    osc.stop(ctx.currentTime + duration);
+  }
+
+  function playCorrectSound() {
+    playTone(523, 0.1, "sine");
+    setTimeout(function () { playTone(659, 0.15, "sine"); }, 80);
+  }
+
+  function playWrongSound() {
+    playTone(311, 0.2, "triangle");
   }
 
   function esc(str) {

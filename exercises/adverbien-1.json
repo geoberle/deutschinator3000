@@ -18,7 +18,7 @@
       "correct": [
         3
       ],
-      "explanation": "«draußen» ist ein Lokaladverb (Wo? → draußen).",
+      "explanation": "«draußen» beantwortet die Frage: Wo?\n**Merke:** Wo/Wohin/Woher → Lokaladverb.",
       "classify": {
         "question": "Welche Art von Adverb ist das?",
         "options": [
@@ -41,7 +41,7 @@
       "correct": [
         2
       ],
-      "explanation": "«morgen» ist ein Temporaladverb (Wann? → morgen).",
+      "explanation": "«morgen» beantwortet die Frage: Wann?\n**Merke:** Wann/Wie oft/Wie lange → Temporaladverb.",
       "classify": {
         "question": "Welche Art von Adverb ist das?",
         "options": [
@@ -63,7 +63,7 @@
       "correct": [
         2
       ],
-      "explanation": "«sehr» ist ein Gradadverb, es verstärkt das Adjektiv «schön».",
+      "explanation": "«sehr» verstärkt «schön» — es sagt WIE schön.\n**Merke:** Wie/Wie sehr → Modaladverb (Gradadverb).",
       "classify": {
         "question": "Welche Art von Adverb ist das?",
         "options": [
@@ -86,7 +86,7 @@
       "correct": [
         2
       ],
-      "explanation": "«trotzdem» ist ein Kausaladverb (Warum/Unter welchem Umstand? → trotzdem).",
+      "explanation": "«trotzdem» beantwortet: Unter welchem Umstand?\n**Merke:** Warum/Weshalb/Trotzdem → Kausaladverb.",
       "classify": {
         "question": "Welche Art von Adverb ist das?",
         "options": [
@@ -110,7 +110,7 @@
       "correct": [
         2
       ],
-      "explanation": "«gestern» ist ein Temporaladverb (Wann? → gestern).",
+      "explanation": "«gestern» beantwortet die Frage: Wann?\n**Merke:** Wann/Wie oft/Wie lange → Temporaladverb.",
       "classify": {
         "question": "Welche Art von Adverb ist das?",
         "options": [
@@ -134,7 +134,7 @@
       "correct": [
         2
       ],
-      "explanation": "«dorthin» ist ein Lokaladverb (Wohin? → dorthin).",
+      "explanation": "«dorthin» beantwortet die Frage: Wohin?\n**Merke:** Wo/Wohin/Woher → Lokaladverb.",
       "classify": {
         "question": "Welche Art von Adverb ist das?",
         "options": [
@@ -157,7 +157,7 @@
       "correct": [
         2
       ],
-      "explanation": "«deshalb» ist ein Kausaladverb (Warum? → deshalb).",
+      "explanation": "«deshalb» beantwortet die Frage: Warum?\n**Merke:** Warum/Weshalb/Deshalb → Kausaladverb.",
       "classify": {
         "question": "Welche Art von Adverb ist das?",
         "options": [
@@ -181,7 +181,7 @@
       "correct": [
         3
       ],
-      "explanation": "«oft» ist ein Temporaladverb (Wie oft? → oft).",
+      "explanation": "«oft» beantwortet die Frage: Wie oft?\n**Merke:** Wann/Wie oft/Wie lange → Temporaladverb.",
       "classify": {
         "question": "Welche Art von Adverb ist das?",
         "options": [
@@ -205,7 +205,7 @@
       "correct": [
         3
       ],
-      "explanation": "«überall» ist ein Lokaladverb (Wo? → überall).",
+      "explanation": "«überall» beantwortet die Frage: Wo?\n**Merke:** Wo/Wohin/Woher → Lokaladverb.",
       "classify": {
         "question": "Welche Art von Adverb ist das?",
         "options": [
@@ -228,7 +228,7 @@
       "correct": [
         2
       ],
-      "explanation": "«leider» ist ein Modaladverb, das eine Bewertung ausdrückt.",
+      "explanation": "«leider» drückt eine Bewertung aus — WIE man etwas sieht.\n**Merke:** Wie/Bewertung/Grad → Modaladverb.",
       "classify": {
         "question": "Welche Art von Adverb ist das?",
         "options": [

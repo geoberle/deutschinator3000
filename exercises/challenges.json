@@ -1,17 +1,18 @@
-[
-  {
-    "id": "passiv-tag-1",
-    "name": "Tag 1: Grundlagen",
-    "sets": ["passiv-arten-1", "passiv-umformen-1"]
-  },
-  {
-    "id": "passiv-tag-2",
-    "name": "Tag 2: Zeitformen",
-    "sets": ["passiv-zeiten-mix-1", "passiv-futur-1"]
-  },
-  {
-    "id": "passiv-tag-3",
-    "name": "Tag 3: Profistufe",
-    "sets": ["sein-falle-1", "passiv-rueckwaerts-1"]
-  }
-]
+{
+  "id": "passiv-vorbereitung",
+  "name": "Aktiv/Passiv Test Vorbereitung",
+  "stages": [
+    {
+      "name": "Stufe 1: Erkennen",
+      "sets": ["passiv-arten-1", "passiv-umformen-1"]
+    },
+    {
+      "name": "Stufe 2: Zeitformen",
+      "sets": ["passiv-zeiten-mix-1", "passiv-futur-1"]
+    },
+    {
+      "name": "Stufe 3: Profistufe",
+      "sets": ["sein-falle-1", "passiv-rueckwaerts-1"]
+    }
+  ]
+}

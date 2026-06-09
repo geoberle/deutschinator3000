@@ -2,6 +2,7 @@
   "id": "sein-falle-1",
   "name": "Die «sein»-Falle: ZP oder Aktiv Perfekt? 1",
   "goal": "Verstehen, dass nicht alles mit «sein» + Partizip II ein Zustandspassiv ist.",
+  "rules": ["passiv-grundlagen"],
   "authoring": {
     "rationale": "Die «sein»-Falle: Zustandspassiv vs. Aktiv Perfekt unterscheiden. Zustand (Das Fenster ist geöffnet) vs. vergangene Bewegung/Handlung (Der Hund ist weggelaufen). Kniffligste Unterscheidung im Passiv-Thema."
   },

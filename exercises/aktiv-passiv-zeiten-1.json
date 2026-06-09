@@ -2,6 +2,7 @@
   "id": "aktiv-passiv-zeiten-1",
   "name": "Aktiv/Passiv + Zeitform 1",
   "goal": "Aktiv und Passiv erkennen und gleichzeitig die Zeitform bestimmen.",
+  "rules": ["passiv-grundlagen"],
   "authoring": {
     "rationale": "Aufbauübung nach aktiv-passiv-erkennen — jetzt kommt die Zeitform dazu. Verschiedene Zeitformen gemischt."
   },

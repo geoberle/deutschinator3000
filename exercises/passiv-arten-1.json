@@ -2,6 +2,7 @@
   "id": "passiv-arten-1",
   "name": "Der Detektiv-Blick: Passiv-Arten 1",
   "goal": "Ein Gefühl für die zwei Passiv-Arten bekommen — wann steht «werden», wann «sein»?",
+  "rules": ["passiv-grundlagen"],
   "authoring": {
     "rationale": "Fokus auf werden vs. sein, ohne Zeitformen-Komplexität.",
     "constraints": "Nur Präsens und Präteritum."

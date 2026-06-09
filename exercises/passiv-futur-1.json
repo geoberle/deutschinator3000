@@ -2,6 +2,7 @@
   "id": "passiv-futur-1",
   "name": "Die Zukunfts-Mission: Futur I Passiv 1",
   "goal": "Die Struktur des Futur I im Passiv sicher beherrschen.",
+  "rules": ["passiv-grundlagen"],
   "authoring": {
     "rationale": "Futur I wurde bisher ausgelassen, ist aber Klassiker bei Grammatik-Tests. Beide Passiv-Arten im Futur üben: Vorgangspassiv (werden + Partizip II + werden) und Zustandspassiv (werden + Partizip II + sein).",
     "constraints": "Nur Futur I."

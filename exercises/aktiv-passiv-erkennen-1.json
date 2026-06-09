@@ -2,6 +2,7 @@
   "id": "aktiv-passiv",
   "name": "Aktiv Passiv erkennen 1",
   "goal": "Den Unterschied zwischen Aktiv und Passiv erkennen lernen.",
+  "rules": ["passiv-grundlagen"],
   "authoring": {
     "rationale": "Einstiegsübung für Anfänger — nur Aktiv vs. Passiv unterscheiden, ohne Zeitformen oder Passiv-Arten."
   },

@@ -23,6 +23,8 @@
   var challengeScores = [];
   var inChallengeHub = false;
 
+  var rulesCache = {};
+
   var reviewSet = null;
   var reviewExercises = [];
   var reviewAnswers = [];
@@ -656,6 +658,7 @@
   function showHome() {
     setHeaderTitle(null);
     setHeaderBack(false);
+    setHeaderRules(null);
     challengeDef = null;
 
     Promise.all([
@@ -819,6 +822,7 @@
 
       setHeaderTitle(challengeDef.name);
       setHeaderBack(false);
+      setHeaderRules(null);
       var header = document.querySelector("header");
       var backBtn = document.createElement("button");
       backBtn.className = "header-back";
@@ -1022,6 +1026,7 @@
         initQuiz(data);
         setHeaderTitle(data.name);
         setHeaderBack(true);
+        setHeaderRules(data.rules);
         showQuestion();
       });
   }
@@ -1173,7 +1178,7 @@
     var explanationHtml =
       '<div class="explanation ' + (correct ? "explanation-correct" : "explanation-wrong") + '">' +
         "<strong>" + (correct ? randomPraise() : randomEncourage()) + "</strong>" +
-        snarkdown(ex.explanation) +
+        marked.parse(ex.explanation) +
       "</div>" +
       '<button class="next-btn" id="next-btn">' +
         (isLast ? "Ergebnis anzeigen" : "Weiter") +
@@ -1196,7 +1201,7 @@
     feedback.innerHTML =
       '<div class="explanation ' + (correct ? "explanation-correct" : "explanation-wrong") + '">' +
         "<strong>" + (correct ? randomPraise() : randomEncourage()) + "</strong>" +
-        snarkdown(explanation) +
+        marked.parse(explanation) +
       "</div>" +
       '<button class="next-btn" id="next-btn">' +
         (isLast ? "Ergebnis anzeigen" : "Weiter") +
@@ -1235,6 +1240,7 @@
   function showSummary() {
     setHeaderTitle(null);
     setHeaderBack(false);
+    setHeaderRules(null);
     var correctCount = 0;
     for (var i = 0; i < results.length; i++) {
       if (results[i]) correctCount++;
@@ -1421,6 +1427,7 @@
 
             setHeaderTitle(null);
             setHeaderBack(false);
+            setHeaderRules(null);
             app.innerHTML =
               '<div class="summary">' +
                 renderProgressDots(reviewResults.length, reviewResults, -1) +
@@ -1482,7 +1489,7 @@
       rendered.html +
       '<div class="explanation ' + (rendered.correct ? "explanation-correct" : "explanation-wrong") + '">' +
         "<strong>" + (rendered.correct ? randomPraise() : randomEncourage()) + "</strong>" +
-        snarkdown(ex.explanation) +
+        marked.parse(ex.explanation) +
       "</div>" +
       '<div class="review-nav" id="review-nav"></div>';
 
@@ -1550,6 +1557,78 @@
       });
       header.prepend(btn);
     }
+  }
+
+  function setHeaderRules(rules) {
+    var header = document.querySelector("header");
+    var existing = header.querySelector(".header-rules");
+    if (existing) existing.remove();
+    if (rules && rules.length) {
+      var btn = document.createElement("button");
+      btn.className = "header-rules";
+      btn.innerHTML = "&#x1F4D6;";
+      btn.addEventListener("click", showRulesModal);
+      header.appendChild(btn);
+    }
+  }
+
+  function showRulesModal() {
+    var rules = currentSet && currentSet.rules;
+    if (!rules || !rules.length) return;
+
+    var overlay = document.createElement("div");
+    overlay.className = "rules-overlay";
+    overlay.id = "rules-overlay";
+
+    var modal = document.createElement("div");
+    modal.className = "rules-modal";
+
+    var closeBtn = document.createElement("button");
+    closeBtn.className = "rules-close";
+    closeBtn.innerHTML = "&times;";
+    closeBtn.addEventListener("click", hideRulesModal);
+
+    var content = document.createElement("div");
+    content.className = "rules-content";
+    content.innerHTML = "<p>Laden…</p>";
+
+    modal.appendChild(closeBtn);
+    modal.appendChild(content);
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay) hideRulesModal();
+    });
+    document.addEventListener("keydown", onRulesEscape);
+
+    var fetches = [];
+    for (var i = 0; i < rules.length; i++) {
+      fetches.push(fetchRule(rules[i]));
+    }
+    Promise.all(fetches).then(function (texts) {
+      content.innerHTML = marked.parse(texts.join("\n\n---\n\n"));
+    });
+  }
+
+  function fetchRule(id) {
+    if (rulesCache[id]) return Promise.resolve(rulesCache[id]);
+    return fetch("rules/" + id + ".md")
+      .then(function (r) { return r.text(); })
+      .then(function (text) {
+        rulesCache[id] = text;
+        return text;
+      });
+  }
+
+  function hideRulesModal() {
+    var overlay = document.getElementById("rules-overlay");
+    if (overlay) overlay.remove();
+    document.removeEventListener("keydown", onRulesEscape);
+  }
+
+  function onRulesEscape(e) {
+    if (e.key === "Escape") hideRulesModal();
   }
 
   function showToast(msg) {

@@ -6,98 +6,350 @@
     {
       "sentence": "Die Kinder spielen im Garten.",
       "steps": [
-        { "question": "Aktiv oder Passiv?", "options": ["Aktiv", "Vorgangspassiv", "Zustandspassiv"], "correct": 0 },
-        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"], "correct": 0 }
+        {
+          "question": "Aktiv oder Passiv?",
+          "options": [
+            "Aktiv",
+            "Vorgangspassiv",
+            "Zustandspassiv"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": [
+            "Präsens",
+            "Präteritum",
+            "Perfekt",
+            "Plusquamperfekt",
+            "Futur I"
+          ],
+          "correct": 0
+        }
       ],
-      "explanation": "Das Subjekt (die Kinder) handelt selbst → Aktiv. «spielen» ist Präsens."
+      "explanation": "Das Subjekt (die Kinder) handelt selbst → Aktiv. «spielen» ist Präsens.",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Der Kuchen wird von der Mutter gebacken.",
       "steps": [
-        { "question": "Aktiv oder Passiv?", "options": ["Aktiv", "Vorgangspassiv", "Zustandspassiv"], "correct": 1 },
-        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"], "correct": 0 }
+        {
+          "question": "Aktiv oder Passiv?",
+          "options": [
+            "Aktiv",
+            "Vorgangspassiv",
+            "Zustandspassiv"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": [
+            "Präsens",
+            "Präteritum",
+            "Perfekt",
+            "Plusquamperfekt",
+            "Futur I"
+          ],
+          "correct": 0
+        }
       ],
-      "explanation": "«wird gebacken» → werden + Partizip II = Vorgangspassiv Präsens."
+      "explanation": "«wird gebacken» → werden + Partizip II = Vorgangspassiv Präsens.",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Das Fenster ist geöffnet.",
       "steps": [
-        { "question": "Aktiv oder Passiv?", "options": ["Aktiv", "Vorgangspassiv", "Zustandspassiv"], "correct": 2 },
-        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"], "correct": 0 }
+        {
+          "question": "Aktiv oder Passiv?",
+          "options": [
+            "Aktiv",
+            "Vorgangspassiv",
+            "Zustandspassiv"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": [
+            "Präsens",
+            "Präteritum",
+            "Perfekt",
+            "Plusquamperfekt",
+            "Futur I"
+          ],
+          "correct": 0
+        }
       ],
-      "explanation": "«ist geöffnet» → sein + Partizip II = Zustandspassiv Präsens. Das Fenster befindet sich im Zustand des Geöffnetseins."
+      "explanation": "«ist geöffnet» → sein + Partizip II = Zustandspassiv Präsens. Das Fenster befindet sich im Zustand des Geöffnetseins.",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Der Lehrer erklärte die Aufgabe.",
       "steps": [
-        { "question": "Aktiv oder Passiv?", "options": ["Aktiv", "Vorgangspassiv", "Zustandspassiv"], "correct": 0 },
-        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"], "correct": 1 }
+        {
+          "question": "Aktiv oder Passiv?",
+          "options": [
+            "Aktiv",
+            "Vorgangspassiv",
+            "Zustandspassiv"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": [
+            "Präsens",
+            "Präteritum",
+            "Perfekt",
+            "Plusquamperfekt",
+            "Futur I"
+          ],
+          "correct": 1
+        }
       ],
-      "explanation": "Das Subjekt (der Lehrer) handelt selbst → Aktiv. «erklärte» ist Präteritum."
+      "explanation": "Das Subjekt (der Lehrer) handelt selbst → Aktiv. «erklärte» ist Präteritum.",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Das Buch wurde von den Schülern gelesen.",
       "steps": [
-        { "question": "Aktiv oder Passiv?", "options": ["Aktiv", "Vorgangspassiv", "Zustandspassiv"], "correct": 1 },
-        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"], "correct": 1 }
+        {
+          "question": "Aktiv oder Passiv?",
+          "options": [
+            "Aktiv",
+            "Vorgangspassiv",
+            "Zustandspassiv"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": [
+            "Präsens",
+            "Präteritum",
+            "Perfekt",
+            "Plusquamperfekt",
+            "Futur I"
+          ],
+          "correct": 1
+        }
       ],
-      "explanation": "«wurde gelesen» → wurde + Partizip II = Vorgangspassiv Präteritum."
+      "explanation": "«wurde gelesen» → wurde + Partizip II = Vorgangspassiv Präteritum.",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Die Tür war geschlossen.",
       "steps": [
-        { "question": "Aktiv oder Passiv?", "options": ["Aktiv", "Vorgangspassiv", "Zustandspassiv"], "correct": 2 },
-        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"], "correct": 1 }
+        {
+          "question": "Aktiv oder Passiv?",
+          "options": [
+            "Aktiv",
+            "Vorgangspassiv",
+            "Zustandspassiv"
+          ],
+          "correct": 2
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": [
+            "Präsens",
+            "Präteritum",
+            "Perfekt",
+            "Plusquamperfekt",
+            "Futur I"
+          ],
+          "correct": 1
+        }
       ],
-      "explanation": "«war geschlossen» → war + Partizip II = Zustandspassiv Präteritum."
+      "explanation": "«war geschlossen» → war + Partizip II = Zustandspassiv Präteritum.",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Wir haben den Film gesehen.",
       "steps": [
-        { "question": "Aktiv oder Passiv?", "options": ["Aktiv", "Vorgangspassiv", "Zustandspassiv"], "correct": 0 },
-        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"], "correct": 2 }
+        {
+          "question": "Aktiv oder Passiv?",
+          "options": [
+            "Aktiv",
+            "Vorgangspassiv",
+            "Zustandspassiv"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": [
+            "Präsens",
+            "Präteritum",
+            "Perfekt",
+            "Plusquamperfekt",
+            "Futur I"
+          ],
+          "correct": 2
+        }
       ],
-      "explanation": "Das Subjekt (wir) handelt selbst → Aktiv. «haben gesehen» = Perfekt."
+      "explanation": "Das Subjekt (wir) handelt selbst → Aktiv. «haben gesehen» = Perfekt.",
+      "reveal": [
+        1
+      ]
     },
     {
       "sentence": "Der Brief ist geschrieben worden.",
       "steps": [
-        { "question": "Aktiv oder Passiv?", "options": ["Aktiv", "Vorgangspassiv", "Zustandspassiv"], "correct": 1 },
-        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"], "correct": 2 }
+        {
+          "question": "Aktiv oder Passiv?",
+          "options": [
+            "Aktiv",
+            "Vorgangspassiv",
+            "Zustandspassiv"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": [
+            "Präsens",
+            "Präteritum",
+            "Perfekt",
+            "Plusquamperfekt",
+            "Futur I"
+          ],
+          "correct": 2
+        }
       ],
-      "explanation": "«ist geschrieben worden» → ist + Partizip II + worden = Vorgangspassiv Perfekt."
+      "explanation": "«ist geschrieben worden» → ist + Partizip II + worden = Vorgangspassiv Perfekt.",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Sie hatte den Kuchen schon gebacken.",
       "steps": [
-        { "question": "Aktiv oder Passiv?", "options": ["Aktiv", "Vorgangspassiv", "Zustandspassiv"], "correct": 0 },
-        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"], "correct": 3 }
+        {
+          "question": "Aktiv oder Passiv?",
+          "options": [
+            "Aktiv",
+            "Vorgangspassiv",
+            "Zustandspassiv"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": [
+            "Präsens",
+            "Präteritum",
+            "Perfekt",
+            "Plusquamperfekt",
+            "Futur I"
+          ],
+          "correct": 3
+        }
       ],
-      "explanation": "Das Subjekt (sie) handelt selbst → Aktiv. «hatte gebacken» = Plusquamperfekt."
+      "explanation": "Das Subjekt (sie) handelt selbst → Aktiv. «hatte gebacken» = Plusquamperfekt.",
+      "reveal": [
+        1
+      ]
     },
     {
       "sentence": "Das Haus wird nächstes Jahr gebaut werden.",
       "steps": [
-        { "question": "Aktiv oder Passiv?", "options": ["Aktiv", "Vorgangspassiv", "Zustandspassiv"], "correct": 1 },
-        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"], "correct": 4 }
+        {
+          "question": "Aktiv oder Passiv?",
+          "options": [
+            "Aktiv",
+            "Vorgangspassiv",
+            "Zustandspassiv"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": [
+            "Präsens",
+            "Präteritum",
+            "Perfekt",
+            "Plusquamperfekt",
+            "Futur I"
+          ],
+          "correct": 4
+        }
       ],
-      "explanation": "«wird gebaut werden» → wird + Partizip II + werden = Vorgangspassiv Futur I."
+      "explanation": "«wird gebaut werden» → wird + Partizip II + werden = Vorgangspassiv Futur I.",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Er wird morgen ankommen.",
       "steps": [
-        { "question": "Aktiv oder Passiv?", "options": ["Aktiv", "Vorgangspassiv", "Zustandspassiv"], "correct": 0 },
-        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"], "correct": 4 }
+        {
+          "question": "Aktiv oder Passiv?",
+          "options": [
+            "Aktiv",
+            "Vorgangspassiv",
+            "Zustandspassiv"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": [
+            "Präsens",
+            "Präteritum",
+            "Perfekt",
+            "Plusquamperfekt",
+            "Futur I"
+          ],
+          "correct": 4
+        }
       ],
-      "explanation": "Das Subjekt (er) handelt selbst → Aktiv. «wird ankommen» = Futur I."
+      "explanation": "Das Subjekt (er) handelt selbst → Aktiv. «wird ankommen» = Futur I.",
+      "reveal": [
+        1
+      ]
     },
     {
       "sentence": "Die Hausaufgaben wurden von den Kindern gemacht.",
       "steps": [
-        { "question": "Aktiv oder Passiv?", "options": ["Aktiv", "Vorgangspassiv", "Zustandspassiv"], "correct": 1 },
-        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"], "correct": 1 }
+        {
+          "question": "Aktiv oder Passiv?",
+          "options": [
+            "Aktiv",
+            "Vorgangspassiv",
+            "Zustandspassiv"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": [
+            "Präsens",
+            "Präteritum",
+            "Perfekt",
+            "Plusquamperfekt",
+            "Futur I"
+          ],
+          "correct": 1
+        }
       ],
-      "explanation": "«wurden gemacht» → wurde + Partizip II = Vorgangspassiv Präteritum."
+      "explanation": "«wurden gemacht» → wurde + Partizip II = Vorgangspassiv Präteritum.",
+      "reveal": [
+        2
+      ]
     }
   ]
 }

@@ -38,6 +38,29 @@
     return ex.type || (reviewSet && reviewSet.type) || "multiple-choice";
   }
 
+  function renderSentence(sentence, reveal, show) {
+    if (!reveal || !show) return '<div class="sentence">' + esc(sentence) + "</div>";
+    var words = sentence.split(" ");
+    var html = '<div class="sentence">';
+    for (var i = 0; i < words.length; i++) {
+      if (i > 0) html += " ";
+      if (reveal.indexOf(i) > -1) {
+        html += '<span class="reveal-word">' + esc(words[i]) + "</span>";
+      } else {
+        html += esc(words[i]);
+      }
+    }
+    html += "</div>";
+    return html;
+  }
+
+  function revealSentence(ex) {
+    if (!ex.reveal) return;
+    var sentenceEl = document.querySelector(".sentence");
+    if (!sentenceEl) return;
+    sentenceEl.outerHTML = renderSentence(ex.sentence, ex.reveal, true);
+  }
+
   // --- Render exercise (quiz mode) ---
 
   function renderExercise(ex) {
@@ -135,6 +158,8 @@
     var stepCorrect = chosen === step.correct;
 
     classifyStepAnswers.push(chosen);
+
+    if (stepIdx === 0) revealSentence(ex);
 
     var stepDiv = e.currentTarget.closest(".classify-step");
     var buttons = stepDiv.querySelectorAll(".option-btn");
@@ -315,6 +340,8 @@
 
     wordBankStepResults.push(correct ? 1 : 0);
 
+    if (stepIdx === 0) revealSentence(ex);
+
     var answerDiv = document.getElementById("word-bank-answer");
     var poolDiv = document.getElementById("word-bank-pool");
     var submitBtn = document.getElementById("word-bank-submit");
@@ -459,7 +486,7 @@
 
   function renderReviewMC(ex, chosen) {
     var correct = chosen === ex.correct;
-    var html = '<div class="sentence">' + esc(ex.sentence) + "</div>" +
+    var html = renderSentence(ex.sentence, ex.reveal, true) +
       '<div class="options" id="options"></div>';
     return { html: html, correct: correct, bind: function () {
       var optionsEl = document.getElementById("options");
@@ -508,7 +535,7 @@
 
   function renderReviewClassify(ex, chosen) {
     var correct = isClassifyCorrect(chosen, ex);
-    var html = '<div class="sentence">' + esc(ex.sentence) + "</div>";
+    var html = renderSentence(ex.sentence, ex.reveal, true);
 
     for (var s = 0; s < ex.steps.length; s++) {
       var step = ex.steps[s];
@@ -539,7 +566,7 @@
 
   function renderReviewWordBank(ex, chosen) {
     var correct = isWordBankCorrect(chosen, ex);
-    var html = '<div class="sentence">' + esc(ex.sentence) + "</div>";
+    var html = renderSentence(ex.sentence, ex.reveal, true);
 
     for (var s = 0; s < ex.steps.length; s++) {
       var step = ex.steps[s];
@@ -883,6 +910,7 @@
       }
     }
 
+    revealSentence(ex);
     showFeedback(correct, ex.explanation);
   }
 

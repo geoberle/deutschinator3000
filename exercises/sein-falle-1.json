@@ -6,114 +6,352 @@
     {
       "sentence": "Das Fenster ist geöffnet.",
       "steps": [
-        { "question": "Zustandspassiv oder Aktiv Perfekt?", "options": ["Zustandspassiv", "Aktiv Perfekt"], "correct": 0 },
-        { "question": "Was beschreibt der Satz?", "options": ["Einen Zustand (Wie ist es?)", "Eine Handlung (Was ist passiert?)"], "correct": 0 }
+        {
+          "question": "Zustandspassiv oder Aktiv Perfekt?",
+          "options": [
+            "Zustandspassiv",
+            "Aktiv Perfekt"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Was beschreibt der Satz?",
+          "options": [
+            "Einen Zustand (Wie ist es?)",
+            "Eine Handlung (Was ist passiert?)"
+          ],
+          "correct": 0
+        }
       ],
-      "explanation": "Das Fenster ist offen — es beschreibt einen Zustand. Jemand hat es geöffnet, aber der Satz sagt nur, WIE es gerade ist."
+      "explanation": "Das Fenster ist offen — es beschreibt einen Zustand. Jemand hat es geöffnet, aber der Satz sagt nur, WIE es gerade ist.",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Der Hund ist weggelaufen.",
       "steps": [
-        { "question": "Zustandspassiv oder Aktiv Perfekt?", "options": ["Zustandspassiv", "Aktiv Perfekt"], "correct": 1 },
-        { "question": "Was beschreibt der Satz?", "options": ["Einen Zustand (Wie ist es?)", "Eine Handlung (Was ist passiert?)"], "correct": 1 }
+        {
+          "question": "Zustandspassiv oder Aktiv Perfekt?",
+          "options": [
+            "Zustandspassiv",
+            "Aktiv Perfekt"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Was beschreibt der Satz?",
+          "options": [
+            "Einen Zustand (Wie ist es?)",
+            "Eine Handlung (Was ist passiert?)"
+          ],
+          "correct": 1
+        }
       ],
-      "explanation": "Der Hund hat etwas getan: Er ist weggelaufen. «weglaufen» ist ein Bewegungsverb — es bildet das Perfekt mit «sein»."
+      "explanation": "Der Hund hat etwas getan: Er ist weggelaufen. «weglaufen» ist ein Bewegungsverb — es bildet das Perfekt mit «sein».",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Die Katze ist auf den Baum geklettert.",
       "steps": [
-        { "question": "Zustandspassiv oder Aktiv Perfekt?", "options": ["Zustandspassiv", "Aktiv Perfekt"], "correct": 1 },
-        { "question": "Was beschreibt der Satz?", "options": ["Einen Zustand (Wie ist es?)", "Eine Handlung (Was ist passiert?)"], "correct": 1 }
+        {
+          "question": "Zustandspassiv oder Aktiv Perfekt?",
+          "options": [
+            "Zustandspassiv",
+            "Aktiv Perfekt"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Was beschreibt der Satz?",
+          "options": [
+            "Einen Zustand (Wie ist es?)",
+            "Eine Handlung (Was ist passiert?)"
+          ],
+          "correct": 1
+        }
       ],
-      "explanation": "Die Katze hat etwas getan: Sie ist geklettert. «klettern» ist ein Bewegungsverb → Perfekt mit «sein»."
+      "explanation": "Die Katze hat etwas getan: Sie ist geklettert. «klettern» ist ein Bewegungsverb → Perfekt mit «sein».",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Die Tür ist geschlossen.",
       "steps": [
-        { "question": "Zustandspassiv oder Aktiv Perfekt?", "options": ["Zustandspassiv", "Aktiv Perfekt"], "correct": 0 },
-        { "question": "Was beschreibt der Satz?", "options": ["Einen Zustand (Wie ist es?)", "Eine Handlung (Was ist passiert?)"], "correct": 0 }
+        {
+          "question": "Zustandspassiv oder Aktiv Perfekt?",
+          "options": [
+            "Zustandspassiv",
+            "Aktiv Perfekt"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Was beschreibt der Satz?",
+          "options": [
+            "Einen Zustand (Wie ist es?)",
+            "Eine Handlung (Was ist passiert?)"
+          ],
+          "correct": 0
+        }
       ],
-      "explanation": "Die Tür ist zu — das ist ein Zustand. Man kann fragen: «Von wem ist sie geschlossen?» → Zustandspassiv."
+      "explanation": "Die Tür ist zu — das ist ein Zustand. Man kann fragen: «Von wem ist sie geschlossen?» → Zustandspassiv.",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Oma ist gestern angekommen.",
       "steps": [
-        { "question": "Zustandspassiv oder Aktiv Perfekt?", "options": ["Zustandspassiv", "Aktiv Perfekt"], "correct": 1 },
-        { "question": "Was beschreibt der Satz?", "options": ["Einen Zustand (Wie ist es?)", "Eine Handlung (Was ist passiert?)"], "correct": 1 }
+        {
+          "question": "Zustandspassiv oder Aktiv Perfekt?",
+          "options": [
+            "Zustandspassiv",
+            "Aktiv Perfekt"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Was beschreibt der Satz?",
+          "options": [
+            "Einen Zustand (Wie ist es?)",
+            "Eine Handlung (Was ist passiert?)"
+          ],
+          "correct": 1
+        }
       ],
-      "explanation": "Oma hat etwas getan: Sie ist angekommen. «ankommen» ist ein Bewegungsverb → Perfekt mit «sein»."
+      "explanation": "Oma hat etwas getan: Sie ist angekommen. «ankommen» ist ein Bewegungsverb → Perfekt mit «sein».",
+      "reveal": [
+        1
+      ]
     },
     {
       "sentence": "Der Tisch ist gedeckt.",
       "steps": [
-        { "question": "Zustandspassiv oder Aktiv Perfekt?", "options": ["Zustandspassiv", "Aktiv Perfekt"], "correct": 0 },
-        { "question": "Was beschreibt der Satz?", "options": ["Einen Zustand (Wie ist es?)", "Eine Handlung (Was ist passiert?)"], "correct": 0 }
+        {
+          "question": "Zustandspassiv oder Aktiv Perfekt?",
+          "options": [
+            "Zustandspassiv",
+            "Aktiv Perfekt"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Was beschreibt der Satz?",
+          "options": [
+            "Einen Zustand (Wie ist es?)",
+            "Eine Handlung (Was ist passiert?)"
+          ],
+          "correct": 0
+        }
       ],
-      "explanation": "Der Tisch ist fertig gedeckt — er beschreibt, WIE der Tisch gerade ist. Jemand hat ihn gedeckt → Zustandspassiv."
+      "explanation": "Der Tisch ist fertig gedeckt — er beschreibt, WIE der Tisch gerade ist. Jemand hat ihn gedeckt → Zustandspassiv.",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Das Auto ist gewaschen.",
       "steps": [
-        { "question": "Zustandspassiv oder Aktiv Perfekt?", "options": ["Zustandspassiv", "Aktiv Perfekt"], "correct": 0 },
-        { "question": "Was beschreibt der Satz?", "options": ["Einen Zustand (Wie ist es?)", "Eine Handlung (Was ist passiert?)"], "correct": 0 }
+        {
+          "question": "Zustandspassiv oder Aktiv Perfekt?",
+          "options": [
+            "Zustandspassiv",
+            "Aktiv Perfekt"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Was beschreibt der Satz?",
+          "options": [
+            "Einen Zustand (Wie ist es?)",
+            "Eine Handlung (Was ist passiert?)"
+          ],
+          "correct": 0
+        }
       ],
-      "explanation": "Das Auto ist sauber — ein Zustand. Man kann fragen: «Von wem ist es gewaschen?» → Zustandspassiv."
+      "explanation": "Das Auto ist sauber — ein Zustand. Man kann fragen: «Von wem ist es gewaschen?» → Zustandspassiv.",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Die Blume ist gewachsen.",
       "steps": [
-        { "question": "Zustandspassiv oder Aktiv Perfekt?", "options": ["Zustandspassiv", "Aktiv Perfekt"], "correct": 1 },
-        { "question": "Was beschreibt der Satz?", "options": ["Einen Zustand (Wie ist es?)", "Eine Handlung (Was ist passiert?)"], "correct": 1 }
+        {
+          "question": "Zustandspassiv oder Aktiv Perfekt?",
+          "options": [
+            "Zustandspassiv",
+            "Aktiv Perfekt"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Was beschreibt der Satz?",
+          "options": [
+            "Einen Zustand (Wie ist es?)",
+            "Eine Handlung (Was ist passiert?)"
+          ],
+          "correct": 1
+        }
       ],
-      "explanation": "Die Blume hat etwas getan: Sie ist gewachsen. Niemand hat sie «gewachsen» — sie hat sich selbst verändert → Aktiv Perfekt."
+      "explanation": "Die Blume hat etwas getan: Sie ist gewachsen. Niemand hat sie «gewachsen» — sie hat sich selbst verändert → Aktiv Perfekt.",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Der Schneemann ist geschmolzen.",
       "steps": [
-        { "question": "Zustandspassiv oder Aktiv Perfekt?", "options": ["Zustandspassiv", "Aktiv Perfekt"], "correct": 1 },
-        { "question": "Was beschreibt der Satz?", "options": ["Einen Zustand (Wie ist es?)", "Eine Handlung (Was ist passiert?)"], "correct": 1 }
+        {
+          "question": "Zustandspassiv oder Aktiv Perfekt?",
+          "options": [
+            "Zustandspassiv",
+            "Aktiv Perfekt"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Was beschreibt der Satz?",
+          "options": [
+            "Einen Zustand (Wie ist es?)",
+            "Eine Handlung (Was ist passiert?)"
+          ],
+          "correct": 1
+        }
       ],
-      "explanation": "Der Schneemann ist geschmolzen — es ist etwas passiert. «schmelzen» beschreibt eine Veränderung → Aktiv Perfekt mit «sein»."
+      "explanation": "Der Schneemann ist geschmolzen — es ist etwas passiert. «schmelzen» beschreibt eine Veränderung → Aktiv Perfekt mit «sein».",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Die Wand ist gestrichen.",
       "steps": [
-        { "question": "Zustandspassiv oder Aktiv Perfekt?", "options": ["Zustandspassiv", "Aktiv Perfekt"], "correct": 0 },
-        { "question": "Was beschreibt der Satz?", "options": ["Einen Zustand (Wie ist es?)", "Eine Handlung (Was ist passiert?)"], "correct": 0 }
+        {
+          "question": "Zustandspassiv oder Aktiv Perfekt?",
+          "options": [
+            "Zustandspassiv",
+            "Aktiv Perfekt"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Was beschreibt der Satz?",
+          "options": [
+            "Einen Zustand (Wie ist es?)",
+            "Eine Handlung (Was ist passiert?)"
+          ],
+          "correct": 0
+        }
       ],
-      "explanation": "Die Wand ist frisch gestrichen — ein Zustand. Jemand hat sie gestrichen → Zustandspassiv."
+      "explanation": "Die Wand ist frisch gestrichen — ein Zustand. Jemand hat sie gestrichen → Zustandspassiv.",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Die Kinder sind nach Hause gegangen.",
       "steps": [
-        { "question": "Zustandspassiv oder Aktiv Perfekt?", "options": ["Zustandspassiv", "Aktiv Perfekt"], "correct": 1 },
-        { "question": "Was beschreibt der Satz?", "options": ["Einen Zustand (Wie ist es?)", "Eine Handlung (Was ist passiert?)"], "correct": 1 }
+        {
+          "question": "Zustandspassiv oder Aktiv Perfekt?",
+          "options": [
+            "Zustandspassiv",
+            "Aktiv Perfekt"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Was beschreibt der Satz?",
+          "options": [
+            "Einen Zustand (Wie ist es?)",
+            "Eine Handlung (Was ist passiert?)"
+          ],
+          "correct": 1
+        }
       ],
-      "explanation": "Die Kinder haben etwas getan: Sie sind gegangen. «gehen» ist ein Bewegungsverb → Perfekt mit «sein»."
+      "explanation": "Die Kinder haben etwas getan: Sie sind gegangen. «gehen» ist ein Bewegungsverb → Perfekt mit «sein».",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Das Essen ist gekocht.",
       "steps": [
-        { "question": "Zustandspassiv oder Aktiv Perfekt?", "options": ["Zustandspassiv", "Aktiv Perfekt"], "correct": 0 },
-        { "question": "Was beschreibt der Satz?", "options": ["Einen Zustand (Wie ist es?)", "Eine Handlung (Was ist passiert?)"], "correct": 0 }
+        {
+          "question": "Zustandspassiv oder Aktiv Perfekt?",
+          "options": [
+            "Zustandspassiv",
+            "Aktiv Perfekt"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Was beschreibt der Satz?",
+          "options": [
+            "Einen Zustand (Wie ist es?)",
+            "Eine Handlung (Was ist passiert?)"
+          ],
+          "correct": 0
+        }
       ],
-      "explanation": "Das Essen ist fertig — ein Zustand. Man kann fragen: «Von wem ist es gekocht?» → Zustandspassiv."
+      "explanation": "Das Essen ist fertig — ein Zustand. Man kann fragen: «Von wem ist es gekocht?» → Zustandspassiv.",
+      "reveal": [
+        2
+      ]
     },
     {
       "sentence": "Papa ist zur Arbeit gefahren.",
       "steps": [
-        { "question": "Zustandspassiv oder Aktiv Perfekt?", "options": ["Zustandspassiv", "Aktiv Perfekt"], "correct": 1 },
-        { "question": "Was beschreibt der Satz?", "options": ["Einen Zustand (Wie ist es?)", "Eine Handlung (Was ist passiert?)"], "correct": 1 }
+        {
+          "question": "Zustandspassiv oder Aktiv Perfekt?",
+          "options": [
+            "Zustandspassiv",
+            "Aktiv Perfekt"
+          ],
+          "correct": 1
+        },
+        {
+          "question": "Was beschreibt der Satz?",
+          "options": [
+            "Einen Zustand (Wie ist es?)",
+            "Eine Handlung (Was ist passiert?)"
+          ],
+          "correct": 1
+        }
       ],
-      "explanation": "Papa hat etwas getan: Er ist gefahren. «fahren» ist ein Bewegungsverb → Perfekt mit «sein»."
+      "explanation": "Papa hat etwas getan: Er ist gefahren. «fahren» ist ein Bewegungsverb → Perfekt mit «sein».",
+      "reveal": [
+        1
+      ]
     },
     {
       "sentence": "Der Kuchen ist gebacken.",
       "steps": [
-        { "question": "Zustandspassiv oder Aktiv Perfekt?", "options": ["Zustandspassiv", "Aktiv Perfekt"], "correct": 0 },
-        { "question": "Was beschreibt der Satz?", "options": ["Einen Zustand (Wie ist es?)", "Eine Handlung (Was ist passiert?)"], "correct": 0 }
+        {
+          "question": "Zustandspassiv oder Aktiv Perfekt?",
+          "options": [
+            "Zustandspassiv",
+            "Aktiv Perfekt"
+          ],
+          "correct": 0
+        },
+        {
+          "question": "Was beschreibt der Satz?",
+          "options": [
+            "Einen Zustand (Wie ist es?)",
+            "Eine Handlung (Was ist passiert?)"
+          ],
+          "correct": 0
+        }
       ],
-      "explanation": "Der Kuchen ist fertig gebacken — ein Zustand. Jemand hat ihn gebacken → Zustandspassiv."
+      "explanation": "Der Kuchen ist fertig gebacken — ein Zustand. Jemand hat ihn gebacken → Zustandspassiv.",
+      "reveal": [
+        2
+      ]
     }
   ]
 }

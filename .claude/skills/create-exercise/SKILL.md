@@ -188,6 +188,23 @@ User builds a sentence by tapping words from a shuffled pool into an answer area
 }
 ```
 
+### Optional: `reveal` — Post-Solve Word Highlighting
+
+Any exercise with a `sentence` field (MC, classify, word-bank) can include `"reveal": [indices]` to highlight key words after the kid answers. The highlighted words appear with an amber background — useful for drawing attention to trigger words like «werden»/«sein» in passive exercises.
+
+```json
+{
+  "sentence": "Das Fenster wird geöffnet.",
+  "reveal": [2],
+  ...
+}
+```
+
+- `reveal` is an array of zero-based word indices (sentence split on spaces)
+- Highlight appears immediately on answer (correct or wrong)
+- Also shown in review mode
+- Future: `highlight` (separate field) reserved for pre-solve highlighting
+
 ### Critical Rules for Exercise Content
 
 - **Sentence quality**: Use natural, age-appropriate German sentences. Vary subjects, tenses, complexity.

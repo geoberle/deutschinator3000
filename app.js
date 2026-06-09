@@ -1175,7 +1175,7 @@
     var explanationHtml =
       '<div class="explanation ' + (correct ? "explanation-correct" : "explanation-wrong") + '">' +
         "<strong>" + (correct ? randomPraise() : "Leider falsch.") + "</strong>" +
-        esc(ex.explanation) +
+        snarkdown(ex.explanation) +
       "</div>" +
       '<button class="next-btn" id="next-btn">' +
         (isLast ? "Ergebnis anzeigen" : "Weiter") +
@@ -1197,7 +1197,7 @@
     feedback.innerHTML =
       '<div class="explanation ' + (correct ? "explanation-correct" : "explanation-wrong") + '">' +
         "<strong>" + (correct ? randomPraise() : "Leider falsch.") + "</strong>" +
-        esc(explanation) +
+        snarkdown(explanation) +
       "</div>" +
       '<button class="next-btn" id="next-btn">' +
         (isLast ? "Ergebnis anzeigen" : "Weiter") +
@@ -1446,7 +1446,7 @@
       rendered.html +
       '<div class="explanation ' + (rendered.correct ? "explanation-correct" : "explanation-wrong") + '">' +
         "<strong>" + (rendered.correct ? randomPraise() : "Leider falsch.") + "</strong>" +
-        esc(ex.explanation) +
+        snarkdown(ex.explanation) +
       "</div>" +
       '<div class="review-nav" id="review-nav"></div>';
 

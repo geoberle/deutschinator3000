@@ -668,6 +668,10 @@ header h1 {
   margin-bottom: 0.25rem;
 }
 
+.explanation p {
+  margin: 0.25rem 0 0;
+}
+
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(4px); }
   to { opacity: 1; transform: translateY(0); }

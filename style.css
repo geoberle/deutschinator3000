@@ -71,26 +71,112 @@ header h1 {
   color: #666;
 }
 
+.challenge-progress {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1976d2;
+  margin-top: 0.5rem;
+}
+
+/* Challenge hub */
+
+.challenge-sets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.challenge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.challenge-done {
+  background: #e8f5e9;
+  border-color: #c8e6c9;
+}
+
+.challenge-next {
+  border-color: #1976d2;
+  background: #e3f2fd;
+}
+
+.challenge-locked {
+  color: #bbb;
+}
+
+.challenge-icon {
+  font-weight: 700;
+  font-size: 1.1rem;
+  width: 1.5rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.challenge-done .challenge-icon {
+  color: #2e7d32;
+}
+
+.challenge-next .challenge-icon {
+  color: #1976d2;
+}
+
+.challenge-row-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.challenge-row-score {
+  font-size: 0.85rem;
+  color: #2e7d32;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.challenge-start-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  min-height: 36px;
+  flex-shrink: 0;
+}
+
+.challenge-hub-actions {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.challenge-reset {
+  font-size: 0.8rem;
+  color: #999;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+.challenge-reset:hover {
+  color: #666;
+}
+
 /* Celebration */
+
+.celebration-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
 
 .celebration-title {
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.challenge-breakdown {
-  margin-top: 1.5rem;
-  text-align: left;
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.challenge-set-score {
-  font-size: 0.9rem;
-  padding: 0.25rem 0;
-  color: #666;
+  margin-bottom: 0.5rem;
 }
 
 /* Home — exercise set cards */

@@ -21,6 +21,7 @@
   var challengeDef = null;
   var challengeSetIndex = 0;
   var challengeScores = [];
+  var inChallengeHub = false;
 
   var reviewSet = null;
   var reviewExercises = [];
@@ -572,7 +573,7 @@
     } else if (location.hash.startsWith("#set/")) {
       startSetById(decodeURIComponent(location.hash.replace("#set/", "")));
     } else if (location.hash === "#challenge") {
-      startChallenge();
+      showChallengeHub();
     } else {
       showHome();
     }
@@ -616,9 +617,24 @@
             }
           }
         }
+        var saved = challenge.id ? loadChallengeProgress(challenge.id) : null;
+        var progressHtml = "";
+        if (saved && saved.scores) {
+          var doneCount = 0;
+          for (var dc = 0; dc < saved.scores.length; dc++) {
+            if (saved.scores[dc]) doneCount++;
+          }
+          if (doneCount > 0 && doneCount < challenge.sets.length) {
+            progressHtml = '<div class="challenge-progress">' +
+              doneCount + " von " + challenge.sets.length + " geschafft — weiter geht's!</div>";
+          } else if (doneCount === challenge.sets.length) {
+            progressHtml = '<div class="challenge-progress">Alle geschafft!</div>';
+          }
+        }
         html += '<div class="challenge-card" id="challenge-card">' +
           "<h2>" + esc(challenge.name) + "</h2>" +
           "<p>" + challenge.sets.length + " Übungen · " + totalCount + " Aufgaben</p>" +
+          progressHtml +
           "</div>";
       }
 
@@ -653,15 +669,143 @@
     });
   }
 
-  function startChallenge() {
-    fetch("exercises/challenges.json")
-      .then(function (r) { return r.json(); })
-      .then(function (data) {
-        challengeDef = data;
-        challengeSetIndex = 0;
-        challengeScores = [];
-        startSetById(data.sets[0]);
+  function showChallengeHub() {
+    Promise.all([
+      fetch("exercises/index.json").then(function (r) { return r.json(); }),
+      fetch("exercises/challenges.json").then(function (r) { return r.json(); })
+    ]).then(function (both) {
+      sets = both[0];
+      challengeDef = both[1];
+      inChallengeHub = true;
+
+      var saved = challengeDef.id ? loadChallengeProgress(challengeDef.id) : null;
+      challengeScores = [];
+      for (var i = 0; i < challengeDef.sets.length; i++) {
+        challengeScores.push(saved && saved.scores && saved.scores[i] ? saved.scores[i] : null);
+      }
+
+      var nextIdx = -1;
+      var doneCount = 0;
+      for (var n = 0; n < challengeScores.length; n++) {
+        if (challengeScores[n]) doneCount++;
+        else if (nextIdx === -1) nextIdx = n;
+      }
+      var allDone = doneCount === challengeDef.sets.length;
+
+      setHeaderTitle(challengeDef.name);
+      setHeaderBack(false);
+      var header = document.querySelector("header");
+      var backBtn = document.createElement("button");
+      backBtn.className = "header-back";
+      backBtn.textContent = "←";
+      backBtn.addEventListener("click", function () {
+        location.hash = "";
+        showHome();
       });
+      header.prepend(backBtn);
+
+      var html = "";
+
+      if (allDone) {
+        var totalCorrect = 0;
+        var totalQuestions = 0;
+        for (var t = 0; t < challengeScores.length; t++) {
+          totalCorrect += challengeScores[t].correct;
+          totalQuestions += challengeScores[t].total;
+        }
+        html += '<div class="celebration-header">' +
+          '<div class="celebration-title">Geschafft!</div>' +
+          '<div class="score">' + totalCorrect + " / " + totalQuestions + "</div>" +
+          '<div class="score-label">richtig beantwortet</div>' +
+          "</div>";
+      }
+
+      html += '<div class="challenge-sets">';
+      for (var i = 0; i < challengeDef.sets.length; i++) {
+        var setId = challengeDef.sets[i];
+        var setInfo = null;
+        for (var s = 0; s < sets.length; s++) {
+          if (sets[s].id === setId) { setInfo = sets[s]; break; }
+        }
+        if (!setInfo) continue;
+
+        var isDone = !!challengeScores[i];
+        var isNext = i === nextIdx;
+        var isLocked = !isDone && !isNext;
+
+        var rowCls = "challenge-row";
+        if (isDone) rowCls += " challenge-done";
+        if (isNext) rowCls += " challenge-next";
+        if (isLocked) rowCls += " challenge-locked";
+
+        var icon = isDone ? "✓" : (isNext ? "→" : "○");
+        var scoreHtml = isDone ? '<span class="challenge-row-score">' + challengeScores[i].correct + "/" + challengeScores[i].total + "</span>" : "";
+        var actionHtml = isNext ? '<button class="btn-primary challenge-start-btn" data-challenge-idx="' + i + '">Starten</button>' : "";
+
+        html += '<div class="' + rowCls + '" data-challenge-idx="' + i + '">' +
+          '<span class="challenge-icon">' + icon + "</span>" +
+          '<span class="challenge-row-name">' + esc(setInfo.name) + "</span>" +
+          scoreHtml +
+          actionHtml +
+          "</div>";
+      }
+      html += "</div>";
+
+      html += '<div class="challenge-hub-actions">' +
+        '<div class="challenge-reset" id="btn-challenge-reset">Zurücksetzen</div>' +
+        "</div>";
+
+      app.innerHTML = html;
+
+      var startBtn = document.querySelector(".challenge-start-btn");
+      if (startBtn) {
+        startBtn.addEventListener("click", function (e) {
+          e.stopPropagation();
+          var idx = parseInt(e.currentTarget.getAttribute("data-challenge-idx"), 10);
+          challengeSetIndex = idx;
+          inChallengeHub = false;
+          startSetById(challengeDef.sets[idx]);
+        });
+      }
+
+      var doneRows = document.querySelectorAll(".challenge-done");
+      for (var d = 0; d < doneRows.length; d++) {
+        doneRows[d].style.cursor = "pointer";
+        doneRows[d].addEventListener("click", function (e) {
+          var idx = parseInt(e.currentTarget.getAttribute("data-challenge-idx"), 10);
+          challengeSetIndex = idx;
+          inChallengeHub = false;
+          startSetById(challengeDef.sets[idx]);
+        });
+      }
+
+      document.getElementById("btn-challenge-reset").addEventListener("click", function () {
+        clearChallengeProgress();
+        challengeScores = [];
+        showChallengeHub();
+      });
+    });
+  }
+
+  function saveChallengeProgress() {
+    if (!challengeDef || !challengeDef.id) return;
+    try {
+      localStorage.setItem("challenge-" + challengeDef.id, JSON.stringify({
+        scores: challengeScores
+      }));
+    } catch (e) {}
+  }
+
+  function loadChallengeProgress(id) {
+    try {
+      var raw = localStorage.getItem("challenge-" + id);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) { return null; }
+  }
+
+  function clearChallengeProgress() {
+    if (!challengeDef || !challengeDef.id) return;
+    try { localStorage.removeItem("challenge-" + challengeDef.id); } catch (e) {}
   }
 
   function onCardClick(e) {
@@ -902,14 +1046,10 @@
       '<button class="btn-share" id="btn-share">Ergebnis teilen</button>';
 
     if (challengeDef) {
-      if (challengeSetIndex < challengeDef.sets.length - 1) {
-        actionsHtml += '<button class="btn-primary" id="btn-next-challenge">Nächste Übung</button>';
-      } else {
-        actionsHtml += '<button class="btn-primary" id="btn-finish-challenge">Fertig!</button>';
-      }
+      actionsHtml += '<button class="btn-primary" id="btn-to-hub">Zur Übersicht</button>';
+    } else {
+      actionsHtml += '<button class="btn-secondary" id="btn-back">Zurück</button>';
     }
-
-    actionsHtml += '<button class="btn-secondary" id="btn-back">Zurück</button>';
 
     app.innerHTML =
       '<div class="summary">' +
@@ -926,17 +1066,20 @@
       shareResult(correctCount, total);
     });
 
-    var advanceBtn = document.getElementById("btn-next-challenge") || document.getElementById("btn-finish-challenge");
-    if (advanceBtn) {
-      advanceBtn.addEventListener("click", function () {
+    var hubBtn = document.getElementById("btn-to-hub");
+    if (hubBtn) {
+      hubBtn.addEventListener("click", function () {
         advanceChallenge(correctCount, total);
       });
     }
 
-    document.getElementById("btn-back").addEventListener("click", function () {
-      location.hash = "";
-      showHome();
-    });
+    var backBtn = document.getElementById("btn-back");
+    if (backBtn) {
+      backBtn.addEventListener("click", function () {
+        location.hash = "";
+        showHome();
+      });
+    }
   }
 
   function retrySet() {
@@ -963,48 +1106,9 @@
   }
 
   function advanceChallenge(correctCount, total) {
-    challengeScores.push({name: currentSet.name, correct: correctCount, total: total});
-    challengeSetIndex++;
-    if (challengeSetIndex >= challengeDef.sets.length) {
-      showCelebration();
-    } else {
-      startSetById(challengeDef.sets[challengeSetIndex]);
-    }
-  }
-
-  function showCelebration() {
-    setHeaderTitle(null);
-    setHeaderBack(false);
-    var totalCorrect = 0;
-    var totalQuestions = 0;
-    for (var i = 0; i < challengeScores.length; i++) {
-      totalCorrect += challengeScores[i].correct;
-      totalQuestions += challengeScores[i].total;
-    }
-
-    var breakdownHtml = "";
-    for (var s = 0; s < challengeScores.length; s++) {
-      breakdownHtml += '<div class="challenge-set-score">' +
-        esc(challengeScores[s].name) + ": " +
-        challengeScores[s].correct + "/" + challengeScores[s].total +
-        "</div>";
-    }
-
-    app.innerHTML =
-      '<div class="summary celebration">' +
-        '<div class="celebration-title">' + esc(challengeDef.name) + " geschafft!</div>" +
-        '<div class="score">' + totalCorrect + " / " + totalQuestions + "</div>" +
-        '<div class="score-label">richtig beantwortet</div>' +
-        '<div class="challenge-breakdown">' + breakdownHtml + "</div>" +
-        '<div class="summary-actions">' +
-          '<button class="btn-secondary" id="btn-back">Zurück</button>' +
-        "</div>" +
-      "</div>";
-
-    document.getElementById("btn-back").addEventListener("click", function () {
-      location.hash = "";
-      showHome();
-    });
+    challengeScores[challengeSetIndex] = {name: currentSet.name, correct: correctCount, total: total};
+    saveChallengeProgress();
+    showChallengeHub();
   }
 
   function shareResult(correctCount, total) {
@@ -1191,6 +1295,10 @@
           showSharedResult();
           return;
         }
+        if (challengeDef && !inChallengeHub) {
+          showChallengeHub();
+          return;
+        }
         location.hash = "";
         showHome();
       });
@@ -1246,7 +1354,7 @@
     } else if (location.hash.startsWith("#set/")) {
       startSetById(decodeURIComponent(location.hash.replace("#set/", "")));
     } else if (location.hash === "#challenge") {
-      startChallenge();
+      showChallengeHub();
     }
   });
 

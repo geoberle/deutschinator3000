@@ -21,14 +21,17 @@ Ask the user these questions **one at a time** using AskUserQuestion:
 
 ```json
 {
+  "id": "passiv-tag-1",
   "name": "Tagesübung",
   "sets": ["aktiv-passiv", "passiv-arten-1", "aktiv-passiv-zeiten-1"]
 }
 ```
 
+- `id`: unique identifier. Progress is stored in localStorage keyed by this. Changing the ID resets progress. Use a new ID when the challenge content changes (e.g., `"passiv-tag-1"`, `"passiv-tag-2"`)
 - `name`: display name shown on the challenge card and celebration screen
 - `sets`: array of exercise set IDs (must match `id` fields in `exercises/index.json`)
 - Order matters — sets are played in the order listed
+- Progress persists in localStorage: kid can close browser and resume where they left off. Progress clears on completion or when `id` changes.
 
 ## Steps
 

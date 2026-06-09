@@ -11,8 +11,8 @@
       "sets": ["passiv-zeiten-mix-1", "passiv-futur-1"]
     },
     {
-      "name": "Stufe 3: Profistufe",
-      "sets": ["sein-falle-1", "passiv-rueckwaerts-1"]
+      "name": "Stufe 3: Rückwärtsgang",
+      "sets": ["passiv-rueckwaerts-1"]
     }
   ]
 }

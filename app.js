@@ -758,7 +758,7 @@
           html +=
             '<div class="set-card" data-index="' + s.index + '">' +
               "<h2>" + esc(s.set.name) + "</h2>" +
-              "<p>" + esc(s.set.description) + "</p>" +
+              "<p>" + esc(s.set.goal || s.set.description) + "</p>" +
               '<div class="count">' + s.set.count + " Aufgaben</div>" +
             "</div>";
         }
@@ -1019,6 +1019,7 @@
       .then(function (r) { return r.json(); })
       .then(function (data) {
         currentSet = data;
+        currentSet.description = set.description || "";
         initQuiz(data);
         setHeaderTitle(data.name);
         setHeaderBack(true);
@@ -1047,8 +1048,10 @@
     var total = exercises.length;
     var question = ex.question || currentSet.question || "";
 
+    var desc = index === 0 && currentSet.description ? currentSet.description : "";
     var rendered = renderExercise(ex);
     app.innerHTML = renderProgressDots(total, results, index) +
+      (desc ? '<div class="set-description">' + esc(desc) + "</div>" : "") +
       (question ? '<div class="question-label">' + esc(question) + "</div>" : "") +
       rendered.html;
     rendered.bind();

@@ -1,6 +1,11 @@
 {
   "id": "passiv-zeiten-mix-1",
   "name": "Der Zeiten-Mix: Vorgangspassiv 1",
+  "goal": "Sicherheit in den verschiedenen Zeitformen des Passivs gewinnen.",
+  "authoring": {
+    "rationale": "Vorgangspassiv-Sätze in andere Zeiten umsetzen — nächste Stufe nach dem Grundlagen-Umformen.",
+    "constraints": "Vorgangspassiv: Präteritum, Perfekt, Plusquamperfekt. Zustandspassiv: nur Präsens und Präteritum, da Perfekt-Formen kaum verwendet werden."
+  },
   "type": "word-bank",
   "exercises": [
     {

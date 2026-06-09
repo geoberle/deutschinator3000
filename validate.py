@@ -38,6 +38,17 @@ for entry in manifest:
     if data.get("id") != eid:
         err(f"ID mismatch: manifest={eid}, file={data.get('id')}")
 
+    # Goal (required)
+    if not data.get("goal") or not isinstance(data["goal"], str):
+        err("Missing or invalid 'goal' field (required string)")
+
+    # Authoring rationale (required)
+    authoring = data.get("authoring")
+    if not authoring or not isinstance(authoring, dict):
+        err("Missing or invalid 'authoring' field (required object)")
+    elif not authoring.get("rationale") or not isinstance(authoring["rationale"], str):
+        err("Missing or invalid 'authoring.rationale' field (required string)")
+
     # Count match
     actual = len(data.get("exercises", []))
     if actual != entry["count"]:

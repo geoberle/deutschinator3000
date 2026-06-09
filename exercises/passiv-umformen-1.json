@@ -1,6 +1,11 @@
 {
   "id": "passiv-umformen-1",
   "name": "Die Verwandlung: Passiv bilden 1",
+  "goal": "Passivformen selbst korrekt bilden lernen.",
+  "authoring": {
+    "rationale": "Aktiv-Sätze ins Vorgangspassiv umwandeln, dann das passende Zustandspassiv (Resultat) formulieren. Vom Erkennen zum aktiven Bilden.",
+    "constraints": "Nur Präsens und Präteritum."
+  },
   "type": "word-bank",
   "exercises": [
     {

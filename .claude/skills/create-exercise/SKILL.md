@@ -12,12 +12,15 @@ Generate a new exercise set JSON file for Deutschinator 3000 and register it in 
 
 Before generating anything, ask the user these questions **one at a time**. Use AskUserQuestion for each. Provide your recommended answer.
 
-1. **Type(s)**: Which exercise types? Can be one or mixed. (multiple-choice = pick from options, word-tap = tap words in a sentence, word-tap+classify = tap word then classify it, classify = multi-step classification of a sentence)
-2. **Topic**: What grammar topic? (e.g., Zeitformen, Aktiv/Passiv, Kasus, Konjunktiv, Satzglieder, Adverbien)
-3. **Question**: Default question for the set. Individual exercises can override this with their own `question` field.
-4. **Options** (multiple-choice only): What are the fixed answer options?
-5. **Count**: How many exercises? (recommend 12-15)
-6. **Difficulty**: School level / age range? (e.g., 4. Klasse, 6. Klasse, Gymnasium)
+1. **Goal** (required): What should the kid learn? One sentence in German. This becomes the `goal` field and is shown on the exercise card.
+2. **Authoring rationale** (required): Why does this exercise exist? Design reasoning, pedagogical intent. In German. Becomes `authoring.rationale`.
+3. **Authoring constraints** (optional): Scope limitations (e.g., "Nur Präsens und Präteritum"). Becomes `authoring.constraints`.
+4. **Type(s)**: Which exercise types? Can be one or mixed. (multiple-choice = pick from options, word-tap = tap words in a sentence, word-tap+classify = tap word then classify it, classify = multi-step classification of a sentence)
+5. **Topic**: What grammar topic? (e.g., Zeitformen, Aktiv/Passiv, Kasus, Konjunktiv, Satzglieder, Adverbien)
+6. **Question**: Default question for the set. Individual exercises can override this with their own `question` field.
+7. **Options** (multiple-choice only): What are the fixed answer options?
+8. **Count**: How many exercises? (recommend 12-15)
+9. **Difficulty**: School level / age range? (e.g., 4. Klasse, 6. Klasse, Gymnasium)
 
 ## Exercise File Formats
 
@@ -45,6 +48,11 @@ User picks one option from a list.
 {
   "id": "kebab-case-id",
   "name": "Human-readable name",
+  "goal": "Was das Kind lernen soll — ein Satz auf Deutsch.",
+  "authoring": {
+    "rationale": "Warum diese Übung existiert — pädagogische Begründung.",
+    "constraints": "Optionale Einschränkungen (z.B. nur bestimmte Zeitformen)."
+  },
   "question": "Default question for all exercises",
   "exercises": [
     {
@@ -224,13 +232,17 @@ The manifest at `exercises/index.json` is an array of set descriptors:
   {
     "id": "zeitformen",
     "name": "Zeitformen erkennen",
-    "description": "Erkenne die Zeitform des Satzes",
+    "goal": "Die Zeitform in Sätzen sicher erkennen.",
+    "description": "Erkenne die Zeitform des Satzes (Präsens, Präteritum, Perfekt, Plusquamperfekt, Futur I)",
     "file": "zeitformen.json",
     "count": 15,
     "category": "Zeiten"
   }
 ]
 ```
+
+- `goal`: shown on the exercise card in the menu (learning intent — why)
+- `description`: shown on the first question when starting the exercise (task instruction — what to do)
 
 **Ordering matters**: The home screen renders entries in manifest order. Category headers are shown when the category changes from the previous entry. Sets with the same `category` MUST be adjacent in the array — otherwise the category header renders multiple times.
 

@@ -1,6 +1,11 @@
 {
   "id": "passiv-rueckwaerts-1",
   "name": "Der Rückwärtsgang: Passiv → Aktiv 1",
+  "goal": "Passivsätze zurück ins Aktiv umbauen — wer tut eigentlich was?",
+  "authoring": {
+    "rationale": "Erst wer Passiv zurück ins Aktiv umbauen kann, hat die Satzstruktur wirklich verstanden. Mechanisches Passiv-Formen reicht nicht.",
+    "constraints": "Zeitform muss beim Umbau strikt beibehalten werden."
+  },
   "type": "word-bank",
   "exercises": [
     {

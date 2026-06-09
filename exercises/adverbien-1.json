@@ -1,6 +1,10 @@
 {
   "id": "adverbien-1",
   "name": "Adverbien erkennen 1",
+  "goal": "Adverbien im Satz erkennen und richtig einordnen.",
+  "authoring": {
+    "rationale": "Grundübung: Adverbien finden und nach Kategorie zuordnen."
+  },
   "type": "word-tap",
   "question": "Welches Wort ist das Adverb?",
   "exercises": [

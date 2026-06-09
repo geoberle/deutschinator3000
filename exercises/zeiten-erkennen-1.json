@@ -1,6 +1,10 @@
 {
   "id": "zeiten-erkennen-1",
   "name": "Zeiten erkennen 1",
+  "goal": "Die Zeitform in aktiven Sätzen sicher erkennen.",
+  "authoring": {
+    "rationale": "Grundübung: Zeitformen bestimmen, nur Aktiv-Sätze. Basis für spätere Passiv-Übungen, wo Zeitform-Erkennung vorausgesetzt wird."
+  },
   "question": "In welcher Zeitform steht dieser Satz?",
   "exercises": [
     {

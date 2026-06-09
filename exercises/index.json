@@ -2,6 +2,7 @@
   {
     "id": "aktiv-passiv-zeiten-1",
     "name": "Aktiv/Passiv + Zeitform 1",
+    "goal": "Aktiv und Passiv erkennen und gleichzeitig die Zeitform bestimmen.",
     "description": "Bestimme Aktiv/Passiv und die Zeitform des Satzes",
     "file": "aktiv-passiv-zeiten-1.json",
     "count": 12,
@@ -10,6 +11,7 @@
   {
     "id": "aktiv-passiv",
     "name": "Aktiv Passiv erkennen 1",
+    "goal": "Den Unterschied zwischen Aktiv und Passiv erkennen lernen.",
     "description": "Bestimme ob der Satz im Aktiv, Vorgangspassiv oder Zustandspassiv steht",
     "file": "aktiv-passiv-erkennen-1.json",
     "count": 12,
@@ -18,6 +20,7 @@
   {
     "id": "passiv-arten-1",
     "name": "Der Detektiv-Blick: Passiv-Arten 1",
+    "goal": "Ein Gefühl für die zwei Passiv-Arten bekommen — wann steht «werden», wann «sein»?",
     "description": "Erkenne Vorgangspassiv oder Zustandspassiv und bestimme die Zeitform (Präsens/Präteritum)",
     "file": "passiv-arten-1.json",
     "count": 12,
@@ -26,6 +29,7 @@
   {
     "id": "passiv-umformen-1",
     "name": "Die Verwandlung: Passiv bilden 1",
+    "goal": "Passivformen selbst korrekt bilden lernen.",
     "description": "Forme Aktiv-Sätze in Vorgangspassiv und Zustandspassiv um (Präsens/Präteritum)",
     "file": "passiv-umformen-1.json",
     "count": 10,
@@ -34,6 +38,7 @@
   {
     "id": "passiv-zeiten-mix-1",
     "name": "Der Zeiten-Mix: Vorgangspassiv 1",
+    "goal": "Sicherheit in den verschiedenen Zeitformen des Passivs gewinnen.",
     "description": "Setze Vorgangspassiv-Sätze in verschiedene Zeitformen (Präteritum, Perfekt, Plusquamperfekt, Futur I)",
     "file": "passiv-zeiten-mix-1.json",
     "count": 10,
@@ -42,6 +47,7 @@
   {
     "id": "passiv-futur-1",
     "name": "Die Zukunfts-Mission: Futur I Passiv 1",
+    "goal": "Die Struktur des Futur I im Passiv sicher beherrschen.",
     "description": "Bilde Vorgangspassiv und Zustandspassiv im Futur I (werden + PII + werden/sein)",
     "file": "passiv-futur-1.json",
     "count": 10,
@@ -50,6 +56,7 @@
   {
     "id": "sein-falle-1",
     "name": "Die «sein»-Falle: ZP oder Aktiv Perfekt? 1",
+    "goal": "Verstehen, dass nicht alles mit «sein» + Partizip II ein Zustandspassiv ist.",
     "description": "Unterscheide Zustandspassiv von Aktiv Perfekt — beides nutzt «sein» + Partizip II",
     "file": "sein-falle-1.json",
     "count": 14,
@@ -58,6 +65,7 @@
   {
     "id": "passiv-rueckwaerts-1",
     "name": "Der Rückwärtsgang: Passiv → Aktiv 1",
+    "goal": "Passivsätze zurück ins Aktiv umbauen — wer tut eigentlich was?",
     "description": "Forme Passivsätze zurück ins Aktiv — mit korrekter Zeitform und Kasus",
     "file": "passiv-rueckwaerts-1.json",
     "count": 10,
@@ -66,6 +74,7 @@
   {
     "id": "zeiten-erkennen-1",
     "name": "Zeiten erkennen 1",
+    "goal": "Die Zeitform in aktiven Sätzen sicher erkennen.",
     "description": "Erkenne die Zeitform des Satzes (Präsens, Präteritum, Perfekt, Plusquamperfekt, Futur I)",
     "file": "zeiten-erkennen-1.json",
     "count": 20,
@@ -74,6 +83,7 @@
   {
     "id": "adverbien-1",
     "name": "Adverbien erkennen 1",
+    "goal": "Adverbien im Satz erkennen und richtig einordnen.",
     "description": "Finde das Adverb im Satz",
     "file": "adverbien-1.json",
     "count": 10,

@@ -861,7 +861,7 @@
           }
           var prevStageComplete = si === 0 ? true : (function () {
             var prevStart = 0;
-            for (var ps = 0; ps < si; ps++) prevStart += challengeDef.stages[ps].sets.length;
+            for (var ps = 0; ps < si - 1; ps++) prevStart += challengeDef.stages[ps].sets.length;
             var prevEnd = prevStart + challengeDef.stages[si - 1].sets.length;
             for (var pc = prevStart; pc < prevEnd; pc++) {
               if (!challengeScores[pc]) return false;
@@ -1252,6 +1252,15 @@
       '<button class="btn-share" id="btn-share">Ergebnis teilen</button>';
 
     if (challengeDef) {
+      challengeScores[challengeSetIndex] = {name: currentSet.name, correct: correctCount, total: total};
+      saveChallengeProgress();
+      var allChallengeDone = true;
+      for (var cd = 0; cd < challengeScores.length; cd++) {
+        if (!challengeScores[cd]) { allChallengeDone = false; break; }
+      }
+      if (allChallengeDone && challengeDef.id) {
+        try { localStorage.setItem("challenge-completed-" + challengeDef.id, "true"); } catch (e) {}
+      }
       actionsHtml += '<button class="btn-primary" id="btn-to-hub">Zur Übersicht</button>';
     } else {
       actionsHtml += '<button class="btn-secondary" id="btn-back">Zurück</button>';
@@ -1311,7 +1320,7 @@
     if (hubBtn) {
       hubBtn.addEventListener("click", function () {
         stopCelebration();
-        advanceChallenge(correctCount, total);
+        advanceChallenge();
       });
     }
 
@@ -1348,18 +1357,7 @@
     showQuestion();
   }
 
-  function advanceChallenge(correctCount, total) {
-    challengeScores[challengeSetIndex] = {name: currentSet.name, correct: correctCount, total: total};
-    saveChallengeProgress();
-
-    var allDone = true;
-    for (var i = 0; i < challengeScores.length; i++) {
-      if (!challengeScores[i]) { allDone = false; break; }
-    }
-    if (allDone && challengeDef && challengeDef.id) {
-      try { localStorage.setItem("challenge-completed-" + challengeDef.id, "true"); } catch (e) {}
-    }
-
+  function advanceChallenge() {
     showChallengeHub();
   }
 

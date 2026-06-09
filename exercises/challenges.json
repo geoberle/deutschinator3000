@@ -1,12 +1,17 @@
-{
-  "id": "passiv-tag-1",
-  "name": "Aktiv Passiv Test Vorbereitung Tag 1",
-  "sets": [
-    "passiv-arten-1",
-    "passiv-umformen-1",
-    "passiv-zeiten-mix-1",
-    "passiv-futur-1",
-    "sein-falle-1",
-    "passiv-rueckwaerts-1"
-  ]
-}
+[
+  {
+    "id": "passiv-tag-1",
+    "name": "Tag 1: Grundlagen",
+    "sets": ["passiv-arten-1", "passiv-umformen-1"]
+  },
+  {
+    "id": "passiv-tag-2",
+    "name": "Tag 2: Zeitformen",
+    "sets": ["passiv-zeiten-mix-1", "passiv-futur-1"]
+  },
+  {
+    "id": "passiv-tag-3",
+    "name": "Tag 3: Profistufe",
+    "sets": ["sein-falle-1", "passiv-rueckwaerts-1"]
+  }
+]

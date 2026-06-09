@@ -22,6 +22,7 @@
   var challengeSetIndex = 0;
   var challengeScores = [];
   var inChallengeHub = false;
+  var challengesList = [];
 
   var reviewSet = null;
   var reviewExercises = [];
@@ -59,6 +60,8 @@
     var sentenceEl = document.querySelector(".sentence");
     if (!sentenceEl) return;
     sentenceEl.outerHTML = renderSentence(ex.sentence, ex.reveal, true);
+    var hintBtn = document.getElementById("hint-btn");
+    if (hintBtn) hintBtn.remove();
   }
 
   // --- Render exercise (quiz mode) ---
@@ -77,11 +80,27 @@
     return renderMC(ex);
   }
 
+  function renderHintBtn(ex) {
+    if (!ex.reveal) return "";
+    return '<div class="hint-btn" id="hint-btn">💡 Hinweis</div>';
+  }
+
+  function bindHintBtn(ex) {
+    var btn = document.getElementById("hint-btn");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      revealSentence(ex);
+      btn.remove();
+    });
+  }
+
   function renderMC(ex) {
     var html = '<div class="sentence">' + esc(ex.sentence) + "</div>" +
+      renderHintBtn(ex) +
       '<div class="options" id="options"></div>' +
       '<div id="feedback"></div>';
     return { html: html, bind: function () {
+      bindHintBtn(ex);
       var optionsEl = document.getElementById("options");
       for (var i = 0; i < ex.options.length; i++) {
         var btn = document.createElement("button");
@@ -118,9 +137,11 @@
 
   function renderClassify(ex) {
     var html = '<div class="sentence">' + esc(ex.sentence) + "</div>" +
+      renderHintBtn(ex) +
       '<div id="classify-steps"></div>' +
       '<div id="feedback"></div>';
     return { html: html, bind: function () {
+      bindHintBtn(ex);
       classifyStepAnswers = [];
       appendClassifyStep(ex, 0);
     }};
@@ -208,9 +229,11 @@
 
   function renderWordBank(ex) {
     var html = '<div class="sentence">' + esc(ex.sentence) + "</div>" +
+      renderHintBtn(ex) +
       '<div id="word-bank-steps"></div>' +
       '<div id="feedback"></div>';
     return { html: html, bind: function () {
+      bindHintBtn(ex);
       wordBankStepResults = [];
       appendWordBankStep(ex, 0);
     }};
@@ -599,8 +622,9 @@
       showSharedResult();
     } else if (location.hash.startsWith("#set/")) {
       startSetById(decodeURIComponent(location.hash.replace("#set/", "")));
-    } else if (location.hash === "#challenge") {
-      showChallengeHub();
+    } else if (location.hash.startsWith("#challenge")) {
+      var cid = location.hash.replace("#challenge/", "").replace("#challenge", "");
+      showChallengeHub(cid || null);
     } else {
       showHome();
     }
@@ -630,37 +654,57 @@
       }).catch(function () { return null; })
     ]).then(function (both) {
       sets = both[0];
-      var challenge = both[1];
+      var raw = both[1];
+      challengesList = Array.isArray(raw) ? raw : (raw ? [raw] : []);
+      migrateChallengeCompletion(challengesList);
 
       var html = "";
 
-      if (challenge && challenge.sets && challenge.sets.length > 0) {
+      for (var ci = 0; ci < challengesList.length; ci++) {
+        var ch = challengesList[ci];
+        if (!ch.sets || !ch.sets.length) continue;
+
         var totalCount = 0;
-        for (var c = 0; c < challenge.sets.length; c++) {
+        for (var c = 0; c < ch.sets.length; c++) {
           for (var s = 0; s < sets.length; s++) {
-            if (sets[s].id === challenge.sets[c]) {
-              totalCount += sets[s].count;
-              break;
+            if (sets[s].id === ch.sets[c]) { totalCount += sets[s].count; break; }
+          }
+        }
+
+        var unlocked = isChallengeUnlocked(challengesList, ci);
+        var completed = isChallengeCompleted(ch.id);
+        var cardCls = "challenge-card";
+        var iconHtml = "";
+
+        if (!unlocked) {
+          cardCls += " challenge-card-locked";
+          iconHtml = '<span class="challenge-icon">🔒</span>';
+        } else if (completed) {
+          cardCls += " challenge-card-completed";
+          iconHtml = '<span class="challenge-icon">✓</span>';
+        }
+
+        var progressHtml = "";
+        if (unlocked) {
+          var saved = ch.id ? loadChallengeProgress(ch.id) : null;
+          if (saved && saved.scores) {
+            var doneCount = 0;
+            for (var dc = 0; dc < saved.scores.length; dc++) {
+              if (saved.scores[dc]) doneCount++;
+            }
+            if (completed) {
+              progressHtml = '<div class="challenge-progress">Alle geschafft!</div>';
+            } else if (doneCount > 0) {
+              progressHtml = '<div class="challenge-progress">' +
+                doneCount + " von " + ch.sets.length + " geschafft — weiter geht's!</div>";
             }
           }
         }
-        var saved = challenge.id ? loadChallengeProgress(challenge.id) : null;
-        var progressHtml = "";
-        if (saved && saved.scores) {
-          var doneCount = 0;
-          for (var dc = 0; dc < saved.scores.length; dc++) {
-            if (saved.scores[dc]) doneCount++;
-          }
-          if (doneCount > 0 && doneCount < challenge.sets.length) {
-            progressHtml = '<div class="challenge-progress">' +
-              doneCount + " von " + challenge.sets.length + " geschafft — weiter geht's!</div>";
-          } else if (doneCount === challenge.sets.length) {
-            progressHtml = '<div class="challenge-progress">Alle geschafft!</div>';
-          }
-        }
-        html += '<div class="challenge-card" id="challenge-card">' +
-          "<h2>" + esc(challenge.name) + "</h2>" +
-          "<p>" + challenge.sets.length + " Übungen · " + totalCount + " Aufgaben</p>" +
+
+        html += '<div class="' + cardCls + '" data-challenge-id="' + esc(ch.id) + '">' +
+          iconHtml +
+          "<h2>" + esc(ch.name) + "</h2>" +
+          "<p>" + ch.sets.length + " Übungen · " + totalCount + " Aufgaben</p>" +
           progressHtml +
           "</div>";
       }
@@ -683,9 +727,16 @@
       html += "</div>";
       app.innerHTML = html;
 
-      if (document.getElementById("challenge-card")) {
-        document.getElementById("challenge-card").addEventListener("click", function () {
-          location.hash = "#challenge";
+      var challengeCards = app.querySelectorAll(".challenge-card");
+      for (var cc = 0; cc < challengeCards.length; cc++) {
+        challengeCards[cc].addEventListener("click", function () {
+          if (this.classList.contains("challenge-card-locked")) {
+            this.classList.remove("shake");
+            void this.offsetWidth;
+            this.classList.add("shake");
+            return;
+          }
+          location.hash = "#challenge/" + this.getAttribute("data-challenge-id");
         });
       }
 
@@ -696,13 +747,30 @@
     });
   }
 
-  function showChallengeHub() {
+  function showChallengeHub(challengeId) {
     Promise.all([
       fetch("exercises/index.json").then(function (r) { return r.json(); }),
       fetch("exercises/challenges.json").then(function (r) { return r.json(); })
     ]).then(function (both) {
       sets = both[0];
-      challengeDef = both[1];
+      var raw = both[1];
+      challengesList = Array.isArray(raw) ? raw : (raw ? [raw] : []);
+      migrateChallengeCompletion(challengesList);
+
+      challengeDef = null;
+      if (challengeId) {
+        for (var f = 0; f < challengesList.length; f++) {
+          if (challengesList[f].id === challengeId) { challengeDef = challengesList[f]; break; }
+        }
+      }
+      if (!challengeDef && challengesList.length > 0) {
+        var fid = firstUnlockedChallengeId(challengesList);
+        for (var g = 0; g < challengesList.length; g++) {
+          if (challengesList[g].id === fid) { challengeDef = challengesList[g]; break; }
+        }
+      }
+      if (!challengeDef) { showHome(); return; }
+
       inChallengeHub = true;
 
       var saved = challengeDef.id ? loadChallengeProgress(challengeDef.id) : null;
@@ -807,9 +875,10 @@
       }
 
       document.getElementById("btn-challenge-reset").addEventListener("click", function () {
+        var resetId = challengeDef ? challengeDef.id : null;
         clearChallengeProgress();
         challengeScores = [];
-        showChallengeHub();
+        showChallengeHub(resetId);
       });
     });
   }
@@ -832,7 +901,42 @@
 
   function clearChallengeProgress() {
     if (!challengeDef || !challengeDef.id) return;
-    try { localStorage.removeItem("challenge-" + challengeDef.id); } catch (e) {}
+    try {
+      localStorage.removeItem("challenge-" + challengeDef.id);
+      localStorage.removeItem("challenge-completed-" + challengeDef.id);
+    } catch (e) {}
+  }
+
+  function isChallengeCompleted(id) {
+    try { return localStorage.getItem("challenge-completed-" + id) === "true"; }
+    catch (e) { return false; }
+  }
+
+  function isChallengeUnlocked(list, index) {
+    if (index === 0) return true;
+    return isChallengeCompleted(list[index - 1].id);
+  }
+
+  function firstUnlockedChallengeId(list) {
+    for (var i = 0; i < list.length; i++) {
+      if (!isChallengeCompleted(list[i].id)) return list[i].id;
+    }
+    return list[list.length - 1].id;
+  }
+
+  function migrateChallengeCompletion(list) {
+    for (var i = 0; i < list.length; i++) {
+      if (isChallengeCompleted(list[i].id)) continue;
+      var saved = loadChallengeProgress(list[i].id);
+      if (!saved || !saved.scores) continue;
+      var allDone = true;
+      for (var s = 0; s < list[i].sets.length; s++) {
+        if (!saved.scores[s]) { allDone = false; break; }
+      }
+      if (allDone) {
+        try { localStorage.setItem("challenge-completed-" + list[i].id, "true"); } catch (e) {}
+      }
+    }
   }
 
   function onCardClick(e) {
@@ -1136,7 +1240,16 @@
   function advanceChallenge(correctCount, total) {
     challengeScores[challengeSetIndex] = {name: currentSet.name, correct: correctCount, total: total};
     saveChallengeProgress();
-    showChallengeHub();
+
+    var allDone = true;
+    for (var i = 0; i < challengeScores.length; i++) {
+      if (!challengeScores[i]) { allDone = false; break; }
+    }
+    if (allDone && challengeDef && challengeDef.id) {
+      try { localStorage.setItem("challenge-completed-" + challengeDef.id, "true"); } catch (e) {}
+    }
+
+    showChallengeHub(challengeDef ? challengeDef.id : null);
   }
 
   function shareResult(correctCount, total) {
@@ -1324,7 +1437,7 @@
           return;
         }
         if (challengeDef && !inChallengeHub) {
-          showChallengeHub();
+          showChallengeHub(challengeDef.id);
           return;
         }
         location.hash = "";
@@ -1381,8 +1494,9 @@
       showSharedResult();
     } else if (location.hash.startsWith("#set/")) {
       startSetById(decodeURIComponent(location.hash.replace("#set/", "")));
-    } else if (location.hash === "#challenge") {
-      showChallengeHub();
+    } else if (location.hash.startsWith("#challenge")) {
+      var cid = location.hash.replace("#challenge/", "").replace("#challenge", "");
+      showChallengeHub(cid || null);
     }
   });
 

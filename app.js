@@ -303,6 +303,7 @@
 
   function onWordBankTap(e) {
     if (answered) return;
+    if (e.currentTarget.classList.contains("word-used")) return;
     var poolIdx = parseInt(e.currentTarget.getAttribute("data-pool-idx"), 10);
     e.currentTarget.classList.add("word-used");
 
@@ -328,7 +329,8 @@
     var poolPills = document.querySelectorAll("#word-bank-pool .word-pill");
     for (var i = 0; i < poolPills.length; i++) {
       if (parseInt(poolPills[i].getAttribute("data-pool-idx"), 10) === poolIdx) {
-        poolPills[i].classList.remove("word-used");
+        var target = poolPills[i];
+        setTimeout(function () { target.classList.remove("word-used"); }, 60);
         break;
       }
     }

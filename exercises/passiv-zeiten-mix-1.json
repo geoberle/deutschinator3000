@@ -10,6 +10,54 @@
   "type": "word-bank",
   "exercises": [
     {
+      "sentence": "Die Oma backt den Kuchen.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Präsens:",
+          "answer": ["Der", "Kuchen", "wird", "gebacken"],
+          "distractors": ["wurde", "worden", "werden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«wird gebacken» = Vorgangspassiv Präsens.\n**Merke:** Präsens Passiv: «wird» + Partizip II."
+    },
+    {
+      "sentence": "Das Auto wird gewaschen.",
+      "steps": [
+        {
+          "question": "Bilde das Futur I:",
+          "answer": ["Das", "Auto", "wird", "gewaschen", "werden"],
+          "distractors": ["worden", "wurde", "ist"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«wird gewaschen werden» = Futur I.\n**Merke:** Futur I endet auf «werden», Vergangenheit auf «worden»!"
+    },
+    {
+      "sentence": "Der Hausmeister schließt die Tür.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Präsens:",
+          "answer": ["Die", "Tür", "wird", "geschlossen"],
+          "distractors": ["wurde", "worden", "ist"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«wird geschlossen» = Vorgangspassiv Präsens.\n**Merke:** Präsens Passiv: «wird» + Partizip II."
+    },
+    {
+      "sentence": "Das Licht wird ausgeschaltet.",
+      "steps": [
+        {
+          "question": "Bilde das Perfekt:",
+          "answer": ["Das", "Licht", "ist", "ausgeschaltet", "worden"],
+          "distractors": ["war", "wurde", "werden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«ist ausgeschaltet worden» = Perfekt.\n**Merke:** Perfekt: «ist» + Partizip II + «worden»."
+    },
+    {
       "sentence": "Das Fenster wird geöffnet.",
       "steps": [
         {
@@ -80,54 +128,6 @@
         }
       ],
       "explanation": "«ist geputzt worden» = Perfekt.\n**Merke:** Perfekt: «ist» + Partizip II + «worden»."
-    },
-    {
-      "sentence": "Die Oma backt den Kuchen.",
-      "steps": [
-        {
-          "question": "Bilde das Vorgangspassiv im Präsens:",
-          "answer": ["Der", "Kuchen", "wird", "gebacken"],
-          "distractors": ["wurde", "worden", "werden"],
-          "scaffold": 2
-        }
-      ],
-      "explanation": "«wird gebacken» = Vorgangspassiv Präsens.\n**Merke:** Präsens Passiv: «wird» + Partizip II."
-    },
-    {
-      "sentence": "Das Auto wird gewaschen.",
-      "steps": [
-        {
-          "question": "Bilde das Futur I:",
-          "answer": ["Das", "Auto", "wird", "gewaschen", "werden"],
-          "distractors": ["worden", "wurde", "ist"],
-          "scaffold": 2
-        }
-      ],
-      "explanation": "«wird gewaschen werden» = Futur I.\n**Merke:** Futur I endet auf «werden», Vergangenheit auf «worden»!"
-    },
-    {
-      "sentence": "Der Hausmeister schließt die Tür.",
-      "steps": [
-        {
-          "question": "Bilde das Vorgangspassiv im Präsens:",
-          "answer": ["Die", "Tür", "wird", "geschlossen"],
-          "distractors": ["wurde", "worden", "ist"],
-          "scaffold": 2
-        }
-      ],
-      "explanation": "«wird geschlossen» = Vorgangspassiv Präsens.\n**Merke:** Präsens Passiv: «wird» + Partizip II."
-    },
-    {
-      "sentence": "Das Licht wird ausgeschaltet.",
-      "steps": [
-        {
-          "question": "Bilde das Perfekt:",
-          "answer": ["Das", "Licht", "ist", "ausgeschaltet", "worden"],
-          "distractors": ["war", "wurde", "werden"],
-          "scaffold": 2
-        }
-      ],
-      "explanation": "«ist ausgeschaltet worden» = Perfekt.\n**Merke:** Perfekt: «ist» + Partizip II + «worden»."
     }
   ]
 }

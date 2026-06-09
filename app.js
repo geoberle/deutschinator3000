@@ -1252,13 +1252,19 @@
     }
 
     var ratio = correctCount / total;
+    var wrongCount = total - correctCount;
     var summaryMsg = "";
     var summaryCls = "summary";
+
     if (ratio === 1) {
       summaryMsg = '<div class="summary-message summary-perfect">Perfekt! Alles richtig!</div>';
       summaryCls += " summary-celebrate";
+    } else if (wrongCount === 1) {
+      summaryMsg = '<div class="summary-message summary-almost">So nah dran! Nur 1 Fehler!</div>';
+      summaryCls += " summary-celebrate";
     } else if (ratio >= 0.8) {
       summaryMsg = '<div class="summary-message summary-great">Stark! Fast alles richtig!</div>';
+      summaryCls += " summary-celebrate";
     } else if (ratio >= 0.5) {
       summaryMsg = '<div class="summary-message summary-ok">Guter Anfang — weiter üben!</div>';
     } else {
@@ -1276,7 +1282,21 @@
         "</div>" +
       "</div>";
 
-    document.getElementById("btn-retry").addEventListener("click", retrySet);
+    stopCelebration();
+    if (ratio === 1) {
+      playFanfare();
+      celebrateMassiveFireworks();
+    } else if (wrongCount === 1) {
+      playJingle();
+      celebrateFireworks();
+    } else if (ratio >= 0.8) {
+      celebrateConfetti();
+    }
+
+    document.getElementById("btn-retry").addEventListener("click", function () {
+      stopCelebration();
+      retrySet();
+    });
     document.getElementById("btn-share").addEventListener("click", function () {
       shareResult(correctCount, total);
     });
@@ -1284,6 +1304,7 @@
     var hubBtn = document.getElementById("btn-to-hub");
     if (hubBtn) {
       hubBtn.addEventListener("click", function () {
+        stopCelebration();
         advanceChallenge(correctCount, total);
       });
     }
@@ -1291,6 +1312,7 @@
     var backBtn = document.getElementById("btn-back");
     if (backBtn) {
       backBtn.addEventListener("click", function () {
+        stopCelebration();
         location.hash = "";
         showHome();
       });
@@ -1600,6 +1622,67 @@
     playTone(311, 0.2, "triangle");
   }
 
+  function playJingle() {
+    var notes = [523, 659, 784];
+    for (var i = 0; i < notes.length; i++) {
+      (function (n, d) {
+        setTimeout(function () { playTone(n, 0.15, "sine"); }, d);
+      })(notes[i], i * 100);
+    }
+  }
+
+  function playFanfare() {
+    var notes = [392, 523, 659, 784, 1047];
+    for (var i = 0; i < notes.length; i++) {
+      (function (n, d) {
+        setTimeout(function () { playTone(n, 0.25, "sine"); }, d);
+      })(notes[i], i * 120);
+    }
+  }
+
+  var fireworksInterval = null;
+
+  function stopCelebration() {
+    if (fireworksInterval) {
+      clearInterval(fireworksInterval);
+      fireworksInterval = null;
+    }
+  }
+
+  function celebrateConfetti() {
+    if (typeof confetti !== "function") return;
+    confetti({ particleCount: 40, spread: 55, origin: { y: 0.7 } });
+  }
+
+  function celebrateFireworks() {
+    if (typeof confetti !== "function") return;
+    confetti({ particleCount: 60, spread: 70, origin: { x: 0.3, y: 0.6 } });
+    setTimeout(function () {
+      confetti({ particleCount: 60, spread: 70, origin: { x: 0.7, y: 0.5 } });
+    }, 300);
+    setTimeout(function () {
+      confetti({ particleCount: 40, spread: 90, origin: { x: 0.5, y: 0.4 } });
+    }, 600);
+  }
+
+  function celebrateMassiveFireworks() {
+    if (typeof confetti !== "function") return;
+    function burst() {
+      confetti({
+        particleCount: 80,
+        spread: 100,
+        origin: { x: Math.random() * 0.6 + 0.2, y: Math.random() * 0.4 + 0.3 }
+      });
+    }
+    burst();
+    setTimeout(burst, 200);
+    setTimeout(burst, 500);
+    fireworksInterval = setInterval(function () {
+      burst();
+      setTimeout(burst, 200 + Math.random() * 300);
+    }, 1200);
+  }
+
   function esc(str) {
     var d = document.createElement("div");
     d.textContent = str;
@@ -1607,6 +1690,7 @@
   }
 
   window.addEventListener("hashchange", function () {
+    stopCelebration();
     reviewSet = null;
     if (!location.hash || location.hash === "#") {
       showHome();
@@ -1618,6 +1702,33 @@
       showChallengeHub();
     }
   });
+
+  if (location.search.indexOf("debug") > -1) {
+    var panel = document.createElement("div");
+    panel.className = "debug-panel";
+    panel.innerHTML =
+      "<strong>Debug</strong>" +
+      '<button data-action="confetti">Confetti (≥80%)</button>' +
+      '<button data-action="fireworks">Fireworks (1 error)</button>' +
+      '<button data-action="massive">Massive (100%)</button>' +
+      '<button data-action="stop">Stop</button>' +
+      '<button data-action="jingle">Jingle</button>' +
+      '<button data-action="fanfare">Fanfare</button>' +
+      '<button data-action="correct">Correct ♪</button>' +
+      '<button data-action="wrong">Wrong ♪</button>';
+    document.body.appendChild(panel);
+    panel.addEventListener("click", function (e) {
+      var action = e.target.getAttribute("data-action");
+      if (action === "confetti") celebrateConfetti();
+      if (action === "fireworks") celebrateFireworks();
+      if (action === "massive") celebrateMassiveFireworks();
+      if (action === "stop") stopCelebration();
+      if (action === "jingle") playJingle();
+      if (action === "fanfare") playFanfare();
+      if (action === "correct") playCorrectSound();
+      if (action === "wrong") playWrongSound();
+    });
+  }
 
   init();
 })();

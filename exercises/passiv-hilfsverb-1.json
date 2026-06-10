@@ -1,0 +1,114 @@
+{
+  "id": "passiv-hilfsverb-1",
+  "name": "Baustein-Suche: Hilfsverb finden 1",
+  "goal": "Das Hilfsverb im Passivsatz sicher erkennen — Schlüssel zu VP vs. ZP.",
+  "rules": ["passiv-grundlagen"],
+  "authoring": {
+    "rationale": "Word-Tap erzwingt echtes Parsing. Kein Ausschlussverfahren möglich. Classify-Folgefrage baut VP/ZP-Gespür auf.",
+    "constraints": "Nur Präsens und Präteritum. Balance VP/ZP 50:50."
+  },
+  "type": "word-tap",
+  "question": "Tippe auf das Hilfsverb im Passivsatz!",
+  "exercises": [
+    {
+      "words": ["Die", "Tür", "wird", "geschlossen."],
+      "correct": [2],
+      "explanation": "«wird» ist das Hilfsverb → Passiv mit «werden».\n**Merke:** «werden» + Partizip II = Vorgangspassiv.",
+      "classify": {
+        "question": "Vorgangspassiv oder Zustandspassiv?",
+        "options": ["Vorgangspassiv", "Zustandspassiv"],
+        "correct": 0
+      }
+    },
+    {
+      "words": ["Das", "Fenster", "ist", "geöffnet."],
+      "correct": [2],
+      "explanation": "«ist» ist das Hilfsverb → Passiv mit «sein».\n**Merke:** «sein» + Partizip II = Zustandspassiv.",
+      "classify": {
+        "question": "Vorgangspassiv oder Zustandspassiv?",
+        "options": ["Vorgangspassiv", "Zustandspassiv"],
+        "correct": 1
+      }
+    },
+    {
+      "words": ["Gestern", "wurden", "die", "Blumen", "gegossen."],
+      "correct": [1],
+      "explanation": "«wurden» ist das Hilfsverb → Vergangenheitsform von «werden».\n**Merke:** «wurden» = Vorgangspassiv Präteritum.",
+      "classify": {
+        "question": "Vorgangspassiv oder Zustandspassiv?",
+        "options": ["Vorgangspassiv", "Zustandspassiv"],
+        "correct": 0
+      }
+    },
+    {
+      "words": ["Der", "Kuchen", "war", "schon", "gebacken."],
+      "correct": [2],
+      "explanation": "«war» ist das Hilfsverb → Vergangenheitsform von «sein».\n**Merke:** «war» + Partizip II = Zustandspassiv Präteritum.",
+      "classify": {
+        "question": "Vorgangspassiv oder Zustandspassiv?",
+        "options": ["Vorgangspassiv", "Zustandspassiv"],
+        "correct": 1
+      }
+    },
+    {
+      "words": ["Im", "Garten", "werden", "die", "Rosen", "gepflanzt."],
+      "correct": [2],
+      "explanation": "«werden» ist das Hilfsverb → Plural von «wird».\n**Merke:** «werden» + Partizip II = Vorgangspassiv.",
+      "classify": {
+        "question": "Vorgangspassiv oder Zustandspassiv?",
+        "options": ["Vorgangspassiv", "Zustandspassiv"],
+        "correct": 0
+      }
+    },
+    {
+      "words": ["Die", "Hausaufgaben", "sind", "erledigt."],
+      "correct": [2],
+      "explanation": "«sind» ist das Hilfsverb → Plural von «ist».\n**Merke:** «sein» + Partizip II = Zustandspassiv.",
+      "classify": {
+        "question": "Vorgangspassiv oder Zustandspassiv?",
+        "options": ["Vorgangspassiv", "Zustandspassiv"],
+        "correct": 1
+      }
+    },
+    {
+      "words": ["Heute", "wurde", "der", "Brief", "geschrieben."],
+      "correct": [1],
+      "explanation": "«wurde» ist das Hilfsverb → Vergangenheitsform von «werden».\n**Merke:** «wurde» = Vorgangspassiv Präteritum.",
+      "classify": {
+        "question": "Vorgangspassiv oder Zustandspassiv?",
+        "options": ["Vorgangspassiv", "Zustandspassiv"],
+        "correct": 0
+      }
+    },
+    {
+      "words": ["Die", "Tafel", "ist", "geputzt."],
+      "correct": [2],
+      "explanation": "«ist» ist das Hilfsverb → Passiv mit «sein».\n**Merke:** «sein» + Partizip II = Zustandspassiv (Ergebnis).",
+      "classify": {
+        "question": "Vorgangspassiv oder Zustandspassiv?",
+        "options": ["Vorgangspassiv", "Zustandspassiv"],
+        "correct": 1
+      }
+    },
+    {
+      "words": ["Vom", "Koch", "wird", "die", "Suppe", "gekocht."],
+      "correct": [2],
+      "explanation": "«wird» ist das Hilfsverb → auch mit «vom Koch» bleibt es VP.\n**Merke:** «werden» + Partizip II = Vorgangspassiv.",
+      "classify": {
+        "question": "Vorgangspassiv oder Zustandspassiv?",
+        "options": ["Vorgangspassiv", "Zustandspassiv"],
+        "correct": 0
+      }
+    },
+    {
+      "words": ["Das", "Auto", "war", "schon", "gewaschen."],
+      "correct": [2],
+      "explanation": "«war» ist das Hilfsverb → Vergangenheitsform von «sein».\n**Merke:** «war» + Partizip II = Zustandspassiv Präteritum.",
+      "classify": {
+        "question": "Vorgangspassiv oder Zustandspassiv?",
+        "options": ["Vorgangspassiv", "Zustandspassiv"],
+        "correct": 1
+      }
+    }
+  ]
+}

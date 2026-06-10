@@ -123,6 +123,16 @@ for entry in manifest:
                 answer = step.get("answer")
                 if not answer or not isinstance(answer, list):
                     err(f"{sp}missing or invalid 'answer' array")
+                    continue
+                scaffold = step.get("scaffold", 0)
+                distractors = step.get("distractors", [])
+                pool = answer[scaffold:] + distractors
+                seen = {}
+                for w in pool:
+                    seen[w] = seen.get(w, 0) + 1
+                dupes = {k: v for k, v in seen.items() if v > 1}
+                if dupes:
+                    err(f"{sp}duplicate words in pool: {dupes}")
         else:
             if not ex.get("sentence"):
                 err(f"{prefix}Missing 'sentence'")

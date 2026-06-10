@@ -1,0 +1,76 @@
+{
+  "id": "passiv-kombi-1",
+  "name": "Doppel-Check: VP/ZP + Zeitform 1",
+  "goal": "Passiv-Art und Zeitform gleichzeitig bestimmen — mit reduziertem Zeitformen-Set.",
+  "rules": ["passiv-grundlagen"],
+  "authoring": {
+    "rationale": "Kombiniert die zwei Dimensionen aus Sets 2+3. Reduziert auf 3 Zeitformen (kein Futur/Plusquam). 7 Übungen wegen höherer kognitiver Belastung.",
+    "constraints": "Nur Präsens, Präteritum, Perfekt. VP und ZP gemischt. Single-step pro Dimension."
+  },
+  "type": "classify",
+  "exercises": [
+    {
+      "sentence": "Das Fenster wird geöffnet.",
+      "reveal": [2],
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 0 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt"], "correct": 0 }
+      ],
+      "explanation": "«wird geöffnet» → VP Präsens.\n**Merke:** «wird» + Partizip II = Vorgangspassiv Präsens."
+    },
+    {
+      "sentence": "Die Tür war geschlossen.",
+      "reveal": [2],
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 1 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt"], "correct": 1 }
+      ],
+      "explanation": "«war geschlossen» → ZP Präteritum.\n**Merke:** «war» + Partizip II = Zustandspassiv Präteritum."
+    },
+    {
+      "sentence": "Der Brief ist geschrieben worden.",
+      "reveal": [2, 4],
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 0 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt"], "correct": 2 }
+      ],
+      "explanation": "«ist geschrieben worden» → VP Perfekt.\n**Merke:** «ist» + Partizip II + «worden» = VP Perfekt. Das «worden» macht den Unterschied zum ZP!"
+    },
+    {
+      "sentence": "Die Blumen sind gegossen.",
+      "reveal": [2],
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 1 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt"], "correct": 0 }
+      ],
+      "explanation": "«sind gegossen» → ZP Präsens.\n**Merke:** «sein» + Partizip II (ohne «worden») = Zustandspassiv."
+    },
+    {
+      "sentence": "Das Auto wurde gewaschen.",
+      "reveal": [2],
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 0 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt"], "correct": 1 }
+      ],
+      "explanation": "«wurde gewaschen» → VP Präteritum.\n**Merke:** «wurde» + Partizip II = Vorgangspassiv Präteritum."
+    },
+    {
+      "sentence": "Die Hausaufgaben sind kontrolliert worden.",
+      "reveal": [2, 4],
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 0 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt"], "correct": 2 }
+      ],
+      "explanation": "«sind kontrolliert worden» → VP Perfekt.\n**Merke:** «worden» am Ende = immer Vorgangspassiv Perfekt!"
+    },
+    {
+      "sentence": "Der Tisch ist gedeckt.",
+      "reveal": [2],
+      "steps": [
+        { "question": "Vorgangspassiv oder Zustandspassiv?", "options": ["Vorgangspassiv", "Zustandspassiv"], "correct": 1 },
+        { "question": "Welche Zeitform?", "options": ["Präsens", "Präteritum", "Perfekt"], "correct": 0 }
+      ],
+      "explanation": "«ist gedeckt» → ZP Präsens.\n**Merke:** «sein» + Partizip II (ohne «worden») = Zustandspassiv Präsens."
+    }
+  ]
+}

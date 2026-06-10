@@ -1,0 +1,109 @@
+{
+  "id": "passiv-umformen-mix-1",
+  "name": "Die große Verwandlung: Aktiv → Passiv 1",
+  "goal": "Aktivsätze in verschiedenen Zeitformen ins Vorgangspassiv umformen.",
+  "rules": ["passiv-grundlagen"],
+  "authoring": {
+    "rationale": "Krönender Abschluss: aktive Produktion mit gemischten Zeitformen. Baut auf Erkennung (Sets 1-3) und Zeitform-Wechsel (Set 4) auf.",
+    "constraints": "Nur Vorgangspassiv. Alle 4 Zeitformen (Präsens, Präteritum, Perfekt, Futur I) je 2x. Kein Plusquamperfekt. Distraktoren."
+  },
+  "type": "word-bank",
+  "exercises": [
+    {
+      "sentence": "Der Koch kocht die Suppe.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Präsens:",
+          "answer": ["Die", "Suppe", "wird", "gekocht"],
+          "distractors": ["wurde", "worden", "ist"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«wird gekocht» = Vorgangspassiv Präsens.\n**Merke:** Präsens: «wird» + Partizip II."
+    },
+    {
+      "sentence": "Die Mutter wusch die Wäsche.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Präteritum:",
+          "answer": ["Die", "Wäsche", "wurde", "gewaschen"],
+          "distractors": ["wird", "worden", "war"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«wurde gewaschen» = Vorgangspassiv Präteritum.\n**Merke:** Präteritum: «wurde» + Partizip II."
+    },
+    {
+      "sentence": "Die Kinder haben das Bild gemalt.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Perfekt:",
+          "answer": ["Das", "Bild", "ist", "gemalt", "worden"],
+          "distractors": ["wurde", "war", "werden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«ist gemalt worden» = Vorgangspassiv Perfekt.\n**Merke:** Perfekt: «ist» + Partizip II + «worden»."
+    },
+    {
+      "sentence": "Der Vater wird das Auto reparieren.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Futur I:",
+          "answer": ["Das", "Auto", "wird", "repariert", "werden"],
+          "distractors": ["worden", "wurde", "ist"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«wird repariert werden» = Vorgangspassiv Futur I.\n**Merke:** Futur I: «wird» + Partizip II + «werden»."
+    },
+    {
+      "sentence": "Die Lehrerin erklärt die Aufgabe.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Präsens:",
+          "answer": ["Die", "Aufgabe", "wird", "erklärt"],
+          "distractors": ["ist", "wurde", "worden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«wird erklärt» = Vorgangspassiv Präsens.\n**Merke:** Präsens: «wird» + Partizip II."
+    },
+    {
+      "sentence": "Der Hausmeister schloss die Tür.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Präteritum:",
+          "answer": ["Die", "Tür", "wurde", "geschlossen"],
+          "distractors": ["wird", "war", "worden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«wurde geschlossen» = Vorgangspassiv Präteritum.\n**Merke:** Präteritum: «wurde» + Partizip II."
+    },
+    {
+      "sentence": "Die Oma hat den Schal gestrickt.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Perfekt:",
+          "answer": ["Der", "Schal", "ist", "gestrickt", "worden"],
+          "distractors": ["wurde", "war", "werden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«ist gestrickt worden» = Vorgangspassiv Perfekt.\n**Merke:** Perfekt: «ist» + Partizip II + «worden»."
+    },
+    {
+      "sentence": "Der Lehrer wird den Test korrigieren.",
+      "steps": [
+        {
+          "question": "Bilde das Vorgangspassiv im Futur I:",
+          "answer": ["Der", "Test", "wird", "korrigiert", "werden"],
+          "distractors": ["worden", "wurde", "ist"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«wird korrigiert werden» = Vorgangspassiv Futur I.\n**Merke:** Futur I: «wird» + Partizip II + «werden»."
+    }
+  ]
+}

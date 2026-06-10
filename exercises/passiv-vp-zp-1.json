@@ -1,0 +1,97 @@
+{
+  "id": "passiv-vp-zp-1",
+  "name": "VP oder ZP? Passiv-Art erkennen 1",
+  "goal": "Vorgangspassiv und Zustandspassiv sicher unterscheiden — nur eine Frage, kein Zeitform-Stress.",
+  "rules": ["passiv-grundlagen"],
+  "authoring": {
+    "rationale": "Single-dimension Erkennung. Feedback zeigte: VP/ZP + Zeitform gleichzeitig überfordert. Hier nur VP vs. ZP.",
+    "constraints": "Nur VP vs. ZP. Keine Zeitform-Frage. Mix Präsens/Präteritum in Sätzen."
+  },
+  "question": "Steht der Satz im Vorgangspassiv oder Zustandspassiv?",
+  "exercises": [
+    {
+      "sentence": "Die Suppe wird gekocht.",
+      "reveal": [2],
+      "options": ["Vorgangspassiv", "Zustandspassiv"],
+      "correct": 0,
+      "explanation": "«wird gekocht» → jemand kocht gerade.\n**Merke:** «werden» = Vorgang läuft."
+    },
+    {
+      "sentence": "Der Kuchen ist gebacken.",
+      "reveal": [2],
+      "options": ["Vorgangspassiv", "Zustandspassiv"],
+      "correct": 1,
+      "explanation": "«ist gebacken» → der Kuchen ist fertig.\n**Merke:** «sein» = Ergebnis steht fest."
+    },
+    {
+      "sentence": "Die Fenster wurden geputzt.",
+      "reveal": [2],
+      "options": ["Vorgangspassiv", "Zustandspassiv"],
+      "correct": 0,
+      "explanation": "«wurden geputzt» → jemand putzte sie.\n**Merke:** «wurden» ist Vergangenheit von «werden» → Vorgangspassiv."
+    },
+    {
+      "sentence": "Der Hund ist gefüttert.",
+      "reveal": [2],
+      "options": ["Vorgangspassiv", "Zustandspassiv"],
+      "correct": 1,
+      "explanation": "«ist gefüttert» → der Hund ist schon satt.\n**Merke:** «sein» + Partizip II = Zustandspassiv."
+    },
+    {
+      "sentence": "Das Licht wird ausgeschaltet.",
+      "reveal": [2],
+      "options": ["Vorgangspassiv", "Zustandspassiv"],
+      "correct": 0,
+      "explanation": "«wird ausgeschaltet» → jemand schaltet gerade aus.\n**Merke:** «werden» + Partizip II = Vorgangspassiv."
+    },
+    {
+      "sentence": "Die Wäsche war gewaschen.",
+      "reveal": [2],
+      "options": ["Vorgangspassiv", "Zustandspassiv"],
+      "correct": 1,
+      "explanation": "«war gewaschen» → die Wäsche war schon sauber.\n**Merke:** «war» ist Vergangenheit von «sein» → Zustandspassiv."
+    },
+    {
+      "sentence": "Die Aufgabe wurde erklärt.",
+      "reveal": [2],
+      "options": ["Vorgangspassiv", "Zustandspassiv"],
+      "correct": 0,
+      "explanation": "«wurde erklärt» → jemand erklärte sie.\n**Merke:** «wurde» ist Vergangenheit von «werden» → Vorgangspassiv."
+    },
+    {
+      "sentence": "Das Essen ist zubereitet.",
+      "reveal": [2],
+      "options": ["Vorgangspassiv", "Zustandspassiv"],
+      "correct": 1,
+      "explanation": "«ist zubereitet» → das Essen ist fertig.\n**Merke:** «sein» = Ergebnis steht fest."
+    },
+    {
+      "sentence": "Die Straße wird gesperrt.",
+      "reveal": [2],
+      "options": ["Vorgangspassiv", "Zustandspassiv"],
+      "correct": 0,
+      "explanation": "«wird gesperrt» → die Sperrung passiert gerade.\n**Merke:** «werden» + Partizip II = Vorgangspassiv."
+    },
+    {
+      "sentence": "Die Blumen sind gegossen.",
+      "reveal": [2],
+      "options": ["Vorgangspassiv", "Zustandspassiv"],
+      "correct": 1,
+      "explanation": "«sind gegossen» → die Blumen sind schon gegossen.\n**Merke:** «sein» + Partizip II = Zustandspassiv."
+    },
+    {
+      "sentence": "Der Film wurde gedreht.",
+      "reveal": [2],
+      "options": ["Vorgangspassiv", "Zustandspassiv"],
+      "correct": 0,
+      "explanation": "«wurde gedreht» → jemand drehte den Film.\n**Merke:** «wurde» ist Vergangenheit von «werden» → Vorgangspassiv."
+    },
+    {
+      "sentence": "Das Zimmer war aufgeräumt.",
+      "reveal": [2],
+      "options": ["Vorgangspassiv", "Zustandspassiv"],
+      "correct": 1,
+      "explanation": "«war aufgeräumt» → das Zimmer war schon ordentlich.\n**Merke:** «war» ist Vergangenheit von «sein» → Zustandspassiv."
+    }
+  ]
+}

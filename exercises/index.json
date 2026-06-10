@@ -88,5 +88,59 @@
     "file": "adverbien-1.json",
     "count": 10,
     "category": "Adverb"
+  },
+  {
+    "id": "passiv-hilfsverb-1",
+    "name": "Baustein-Suche: Hilfsverb finden 1",
+    "goal": "Das Hilfsverb im Passivsatz sicher erkennen — Schlüssel zu VP vs. ZP.",
+    "description": "Tippe auf das Hilfsverb im Passivsatz",
+    "file": "passiv-hilfsverb-1.json",
+    "count": 10,
+    "category": "Aktiv/Passiv"
+  },
+  {
+    "id": "passiv-vp-zp-1",
+    "name": "VP oder ZP? Passiv-Art erkennen 1",
+    "goal": "Vorgangspassiv und Zustandspassiv sicher unterscheiden.",
+    "description": "Bestimme ob der Satz im Vorgangspassiv oder Zustandspassiv steht",
+    "file": "passiv-vp-zp-1.json",
+    "count": 12,
+    "category": "Aktiv/Passiv"
+  },
+  {
+    "id": "passiv-zeitform-1",
+    "name": "Zeiten-Radar: Zeitform im Passiv 1",
+    "goal": "Die Zeitform in Passivsätzen sicher erkennen.",
+    "description": "Bestimme die Zeitform des Passivsatzes",
+    "file": "passiv-zeitform-1.json",
+    "count": 12,
+    "category": "Aktiv/Passiv"
+  },
+  {
+    "id": "passiv-zeitwechsel-1",
+    "name": "Zeitreise: Passiv-Zeitform wechseln 1",
+    "goal": "Passivsätze sicher in andere Zeitformen umbauen.",
+    "description": "Setze den Passivsatz in eine andere Zeitform",
+    "file": "passiv-zeitwechsel-1.json",
+    "count": 8,
+    "category": "Aktiv/Passiv"
+  },
+  {
+    "id": "passiv-kombi-1",
+    "name": "Doppel-Check: VP/ZP + Zeitform 1",
+    "goal": "Passiv-Art und Zeitform gleichzeitig bestimmen.",
+    "description": "Bestimme Passiv-Art und Zeitform des Satzes",
+    "file": "passiv-kombi-1.json",
+    "count": 7,
+    "category": "Aktiv/Passiv"
+  },
+  {
+    "id": "passiv-umformen-mix-1",
+    "name": "Die große Verwandlung: Aktiv → Passiv 1",
+    "goal": "Aktivsätze in verschiedenen Zeitformen ins Vorgangspassiv umformen.",
+    "description": "Forme den Aktivsatz ins Vorgangspassiv um",
+    "file": "passiv-umformen-mix-1.json",
+    "count": 8,
+    "category": "Aktiv/Passiv"
   }
 ]

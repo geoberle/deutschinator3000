@@ -1,0 +1,109 @@
+{
+  "id": "passiv-zeitwechsel-1",
+  "name": "Zeitreise: Passiv-Zeitform wechseln 1",
+  "goal": "Passivsätze sicher in andere Zeitformen umbauen.",
+  "rules": ["passiv-grundlagen"],
+  "authoring": {
+    "rationale": "Aktive Produktion nach Erkennung. Kommt nach Zeitform-Erkennung (Set 3). Nur Vorgangspassiv.",
+    "constraints": "Single-step. Distraktoren. Kein Plusquamperfekt. Alle 4 Zielzeitformen vertreten."
+  },
+  "type": "word-bank",
+  "exercises": [
+    {
+      "sentence": "Die Tür wird geschlossen. (Präsens)",
+      "steps": [
+        {
+          "question": "Bilde das Präteritum:",
+          "answer": ["Die", "Tür", "wurde", "geschlossen"],
+          "distractors": ["wird", "worden", "werden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«wurde geschlossen» = Präteritum.\n**Merke:** Präteritum: «wurde» + Partizip II."
+    },
+    {
+      "sentence": "Das Buch wurde gelesen. (Präteritum)",
+      "steps": [
+        {
+          "question": "Bilde das Perfekt:",
+          "answer": ["Das", "Buch", "ist", "gelesen", "worden"],
+          "distractors": ["wurde", "war", "werden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«ist gelesen worden» = Perfekt.\n**Merke:** Perfekt: «ist» + Partizip II + «worden»."
+    },
+    {
+      "sentence": "Der Hund wird gefüttert. (Präsens)",
+      "steps": [
+        {
+          "question": "Bilde das Futur I:",
+          "answer": ["Der", "Hund", "wird", "gefüttert", "werden"],
+          "distractors": ["worden", "wurde", "ist"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«wird gefüttert werden» = Futur I.\n**Merke:** Futur I: «wird» + Partizip II + «werden»."
+    },
+    {
+      "sentence": "Die Tafel wurde geputzt. (Präteritum)",
+      "steps": [
+        {
+          "question": "Bilde das Präsens:",
+          "answer": ["Die", "Tafel", "wird", "geputzt"],
+          "distractors": ["wurde", "ist", "worden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«wird geputzt» = Präsens.\n**Merke:** Präsens: «wird» + Partizip II."
+    },
+    {
+      "sentence": "Das Fenster wird geöffnet. (Präsens)",
+      "steps": [
+        {
+          "question": "Bilde das Perfekt:",
+          "answer": ["Das", "Fenster", "ist", "geöffnet", "worden"],
+          "distractors": ["wird", "wurde", "war"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«ist geöffnet worden» = Perfekt.\n**Merke:** Perfekt: «ist» + Partizip II + «worden»."
+    },
+    {
+      "sentence": "Der Brief ist geschrieben worden. (Perfekt)",
+      "steps": [
+        {
+          "question": "Bilde das Präteritum:",
+          "answer": ["Der", "Brief", "wurde", "geschrieben"],
+          "distractors": ["ist", "worden", "werden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«wurde geschrieben» = Präteritum.\n**Merke:** Präteritum hat nur 2 Teile: «wurde» + Partizip II."
+    },
+    {
+      "sentence": "Die Blumen werden gegossen. (Präsens)",
+      "steps": [
+        {
+          "question": "Bilde das Präteritum:",
+          "answer": ["Die", "Blumen", "wurden", "gegossen"],
+          "distractors": ["werden", "sind", "worden"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«wurden gegossen» = Präteritum.\n**Merke:** Präteritum Plural: «wurden» + Partizip II."
+    },
+    {
+      "sentence": "Das Auto wurde gewaschen. (Präteritum)",
+      "steps": [
+        {
+          "question": "Bilde das Futur I:",
+          "answer": ["Das", "Auto", "wird", "gewaschen", "werden"],
+          "distractors": ["wurde", "worden", "ist"],
+          "scaffold": 2
+        }
+      ],
+      "explanation": "«wird gewaschen werden» = Futur I.\n**Merke:** Futur I: «wird» + Partizip II + «werden»."
+    }
+  ]
+}

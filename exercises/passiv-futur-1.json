@@ -27,7 +27,7 @@
         {
           "question": "Bilde das Zustandspassiv im Futur I:",
           "answer": ["Die", "Tests", "werden", "korrigiert", "sein"],
-          "distractors": ["werden", "worden", "wurde"],
+          "distractors": ["wird", "worden", "wurde"],
           "scaffold": 2
         }
       ],
@@ -51,7 +51,7 @@
         {
           "question": "Bilde das Zustandspassiv im Futur I:",
           "answer": ["Die", "Bilder", "werden", "gemalt", "sein"],
-          "distractors": ["werden", "worden", "ist"],
+          "distractors": ["wird", "worden", "ist"],
           "scaffold": 2
         }
       ],
@@ -75,7 +75,7 @@
         {
           "question": "Bilde das Zustandspassiv im Futur I:",
           "answer": ["Die", "Bücher", "werden", "gelesen", "sein"],
-          "distractors": ["werden", "worden", "wurde"],
+          "distractors": ["wird", "worden", "wurde"],
           "scaffold": 2
         }
       ],
@@ -99,7 +99,7 @@
         {
           "question": "Bilde das Zustandspassiv im Futur I:",
           "answer": ["Die", "Wände", "werden", "gestrichen", "sein"],
-          "distractors": ["werden", "worden", "war"],
+          "distractors": ["wird", "worden", "war"],
           "scaffold": 2
         }
       ],
@@ -123,7 +123,7 @@
         {
           "question": "Bilde das Zustandspassiv im Futur I:",
           "answer": ["Die", "Koffer", "werden", "gepackt", "sein"],
-          "distractors": ["werden", "worden", "wurde"],
+          "distractors": ["wird", "worden", "wurde"],
           "scaffold": 2
         }
       ],

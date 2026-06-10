@@ -1,0 +1,97 @@
+{
+  "id": "passiv-zeitform-1",
+  "name": "Zeiten-Radar: Zeitform im Passiv 1",
+  "goal": "Die Zeitform in Passivsätzen sicher erkennen — ohne VP/ZP-Ablenkung.",
+  "rules": ["passiv-grundlagen"],
+  "authoring": {
+    "rationale": "Single-dimension: nur Zeitform, nicht VP/ZP. Feedback: beides zusammen überfordert.",
+    "constraints": "Nur Vorgangspassiv-Sätze. Zeitformen: Präsens, Präteritum, Perfekt, Futur I. Kein Plusquamperfekt. 3x jede Zeitform."
+  },
+  "question": "In welcher Zeitform steht dieser Passivsatz?",
+  "exercises": [
+    {
+      "sentence": "Das Fenster wird geöffnet.",
+      "reveal": [2],
+      "options": ["Präsens", "Präteritum", "Perfekt", "Futur I"],
+      "correct": 0,
+      "explanation": "«wird geöffnet» → Präsens.\n**Merke:** «wird» + Partizip II = Präsens."
+    },
+    {
+      "sentence": "Der Brief wurde geschrieben.",
+      "reveal": [2],
+      "options": ["Präsens", "Präteritum", "Perfekt", "Futur I"],
+      "correct": 1,
+      "explanation": "«wurde geschrieben» → Präteritum.\n**Merke:** «wurde» + Partizip II = Präteritum."
+    },
+    {
+      "sentence": "Die Tür ist geschlossen worden.",
+      "reveal": [2, 4],
+      "options": ["Präsens", "Präteritum", "Perfekt", "Futur I"],
+      "correct": 2,
+      "explanation": "«ist geschlossen worden» → Perfekt.\n**Merke:** «ist» + Partizip II + «worden» = Perfekt."
+    },
+    {
+      "sentence": "Das Auto wird repariert werden.",
+      "reveal": [2, 4],
+      "options": ["Präsens", "Präteritum", "Perfekt", "Futur I"],
+      "correct": 3,
+      "explanation": "«wird repariert werden» → Futur I.\n**Merke:** «wird» + Partizip II + «werden» = Futur I."
+    },
+    {
+      "sentence": "Die Blumen werden gegossen.",
+      "reveal": [2],
+      "options": ["Präsens", "Präteritum", "Perfekt", "Futur I"],
+      "correct": 0,
+      "explanation": "«werden gegossen» → Präsens (Plural).\n**Merke:** «werden» + Partizip II = Präsens."
+    },
+    {
+      "sentence": "Die Hausaufgaben wurden kontrolliert.",
+      "reveal": [2],
+      "options": ["Präsens", "Präteritum", "Perfekt", "Futur I"],
+      "correct": 1,
+      "explanation": "«wurden kontrolliert» → Präteritum.\n**Merke:** «wurden» + Partizip II = Präteritum."
+    },
+    {
+      "sentence": "Der Kuchen ist gebacken worden.",
+      "reveal": [2, 4],
+      "options": ["Präsens", "Präteritum", "Perfekt", "Futur I"],
+      "correct": 2,
+      "explanation": "«ist gebacken worden» → Perfekt.\n**Merke:** «ist» + Partizip II + «worden» = Perfekt."
+    },
+    {
+      "sentence": "Das Lied wird gesungen werden.",
+      "reveal": [2, 4],
+      "options": ["Präsens", "Präteritum", "Perfekt", "Futur I"],
+      "correct": 3,
+      "explanation": "«wird gesungen werden» → Futur I.\n**Merke:** Futur I endet auf «werden» — Perfekt auf «worden»!"
+    },
+    {
+      "sentence": "Die Tafel wird geputzt.",
+      "reveal": [2],
+      "options": ["Präsens", "Präteritum", "Perfekt", "Futur I"],
+      "correct": 0,
+      "explanation": "«wird geputzt» → Präsens.\n**Merke:** «wird» + Partizip II = Präsens."
+    },
+    {
+      "sentence": "Das Bild wurde gemalt.",
+      "reveal": [2],
+      "options": ["Präsens", "Präteritum", "Perfekt", "Futur I"],
+      "correct": 1,
+      "explanation": "«wurde gemalt» → Präteritum.\n**Merke:** «wurde» + Partizip II = Präteritum."
+    },
+    {
+      "sentence": "Der Hund ist gefüttert worden.",
+      "reveal": [2, 4],
+      "options": ["Präsens", "Präteritum", "Perfekt", "Futur I"],
+      "correct": 2,
+      "explanation": "«ist gefüttert worden» → Perfekt.\n**Merke:** Perfekt: «ist» + Partizip II + «worden»."
+    },
+    {
+      "sentence": "Die Straße wird gesperrt werden.",
+      "reveal": [2, 4],
+      "options": ["Präsens", "Präteritum", "Perfekt", "Futur I"],
+      "correct": 3,
+      "explanation": "«wird gesperrt werden» → Futur I.\n**Merke:** Futur I: «wird» + Partizip II + «werden»."
+    }
+  ]
+}

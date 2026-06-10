@@ -20,23 +20,5 @@
         "sets": ["passiv-regeln-4"]
       }
     ]
-  },
-  {
-    "id": "passiv-meistern",
-    "name": "Passiv Meistern — Testvorbereitung",
-    "stages": [
-      {
-        "name": "Stufe 1: Bausteine erkennen",
-        "sets": ["passiv-hilfsverb-1", "passiv-vp-zp-1"]
-      },
-      {
-        "name": "Stufe 2: Zeitformen-Radar",
-        "sets": ["passiv-zeitform-1", "passiv-zeitwechsel-1"]
-      },
-      {
-        "name": "Stufe 3: Kombiniert",
-        "sets": ["passiv-kombi-1", "passiv-umformen-mix-1"]
-      }
-    ]
   }
 ]

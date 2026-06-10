@@ -1,0 +1,179 @@
+{
+  "id": "passiv-regeln-4",
+  "name": "Passiv — Regeln Gesamtüberblick",
+  "goal": "Alle Passiv-Zeitformen sicher erkennen und die Regeln abrufen.",
+  "rules": ["passiv-grundlagen"],
+  "authoring": {
+    "rationale": "Vierte Stufe: Alles gemischt. Alle fünf Zeitformen durcheinander plus deklarative Wissensfragen. Prüft, ob das Kind das Gesamtsystem verinnerlicht hat und die Regeln ohne Hilfe abrufen kann.",
+    "constraints": "Alle Zeitformen gemischt (Präsens, Präteritum, Perfekt, Plusquamperfekt, Futur I). Mehr deklarative Fragen als in den vorherigen Stufen. Classify-Schritte mit allen Zeitformen als Optionen."
+  },
+  "question": "Beantworte die Frage",
+  "exercises": [
+    {
+      "type": "classify",
+      "sentence": "Die Pizza wird gerade gebacken.",
+      "steps": [
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 0
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
+          "correct": 0
+        }
+      ],
+      "explanation": "«wird gebacken» → Die Pizza wird gerade gebacken, der Vorgang läuft.\n**Merke:** «wird» + Partizip II = Vorgangspassiv Präsens.",
+      "reveal": [2]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welches Signalwort am Satzende zeigt Vorgangspassiv im Perfekt?",
+      "sentence": "Beispiel: Das Buch ist gelesen ___.",
+      "options": ["gewesen", "worden", "werden"],
+      "correct": 1,
+      "explanation": "«worden» kommt von «werden» und markiert Vorgangspassiv.\n**Merke:** «worden» am Ende = Vorgangspassiv Perfekt oder Plusquamperfekt."
+    },
+    {
+      "type": "classify",
+      "sentence": "Der Hund war gewaschen gewesen.",
+      "steps": [
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 1
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
+          "correct": 3
+        }
+      ],
+      "explanation": "«war gewaschen gewesen» → Der Hund hatte sich im gewaschenen Zustand befunden.\n**Merke:** «war» + Partizip II + «gewesen» = Zustandspassiv Plusquamperfekt.",
+      "reveal": [2, 3]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie viele Teile hat das Passiv im Präsens?",
+      "sentence": "Beispiel: Die Tür wird geschlossen.",
+      "options": ["2 (Hilfsverb + Partizip II)", "3 (Hilfsverb + Partizip II + Signalwort)", "1 (nur Partizip II)"],
+      "correct": 0,
+      "explanation": "Präsens und Präteritum brauchen nur zwei Teile: Hilfsverb + Partizip II.\n**Merke:** Ab Perfekt kommt ein drittes Wort dazu («worden»/«gewesen»)."
+    },
+    {
+      "type": "classify",
+      "sentence": "Die Tickets werden online verkauft werden.",
+      "steps": [
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 0
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
+          "correct": 4
+        }
+      ],
+      "explanation": "«werden verkauft werden» → Doppeltes «werden» = Futur I.\n**Merke:** «werden» + Partizip II + «werden» = Vorgangspassiv Futur I.",
+      "reveal": [1, 5]
+    },
+    {
+      "type": "classify",
+      "sentence": "Das Tor wurde in der Pause repariert.",
+      "steps": [
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 0
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
+          "correct": 1
+        }
+      ],
+      "explanation": "«wurde repariert» → Jemand reparierte in der Pause (Vorgang, Vergangenheit).\n**Merke:** «wurde» + Partizip II = Vorgangspassiv Präteritum.",
+      "reveal": [2]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie erkennt man den Unterschied zwischen Perfekt und Plusquamperfekt im Passiv?",
+      "sentence": "Tipp: Schau auf das konjugierte Verb am Anfang.",
+      "options": ["«ist/sind» = Perfekt, «war/waren» = Plusquamperfekt", "«war/waren» = Perfekt, «ist/sind» = Plusquamperfekt", "Am Partizip II"],
+      "correct": 0,
+      "explanation": "Das konjugierte Hilfsverb zeigt die Zeitform: Gegenwart = Perfekt, Vergangenheit = Plusquamperfekt.\n**Merke:** «ist» → Perfekt, «war» → Plusquamperfekt."
+    },
+    {
+      "type": "classify",
+      "sentence": "Die Bilder sind aufgehängt gewesen.",
+      "steps": [
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 1
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
+          "correct": 2
+        }
+      ],
+      "explanation": "«sind aufgehängt gewesen» → Die Bilder befanden sich im aufgehängten Zustand.\n**Merke:** «sind» + Partizip II + «gewesen» = Zustandspassiv Perfekt.",
+      "reveal": [1, 3]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welches Muster hat Futur I Zustandspassiv?",
+      "sentence": "Tipp: Zustandspassiv nutzt immer «sein».",
+      "options": ["wird + Partizip II + werden", "wird + Partizip II + sein", "ist + Partizip II + gewesen"],
+      "correct": 1,
+      "explanation": "Futur I = «wird» vorne. Zustandspassiv = «sein» am Ende.\n**Merke:** «wird» + Partizip II + «sein» = Zustandspassiv Futur I."
+    },
+    {
+      "type": "classify",
+      "sentence": "Die Straße ist gesperrt worden.",
+      "steps": [
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 0
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
+          "correct": 2
+        }
+      ],
+      "explanation": "«ist gesperrt worden» → Jemand hat die Straße gesperrt (Vorgang, abgeschlossen).\n**Merke:** «ist» + Partizip II + «worden» = Vorgangspassiv Perfekt.",
+      "reveal": [2, 3]
+    },
+    {
+      "type": "classify",
+      "sentence": "Das Buch wird nächste Woche veröffentlicht sein.",
+      "steps": [
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 1
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I"],
+          "correct": 4
+        }
+      ],
+      "explanation": "«wird veröffentlicht sein» → Das Buch wird dann im veröffentlichten Zustand sein.\n**Merke:** «wird» + Partizip II + «sein» = Zustandspassiv Futur I.",
+      "reveal": [4, 5]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welches Wort steht im Passiv IMMER am Satzende?",
+      "sentence": "Egal welche Zeitform — eines bleibt gleich.",
+      "options": ["das Hilfsverb", "das Partizip II oder ein Signalwort", "das Subjekt"],
+      "correct": 1,
+      "explanation": "In einfachen Zeiten steht das Partizip II am Ende, in zusammengesetzten das Signalwort.\n**Merke:** Satzende im Passiv = Partizip II (Präsens/Präteritum) oder Signalwort (Perfekt/Plusquamperfekt/Futur I)."
+    }
+  ]
+}

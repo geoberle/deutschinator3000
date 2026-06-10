@@ -72,6 +72,42 @@
     "category": "Aktiv/Passiv"
   },
   {
+    "id": "passiv-regeln-1",
+    "name": "Passiv — Regeln Stufe 1",
+    "goal": "Erkenne Vorgangs- und Zustandspassiv im Präsens und Präteritum.",
+    "description": "Finde das Hilfsverb, bestimme die Passivart und die Zeitform",
+    "file": "passiv-regeln-1.json",
+    "count": 12,
+    "category": "Aktiv/Passiv"
+  },
+  {
+    "id": "passiv-regeln-2",
+    "name": "Passiv — Regeln Stufe 2",
+    "goal": "Erkenne Vorgangs- und Zustandspassiv im Perfekt und Plusquamperfekt.",
+    "description": "Finde das Signalwort am Satzende, bestimme die Passivart und die Zeitform",
+    "file": "passiv-regeln-2.json",
+    "count": 12,
+    "category": "Aktiv/Passiv"
+  },
+  {
+    "id": "passiv-regeln-3",
+    "name": "Passiv — Regeln Stufe 3",
+    "goal": "Erkenne Vorgangs- und Zustandspassiv im Futur I.",
+    "description": "Finde das Signalwort am Satzende, bestimme die Passivart und erkenne Futur I",
+    "file": "passiv-regeln-3.json",
+    "count": 12,
+    "category": "Aktiv/Passiv"
+  },
+  {
+    "id": "passiv-regeln-4",
+    "name": "Passiv — Regeln Gesamtüberblick",
+    "goal": "Alle Passiv-Zeitformen sicher erkennen und die Regeln abrufen.",
+    "description": "Bestimme Passivart und Zeitform — alle Zeitformen gemischt",
+    "file": "passiv-regeln-4.json",
+    "count": 12,
+    "category": "Aktiv/Passiv"
+  },
+  {
     "id": "zeiten-erkennen-1",
     "name": "Zeiten erkennen 1",
     "goal": "Die Zeitform in aktiven Sätzen sicher erkennen.",

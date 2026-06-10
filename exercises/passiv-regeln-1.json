@@ -1,0 +1,229 @@
+{
+  "id": "passiv-regeln-1",
+  "name": "Passiv — Regeln Stufe 1",
+  "goal": "Erkenne Vorgangs- und Zustandspassiv im Präsens und Präteritum.",
+  "rules": ["passiv-grundlagen"],
+  "authoring": {
+    "rationale": "Erste Stufe der Regelübungen: Das Kind lernt, Vorgangs- und Zustandspassiv im Präsens und Präteritum am Hilfsverb zu erkennen und die Zeitform zu bestimmen. Analytisches Vorgehen: Hilfsverb finden → Passivart bestimmen → Zeitform benennen.",
+    "constraints": "Nur Präsens und Präteritum. Keine zusammengesetzten Zeitformen (Perfekt, Plusquamperfekt, Futur). Mischung aus analytischen Classify-Übungen (3 Schritte) und deklarativen Multiple-Choice-Fragen."
+  },
+  "question": "Beantworte die Frage",
+  "exercises": [
+    {
+      "type": "classify",
+      "sentence": "Das Frühstück wird von Papa vorbereitet.",
+      "steps": [
+        {
+          "question": "Welches Hilfsverb steckt im Satz?",
+          "options": ["werden", "sein"],
+          "correct": 0
+        },
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 0
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Präteritum"],
+          "correct": 0
+        }
+      ],
+      "explanation": "«wird vorbereitet» → Papa bereitet gerade vor, der Vorgang läuft.\n**Merke:** «werden» + Partizip II = Vorgangspassiv. «wird» = Präsens.",
+      "reveal": [2]
+    },
+    {
+      "type": "classify",
+      "sentence": "Der Klassenraum ist aufgeräumt.",
+      "steps": [
+        {
+          "question": "Welches Hilfsverb steckt im Satz?",
+          "options": ["werden", "sein"],
+          "correct": 1
+        },
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 1
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Präteritum"],
+          "correct": 0
+        }
+      ],
+      "explanation": "«ist aufgeräumt» → Der Raum ist schon fertig aufgeräumt, das Ergebnis steht fest.\n**Merke:** «sein» + Partizip II = Zustandspassiv. «ist» = Präsens.",
+      "reveal": [2]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welches Hilfsverb verwendet das Vorgangspassiv?",
+      "sentence": "Denke an den Unterschied: Vorgang läuft vs. Ergebnis steht fest.",
+      "options": ["sein", "werden", "haben"],
+      "correct": 1,
+      "explanation": "Das Vorgangspassiv beschreibt einen laufenden Vorgang.\n**Merke:** Vorgangspassiv = «werden» + Partizip II."
+    },
+    {
+      "type": "classify",
+      "sentence": "Die Hausaufgaben wurden von der Lehrerin kontrolliert.",
+      "steps": [
+        {
+          "question": "Welches Hilfsverb steckt im Satz?",
+          "options": ["werden", "sein"],
+          "correct": 0
+        },
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 0
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Präteritum"],
+          "correct": 1
+        }
+      ],
+      "explanation": "«wurden kontrolliert» → Die Kontrolle fand statt, ist aber vorbei.\n**Merke:** «wurden» ist die Präteritum-Form von «werden» → Vorgangspassiv Präteritum.",
+      "reveal": [2]
+    },
+    {
+      "type": "classify",
+      "sentence": "Das Fenster war geöffnet.",
+      "steps": [
+        {
+          "question": "Welches Hilfsverb steckt im Satz?",
+          "options": ["werden", "sein"],
+          "correct": 1
+        },
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 1
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Präteritum"],
+          "correct": 1
+        }
+      ],
+      "explanation": "«war geöffnet» → Das Fenster befand sich im geöffneten Zustand.\n**Merke:** «war» ist die Präteritum-Form von «sein» → Zustandspassiv Präteritum.",
+      "reveal": [2]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Was steht beim Passiv immer am Satzende?",
+      "sentence": "Beispiel: Die Suppe wird gekocht.",
+      "options": ["das Hilfsverb", "das Partizip II", "das Subjekt"],
+      "correct": 1,
+      "explanation": "«gekocht» steht am Ende — das Partizip II.\n**Merke:** Im Passiv steht das Partizip II immer am Satzende."
+    },
+    {
+      "type": "classify",
+      "sentence": "Der Brief wird von Oma geschrieben.",
+      "steps": [
+        {
+          "question": "Welches Hilfsverb steckt im Satz?",
+          "options": ["werden", "sein"],
+          "correct": 0
+        },
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 0
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Präteritum"],
+          "correct": 0
+        }
+      ],
+      "explanation": "«wird geschrieben» → Oma schreibt gerade, der Vorgang läuft.\n**Merke:** «wird» + Partizip II = Vorgangspassiv Präsens.",
+      "reveal": [2]
+    },
+    {
+      "type": "classify",
+      "sentence": "Die Fahrräder waren repariert.",
+      "steps": [
+        {
+          "question": "Welches Hilfsverb steckt im Satz?",
+          "options": ["werden", "sein"],
+          "correct": 1
+        },
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 1
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Präteritum"],
+          "correct": 1
+        }
+      ],
+      "explanation": "«waren repariert» → Die Fahrräder befanden sich im reparierten Zustand.\n**Merke:** «waren» = Präteritum von «sein» → Zustandspassiv Präteritum.",
+      "reveal": [1]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Was beschreibt das Zustandspassiv?",
+      "sentence": "Vergleiche: «Die Tür wird geschlossen» vs. «Die Tür ist geschlossen».",
+      "options": ["einen laufenden Vorgang", "ein fertiges Ergebnis", "eine Vermutung"],
+      "correct": 1,
+      "explanation": "«ist geschlossen» → Die Tür ist schon zu, das Ergebnis steht.\n**Merke:** Zustandspassiv = «sein» + Partizip II → Ergebnis steht fest."
+    },
+    {
+      "type": "classify",
+      "sentence": "Das Tor wurde in der letzten Minute geschossen.",
+      "steps": [
+        {
+          "question": "Welches Hilfsverb steckt im Satz?",
+          "options": ["werden", "sein"],
+          "correct": 0
+        },
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 0
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Präteritum"],
+          "correct": 1
+        }
+      ],
+      "explanation": "«wurde geschossen» → Das Tor fiel — ein Vorgang in der Vergangenheit.\n**Merke:** «wurde» + Partizip II = Vorgangspassiv Präteritum.",
+      "reveal": [2]
+    },
+    {
+      "type": "classify",
+      "sentence": "Die Geschenke sind verpackt.",
+      "steps": [
+        {
+          "question": "Welches Hilfsverb steckt im Satz?",
+          "options": ["werden", "sein"],
+          "correct": 1
+        },
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 1
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Präteritum"],
+          "correct": 0
+        }
+      ],
+      "explanation": "«sind verpackt» → Die Geschenke sind fertig eingepackt.\n**Merke:** «sein» + Partizip II = Zustandspassiv. «sind» = Präsens.",
+      "reveal": [1]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie lautet das Vorgangspassiv Präteritum von «machen»?",
+      "sentence": "Tipp: Setze das Hilfsverb ins Präteritum.",
+      "options": ["wird gemacht", "wurde gemacht", "war gemacht", "ist gemacht"],
+      "correct": 1,
+      "explanation": "Vorgangspassiv = «werden» + Partizip II. Präteritum von «werden» = «wurde».\n**Merke:** «wurde» + Partizip II = Vorgangspassiv Präteritum."
+    }
+  ]
+}

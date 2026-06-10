@@ -49,9 +49,9 @@ Wenn das Challenge-Thema keine passende Regeldatei in `rules/` hat:
 
 ### Schritt 3: Challenge-Definition schreiben
 
-Schreibe `exercises/challenges.json`.
+Lies `exercises/challenges.json` (Array von Challenges). Füge neue Challenge zum Array hinzu oder aktualisiere bestehende (gleiche ID).
 
-**Format:**
+**Format jeder Challenge:**
 
 ```json
 {
@@ -100,6 +100,6 @@ Gib eine Zusammenfassung:
 
 ## Wichtige Hinweise
 
-- `challenges.json` enthält aktuell ein einzelnes Challenge-Objekt (kein Array). Wenn mehrere Challenges nötig werden, muss zuerst `app.js` angepasst werden — flagge das dem Benutzer.
+- `challenges.json` ist ein Array von Challenge-Objekten. Neue Challenges werden zum Array hinzugefügt. Bei gleicher ID wird die bestehende Challenge ersetzt.
 - Regeldateien werden von Exercise-Sets über das `rules`-Feld referenziert, nicht von der Challenge selbst. Stelle sicher, dass die Exercise-Sets die richtigen `rules`-Referenzen haben.
 - Ändere die Challenge-ID, wenn sich der Inhalt ändert — sonst sieht das Kind alten Fortschritt.

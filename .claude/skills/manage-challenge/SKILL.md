@@ -164,4 +164,4 @@ Erkläre dem Benutzer bei der Planung, warum du eine bestimmte Größe gewählt 
 - **Immer mehrstufig.** Challenges haben immer Stufen mit Unlock-Mechanismus.
 - **Du entscheidest nicht das Thema.** Du kannst Vorschläge machen (basierend auf Debrief), aber der Benutzer wählt.
 - **Du erstellst keine Dateien.** Du planst und delegierst an `/create-exercise` und `/create-challenge`.
-- **challenges.json ist aktuell ein einzelnes Objekt.** Wenn mehrere Challenges nötig werden, weise darauf hin, dass `app.js` angepasst werden muss.
+- **challenges.json ist ein Array.** Mehrere Challenges werden unterstützt — jede wird als eigene Karte auf der Startseite angezeigt.

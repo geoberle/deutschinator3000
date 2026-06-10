@@ -1,0 +1,229 @@
+{
+  "id": "passiv-regeln-3",
+  "name": "Passiv — Regeln Stufe 3",
+  "goal": "Erkenne Vorgangs- und Zustandspassiv im Futur I.",
+  "rules": ["passiv-grundlagen"],
+  "authoring": {
+    "rationale": "Dritte Stufe der Regelübungen: Futur I im Passiv. Das Kind lernt die Doppelstruktur «wird + Partizip II + werden/sein». Signalwort am Ende: «werden» = VP, «sein» = ZP. Analytisches Vorgehen: Signalwort am Ende finden → Passivart bestimmen → Zeitform bestätigen.",
+    "constraints": "Nur Futur I. Signalwörter «werden» und «sein» am Satzende als Schlüssel. Mischung aus analytischen Classify-Übungen (3 Schritte) und deklarativen Multiple-Choice-Fragen."
+  },
+  "question": "Beantworte die Frage",
+  "exercises": [
+    {
+      "type": "classify",
+      "sentence": "Das Paket wird morgen geliefert werden.",
+      "steps": [
+        {
+          "question": "Was steht am Satzende: «werden» oder «sein»?",
+          "options": ["werden", "sein"],
+          "correct": 0
+        },
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 0
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Futur I"],
+          "correct": 1
+        }
+      ],
+      "explanation": "«wird geliefert werden» → Jemand wird das Paket morgen liefern (zukünftiger Vorgang).\n**Merke:** «wird» + Partizip II + «werden» = Vorgangspassiv Futur I.",
+      "reveal": [2, 4]
+    },
+    {
+      "type": "classify",
+      "sentence": "Die Aufgabe wird bis Freitag erledigt sein.",
+      "steps": [
+        {
+          "question": "Was steht am Satzende: «werden» oder «sein»?",
+          "options": ["werden", "sein"],
+          "correct": 1
+        },
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 1
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Futur I"],
+          "correct": 1
+        }
+      ],
+      "explanation": "«wird erledigt sein» → Die Aufgabe wird dann im erledigten Zustand sein.\n**Merke:** «wird» + Partizip II + «sein» = Zustandspassiv Futur I.",
+      "reveal": [4, 5]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie bildet man Vorgangspassiv Futur I?",
+      "sentence": "Beispiel: Das Auto ___ repariert ___.",
+      "options": ["wird ... werden", "wird ... sein", "ist ... worden"],
+      "correct": 0,
+      "explanation": "Futur I Vorgangspassiv hat «werden» doppelt: vorne konjugiert, hinten als Infinitiv.\n**Merke:** «wird» + Partizip II + «werden» = Vorgangspassiv Futur I."
+    },
+    {
+      "type": "classify",
+      "sentence": "Der Kuchen wird zum Geburtstag gebacken werden.",
+      "steps": [
+        {
+          "question": "Was steht am Satzende: «werden» oder «sein»?",
+          "options": ["werden", "sein"],
+          "correct": 0
+        },
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 0
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Futur I"],
+          "correct": 1
+        }
+      ],
+      "explanation": "«wird gebacken werden» → Jemand wird den Kuchen backen (zukünftiger Vorgang).\n**Merke:** Zwei Mal «werden» im Satz = Futur I Vorgangspassiv.",
+      "reveal": [2, 6]
+    },
+    {
+      "type": "classify",
+      "sentence": "Das Zimmer wird aufgeräumt sein.",
+      "steps": [
+        {
+          "question": "Was steht am Satzende: «werden» oder «sein»?",
+          "options": ["werden", "sein"],
+          "correct": 1
+        },
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 1
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Futur I"],
+          "correct": 1
+        }
+      ],
+      "explanation": "«wird aufgeräumt sein» → Das Zimmer wird dann im aufgeräumten Zustand sein.\n**Merke:** «wird» + Partizip II + «sein» = Zustandspassiv Futur I.",
+      "reveal": [2, 3]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Warum ist Futur I Vorgangspassiv verwirrend?",
+      "sentence": "Vergleiche: «wird gemacht» (Präsens) vs. «wird gemacht werden» (Futur I).",
+      "options": ["Weil «werden» zweimal vorkommt", "Weil «sein» am Ende steht", "Weil kein Partizip II da ist"],
+      "correct": 0,
+      "explanation": "«wird» steht vorne (konjugiert) UND «werden» steht am Ende (Infinitiv).\n**Merke:** Doppeltes «werden» = sicheres Zeichen für Futur I Vorgangspassiv."
+    },
+    {
+      "type": "classify",
+      "sentence": "Die Ergebnisse werden nächste Woche veröffentlicht werden.",
+      "steps": [
+        {
+          "question": "Was steht am Satzende: «werden» oder «sein»?",
+          "options": ["werden", "sein"],
+          "correct": 0
+        },
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 0
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Futur I"],
+          "correct": 1
+        }
+      ],
+      "explanation": "«werden veröffentlicht werden» → Die Ergebnisse werden nächste Woche veröffentlicht (zukünftig).\n**Merke:** «werden» + Partizip II + «werden» = Vorgangspassiv Futur I.",
+      "reveal": [1, 5]
+    },
+    {
+      "type": "classify",
+      "sentence": "Die Hausaufgaben werden bis morgen abgegeben sein.",
+      "steps": [
+        {
+          "question": "Was steht am Satzende: «werden» oder «sein»?",
+          "options": ["werden", "sein"],
+          "correct": 1
+        },
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 1
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Futur I"],
+          "correct": 1
+        }
+      ],
+      "explanation": "«werden abgegeben sein» → Die Hausaufgaben werden dann im abgegebenen Zustand sein.\n**Merke:** «werden» + Partizip II + «sein» = Zustandspassiv Futur I.",
+      "reveal": [1, 5]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie erkennt man Zustandspassiv Futur I?",
+      "sentence": "Tipp: Schau auf das letzte Wort im Satz.",
+      "options": ["«werden» am Ende", "«sein» am Ende", "«gewesen» am Ende"],
+      "correct": 1,
+      "explanation": "Zustandspassiv nutzt immer «sein» — auch im Futur I steht «sein» am Ende.\n**Merke:** «wird» + Partizip II + «sein» = Zustandspassiv Futur I."
+    },
+    {
+      "type": "classify",
+      "sentence": "Der Brief wird heute noch geschrieben werden.",
+      "steps": [
+        {
+          "question": "Was steht am Satzende: «werden» oder «sein»?",
+          "options": ["werden", "sein"],
+          "correct": 0
+        },
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 0
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Futur I"],
+          "correct": 1
+        }
+      ],
+      "explanation": "«wird geschrieben werden» → Jemand wird den Brief heute noch schreiben.\n**Merke:** «wird» vorne + «werden» hinten = Futur I Vorgangspassiv.",
+      "reveal": [2, 6]
+    },
+    {
+      "type": "classify",
+      "sentence": "Das Projekt wird abgeschlossen sein.",
+      "steps": [
+        {
+          "question": "Was steht am Satzende: «werden» oder «sein»?",
+          "options": ["werden", "sein"],
+          "correct": 1
+        },
+        {
+          "question": "Vorgangspassiv oder Zustandspassiv?",
+          "options": ["Vorgangspassiv", "Zustandspassiv"],
+          "correct": 1
+        },
+        {
+          "question": "Welche Zeitform?",
+          "options": ["Präsens", "Futur I"],
+          "correct": 1
+        }
+      ],
+      "explanation": "«wird abgeschlossen sein» → Das Projekt wird dann im abgeschlossenen Zustand sein.\n**Merke:** «wird» + Partizip II + «sein» = Zustandspassiv Futur I.",
+      "reveal": [2, 3]
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Was ist der Unterschied zwischen «wird gemacht» und «wird gemacht werden»?",
+      "sentence": "Beide beginnen mit «wird» — aber ein Wort macht den Unterschied.",
+      "options": ["Kein Unterschied", "«wird gemacht» = Präsens, «wird gemacht werden» = Futur I", "«wird gemacht» = Futur I, «wird gemacht werden» = Präsens"],
+      "correct": 1,
+      "explanation": "Ohne «werden» am Ende → Präsens. Mit «werden» am Ende → Futur I.\n**Merke:** Das «werden» am Satzende macht aus Präsens ein Futur I."
+    }
+  ]
+}

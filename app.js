@@ -395,18 +395,29 @@
       for (var r = stepIdx + 1; r < ex.steps.length; r++) {
         wordBankStepResults.push(-1);
       }
-      answerDiv.innerHTML = "";
-      answerDiv.classList.add("answered");
+      var placedPills = answerDiv.querySelectorAll(".word-placed");
+      for (var m = 0; m < placedPills.length; m++) {
+        placedPills[m].classList.add("answered");
+        if (m < expected.length && wordBankPool[wordBankPlaced[m]] === expected[m]) {
+          placedPills[m].classList.add("word-correct");
+        } else {
+          placedPills[m].classList.add("word-wrong");
+        }
+      }
+      answerDiv.removeAttribute("id");
+      var corrDiv = document.createElement("div");
+      corrDiv.className = "word-bank-answer word-bank-correction answered";
       for (var c = 0; c < step.answer.length; c++) {
         var cp = document.createElement("span");
         cp.className = "word-pill answered word-correct";
         cp.textContent = step.answer[c];
-        answerDiv.appendChild(cp);
+        corrDiv.appendChild(cp);
       }
       var cp2 = document.createElement("span");
       cp2.className = "word-bank-period";
       cp2.textContent = ".";
-      answerDiv.appendChild(cp2);
+      corrDiv.appendChild(cp2);
+      answerDiv.parentNode.insertBefore(corrDiv, answerDiv.nextSibling);
       poolDiv.remove();
       submitBtn.remove();
       finalizeWordBank(false);

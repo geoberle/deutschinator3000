@@ -175,7 +175,6 @@ User builds a sentence by tapping words from a shuffled pool into an answer area
 {
   "id": "grammatik-mix",
   "name": "Grammatik-Mix",
-  "question": "Beantworte die Frage",
   "exercises": [
     {
       "type": "multiple-choice",

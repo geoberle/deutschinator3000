@@ -7,7 +7,6 @@
     "rationale": "Erste Stufe der Regelübungen: Das Kind lernt, Vorgangs- und Zustandspassiv im Präsens und Präteritum am Hilfsverb zu erkennen und die Zeitform zu bestimmen. Analytisches Vorgehen: Hilfsverb finden → Passivart bestimmen → Zeitform benennen.",
     "constraints": "Nur Präsens und Präteritum. Keine zusammengesetzten Zeitformen (Perfekt, Plusquamperfekt, Futur). Mischung aus analytischen Classify-Übungen (3 Schritte) und deklarativen Multiple-Choice-Fragen."
   },
-  "question": "Beantworte die Frage",
   "exercises": [
     {
       "type": "classify",
@@ -111,11 +110,11 @@
     },
     {
       "type": "multiple-choice",
-      "question": "Was steht beim Passiv immer am Satzende?",
+      "question": "Was steht beim Passiv im Präsens und Präteritum am Satzende?",
       "sentence": "Beispiel: Die Suppe wird gekocht.",
       "options": ["das Hilfsverb", "das Partizip II", "das Subjekt"],
       "correct": 1,
-      "explanation": "«gekocht» steht am Ende — das Partizip II.\n**Merke:** Im Passiv steht das Partizip II immer am Satzende."
+      "explanation": "«gekocht» steht am Ende — das Partizip II.\n**Merke:** Im Präsens und Präteritum steht das Partizip II am Satzende."
     },
     {
       "type": "classify",
@@ -161,7 +160,7 @@
         }
       ],
       "explanation": "«waren repariert» → Die Fahrräder befanden sich im reparierten Zustand.\n**Merke:** «waren» = Präteritum von «sein» → Zustandspassiv Präteritum.",
-      "reveal": [1]
+      "reveal": [2]
     },
     {
       "type": "multiple-choice",
@@ -215,7 +214,7 @@
         }
       ],
       "explanation": "«sind verpackt» → Die Geschenke sind fertig eingepackt.\n**Merke:** «sein» + Partizip II = Zustandspassiv. «sind» = Präsens.",
-      "reveal": [1]
+      "reveal": [2]
     },
     {
       "type": "multiple-choice",

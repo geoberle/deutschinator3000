@@ -4,20 +4,14 @@
   "goal": "Erkenne Vorgangs- und Zustandspassiv im Futur I.",
   "rules": ["passiv-grundlagen"],
   "authoring": {
-    "rationale": "Dritte Stufe der Regelübungen: Futur I im Passiv. Das Kind lernt die Doppelstruktur «wird + Partizip II + werden/sein». Signalwort am Ende: «werden» = VP, «sein» = ZP. Analytisches Vorgehen: Signalwort am Ende finden → Passivart bestimmen → Zeitform bestätigen.",
-    "constraints": "Nur Futur I. Signalwörter «werden» und «sein» am Satzende als Schlüssel. Mischung aus analytischen Classify-Übungen (3 Schritte) und deklarativen Multiple-Choice-Fragen."
+    "rationale": "Dritte Stufe der Regelübungen: Futur I im Passiv. Das Kind lernt die Doppelstruktur «wird + Partizip II + werden/sein». Analytisches Vorgehen: Passivart bestimmen → Zeitform benennen.",
+    "constraints": "Nur Futur I. Signalwörter «werden» und «sein» am Satzende als Schlüssel. Mischung aus analytischen Classify-Übungen (2 Schritte) und deklarativen Multiple-Choice-Fragen."
   },
-  "question": "Beantworte die Frage",
   "exercises": [
     {
       "type": "classify",
       "sentence": "Das Paket wird morgen geliefert werden.",
       "steps": [
-        {
-          "question": "Was steht am Satzende: «werden» oder «sein»?",
-          "options": ["werden", "sein"],
-          "correct": 0
-        },
         {
           "question": "Vorgangspassiv oder Zustandspassiv?",
           "options": ["Vorgangspassiv", "Zustandspassiv"],
@@ -30,17 +24,12 @@
         }
       ],
       "explanation": "«wird geliefert werden» → Jemand wird das Paket morgen liefern (zukünftiger Vorgang).\n**Merke:** «wird» + Partizip II + «werden» = Vorgangspassiv Futur I.",
-      "reveal": [2, 4]
+      "reveal": [2, 5]
     },
     {
       "type": "classify",
       "sentence": "Die Aufgabe wird bis Freitag erledigt sein.",
       "steps": [
-        {
-          "question": "Was steht am Satzende: «werden» oder «sein»?",
-          "options": ["werden", "sein"],
-          "correct": 1
-        },
         {
           "question": "Vorgangspassiv oder Zustandspassiv?",
           "options": ["Vorgangspassiv", "Zustandspassiv"],
@@ -53,7 +42,7 @@
         }
       ],
       "explanation": "«wird erledigt sein» → Die Aufgabe wird dann im erledigten Zustand sein.\n**Merke:** «wird» + Partizip II + «sein» = Zustandspassiv Futur I.",
-      "reveal": [4, 5]
+      "reveal": [2, 6]
     },
     {
       "type": "multiple-choice",
@@ -67,11 +56,6 @@
       "type": "classify",
       "sentence": "Der Kuchen wird zum Geburtstag gebacken werden.",
       "steps": [
-        {
-          "question": "Was steht am Satzende: «werden» oder «sein»?",
-          "options": ["werden", "sein"],
-          "correct": 0
-        },
         {
           "question": "Vorgangspassiv oder Zustandspassiv?",
           "options": ["Vorgangspassiv", "Zustandspassiv"],
@@ -91,11 +75,6 @@
       "sentence": "Das Zimmer wird aufgeräumt sein.",
       "steps": [
         {
-          "question": "Was steht am Satzende: «werden» oder «sein»?",
-          "options": ["werden", "sein"],
-          "correct": 1
-        },
-        {
           "question": "Vorgangspassiv oder Zustandspassiv?",
           "options": ["Vorgangspassiv", "Zustandspassiv"],
           "correct": 1
@@ -107,7 +86,7 @@
         }
       ],
       "explanation": "«wird aufgeräumt sein» → Das Zimmer wird dann im aufgeräumten Zustand sein.\n**Merke:** «wird» + Partizip II + «sein» = Zustandspassiv Futur I.",
-      "reveal": [2, 3]
+      "reveal": [2, 4]
     },
     {
       "type": "multiple-choice",
@@ -122,11 +101,6 @@
       "sentence": "Die Ergebnisse werden nächste Woche veröffentlicht werden.",
       "steps": [
         {
-          "question": "Was steht am Satzende: «werden» oder «sein»?",
-          "options": ["werden", "sein"],
-          "correct": 0
-        },
-        {
           "question": "Vorgangspassiv oder Zustandspassiv?",
           "options": ["Vorgangspassiv", "Zustandspassiv"],
           "correct": 0
@@ -138,17 +112,12 @@
         }
       ],
       "explanation": "«werden veröffentlicht werden» → Die Ergebnisse werden nächste Woche veröffentlicht (zukünftig).\n**Merke:** «werden» + Partizip II + «werden» = Vorgangspassiv Futur I.",
-      "reveal": [1, 5]
+      "reveal": [2, 6]
     },
     {
       "type": "classify",
       "sentence": "Die Hausaufgaben werden bis morgen abgegeben sein.",
       "steps": [
-        {
-          "question": "Was steht am Satzende: «werden» oder «sein»?",
-          "options": ["werden", "sein"],
-          "correct": 1
-        },
         {
           "question": "Vorgangspassiv oder Zustandspassiv?",
           "options": ["Vorgangspassiv", "Zustandspassiv"],
@@ -161,12 +130,12 @@
         }
       ],
       "explanation": "«werden abgegeben sein» → Die Hausaufgaben werden dann im abgegebenen Zustand sein.\n**Merke:** «werden» + Partizip II + «sein» = Zustandspassiv Futur I.",
-      "reveal": [1, 5]
+      "reveal": [2, 6]
     },
     {
       "type": "multiple-choice",
       "question": "Wie erkennt man Zustandspassiv Futur I?",
-      "sentence": "Tipp: Schau auf das letzte Wort im Satz.",
+      "sentence": "Tipp: Zustandspassiv nutzt immer «sein» — welche Form steht am Ende?",
       "options": ["«werden» am Ende", "«sein» am Ende", "«gewesen» am Ende"],
       "correct": 1,
       "explanation": "Zustandspassiv nutzt immer «sein» — auch im Futur I steht «sein» am Ende.\n**Merke:** «wird» + Partizip II + «sein» = Zustandspassiv Futur I."
@@ -175,11 +144,6 @@
       "type": "classify",
       "sentence": "Der Brief wird heute noch geschrieben werden.",
       "steps": [
-        {
-          "question": "Was steht am Satzende: «werden» oder «sein»?",
-          "options": ["werden", "sein"],
-          "correct": 0
-        },
         {
           "question": "Vorgangspassiv oder Zustandspassiv?",
           "options": ["Vorgangspassiv", "Zustandspassiv"],
@@ -199,11 +163,6 @@
       "sentence": "Das Projekt wird abgeschlossen sein.",
       "steps": [
         {
-          "question": "Was steht am Satzende: «werden» oder «sein»?",
-          "options": ["werden", "sein"],
-          "correct": 1
-        },
-        {
           "question": "Vorgangspassiv oder Zustandspassiv?",
           "options": ["Vorgangspassiv", "Zustandspassiv"],
           "correct": 1
@@ -215,7 +174,7 @@
         }
       ],
       "explanation": "«wird abgeschlossen sein» → Das Projekt wird dann im abgeschlossenen Zustand sein.\n**Merke:** «wird» + Partizip II + «sein» = Zustandspassiv Futur I.",
-      "reveal": [2, 3]
+      "reveal": [2, 4]
     },
     {
       "type": "multiple-choice",

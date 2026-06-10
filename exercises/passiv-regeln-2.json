@@ -4,20 +4,14 @@
   "goal": "Erkenne Vorgangs- und Zustandspassiv im Perfekt und Plusquamperfekt.",
   "rules": ["passiv-grundlagen"],
   "authoring": {
-    "rationale": "Zweite Stufe der Regelübungen: Die zusammengesetzten Zeitformen. Das Kind lernt, «worden» (← werden) und «gewesen» (← sein) als Signalwörter am Satzende zu erkennen. Analytisches Vorgehen: Signalwort am Ende finden → Passivart bestimmen → Zeitform benennen.",
-    "constraints": "Nur Perfekt und Plusquamperfekt. Signalwörter «worden» und «gewesen» als Schlüssel. Mischung aus analytischen Classify-Übungen (3 Schritte) und deklarativen Multiple-Choice-Fragen."
+    "rationale": "Zweite Stufe der Regelübungen: Die zusammengesetzten Zeitformen. Das Kind lernt, «worden» (← werden) und «gewesen» (← sein) als Signalwörter am Satzende zu erkennen. Analytisches Vorgehen: Passivart bestimmen → Zeitform benennen.",
+    "constraints": "Nur Perfekt und Plusquamperfekt. Signalwörter «worden» und «gewesen» als Schlüssel. Mischung aus analytischen Classify-Übungen (2 Schritte) und deklarativen Multiple-Choice-Fragen."
   },
-  "question": "Beantworte die Frage",
   "exercises": [
     {
       "type": "classify",
       "sentence": "Das Fahrrad ist repariert worden.",
       "steps": [
-        {
-          "question": "Was steht am Satzende: «worden» oder «gewesen»?",
-          "options": ["worden", "gewesen"],
-          "correct": 0
-        },
         {
           "question": "Vorgangspassiv oder Zustandspassiv?",
           "options": ["Vorgangspassiv", "Zustandspassiv"],
@@ -30,17 +24,12 @@
         }
       ],
       "explanation": "«ist repariert worden» → Jemand hat das Fahrrad repariert (Vorgang, abgeschlossen).\n**Merke:** «worden» am Ende = Vorgangspassiv. «ist» + Partizip II + «worden» = Perfekt.",
-      "reveal": [1, 3]
+      "reveal": [2, 4]
     },
     {
       "type": "classify",
       "sentence": "Die Tür war verschlossen gewesen.",
       "steps": [
-        {
-          "question": "Was steht am Satzende: «worden» oder «gewesen»?",
-          "options": ["worden", "gewesen"],
-          "correct": 1
-        },
         {
           "question": "Vorgangspassiv oder Zustandspassiv?",
           "options": ["Vorgangspassiv", "Zustandspassiv"],
@@ -53,25 +42,12 @@
         }
       ],
       "explanation": "«war verschlossen gewesen» → Die Tür befand sich damals im verschlossenen Zustand.\n**Merke:** «gewesen» am Ende = Zustandspassiv. «war» + Partizip II + «gewesen» = Plusquamperfekt.",
-      "reveal": [2, 3]
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Woran erkennt man Vorgangspassiv in zusammengesetzten Zeitformen?",
-      "sentence": "Vergleiche: «ist gemacht worden» vs. «ist gemacht gewesen».",
-      "options": ["am Wort «gewesen»", "am Wort «worden»", "am Wort «haben»"],
-      "correct": 1,
-      "explanation": "«worden» ist das Signalwort für Vorgangspassiv in Perfekt und Plusquamperfekt.\n**Merke:** «worden» am Satzende → Vorgangspassiv."
+      "reveal": [2, 4]
     },
     {
       "type": "classify",
       "sentence": "Der Aufsatz ist von der Lehrerin korrigiert worden.",
       "steps": [
-        {
-          "question": "Was steht am Satzende: «worden» oder «gewesen»?",
-          "options": ["worden", "gewesen"],
-          "correct": 0
-        },
         {
           "question": "Vorgangspassiv oder Zustandspassiv?",
           "options": ["Vorgangspassiv", "Zustandspassiv"],
@@ -84,17 +60,12 @@
         }
       ],
       "explanation": "«ist korrigiert worden» → Die Lehrerin hat korrigiert, der Vorgang ist abgeschlossen.\n**Merke:** «ist» + Partizip II + «worden» = Vorgangspassiv Perfekt.",
-      "reveal": [1, 7]
+      "reveal": [2, 7]
     },
     {
       "type": "classify",
       "sentence": "Das Geschenk war verpackt gewesen.",
       "steps": [
-        {
-          "question": "Was steht am Satzende: «worden» oder «gewesen»?",
-          "options": ["worden", "gewesen"],
-          "correct": 1
-        },
         {
           "question": "Vorgangspassiv oder Zustandspassiv?",
           "options": ["Vorgangspassiv", "Zustandspassiv"],
@@ -107,7 +78,7 @@
         }
       ],
       "explanation": "«war verpackt gewesen» → Das Geschenk hatte sich im verpackten Zustand befunden.\n**Merke:** «war» + Partizip II + «gewesen» = Zustandspassiv Plusquamperfekt.",
-      "reveal": [2, 3]
+      "reveal": [2, 4]
     },
     {
       "type": "multiple-choice",
@@ -122,11 +93,6 @@
       "sentence": "Die Fenster waren geputzt worden.",
       "steps": [
         {
-          "question": "Was steht am Satzende: «worden» oder «gewesen»?",
-          "options": ["worden", "gewesen"],
-          "correct": 0
-        },
-        {
           "question": "Vorgangspassiv oder Zustandspassiv?",
           "options": ["Vorgangspassiv", "Zustandspassiv"],
           "correct": 0
@@ -138,17 +104,12 @@
         }
       ],
       "explanation": "«waren geputzt worden» → Jemand hatte die Fenster geputzt (Vorgang, vor einem anderen Ereignis).\n**Merke:** «waren» + Partizip II + «worden» = Vorgangspassiv Plusquamperfekt.",
-      "reveal": [2, 3]
+      "reveal": [2, 4]
     },
     {
       "type": "classify",
       "sentence": "Der Computer ist ausgeschaltet gewesen.",
       "steps": [
-        {
-          "question": "Was steht am Satzende: «worden» oder «gewesen»?",
-          "options": ["worden", "gewesen"],
-          "correct": 1
-        },
         {
           "question": "Vorgangspassiv oder Zustandspassiv?",
           "options": ["Vorgangspassiv", "Zustandspassiv"],
@@ -161,7 +122,7 @@
         }
       ],
       "explanation": "«ist ausgeschaltet gewesen» → Der Computer befand sich im ausgeschalteten Zustand.\n**Merke:** «ist» + Partizip II + «gewesen» = Zustandspassiv Perfekt.",
-      "reveal": [2, 3]
+      "reveal": [2, 4]
     },
     {
       "type": "multiple-choice",
@@ -176,11 +137,6 @@
       "sentence": "Die Briefe waren abgeschickt worden.",
       "steps": [
         {
-          "question": "Was steht am Satzende: «worden» oder «gewesen»?",
-          "options": ["worden", "gewesen"],
-          "correct": 0
-        },
-        {
           "question": "Vorgangspassiv oder Zustandspassiv?",
           "options": ["Vorgangspassiv", "Zustandspassiv"],
           "correct": 0
@@ -192,17 +148,12 @@
         }
       ],
       "explanation": "«waren abgeschickt worden» → Jemand hatte die Briefe vorher abgeschickt.\n**Merke:** «waren» + Partizip II + «worden» = Vorgangspassiv Plusquamperfekt.",
-      "reveal": [2, 3]
+      "reveal": [2, 4]
     },
     {
       "type": "classify",
       "sentence": "Das Essen ist bestellt worden.",
       "steps": [
-        {
-          "question": "Was steht am Satzende: «worden» oder «gewesen»?",
-          "options": ["worden", "gewesen"],
-          "correct": 0
-        },
         {
           "question": "Vorgangspassiv oder Zustandspassiv?",
           "options": ["Vorgangspassiv", "Zustandspassiv"],
@@ -215,7 +166,7 @@
         }
       ],
       "explanation": "«ist bestellt worden» → Jemand hat das Essen bestellt, der Vorgang ist abgeschlossen.\n**Merke:** «ist» + Partizip II + «worden» = Vorgangspassiv Perfekt.",
-      "reveal": [2, 3]
+      "reveal": [2, 4]
     },
     {
       "type": "multiple-choice",

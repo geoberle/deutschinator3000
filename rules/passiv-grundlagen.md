@@ -35,4 +35,6 @@ Im Passiv steht die **Handlung** im Vordergrund, nicht die handelnde Person.
 
 - **werden** → es passiert gerade (Vorgang)
 - **sein** → es ist schon fertig (Zustand)
-- Das Partizip II steht immer am **Satzende**
+- Im Präsens/Präteritum steht das **Partizip II** am Satzende
+- Im Perfekt/Plusquamperfekt steht **worden** oder **gewesen** am Satzende
+- Im Futur I steht **werden** oder **sein** am Satzende

@@ -25,6 +25,9 @@
 
   var rulesCache = {};
 
+  var fixMode = false;
+  var fixIndices = [];
+
   var reviewSet = null;
   var reviewExercises = [];
   var reviewAnswers = [];
@@ -185,6 +188,7 @@
 
     var stepDiv = e.currentTarget.closest(".classify-step");
     var buttons = stepDiv.querySelectorAll(".option-btn");
+
     for (var i = 0; i < buttons.length; i++) {
       buttons[i].classList.add("answered");
       if (i === step.correct) buttons[i].classList.add("correct");
@@ -219,8 +223,17 @@
 
   function finalizeClassify(correct) {
     var ex = exercises[index];
-    results.push(correct);
-    chosenAnswers.push(classifyStepAnswers.slice());
+
+    if (fixMode) {
+      if (correct) {
+        var origIdx = fixIndices[index];
+        results[origIdx] = true;
+        chosenAnswers[origIdx] = classifyStepAnswers.slice();
+      }
+    } else {
+      results.push(correct);
+      chosenAnswers.push(classifyStepAnswers.slice());
+    }
 
     var dots = document.querySelectorAll(".progress-dot");
     dots[index].className = "progress-dot " + (correct ? "dot-correct" : "dot-wrong");
@@ -426,8 +439,17 @@
 
   function finalizeWordBank(correct) {
     var ex = exercises[index];
-    results.push(correct);
-    chosenAnswers.push(wordBankStepResults.slice());
+
+    if (fixMode) {
+      if (correct) {
+        var origIdx = fixIndices[index];
+        results[origIdx] = true;
+        chosenAnswers[origIdx] = wordBankStepResults.slice();
+      }
+    } else {
+      results.push(correct);
+      chosenAnswers.push(wordBankStepResults.slice());
+    }
 
     var dots = document.querySelectorAll(".progress-dot");
     dots[index].className = "progress-dot " + (correct ? "dot-correct" : "dot-wrong");
@@ -1058,6 +1080,8 @@
     results = [];
     chosenAnswers = [];
     answered = false;
+    fixMode = false;
+    fixIndices = [];
   }
 
   function showQuestion() {
@@ -1065,8 +1089,18 @@
     var total = exercises.length;
     var question = ex.question || currentSet.question || "";
 
+    var dotsResults;
+    if (fixMode) {
+      dotsResults = [];
+      for (var d = 0; d < index; d++) {
+        dotsResults.push(results[fixIndices[d]]);
+      }
+    } else {
+      dotsResults = results;
+    }
+
     var rendered = renderExercise(ex);
-    app.innerHTML = renderProgressDots(total, results, index) +
+    app.innerHTML = renderProgressDots(total, dotsResults, index) +
       (question ? '<div class="question-label">' + esc(question) + "</div>" : "") +
       rendered.html;
     rendered.bind();
@@ -1079,8 +1113,17 @@
     var chosen = parseInt(e.currentTarget.getAttribute("data-index"), 10);
     var ex = exercises[index];
     var correct = chosen === ex.correct;
-    results.push(correct);
-    chosenAnswers.push(chosen);
+
+    if (fixMode) {
+      var origIdx = fixIndices[index];
+      if (correct) {
+        results[origIdx] = true;
+        chosenAnswers[origIdx] = chosen;
+      }
+    } else {
+      results.push(correct);
+      chosenAnswers.push(chosen);
+    }
 
     var dots = document.querySelectorAll(".progress-dot");
     dots[index].className = "progress-dot " + (correct ? "dot-correct" : "dot-wrong");
@@ -1176,12 +1219,24 @@
   function finalizeWordTap(correct, classifyChoice) {
     if (correct) playCorrectSound(); else playWrongSound();
     var ex = exercises[index];
-    results.push(correct);
 
-    if (ex.classify) {
-      chosenAnswers.push({words: selectedWords.slice(), classify: classifyChoice});
+    if (fixMode) {
+      if (correct) {
+        var origIdx = fixIndices[index];
+        results[origIdx] = true;
+        if (ex.classify) {
+          chosenAnswers[origIdx] = {words: selectedWords.slice(), classify: classifyChoice};
+        } else {
+          chosenAnswers[origIdx] = selectedWords.slice();
+        }
+      }
     } else {
-      chosenAnswers.push(selectedWords.slice());
+      results.push(correct);
+      if (ex.classify) {
+        chosenAnswers.push({words: selectedWords.slice(), classify: classifyChoice});
+      } else {
+        chosenAnswers.push(selectedWords.slice());
+      }
     }
 
     var dots = document.querySelectorAll(".progress-dot");
@@ -1227,10 +1282,40 @@
     index++;
     answered = false;
     if (index >= exercises.length) {
+      if (fixMode) {
+        fixMode = false;
+        fixIndices = [];
+        exercises = [];
+        for (var j = 0; j < exerciseOrder.length; j++) {
+          exercises.push(currentSet.exercises[exerciseOrder[j]]);
+        }
+        index = 0;
+      }
       showSummary();
     } else {
       showQuestion();
     }
+  }
+
+  function startFixMode() {
+    var wrongOriginalIndices = [];
+    for (var i = 0; i < results.length; i++) {
+      if (!results[i]) wrongOriginalIndices.push(i);
+    }
+    if (wrongOriginalIndices.length === 0) return;
+
+    fixMode = true;
+    fixIndices = wrongOriginalIndices;
+    exercises = [];
+    for (var j = 0; j < wrongOriginalIndices.length; j++) {
+      var origIdx = wrongOriginalIndices[j];
+      exercises.push(currentSet.exercises[exerciseOrder[origIdx]]);
+    }
+    index = 0;
+    answered = false;
+    setHeaderTitle(currentSet.name);
+    setHeaderBack(true);
+    showQuestion();
   }
 
   // --- Summary & sharing ---
@@ -1260,7 +1345,12 @@
     }
     var total = results.length;
 
-    var actionsHtml =
+    var hasWrongs = correctCount < total;
+    var actionsHtml = "";
+    if (hasWrongs) {
+      actionsHtml += '<button class="btn-primary" id="btn-fix">Fehler korrigieren</button>';
+    }
+    actionsHtml +=
       '<button class="btn-primary" id="btn-retry">Nochmal</button>' +
       '<button class="btn-share" id="btn-share">Ergebnis teilen</button>';
 
@@ -1321,6 +1411,13 @@
       celebrateConfetti();
     }
 
+    var fixBtn = document.getElementById("btn-fix");
+    if (fixBtn) {
+      fixBtn.addEventListener("click", function () {
+        stopCelebration();
+        startFixMode();
+      });
+    }
     document.getElementById("btn-retry").addEventListener("click", function () {
       stopCelebration();
       retrySet();

@@ -1,18 +1,42 @@
-{
-  "id": "passiv-meistern",
-  "name": "Passiv Meistern — Testvorbereitung",
-  "stages": [
-    {
-      "name": "Stufe 1: Bausteine erkennen",
-      "sets": ["passiv-hilfsverb-1", "passiv-vp-zp-1"]
-    },
-    {
-      "name": "Stufe 2: Zeitformen-Radar",
-      "sets": ["passiv-zeitform-1", "passiv-zeitwechsel-1"]
-    },
-    {
-      "name": "Stufe 3: Kombiniert",
-      "sets": ["passiv-kombi-1", "passiv-umformen-mix-1"]
-    }
-  ]
-}
+[
+  {
+    "id": "passiv-regeln",
+    "name": "Passiv-Regeln — Schritt für Schritt",
+    "stages": [
+      {
+        "name": "Stufe 1: Präsens & Präteritum",
+        "sets": ["passiv-regeln-1"]
+      },
+      {
+        "name": "Stufe 2: Perfekt & Plusquamperfekt",
+        "sets": ["passiv-regeln-2"]
+      },
+      {
+        "name": "Stufe 3: Futur I",
+        "sets": ["passiv-regeln-3"]
+      },
+      {
+        "name": "Stufe 4: Gesamtüberblick",
+        "sets": ["passiv-regeln-4"]
+      }
+    ]
+  },
+  {
+    "id": "passiv-meistern",
+    "name": "Passiv Meistern — Testvorbereitung",
+    "stages": [
+      {
+        "name": "Stufe 1: Bausteine erkennen",
+        "sets": ["passiv-hilfsverb-1", "passiv-vp-zp-1"]
+      },
+      {
+        "name": "Stufe 2: Zeitformen-Radar",
+        "sets": ["passiv-zeitform-1", "passiv-zeitwechsel-1"]
+      },
+      {
+        "name": "Stufe 3: Kombiniert",
+        "sets": ["passiv-kombi-1", "passiv-umformen-mix-1"]
+      }
+    ]
+  }
+]

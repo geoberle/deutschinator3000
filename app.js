@@ -658,8 +658,8 @@
       showSharedResult();
     } else if (location.hash.startsWith("#set/")) {
       startSetById(decodeURIComponent(location.hash.replace("#set/", "")));
-    } else if (location.hash === "#challenge") {
-      showChallengeHub();
+    } else if (location.hash.startsWith("#challenge/")) {
+      showChallengeHub(decodeURIComponent(location.hash.replace("#challenge/", "")));
     } else {
       showHome();
     }
@@ -703,68 +703,66 @@
       }).catch(function () { return null; })
     ]).then(function (both) {
       sets = both[0];
-      var challenge = both[1];
+      var challenges = both[1];
 
       var html = "";
 
-      if (challenge && (challenge.stages || (challenge.sets && challenge.sets.length > 0))) {
-        var allSetIds = challengeAllSets(challenge);
-        var totalCount = 0;
-        for (var c = 0; c < allSetIds.length; c++) {
-          for (var s = 0; s < sets.length; s++) {
-            if (sets[s].id === allSetIds[c]) { totalCount += allSetIds[s] ? sets[s].count : 0; break; }
-          }
-        }
+      if (challenges && challenges.length) {
+        for (var ci = 0; ci < challenges.length; ci++) {
+          var challenge = challenges[ci];
+          if (!challenge || (!challenge.stages && (!challenge.sets || challenge.sets.length === 0))) continue;
 
-        var totalCount = 0;
-        for (var c = 0; c < allSetIds.length; c++) {
-          for (var s = 0; s < sets.length; s++) {
-            if (sets[s].id === allSetIds[c]) { totalCount += sets[s].count; break; }
-          }
-        }
-
-        var saved = challenge.id ? loadChallengeProgress(challenge.id) : null;
-        var completed = isChallengeCompleted(challenge.id);
-        var cardCls = "challenge-card";
-        var iconHtml = "";
-        var progressHtml = "";
-
-        if (completed) {
-          cardCls += " challenge-card-completed";
-          iconHtml = '<span class="challenge-icon">✓</span>';
-          progressHtml = '<div class="challenge-progress">Alle geschafft!</div>';
-        } else if (saved && saved.scores) {
-          var doneCount = 0;
-          for (var dc = 0; dc < saved.scores.length; dc++) {
-            if (saved.scores[dc]) doneCount++;
-          }
-          if (doneCount > 0) {
-            var stagesDone = 0;
-            if (challenge.stages) {
-              var pos = 0;
-              for (var si = 0; si < challenge.stages.length; si++) {
-                var stageDone = true;
-                for (var sj = 0; sj < challenge.stages[si].sets.length; sj++) {
-                  if (!saved.scores[pos]) stageDone = false;
-                  pos++;
-                }
-                if (stageDone) stagesDone++;
-              }
-              progressHtml = '<div class="challenge-progress">' +
-                stagesDone + " von " + challenge.stages.length + " Stufen geschafft — weiter geht's!</div>";
-            } else {
-              progressHtml = '<div class="challenge-progress">' +
-                doneCount + " von " + allSetIds.length + " geschafft — weiter geht's!</div>";
+          var allSetIds = challengeAllSets(challenge);
+          var totalCount = 0;
+          for (var c = 0; c < allSetIds.length; c++) {
+            for (var s = 0; s < sets.length; s++) {
+              if (sets[s].id === allSetIds[c]) { totalCount += sets[s].count; break; }
             }
           }
-        }
 
-        html += '<div class="' + cardCls + '" id="challenge-card">' +
-          iconHtml +
-          "<h2>" + esc(challenge.name) + "</h2>" +
-          "<p>" + (challenge.stages ? challenge.stages.length + " Stufen · " : allSetIds.length + " Übungen · ") + totalCount + " Aufgaben</p>" +
-          progressHtml +
-          "</div>";
+          var saved = challenge.id ? loadChallengeProgress(challenge.id) : null;
+          var completed = isChallengeCompleted(challenge.id);
+          var cardCls = "challenge-card";
+          var iconHtml = "";
+          var progressHtml = "";
+
+          if (completed) {
+            cardCls += " challenge-card-completed";
+            iconHtml = '<span class="challenge-icon">✓</span>';
+            progressHtml = '<div class="challenge-progress">Alle geschafft!</div>';
+          } else if (saved && saved.scores) {
+            var doneCount = 0;
+            for (var dc = 0; dc < saved.scores.length; dc++) {
+              if (saved.scores[dc]) doneCount++;
+            }
+            if (doneCount > 0) {
+              var stagesDone = 0;
+              if (challenge.stages) {
+                var pos = 0;
+                for (var si = 0; si < challenge.stages.length; si++) {
+                  var stageDone = true;
+                  for (var sj = 0; sj < challenge.stages[si].sets.length; sj++) {
+                    if (!saved.scores[pos]) stageDone = false;
+                    pos++;
+                  }
+                  if (stageDone) stagesDone++;
+                }
+                progressHtml = '<div class="challenge-progress">' +
+                  stagesDone + " von " + challenge.stages.length + " Stufen geschafft — weiter geht's!</div>";
+              } else {
+                progressHtml = '<div class="challenge-progress">' +
+                  doneCount + " von " + allSetIds.length + " geschafft — weiter geht's!</div>";
+              }
+            }
+          }
+
+          html += '<div class="' + cardCls + ' challenge-card-link" data-challenge-id="' + esc(challenge.id) + '">' +
+            iconHtml +
+            "<h2>" + esc(challenge.name) + "</h2>" +
+            "<p>" + (challenge.stages ? challenge.stages.length + " Stufen · " : allSetIds.length + " Übungen · ") + totalCount + " Aufgaben</p>" +
+            progressHtml +
+            "</div>";
+        }
       }
 
       var groups = [];
@@ -805,9 +803,10 @@
       html += "</div>";
       app.innerHTML = html;
 
-      if (document.getElementById("challenge-card")) {
-        document.getElementById("challenge-card").addEventListener("click", function () {
-          location.hash = "#challenge";
+      var challengeCards = app.querySelectorAll(".challenge-card-link");
+      for (var cc = 0; cc < challengeCards.length; cc++) {
+        challengeCards[cc].addEventListener("click", function () {
+          location.hash = "#challenge/" + encodeURIComponent(this.getAttribute("data-challenge-id"));
         });
       }
 
@@ -828,13 +827,19 @@
     });
   }
 
-  function showChallengeHub() {
+  function showChallengeHub(challengeId) {
     Promise.all([
       fetch("exercises/index.json").then(function (r) { return r.json(); }),
       fetch("exercises/challenges.json").then(function (r) { return r.json(); })
     ]).then(function (both) {
       sets = both[0];
-      challengeDef = both[1];
+      var challenges = both[1];
+      challengeDef = null;
+      if (challenges && challenges.length) {
+        for (var ci = 0; ci < challenges.length; ci++) {
+          if (challenges[ci].id === challengeId) { challengeDef = challenges[ci]; break; }
+        }
+      }
       if (!challengeDef) { showHome(); return; }
 
       var allSetIds = challengeAllSets(challengeDef);
@@ -1008,9 +1013,10 @@
       }
 
       document.getElementById("btn-challenge-reset").addEventListener("click", function () {
+        var id = challengeDef.id;
         clearChallengeProgress();
         challengeScores = [];
-        showChallengeHub();
+        showChallengeHub(id);
       });
     });
   }
@@ -1468,7 +1474,7 @@
   }
 
   function advanceChallenge() {
-    showChallengeHub();
+    showChallengeHub(challengeDef.id);
   }
 
   function shareResult(correctCount, total) {
@@ -1657,7 +1663,7 @@
           return;
         }
         if (challengeDef && !inChallengeHub) {
-          showChallengeHub();
+          showChallengeHub(challengeDef.id);
           return;
         }
         location.hash = "";
@@ -1885,8 +1891,8 @@
       showSharedResult();
     } else if (location.hash.startsWith("#set/")) {
       startSetById(decodeURIComponent(location.hash.replace("#set/", "")));
-    } else if (location.hash === "#challenge") {
-      showChallengeHub();
+    } else if (location.hash.startsWith("#challenge/")) {
+      showChallengeHub(decodeURIComponent(location.hash.replace("#challenge/", "")));
     }
   });
 

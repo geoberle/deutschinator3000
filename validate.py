@@ -56,8 +56,10 @@ for entry in manifest:
 
     set_type = data.get("type", "multiple-choice")
 
-    # Question exists (not required for classify/word-bank — steps carry their own)
-    if set_type not in ("classify", "word-bank") and not data.get("question"):
+    # Question exists (not required for classify/word-bank — steps carry their own,
+    # nor for mixed-type sets where each exercise declares its own type)
+    has_per_exercise_types = any(ex.get("type") for ex in data.get("exercises", []))
+    if set_type not in ("classify", "word-bank") and not has_per_exercise_types and not data.get("question"):
         err("Missing 'question' field")
 
     for i, ex in enumerate(data.get("exercises", [])):

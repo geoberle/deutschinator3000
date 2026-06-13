@@ -29,6 +29,9 @@
   var fixMode = false;
   var fixIndices = [];
 
+  var quizInProgress = false;
+  var quizHash = "";
+
   var reviewSet = null;
   var reviewExercises = [];
   var reviewAnswers = [];
@@ -692,6 +695,7 @@
   }
 
   function showHome() {
+    quizInProgress = false;
     setHeaderTitle(null);
     setHeaderBack(false);
     setHeaderRules(null);
@@ -829,6 +833,7 @@
   }
 
   function showChallengeHub(challengeId) {
+    quizInProgress = false;
     Promise.all([
       fetch("exercises/index.json").then(function (r) { return r.json(); }),
       fetch("exercises/challenges.json").then(function (r) { return r.json(); })
@@ -1147,6 +1152,8 @@
   }
 
   function showQuestion() {
+    quizInProgress = true;
+    if (index === 0 && !fixMode) quizHash = location.hash;
     var ex = exercises[index];
     var total = exercises.length;
     var question = ex.question || currentSet.question || "";
@@ -1398,6 +1405,7 @@
   }
 
   function showSummary(skipCelebration) {
+    quizInProgress = false;
     setHeaderTitle(null);
     setHeaderBack(false);
     setHeaderRules(null);
@@ -1727,12 +1735,19 @@
           showSharedResult();
           return;
         }
-        if (challengeDef && !inChallengeHub) {
-          showChallengeHub(challengeDef.id);
-          return;
+        function doNavigate() {
+          if (challengeDef && !inChallengeHub) {
+            showChallengeHub(challengeDef.id);
+          } else {
+            location.hash = "";
+            showHome();
+          }
         }
-        location.hash = "";
-        showHome();
+        if (isQuizActive()) {
+          showConfirmLeave(doNavigate);
+        } else {
+          doNavigate();
+        }
       });
       header.prepend(btn);
     }
@@ -1808,6 +1823,45 @@
 
   function onRulesEscape(e) {
     if (e.key === "Escape") hideRulesModal();
+  }
+
+  function isQuizActive() {
+    return quizInProgress && (answered || index > 0);
+  }
+
+  function showConfirmLeave(onConfirm) {
+    var existing = document.getElementById("confirm-overlay");
+    if (existing) existing.remove();
+
+    var answeredCount = answered ? index + 1 : index;
+
+    var overlay = document.createElement("div");
+    overlay.className = "rules-overlay";
+    overlay.id = "confirm-overlay";
+
+    var modal = document.createElement("div");
+    modal.className = "confirm-modal";
+    modal.innerHTML =
+      "<p>Du hast " + answeredCount + " von " + exercises.length + " Fragen beantwortet.<br>Wirklich abbrechen?</p>" +
+      '<div class="confirm-actions">' +
+        '<button class="btn-primary" id="confirm-stay">Weitermachen</button>' +
+        '<button class="btn-secondary" id="confirm-leave">Abbrechen</button>' +
+      "</div>";
+
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+
+    document.getElementById("confirm-stay").addEventListener("click", function () {
+      overlay.remove();
+    });
+    document.getElementById("confirm-leave").addEventListener("click", function () {
+      overlay.remove();
+      quizInProgress = false;
+      onConfirm();
+    });
+    overlay.addEventListener("click", function (e) {
+      if (e.target === overlay) overlay.remove();
+    });
   }
 
   function showToast(msg) {
@@ -1948,6 +2002,14 @@
   }
 
   window.addEventListener("hashchange", function () {
+    if (isQuizActive()) {
+      var targetHash = location.hash;
+      history.replaceState(null, "", quizHash);
+      showConfirmLeave(function () {
+        location.hash = targetHash;
+      });
+      return;
+    }
     stopCelebration();
     reviewSet = null;
     if (!location.hash || location.hash === "#") {

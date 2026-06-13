@@ -1,0 +1,69 @@
+{
+  "id": "satzglieder-1",
+  "name": "Satzglieder bestimmen 1",
+  "goal": "Die wichtigsten Satzglieder im Satz erkennen und benennen.",
+  "type": "satzglieder",
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "O2 — Genitivobjekt", "PO — Präpositionalobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KA — Kausaladverbiale"],
+  "question": "Bestimme die Satzglieder",
+  "exercises": [
+    {
+      "sentence": "Der Hund frisst den Knochen",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "**Der Hund** → Wer frisst? → S (Subjekt)\n**frisst** → Was tut er? → P (Prädikat)\n**den Knochen** → Wen/Was frisst er? → O4 (Akkusativobjekt)"
+    },
+    {
+      "sentence": "Die Lehrerin gibt dem Schüler eine Aufgabe",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "O3 — Dativobjekt" },
+        { "indices": [5, 6], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "**Die Lehrerin** → Wer gibt? → S (Subjekt)\n**gibt** → Was tut sie? → P (Prädikat)\n**dem Schüler** → Wem gibt sie? → O3 (Dativobjekt)\n**eine Aufgabe** → Wen/Was gibt sie? → O4 (Akkusativobjekt)"
+    },
+    {
+      "sentence": "Er hat gestern einen Hund gekauft",
+      "chunks": [
+        { "indices": [0], "correct": "S — Subjekt" },
+        { "indices": [1, 5], "correct": "P — Prädikat" },
+        { "indices": [2], "correct": "TO — Temporaladverbiale" },
+        { "indices": [3, 4], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "**Er** → Wer hat gekauft? → S (Subjekt)\n**hat … gekauft** → Was geschieht? → P (Prädikat, zweiteilig!)\n**gestern** → Wann? → TO (Temporaladverbiale)\n**einen Hund** → Wen/Was? → O4 (Akkusativobjekt)"
+    },
+    {
+      "sentence": "Morgens trinkt das Kind warme Milch",
+      "chunks": [
+        { "indices": [0], "correct": "TO — Temporaladverbiale" },
+        { "indices": [1], "correct": "P — Prädikat" },
+        { "indices": [2, 3], "correct": "S — Subjekt" },
+        { "indices": [4, 5], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "**Morgens** → Wann? → TO (Temporaladverbiale)\n**trinkt** → Was tut es? → P (Prädikat)\n**das Kind** → Wer trinkt? → S (Subjekt)\n**warme Milch** → Wen/Was trinkt es? → O4 (Akkusativobjekt)"
+    },
+    {
+      "sentence": "Die Mutter schenkt dem Kind ein Buch",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "O3 — Dativobjekt" },
+        { "indices": [5, 6], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "**Die Mutter** → Wer schenkt? → S (Subjekt)\n**schenkt** → Was tut sie? → P (Prädikat)\n**dem Kind** → Wem schenkt sie? → O3 (Dativobjekt)\n**ein Buch** → Wen/Was schenkt sie? → O4 (Akkusativobjekt)"
+    },
+    {
+      "sentence": "Im Park spielen die Kinder Fußball",
+      "chunks": [
+        { "indices": [0, 1], "correct": "LO — Lokaladverbiale" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "S — Subjekt" },
+        { "indices": [5], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "**Im Park** → Wo? → LO (Lokaladverbiale)\n**spielen** → Was tun sie? → P (Prädikat)\n**die Kinder** → Wer spielt? → S (Subjekt)\n**Fußball** → Wen/Was spielen sie? → O4 (Akkusativobjekt)"
+    }
+  ]
+}

@@ -128,8 +128,9 @@ Wähle den Typ basierend auf dem Lernziel:
 | Mehrdimensionale Analyse | `classify` | Schrittweise Klassifikation, eine Frage nach der anderen |
 | Wörter im Kontext finden | `word-tap` | Interaktiv, Satz visuell erfassen |
 | Formen bilden / Umformen | `word-bank` | Aktive Produktion, aber mit Wort-Pool als Stützrad |
+| Satzteile kategorisieren | `satzglieder` | Satzglieder bestimmen — Chunks zuordnen, Split-Prädikat, Farb-Badges |
 
-Wenn keiner der 4 Typen zum Lernziel passt: **flagge das.** Beschreibe welche Art von Interaktion fehlt. Erstelle keinen Spec.
+Wenn keiner der 5 Typen zum Lernziel passt: **flagge das.** Beschreibe welche Art von Interaktion fehlt. Erstelle keinen Spec.
 
 ## Pädagogik-Recherche
 
@@ -155,6 +156,7 @@ Dimensioniere Sets nach kognitiver Belastung des Übungstyps:
 | `classify` | 10–12 | Mittel — mehrere Steps, aber immer noch Erkennen |
 | `word-tap` | 8–12 | Mittel — visuelles Scannen + optionale Folgefrage |
 | `word-bank` | 8–10 | Hoch — aktive Produktion, viele Entscheidungen pro Übung |
+| `satzglieder` | 6–10 | Hoch — jeder Chunk einzeln zuordnen, viele Kategorien |
 
 Erkläre dem Benutzer bei der Planung, warum du eine bestimmte Größe gewählt hast.
 

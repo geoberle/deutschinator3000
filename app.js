@@ -16,6 +16,7 @@
   var wordBankStepResults = [];
   var wordBankPlaced = [];
   var wordBankPool = [];
+  var satzgliederAnswers = [];
   var wordBankCurrentStep = 0;
 
   var challengeDef = null;
@@ -84,6 +85,9 @@
     }
     if (type === "word-bank") {
       return renderWordBank(ex);
+    }
+    if (type === "satzglieder") {
+      return renderSatzglieder(ex);
     }
     return renderMC(ex);
   }
@@ -461,6 +465,259 @@
     showFeedback(correct, ex.explanation);
   }
 
+  // --- Satzglieder exercise ---
+
+  var SG_COLORS = [
+    {bg: '#e3f2fd', border: '#1976d2', text: '#1565c0'},
+    {bg: '#fce4ec', border: '#c62828', text: '#b71c1c'},
+    {bg: '#e8f5e9', border: '#2e7d32', text: '#1b5e20'},
+    {bg: '#fff3e0', border: '#e65100', text: '#bf360c'},
+    {bg: '#f3e5f5', border: '#7b1fa2', text: '#6a1b9a'},
+    {bg: '#e0f7fa', border: '#00838f', text: '#006064'},
+    {bg: '#fff9c4', border: '#f9a825', text: '#f57f17'},
+    {bg: '#efebe9', border: '#5d4037', text: '#3e2723'}
+  ];
+
+  function sgCategories(ex) {
+    return ex.categories || (currentSet && currentSet.categories) || (reviewSet && reviewSet.categories) || [];
+  }
+
+  function buildSgBlocks(ex) {
+    var words = ex.sentence.split(" ");
+    var wordToChunk = [];
+    for (var w = 0; w < words.length; w++) wordToChunk.push(-1);
+    for (var c = 0; c < ex.chunks.length; c++) {
+      for (var j = 0; j < ex.chunks[c].indices.length; j++) {
+        wordToChunk[ex.chunks[c].indices[j]] = c;
+      }
+    }
+    var blocks = [];
+    var i = 0;
+    while (i < words.length) {
+      var chunkIdx = wordToChunk[i];
+      var blockWords = [words[i]];
+      while (i + 1 < words.length && wordToChunk[i + 1] === chunkIdx && chunkIdx !== -1) {
+        i++;
+        blockWords.push(words[i]);
+      }
+      blocks.push({chunkIdx: chunkIdx, text: blockWords.join(" ")});
+      i++;
+    }
+    return blocks;
+  }
+
+  function renderSatzglieder(ex) {
+    var blocks = buildSgBlocks(ex);
+    var html = '<div class="sg-sentence" id="sg-sentence">';
+    for (var b = 0; b < blocks.length; b++) {
+      if (blocks[b].chunkIdx === -1) {
+        html += '<span class="sg-word">' + esc(blocks[b].text) + '</span>';
+      } else {
+        html += '<div class="sg-block" data-chunk="' + blocks[b].chunkIdx + '">' +
+          '<span class="sg-pill">' + esc(blocks[b].text) + '</span>' +
+          '<span class="sg-label">&nbsp;</span>' +
+          '</div>';
+      }
+    }
+    html += '</div>' +
+      '<button class="submit-btn" id="sg-submit" disabled>Prüfen</button>' +
+      '<div id="feedback"></div>';
+    return { html: html, bind: function () {
+      satzgliederAnswers = [];
+      for (var i = 0; i < ex.chunks.length; i++) satzgliederAnswers.push(-1);
+      var pills = document.querySelectorAll('.sg-pill');
+      for (var p = 0; p < pills.length; p++) {
+        pills[p].addEventListener('click', onSgPillClick);
+        pills[p].addEventListener('mouseenter', onSgPillEnter);
+        pills[p].addEventListener('mouseleave', onSgPillLeave);
+      }
+      document.getElementById('sg-submit').addEventListener('click', onSgSubmit);
+    }};
+  }
+
+  function onSgPillClick(e) {
+    if (answered) return;
+    e.stopPropagation();
+    closeSgPopover();
+    var block = e.currentTarget.closest('.sg-block');
+    if (!block) return;
+    var chunkIdx = parseInt(block.getAttribute('data-chunk'), 10);
+    var ex = exercises[index];
+    var categories = sgCategories(ex);
+
+    var popover = document.createElement('div');
+    popover.className = 'sg-popover';
+    popover.id = 'sg-popover';
+    for (var i = 0; i < categories.length; i++) {
+      var btn = document.createElement('button');
+      btn.className = 'sg-cat-btn';
+      btn.textContent = categories[i];
+      btn.setAttribute('data-cat', i);
+      btn.setAttribute('data-chunk', chunkIdx);
+      var color = SG_COLORS[i % SG_COLORS.length];
+      btn.style.background = color.bg;
+      btn.style.borderColor = color.border;
+      btn.style.color = color.text;
+      if (satzgliederAnswers[chunkIdx] === i) btn.classList.add('sg-cat-active');
+      btn.addEventListener('click', onSgCategoryPick);
+      popover.appendChild(btn);
+    }
+    document.body.appendChild(popover);
+
+    var pillRect = e.currentTarget.getBoundingClientRect();
+    var popWidth = popover.offsetWidth;
+    var popHeight = popover.offsetHeight;
+    var left = pillRect.left + pillRect.width / 2 - popWidth / 2;
+    var top = pillRect.bottom + window.scrollY + 8;
+
+    if (top + popHeight > window.scrollY + window.innerHeight) {
+      top = pillRect.top + window.scrollY - popHeight - 8;
+    }
+    if (left + popWidth > window.innerWidth - 8) {
+      left = window.innerWidth - popWidth - 8;
+    }
+    if (left < 8) left = 8;
+
+    popover.style.left = left + 'px';
+    popover.style.top = top + 'px';
+    popover.style.visibility = 'visible';
+
+    setTimeout(function () {
+      document.addEventListener('click', closeSgPopoverOutside);
+    }, 0);
+  }
+
+  function onSgPillEnter(e) {
+    if (answered) return;
+    var block = e.currentTarget.closest('.sg-block');
+    if (!block) return;
+    var chunkIdx = block.getAttribute('data-chunk');
+    var allBlocks = document.querySelectorAll('.sg-block[data-chunk="' + chunkIdx + '"]');
+    for (var i = 0; i < allBlocks.length; i++) allBlocks[i].classList.add('sg-highlight');
+  }
+
+  function onSgPillLeave(e) {
+    var block = e.currentTarget.closest('.sg-block');
+    if (!block) return;
+    var chunkIdx = block.getAttribute('data-chunk');
+    var allBlocks = document.querySelectorAll('.sg-block[data-chunk="' + chunkIdx + '"]');
+    for (var i = 0; i < allBlocks.length; i++) allBlocks[i].classList.remove('sg-highlight');
+  }
+
+  function closeSgPopover() {
+    var existing = document.getElementById('sg-popover');
+    if (existing) existing.remove();
+    document.removeEventListener('click', closeSgPopoverOutside);
+  }
+
+  function closeSgPopoverOutside(e) {
+    if (!e.target.closest('.sg-popover') && !e.target.closest('.sg-pill')) {
+      closeSgPopover();
+    }
+  }
+
+  function onSgCategoryPick(e) {
+    e.stopPropagation();
+    var catIdx = parseInt(e.currentTarget.getAttribute('data-cat'), 10);
+    var chunkIdx = parseInt(e.currentTarget.getAttribute('data-chunk'), 10);
+    if (satzgliederAnswers[chunkIdx] === catIdx) {
+      satzgliederAnswers[chunkIdx] = -1;
+    } else {
+      satzgliederAnswers[chunkIdx] = catIdx;
+    }
+    closeSgPopover();
+    updateSgDisplay();
+  }
+
+  function updateSgDisplay() {
+    var ex = exercises[index];
+    var categories = sgCategories(ex);
+    var blocks = document.querySelectorAll('.sg-block');
+    for (var b = 0; b < blocks.length; b++) {
+      var chunkIdx = parseInt(blocks[b].getAttribute('data-chunk'), 10);
+      var catIdx = satzgliederAnswers[chunkIdx];
+      var pill = blocks[b].querySelector('.sg-pill');
+      var label = blocks[b].querySelector('.sg-label');
+      if (catIdx >= 0) {
+        var color = SG_COLORS[catIdx % SG_COLORS.length];
+        pill.style.background = color.bg;
+        pill.style.borderColor = color.border;
+        label.textContent = categories[catIdx].split(' — ')[0];
+        label.style.background = color.border;
+        label.style.color = '';
+        label.classList.add('sg-label-visible');
+      } else {
+        pill.style.background = '';
+        pill.style.borderColor = '';
+        label.innerHTML = '&nbsp;';
+        label.style.background = '';
+        label.style.color = '';
+        label.classList.remove('sg-label-visible');
+      }
+    }
+    var allAssigned = satzgliederAnswers.indexOf(-1) === -1;
+    document.getElementById('sg-submit').disabled = !allAssigned;
+  }
+
+  function onSgSubmit() {
+    if (answered) return;
+    answered = true;
+    closeSgPopover();
+    var ex = exercises[index];
+    var categories = sgCategories(ex);
+    var correct = true;
+    for (var i = 0; i < ex.chunks.length; i++) {
+      if (satzgliederAnswers[i] !== categories.indexOf(ex.chunks[i].correct)) {
+        correct = false;
+        break;
+      }
+    }
+    var blocks = document.querySelectorAll('.sg-block');
+    for (var b = 0; b < blocks.length; b++) {
+      var chunkIdx = parseInt(blocks[b].getAttribute('data-chunk'), 10);
+      var pill = blocks[b].querySelector('.sg-pill');
+      var label = blocks[b].querySelector('.sg-label');
+      var correctCatIdx = categories.indexOf(ex.chunks[chunkIdx].correct);
+      pill.classList.add('answered');
+      if (satzgliederAnswers[chunkIdx] === correctCatIdx) {
+        var clr = SG_COLORS[correctCatIdx % SG_COLORS.length];
+        pill.style.background = clr.bg;
+        pill.style.borderColor = clr.border;
+        label.textContent = categories[correctCatIdx].split(' — ')[0];
+        label.style.background = clr.border;
+        label.style.color = '';
+      } else {
+        pill.style.borderColor = '#c62828';
+        pill.style.background = '#ffebee';
+        var wrongShort = categories[satzgliederAnswers[chunkIdx]].split(' — ')[0];
+        var correctShort = categories[correctCatIdx].split(' — ')[0];
+        label.innerHTML = '<s>' + esc(wrongShort) + '</s> → ' + esc(correctShort);
+        label.style.background = '#c62828';
+        label.style.color = '';
+      }
+      label.classList.add('sg-label-visible');
+    }
+    document.getElementById('sg-submit').style.display = 'none';
+    finalizeSatzglieder(correct);
+  }
+
+  function finalizeSatzglieder(correct) {
+    var ex = exercises[index];
+    if (fixMode) {
+      if (correct) {
+        var origIdx = fixIndices[index];
+        results[origIdx] = true;
+        chosenAnswers[origIdx] = satzgliederAnswers.slice();
+      }
+    } else {
+      results.push(correct);
+      chosenAnswers.push(satzgliederAnswers.slice());
+    }
+    var dots = document.querySelectorAll('.progress-dot');
+    dots[index].className = 'progress-dot ' + (correct ? 'dot-correct' : 'dot-wrong');
+    showFeedback(correct, ex.explanation);
+  }
+
   // --- Check correctness ---
 
   function isCorrect(ex, answer) {
@@ -473,6 +730,9 @@
     }
     if (type === "word-bank") {
       return isWordBankCorrect(answer, ex);
+    }
+    if (type === "satzglieder") {
+      return isSatzgliederCorrect(answer, ex);
     }
     return answer === ex.correct;
   }
@@ -507,6 +767,15 @@
     return true;
   }
 
+  function isSatzgliederCorrect(answer, exercise) {
+    var categories = (currentSet && currentSet.categories) || (reviewSet && reviewSet.categories) || exercise.categories || [];
+    if (!Array.isArray(answer)) return false;
+    for (var i = 0; i < exercise.chunks.length; i++) {
+      if (answer[i] !== categories.indexOf(exercise.chunks[i].correct)) return false;
+    }
+    return true;
+  }
+
   // --- Encode / decode answers for share URLs ---
 
   function encodeAnswer(a) {
@@ -518,7 +787,7 @@
 
   function decodeAnswer(str, ex) {
     var type = ex.type || (reviewSet && reviewSet.type) || "multiple-choice";
-    if (type === "classify" || type === "word-bank") {
+    if (type === "classify" || type === "word-bank" || type === "satzglieder") {
       return str.split(":").map(Number);
     }
     if (type === "word-tap") {
@@ -543,6 +812,9 @@
     }
     if (type === "word-bank") {
       return renderReviewWordBank(ex, chosen);
+    }
+    if (type === "satzglieder") {
+      return renderReviewSatzglieder(ex, chosen);
     }
     return renderReviewMC(ex, chosen);
   }
@@ -652,6 +924,41 @@
       }
     }
 
+    return { html: html, correct: correct, bind: function () {} };
+  }
+
+  function renderReviewSatzglieder(ex, chosen) {
+    var categories = sgCategories(ex);
+    var correct = isSatzgliederCorrect(chosen, ex);
+    var blocks = buildSgBlocks(ex);
+    var html = '<div class="sg-sentence sg-review">';
+    for (var b = 0; b < blocks.length; b++) {
+      if (blocks[b].chunkIdx === -1) {
+        html += '<span class="sg-word">' + esc(blocks[b].text) + '</span>';
+      } else {
+        var chunkIdx = blocks[b].chunkIdx;
+        var correctCatIdx = categories.indexOf(ex.chunks[chunkIdx].correct);
+        var chosenCatIdx = Array.isArray(chosen) ? chosen[chunkIdx] : -1;
+        var isChunkCorrect = chosenCatIdx === correctCatIdx;
+        var color = SG_COLORS[correctCatIdx % SG_COLORS.length];
+        var pillStyle = 'background:' + color.bg + ';border-color:' + (isChunkCorrect ? color.border : '#c62828');
+        var labelHtml;
+        var correctShort = categories[correctCatIdx].split(' — ')[0];
+        if (isChunkCorrect) {
+          labelHtml = '<span class="sg-label sg-label-visible" style="background:' + color.border + '">' + esc(correctShort) + '</span>';
+        } else {
+          var wrongShort = chosenCatIdx >= 0 ? categories[chosenCatIdx].split(' — ')[0] : '—';
+          labelHtml = '<span class="sg-label sg-label-visible" style="background:#c62828">' +
+            '<s>' + esc(wrongShort) + '</s> → ' + esc(correctShort) +
+            '</span>';
+        }
+        html += '<div class="sg-block">' +
+          '<span class="sg-pill answered" style="' + pillStyle + '">' + esc(blocks[b].text) + '</span>' +
+          labelHtml +
+          '</div>';
+      }
+    }
+    html += '</div>';
     return { html: html, correct: correct, bind: function () {} };
   }
 

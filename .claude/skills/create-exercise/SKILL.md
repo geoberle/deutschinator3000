@@ -15,7 +15,7 @@ Before generating anything, ask the user these questions **one at a time**. Use 
 1. **Goal** (required): What should the kid learn? One sentence in German. This becomes the `goal` field and is shown on the exercise card.
 2. **Authoring rationale** (required): Why does this exercise exist? Design reasoning, pedagogical intent. In German. Becomes `authoring.rationale`.
 3. **Authoring constraints** (optional): Scope limitations (e.g., "Nur Präsens und Präteritum"). Becomes `authoring.constraints`.
-4. **Type(s)**: Which exercise types? Can be one or mixed. (multiple-choice = pick from options, word-tap = tap words in a sentence, word-tap+classify = tap word then classify it, classify = multi-step classification of a sentence)
+4. **Type(s)**: Which exercise types? Can be one or mixed. (multiple-choice = pick from options, word-tap = tap words in a sentence, word-tap+classify = tap word then classify it, classify = multi-step classification of a sentence, satzglieder = assign categories to sentence chunks)
 5. **Topic**: What grammar topic? (e.g., Zeitformen, Aktiv/Passiv, Kasus, Konjunktiv, Satzglieder, Adverbien)
 6. **Question**: Default question for the set. Individual exercises can override this with their own `question` field.
 7. **Options** (multiple-choice only): What are the fixed answer options?
@@ -168,6 +168,40 @@ User builds a sentence by tapping words from a shuffled pool into an answer area
 - `scaffold` (optional): number of leading words from `answer` pre-placed in the answer area. These appear as muted/locked pills. Reduces working memory load.
 - Keep sentences short (4-5 words in answer). Fewer words = less cognitive load.
 - Scoring is binary per exercise. Answer encoding: per-step correctness (`1`/`0`/`-1`).
+
+### Type: satzglieder
+
+User assigns grammatical categories (Satzglieder) to pre-chunked sentence parts via tap-to-open popover. Supports non-adjacent chunks (e.g., split Prädikat: "hat … gekauft"). Categories are per-exercise-set, shown as color-coded badges with abbreviation labels.
+
+```json
+{
+  "id": "satzglieder-1",
+  "name": "Satzglieder bestimmen 1",
+  "type": "satzglieder",
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale"],
+  "question": "Bestimme die Satzglieder",
+  "exercises": [
+    {
+      "sentence": "Er hat gestern einen Hund gekauft",
+      "chunks": [
+        { "indices": [0], "correct": "S — Subjekt" },
+        { "indices": [1, 5], "correct": "P — Prädikat" },
+        { "indices": [2], "correct": "TO — Temporaladverbiale" },
+        { "indices": [3, 4], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "**Er** → Wer hat gekauft? → S (Subjekt)\n**hat … gekauft** → Was geschieht? → P (Prädikat, zweiteilig!)\n**gestern** → Wann? → TO (Temporaladverbiale)\n**einen Hund** → Wen/Was? → O4 (Akkusativobjekt)"
+    }
+  ]
+}
+```
+
+- `categories`: array of category labels at set level. Format: `"ABBREV — Full Name"`. Shown in popover with full name, shown as badge with abbreviation only after assignment. Standard abbreviations: S (Subjekt), P (Prädikat), O4 (Akkusativobjekt), O3 (Dativobjekt), O2 (Genitivobjekt), PO (Präpositionalobjekt), TO (Temporaladverbiale), LO (Lokaladverbiale), MO (Modaladverbiale), KA (Kausaladverbiale).
+- `chunks`: array of sentence parts. Each chunk has `indices` (word positions in sentence split on spaces) and `correct` (must match a category string exactly).
+- `indices` can be non-adjacent (e.g., `[1, 5]` for split Prädikat). Consecutive indices render as one visual pill. Non-adjacent indices of the same chunk share color and highlight on hover.
+- `correct` must be an exact string match to one of the `categories` entries.
+- Every word index in the sentence must appear in exactly one chunk.
+- Scoring is all-or-nothing: every chunk must have the correct category assigned.
+- Answer encoding: colon-separated category indices (e.g., `"0:1:6:2"`).
 
 ### Mixed-type set example
 

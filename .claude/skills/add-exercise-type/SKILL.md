@@ -80,6 +80,7 @@ Current encoding formats:
 - word-tap: `"3"` or `"1:4"` (colon-separated word indices)
 - word-tap+classify: `"3+0"` (word indices + classify choice)
 - classify: `"1:0"` (colon-separated step indices, `-1` for unattempted)
+- satzglieder: `"0:1:6:2"` (colon-separated category indices per chunk)
 
 ```javascript
 function encodeAnswer(a) {

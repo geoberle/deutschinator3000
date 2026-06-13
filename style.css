@@ -487,6 +487,130 @@ header h1 {
   order: 999;
 }
 
+/* Satzglieder exercise */
+
+.sg-sentence {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  background: #f8f9fa;
+  border-left: 3px solid #4a90d9;
+  border-radius: 6px;
+}
+
+.sg-block {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.sg-word {
+  padding: 0.5rem 0.25rem;
+  color: #666;
+}
+
+.sg-pill {
+  padding: 0.5rem 0.875rem;
+  border-radius: 999px;
+  border: 2px solid #e0e0e0;
+  background: #fff;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1rem;
+  transition: border-color 0.15s, background-color 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  white-space: nowrap;
+}
+
+.sg-pill:hover:not(.answered) {
+  border-color: #999;
+}
+
+.sg-pill.answered {
+  cursor: default;
+}
+
+.sg-highlight .sg-pill:not(.answered) {
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.3);
+}
+
+.sg-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  margin-top: 4px;
+  white-space: nowrap;
+  text-align: center;
+  visibility: hidden;
+  min-height: 1.1em;
+  letter-spacing: 0.03em;
+}
+
+.sg-label.sg-label-visible {
+  visibility: visible;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 0.75rem;
+}
+
+.sg-label s {
+  color: #c62828;
+  text-decoration-color: #c62828;
+}
+
+.sg-label-wrong {
+  color: #666;
+}
+
+.sg-popover {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  z-index: 1000;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22), 0 2px 8px rgba(0, 0, 0, 0.08);
+  max-width: min(360px, calc(100vw - 16px));
+  animation: fadeIn 0.15s ease;
+  visibility: hidden;
+}
+
+.sg-cat-btn {
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition: opacity 0.1s;
+}
+
+.sg-cat-btn:hover {
+  opacity: 0.8;
+}
+
+.sg-cat-btn.sg-cat-active {
+  box-shadow: inset 0 0 0 2px currentColor;
+}
+
+.submit-btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.submit-btn[disabled]:hover {
+  background: #1976d2;
+}
+
 .classify-step + .classify-step {
   margin-top: 0.75rem;
 }

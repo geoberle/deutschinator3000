@@ -178,5 +178,14 @@
     "file": "passiv-umformen-mix-1.json",
     "count": 8,
     "category": "Aktiv/Passiv"
+  },
+  {
+    "id": "satzglieder-1",
+    "name": "Satzglieder bestimmen 1",
+    "goal": "Die wichtigsten Satzglieder im Satz erkennen und benennen.",
+    "description": "Bestimme die Satzglieder im Satz",
+    "file": "satzglieder-1.json",
+    "count": 6,
+    "category": "Satzglieder"
   }
 ]

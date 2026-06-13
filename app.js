@@ -21,6 +21,7 @@
   var challengeDef = null;
   var challengeSetIndex = 0;
   var challengeScores = [];
+  var challengeAttempts = {};
   var inChallengeHub = false;
 
   var rulesCache = {};
@@ -733,7 +734,7 @@
           } else if (saved && saved.scores) {
             var doneCount = 0;
             for (var dc = 0; dc < saved.scores.length; dc++) {
-              if (saved.scores[dc]) doneCount++;
+              if (isSetPassed(saved.scores[dc])) doneCount++;
             }
             if (doneCount > 0) {
               var stagesDone = 0;
@@ -742,7 +743,7 @@
                 for (var si = 0; si < challenge.stages.length; si++) {
                   var stageDone = true;
                   for (var sj = 0; sj < challenge.stages[si].sets.length; sj++) {
-                    if (!saved.scores[pos]) stageDone = false;
+                    if (!isSetPassed(saved.scores[pos])) stageDone = false;
                     pos++;
                   }
                   if (stageDone) stagesDone++;
@@ -851,11 +852,12 @@
       for (var i = 0; i < allSetIds.length; i++) {
         challengeScores.push(saved && saved.scores && saved.scores[i] ? saved.scores[i] : null);
       }
+      challengeAttempts = saved && saved.attempts ? saved.attempts : {};
 
       var nextIdx = -1;
       var doneCount = 0;
       for (var n = 0; n < challengeScores.length; n++) {
-        if (challengeScores[n]) doneCount++;
+        if (isSetPassed(challengeScores[n])) doneCount++;
         else if (nextIdx === -1) nextIdx = n;
       }
       var allDone = doneCount === allSetIds.length;
@@ -897,14 +899,14 @@
           var stage = challengeDef.stages[si];
           var stageComplete = true;
           for (var sc = 0; sc < stage.sets.length; sc++) {
-            if (!challengeScores[globalIdx + sc]) stageComplete = false;
+            if (!isSetPassed(challengeScores[globalIdx + sc])) stageComplete = false;
           }
           var prevStageComplete = si === 0 ? true : (function () {
             var prevStart = 0;
             for (var ps = 0; ps < si - 1; ps++) prevStart += challengeDef.stages[ps].sets.length;
             var prevEnd = prevStart + challengeDef.stages[si - 1].sets.length;
             for (var pc = prevStart; pc < prevEnd; pc++) {
-              if (!challengeScores[pc]) return false;
+              if (!isSetPassed(challengeScores[pc])) return false;
             }
             return true;
           })();
@@ -929,18 +931,23 @@
             }
             if (!setInfo) { globalIdx++; continue; }
 
-            var isDone = !!challengeScores[idx];
-            var isNext = idx === nextIdx && !stageLocked;
-            var isLocked = stageLocked || (!isDone && !isNext);
+            var score = challengeScores[idx];
+            var isDone = isSetMastered(score);
+            var isAttempted = score && !isDone;
+            var isNext = !isDone && !isAttempted && idx === nextIdx && !stageLocked;
+            var isLocked = stageLocked || (!isDone && !isAttempted && !isNext);
 
             var rowCls = "challenge-row";
             if (isDone) rowCls += " challenge-done";
+            else if (isAttempted) rowCls += " challenge-attempted";
             if (isNext) rowCls += " challenge-next";
             if (isLocked) rowCls += " challenge-locked";
 
-            var icon = isDone ? "✓" : (isNext ? "→" : "○");
-            var scoreHtml = isDone ? '<span class="challenge-row-score">' + challengeScores[idx].correct + "/" + challengeScores[idx].total + "</span>" : "";
-            var actionHtml = isNext ? '<button class="btn-primary challenge-start-btn" data-challenge-idx="' + idx + '">Starten</button>' : "";
+            var icon = isDone ? "✓" : (isAttempted ? "↻" : (isNext ? "→" : "○"));
+            var scoreHtml = (isDone || isAttempted) ? '<span class="challenge-row-score">' + score.correct + "/" + score.total + "</span>" : "";
+            var actionHtml = "";
+            if (isNext) actionHtml = '<button class="btn-primary challenge-start-btn" data-challenge-idx="' + idx + '">Starten</button>';
+            else if (isAttempted) actionHtml = '<button class="btn-primary challenge-start-btn" data-challenge-idx="' + idx + '">Weiter</button>';
 
             html += '<div class="' + rowCls + '" data-challenge-idx="' + idx + '">' +
               '<span class="challenge-icon">' + icon + "</span>" +
@@ -960,18 +967,23 @@
           }
           if (!setInfo) continue;
 
-          var isDone = !!challengeScores[i];
-          var isNext = i === nextIdx;
-          var isLocked = !isDone && !isNext;
+          var score = challengeScores[i];
+          var isDone = isSetMastered(score);
+          var isAttempted = score && !isDone;
+          var isNext = !isDone && !isAttempted && i === nextIdx;
+          var isLocked = !isDone && !isAttempted && !isNext;
 
           var rowCls = "challenge-row";
           if (isDone) rowCls += " challenge-done";
+          else if (isAttempted) rowCls += " challenge-attempted";
           if (isNext) rowCls += " challenge-next";
           if (isLocked) rowCls += " challenge-locked";
 
-          var icon = isDone ? "✓" : (isNext ? "→" : "○");
-          var scoreHtml = isDone ? '<span class="challenge-row-score">' + challengeScores[i].correct + "/" + challengeScores[i].total + "</span>" : "";
-          var actionHtml = isNext ? '<button class="btn-primary challenge-start-btn" data-challenge-idx="' + i + '">Starten</button>' : "";
+          var icon = isDone ? "✓" : (isAttempted ? "↻" : (isNext ? "→" : "○"));
+          var scoreHtml = (isDone || isAttempted) ? '<span class="challenge-row-score">' + score.correct + "/" + score.total + "</span>" : "";
+          var actionHtml = "";
+          if (isNext) actionHtml = '<button class="btn-primary challenge-start-btn" data-challenge-idx="' + i + '">Starten</button>';
+          else if (isAttempted) actionHtml = '<button class="btn-primary challenge-start-btn" data-challenge-idx="' + i + '">Weiter</button>';
 
           html += '<div class="' + rowCls + '" data-challenge-idx="' + i + '">' +
             '<span class="challenge-icon">' + icon + "</span>" +
@@ -990,14 +1002,19 @@
 
       app.innerHTML = html;
 
-      var startBtn = document.querySelector(".challenge-start-btn");
-      if (startBtn) {
-        startBtn.addEventListener("click", function (e) {
+      var startBtns = document.querySelectorAll(".challenge-start-btn");
+      for (var sb = 0; sb < startBtns.length; sb++) {
+        startBtns[sb].addEventListener("click", function (e) {
           e.stopPropagation();
           var idx = parseInt(e.currentTarget.getAttribute("data-challenge-idx"), 10);
           challengeSetIndex = idx;
           inChallengeHub = false;
-          startSetById(challengeDef.sets[idx]);
+          var attempt = challengeAttempts[idx];
+          if (attempt) {
+            resumeAttempt(idx, attempt);
+          } else {
+            startSetById(challengeDef.sets[idx]);
+          }
         });
       }
 
@@ -1016,17 +1033,29 @@
         var id = challengeDef.id;
         clearChallengeProgress();
         challengeScores = [];
+        challengeAttempts = {};
         showChallengeHub(id);
       });
     });
   }
 
+  function isSetPassed(score) {
+    if (!score) return false;
+    if (score.passed !== undefined) return score.passed;
+    return true;
+  }
+
+  function isSetMastered(score) {
+    return score && score.correct === score.total;
+  }
+
   function saveChallengeProgress() {
     if (!challengeDef || !challengeDef.id) return;
     try {
-      localStorage.setItem("challenge-" + challengeDef.id, JSON.stringify({
-        scores: challengeScores
-      }));
+      var data = {scores: challengeScores};
+      var keys = Object.keys(challengeAttempts);
+      if (keys.length > 0) data.attempts = challengeAttempts;
+      localStorage.setItem("challenge-" + challengeDef.id, JSON.stringify(data));
     } catch (e) {}
   }
 
@@ -1069,6 +1098,33 @@
         setHeaderBack(true);
         setHeaderRules(data.rules);
         showQuestion();
+      });
+  }
+
+  function resumeAttempt(setIdx, attempt) {
+    var setId = challengeDef.sets[setIdx];
+    var setInfo = null;
+    for (var s = 0; s < sets.length; s++) {
+      if (sets[s].id === setId) { setInfo = sets[s]; break; }
+    }
+    if (!setInfo) return;
+    fetch("exercises/" + setInfo.file)
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        currentSet = data;
+        results = attempt.results.slice();
+        exerciseOrder = attempt.exerciseOrder.slice();
+        chosenAnswers = [];
+        exercises = [];
+        for (var j = 0; j < exerciseOrder.length; j++) {
+          exercises.push(data.exercises[exerciseOrder[j]]);
+        }
+        fixMode = false;
+        fixIndices = [];
+        setHeaderTitle(data.name);
+        setHeaderBack(true);
+        setHeaderRules(data.rules);
+        showSummary(true);
       });
   }
 
@@ -1341,7 +1397,7 @@
     return html;
   }
 
-  function showSummary() {
+  function showSummary(skipCelebration) {
     setHeaderTitle(null);
     setHeaderBack(false);
     setHeaderRules(null);
@@ -1361,11 +1417,17 @@
       '<button class="btn-share" id="btn-share">Ergebnis teilen</button>';
 
     if (challengeDef) {
-      challengeScores[challengeSetIndex] = {name: currentSet.name, correct: correctCount, total: total};
+      var passed = correctCount === total;
+      challengeScores[challengeSetIndex] = {name: currentSet.name, correct: correctCount, total: total, passed: passed};
+      if (passed) {
+        delete challengeAttempts[challengeSetIndex];
+      } else {
+        challengeAttempts[challengeSetIndex] = {results: results.slice(), exerciseOrder: exerciseOrder.slice()};
+      }
       saveChallengeProgress();
       var allChallengeDone = true;
       for (var cd = 0; cd < challengeScores.length; cd++) {
-        if (!challengeScores[cd]) { allChallengeDone = false; break; }
+        if (!isSetPassed(challengeScores[cd])) { allChallengeDone = false; break; }
       }
       if (allChallengeDone && challengeDef.id) {
         try { localStorage.setItem("challenge-completed-" + challengeDef.id, "true"); } catch (e) {}
@@ -1406,15 +1468,17 @@
         "</div>" +
       "</div>";
 
-    stopCelebration();
-    if (ratio === 1) {
-      playFanfare();
-      celebrateMassiveFireworks();
-    } else if (wrongCount === 1) {
-      playJingle();
-      celebrateFireworks();
-    } else if (ratio >= 0.8) {
-      celebrateConfetti();
+    if (!skipCelebration) {
+      stopCelebration();
+      if (ratio === 1) {
+        playFanfare();
+        celebrateMassiveFireworks();
+      } else if (wrongCount === 1) {
+        playJingle();
+        celebrateFireworks();
+      } else if (ratio >= 0.8) {
+        celebrateConfetti();
+      }
     }
 
     var fixBtn = document.getElementById("btn-fix");
@@ -1451,21 +1515,22 @@
   }
 
   function retrySet() {
-    var wrongIndices = [];
+    var wrongPairs = [];
     for (var i = 0; i < results.length; i++) {
-      if (!results[i]) wrongIndices.push(exerciseOrder[i]);
+      if (!results[i]) wrongPairs.push({resultIdx: i, exerciseIdx: exerciseOrder[i]});
     }
-    if (wrongIndices.length === 0) {
+    if (wrongPairs.length === 0) {
       initQuiz(currentSet);
     } else {
-      exerciseOrder = shuffle(wrongIndices.slice());
+      shuffle(wrongPairs);
+      fixMode = true;
+      fixIndices = [];
       exercises = [];
-      for (var j = 0; j < exerciseOrder.length; j++) {
-        exercises.push(currentSet.exercises[exerciseOrder[j]]);
+      for (var j = 0; j < wrongPairs.length; j++) {
+        fixIndices.push(wrongPairs[j].resultIdx);
+        exercises.push(currentSet.exercises[wrongPairs[j].exerciseIdx]);
       }
       index = 0;
-      results = [];
-      chosenAnswers = [];
       answered = false;
     }
     setHeaderTitle(currentSet.name);

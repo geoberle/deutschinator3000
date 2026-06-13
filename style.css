@@ -194,6 +194,11 @@ header h1 {
   border-color: #c8e6c9;
 }
 
+.challenge-attempted {
+  background: #fff3e0;
+  border-color: #ffb74d;
+}
+
 .challenge-next {
   border-color: #1976d2;
   background: #e3f2fd;
@@ -215,6 +220,10 @@ header h1 {
   color: #2e7d32;
 }
 
+.challenge-attempted .challenge-icon {
+  color: #e65100;
+}
+
 .challenge-next .challenge-icon {
   color: #1976d2;
 }
@@ -232,6 +241,10 @@ header h1 {
   color: #2e7d32;
   font-weight: 600;
   flex-shrink: 0;
+}
+
+.challenge-attempted .challenge-row-score {
+  color: #e65100;
 }
 
 .challenge-start-btn {

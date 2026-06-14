@@ -1314,3 +1314,163 @@ header h1 {
   flex-direction: column;
   gap: 0.75rem;
 }
+
+/* Login screen */
+
+.login-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 2rem;
+}
+
+.login-card {
+  text-align: center;
+  max-width: 22rem;
+}
+
+.login-card h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.login-card p {
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.btn-google {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #dadce0;
+  border-radius: 0.5rem;
+  background: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: #3c4043;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.btn-google:hover {
+  background: #f7f8f8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.btn-google svg {
+  flex-shrink: 0;
+}
+
+/* Sign-out button */
+
+.header-signout {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #888;
+  padding: 0.5rem;
+  line-height: 1;
+}
+
+.header-signout:hover {
+  color: #333;
+}
+
+/* XP Bar */
+
+.xp-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+}
+
+.xp-level {
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  color: #1976d2;
+}
+
+.xp-track {
+  flex: 1;
+  height: 0.5rem;
+  background: #e0e0e0;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.xp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1976d2, #42a5f5);
+  border-radius: 0.25rem;
+  transition: width 0.4s ease;
+}
+
+.xp-text {
+  font-size: 0.8rem;
+  color: #888;
+  white-space: nowrap;
+}
+
+/* Level Up overlay */
+
+.levelup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.levelup-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem 2.5rem;
+  text-align: center;
+  max-width: 20rem;
+  animation: levelup-pop 0.4s ease;
+}
+
+@keyframes levelup-pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.levelup-star {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.levelup-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1976d2;
+  margin-bottom: 0.25rem;
+}
+
+.levelup-level {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.levelup-close {
+  min-width: 8rem;
+}

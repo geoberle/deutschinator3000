@@ -1116,7 +1116,81 @@
 
   // --- Routing & home ---
 
-  function init() {
+  function updateXPDisplay() {
+    var bar = document.getElementById("xp-bar");
+    if (!bar) return;
+    window.db.getStats().then(function (stats) {
+      var needed = window.db.xpForLevel(stats.level);
+      var pct = Math.round((stats.xp / needed) * 100);
+      bar.innerHTML =
+        '<span class="xp-level">Level ' + stats.level + '</span>' +
+        '<div class="xp-track"><div class="xp-fill" style="width:' + pct + '%"></div></div>' +
+        '<span class="xp-text">' + stats.xp + ' / ' + needed + ' XP</span>';
+    });
+  }
+
+  function showLevelUp(level) {
+    var overlay = document.createElement("div");
+    overlay.className = "levelup-overlay";
+    overlay.innerHTML =
+      '<div class="levelup-card">' +
+        '<div class="levelup-star">&#11088;</div>' +
+        '<div class="levelup-title">Level Up!</div>' +
+        '<div class="levelup-level">Level ' + level + '</div>' +
+        '<button class="btn-primary levelup-close">Weiter</button>' +
+      '</div>';
+    document.body.appendChild(overlay);
+    overlay.querySelector(".levelup-close").addEventListener("click", function () {
+      overlay.remove();
+    });
+  }
+
+  function showLogin() {
+    setHeaderTitle(null);
+    setHeaderBack(false);
+    setHeaderRules(null);
+    var existing = document.querySelector("header .header-signout");
+    if (existing) existing.remove();
+    app.innerHTML =
+      '<div class="login-screen">' +
+        '<div class="login-card">' +
+          '<h2>Deutschinator 3000</h2>' +
+          '<p>Melde dich an, um deinen Fortschritt zu speichern.</p>' +
+          '<button class="btn-google" id="btn-google-login">' +
+            '<svg viewBox="0 0 24 24" width="20" height="20"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>' +
+            'Mit Google anmelden' +
+          '</button>' +
+        '</div>' +
+      '</div>';
+    document.getElementById("btn-google-login").addEventListener("click", function () {
+      window.db.signInWithGoogle().catch(function (err) {
+        if (err.code !== "auth/popup-closed-by-user") {
+          alert("Anmeldung fehlgeschlagen: " + err.message);
+        }
+      });
+    });
+  }
+
+  function addSignOutButton() {
+    var header = document.querySelector("header");
+    var existing = header.querySelector(".header-signout");
+    if (existing) return;
+    var btn = document.createElement("button");
+    btn.className = "header-signout";
+    btn.textContent = "↪";
+    btn.title = "Abmelden";
+    btn.addEventListener("click", function () {
+      window.db.signOut();
+    });
+    header.appendChild(btn);
+  }
+
+  function removeSignOutButton() {
+    var existing = document.querySelector("header .header-signout");
+    if (existing) existing.remove();
+  }
+
+  function route() {
     if (location.hash.startsWith("#share/")) {
       showSharedResult();
     } else if (location.hash.startsWith("#set/")) {
@@ -1126,6 +1200,22 @@
     } else {
       showHome();
     }
+  }
+
+  function init() {
+    if (location.hash.startsWith("#share/")) {
+      showSharedResult();
+      return;
+    }
+    window.db.onAuthStateChanged(function (user) {
+      if (user) {
+        addSignOutButton();
+        route();
+      } else {
+        removeSignOutButton();
+        showLogin();
+      }
+    });
   }
 
   function startSetById(setId) {
@@ -1169,12 +1259,29 @@
       sets = both[0];
       var challenges = both[1];
 
-      var html = "";
-
+      var validChallenges = [];
       if (challenges && challenges.length) {
         for (var ci = 0; ci < challenges.length; ci++) {
           var challenge = challenges[ci];
           if (!challenge || (!challenge.stages && (!challenge.sets || challenge.sets.length === 0))) continue;
+          validChallenges.push(challenge);
+        }
+      }
+
+      var challengePromises = validChallenges.map(function (challenge) {
+        return Promise.all([
+          challenge.id ? loadChallengeProgress(challenge.id) : Promise.resolve(null),
+          challenge.id ? isChallengeCompleted(challenge.id) : Promise.resolve(false)
+        ]);
+      });
+
+      return Promise.all(challengePromises).then(function (challengeData) {
+        var html = '<div id="xp-bar" class="xp-bar"></div>';
+
+        for (var ci = 0; ci < validChallenges.length; ci++) {
+          var challenge = validChallenges[ci];
+          var saved = challengeData[ci][0];
+          var completed = challengeData[ci][1];
 
           var allSetIds = challengeAllSets(challenge);
           var totalCount = 0;
@@ -1184,8 +1291,6 @@
             }
           }
 
-          var saved = challenge.id ? loadChallengeProgress(challenge.id) : null;
-          var completed = isChallengeCompleted(challenge.id);
           var cardCls = "challenge-card";
           var iconHtml = "";
           var progressHtml = "";
@@ -1227,7 +1332,6 @@
             progressHtml +
             "</div>";
         }
-      }
 
       var groups = [];
       var curGroup = null;
@@ -1288,6 +1392,9 @@
       for (var j = 0; j < cards.length; j++) {
         cards[j].addEventListener("click", onCardClick);
       }
+
+      updateXPDisplay();
+      });
     });
   }
 
@@ -1311,7 +1418,8 @@
       challengeDef.sets = allSetIds;
       inChallengeHub = true;
 
-      var saved = challengeDef.id ? loadChallengeProgress(challengeDef.id) : null;
+      var loadPromise = challengeDef.id ? loadChallengeProgress(challengeDef.id) : Promise.resolve(null);
+      return loadPromise.then(function (saved) {
       challengeScores = [];
       for (var i = 0; i < allSetIds.length; i++) {
         challengeScores.push(saved && saved.scores && saved.scores[i] ? saved.scores[i] : null);
@@ -1500,6 +1608,7 @@
         challengeAttempts = {};
         showChallengeHub(id);
       });
+      });
     });
   }
 
@@ -1515,32 +1624,23 @@
 
   function saveChallengeProgress() {
     if (!challengeDef || !challengeDef.id) return;
-    try {
-      var data = {scores: challengeScores};
-      var keys = Object.keys(challengeAttempts);
-      if (keys.length > 0) data.attempts = challengeAttempts;
-      localStorage.setItem("challenge-" + challengeDef.id, JSON.stringify(data));
-    } catch (e) {}
+    var data = {scores: challengeScores};
+    var keys = Object.keys(challengeAttempts);
+    if (keys.length > 0) data.attempts = challengeAttempts;
+    window.db.saveChallengeProgress(challengeDef.id, data);
   }
 
   function loadChallengeProgress(id) {
-    try {
-      var raw = localStorage.getItem("challenge-" + id);
-      return raw ? JSON.parse(raw) : null;
-    } catch (e) { return null; }
+    return window.db.loadChallengeProgress(id);
   }
 
   function clearChallengeProgress() {
     if (!challengeDef || !challengeDef.id) return;
-    try {
-      localStorage.removeItem("challenge-" + challengeDef.id);
-      localStorage.removeItem("challenge-completed-" + challengeDef.id);
-    } catch (e) {}
+    window.db.clearChallengeProgress(challengeDef.id);
   }
 
   function isChallengeCompleted(id) {
-    try { return localStorage.getItem("challenge-completed-" + id) === "true"; }
-    catch (e) { return false; }
+    return window.db.isChallengeCompleted(id);
   }
 
   function onCardClick(e) {
@@ -1889,21 +1989,42 @@
       '<button class="btn-primary" id="btn-retry">Nochmal</button>' +
       '<button class="btn-share" id="btn-share">Ergebnis teilen</button>';
 
+    var previouslyAwarded = 0;
     if (challengeDef) {
+      var prevScore = challengeScores[challengeSetIndex];
+      previouslyAwarded = (prevScore && prevScore.xpAwarded) || 0;
       var passed = correctCount === total;
-      challengeScores[challengeSetIndex] = {name: currentSet.name, correct: correctCount, total: total, passed: passed};
+      challengeScores[challengeSetIndex] = {name: currentSet.name, correct: correctCount, total: total, passed: passed, xpAwarded: previouslyAwarded};
       if (passed) {
         delete challengeAttempts[challengeSetIndex];
       } else {
         challengeAttempts[challengeSetIndex] = {results: results.slice(), exerciseOrder: exerciseOrder.slice()};
       }
+    }
+
+    var maxXP = total * 10;
+    var earnedXP = correctCount * 10;
+    var newXP = Math.max(0, earnedXP - previouslyAwarded);
+    if (newXP > 0) {
+      if (challengeDef) {
+        challengeScores[challengeSetIndex].xpAwarded = previouslyAwarded + newXP;
+      }
+      window.db.addXP(newXP).then(function (result) {
+        if (result && result.leveledUp) {
+          showLevelUp(result.newLevel);
+        }
+        updateXPDisplay();
+      });
+    }
+
+    if (challengeDef) {
       saveChallengeProgress();
       var allChallengeDone = true;
       for (var cd = 0; cd < challengeScores.length; cd++) {
         if (!isSetPassed(challengeScores[cd])) { allChallengeDone = false; break; }
       }
       if (allChallengeDone && challengeDef.id) {
-        try { localStorage.setItem("challenge-completed-" + challengeDef.id, "true"); } catch (e) {}
+        window.db.markChallengeCompleted(challengeDef.id);
       }
       actionsHtml += '<button class="btn-primary" id="btn-to-hub">Zur Übersicht</button>';
     } else {
@@ -2222,12 +2343,16 @@
     var header = document.querySelector("header");
     var existing = header.querySelector(".header-rules");
     if (existing) existing.remove();
+    var signout = header.querySelector(".header-signout");
     if (rules && rules.length) {
       var btn = document.createElement("button");
       btn.className = "header-rules";
       btn.innerHTML = "&#x1F4D6;";
       btn.addEventListener("click", showRulesModal);
       header.appendChild(btn);
+      if (signout) signout.style.display = "none";
+    } else {
+      if (signout) signout.style.display = "";
     }
   }
 

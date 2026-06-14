@@ -975,6 +975,7 @@
     return { html: html, correct: correct, bind: function () {
       var optionsEl = document.getElementById("options");
       for (var i = 0; i < ex.options.length; i++) {
+        if (correct && i !== ex.correct) continue;
         var btn = document.createElement("button");
         btn.className = "option-btn answered";
         btn.textContent = ex.options[i];
@@ -1006,6 +1007,7 @@
       html += '<div class="classify-question">' + esc(ex.classify.question) + "</div>" +
         '<div class="options">';
       for (var c = 0; c < ex.classify.options.length; c++) {
+        if (correct && c !== ex.classify.correct) continue;
         var optCls = "option-btn answered";
         if (c === ex.classify.correct) optCls += " correct";
         if (c === chosenClassify && chosenClassify !== ex.classify.correct) optCls += " wrong";
@@ -1031,6 +1033,7 @@
       html += '<div class="options">';
 
       for (var i = 0; i < step.options.length; i++) {
+        if (stepCorrect && i !== step.correct) continue;
         var cls = "option-btn answered";
         if (!unattempted) {
           if (i === step.correct) cls += " correct";
@@ -1736,6 +1739,12 @@
       buttons[i].classList.add("answered");
       if (i === ex.classify.correct) buttons[i].classList.add("correct");
       if (i === chosen && !classifyCorrect) buttons[i].classList.add("wrong");
+    }
+
+    if (classifyCorrect) {
+      for (var j = buttons.length - 1; j >= 0; j--) {
+        if (j !== ex.classify.correct) buttons[j].remove();
+      }
     }
 
     finalizeWordTap(classifyCorrect, chosen);

@@ -1,0 +1,98 @@
+{
+  "id": "adverbien-satzglieder-1",
+  "name": "Adverbiale Bestimmungen im Satz 1",
+  "goal": "Satzglieder bestimmen mit Fokus auf adverbiale Bestimmungen (TO/LO/MO/KA).",
+  "authoring": {
+    "rationale": "Meister-Stufe: Das Adverb-Wissen wird auf Satzglied-Ebene angewendet. Alle vier adverbialen Bestimmungen kommen vor, gemischt mit Subjekt, Prädikat und Objekten.",
+    "constraints": "Fokus auf adverbiale Bestimmungen. Einfache Satzstrukturen mit klaren Satzgliedern."
+  },
+  "rules": ["adverb-grundlagen"],
+  "type": "satzglieder",
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KA — Kausaladverbiale"],
+  "question": "Bestimme die Satzglieder",
+  "exercises": [
+    {
+      "sentence": "Gestern kaufte die Mutter einen Kuchen",
+      "chunks": [
+        { "indices": [0], "correct": "TO — Temporaladverbiale" },
+        { "indices": [1], "correct": "P — Prädikat" },
+        { "indices": [2, 3], "correct": "S — Subjekt" },
+        { "indices": [4, 5], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "**Gestern** → Wann? → TO (Temporaladverbiale)\n**kaufte** → Was tat sie? → P (Prädikat)\n**die Mutter** → Wer kaufte? → S (Subjekt)\n**einen Kuchen** → Wen/Was? → O4 (Akkusativobjekt)"
+    },
+    {
+      "sentence": "Die Kinder spielen gern draußen Fußball",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3], "correct": "MO — Modaladverbiale" },
+        { "indices": [4], "correct": "LO — Lokaladverbiale" },
+        { "indices": [5], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "**Die Kinder** → Wer spielt? → S (Subjekt)\n**spielen** → Was tun sie? → P (Prädikat)\n**gern** → Wie? → MO (Modaladverbiale)\n**draußen** → Wo? → LO (Lokaladverbiale)\n**Fußball** → Wen/Was? → O4 (Akkusativobjekt)"
+    },
+    {
+      "sentence": "Deshalb gibt der Lehrer dem Schüler eine Aufgabe",
+      "chunks": [
+        { "indices": [0], "correct": "KA — Kausaladverbiale" },
+        { "indices": [1], "correct": "P — Prädikat" },
+        { "indices": [2, 3], "correct": "S — Subjekt" },
+        { "indices": [4, 5], "correct": "O3 — Dativobjekt" },
+        { "indices": [6, 7], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "**Deshalb** → Warum? → KA (Kausaladverbiale)\n**gibt** → Was tut er? → P (Prädikat)\n**der Lehrer** → Wer gibt? → S (Subjekt)\n**dem Schüler** → Wem? → O3 (Dativobjekt)\n**eine Aufgabe** → Wen/Was? → O4 (Akkusativobjekt)"
+    },
+    {
+      "sentence": "Dort oben wohnt meine Großmutter",
+      "chunks": [
+        { "indices": [0, 1], "correct": "LO — Lokaladverbiale" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "S — Subjekt" }
+      ],
+      "explanation": "**Dort oben** → Wo? → LO (Lokaladverbiale)\n**wohnt** → Was tut sie? → P (Prädikat)\n**meine Großmutter** → Wer wohnt? → S (Subjekt)"
+    },
+    {
+      "sentence": "Er hat trotzdem den Test bestanden",
+      "chunks": [
+        { "indices": [0], "correct": "S — Subjekt" },
+        { "indices": [1, 5], "correct": "P — Prädikat" },
+        { "indices": [2], "correct": "KA — Kausaladverbiale" },
+        { "indices": [3, 4], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "**Er** → Wer? → S (Subjekt)\n**hat … bestanden** → Was geschah? → P (Prädikat, zweiteilig!)\n**trotzdem** → Unter welchem Umstand? → KA (Kausaladverbiale)\n**den Test** → Wen/Was? → O4 (Akkusativobjekt)"
+    },
+    {
+      "sentence": "Heute Morgen bringt Papa dem Hund sein Futter",
+      "chunks": [
+        { "indices": [0, 1], "correct": "TO — Temporaladverbiale" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3], "correct": "S — Subjekt" },
+        { "indices": [4, 5], "correct": "O3 — Dativobjekt" },
+        { "indices": [6, 7], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "**Heute Morgen** → Wann? → TO (Temporaladverbiale)\n**bringt** → Was tut er? → P (Prädikat)\n**Papa** → Wer bringt? → S (Subjekt)\n**dem Hund** → Wem? → O3 (Dativobjekt)\n**sein Futter** → Wen/Was? → O4 (Akkusativobjekt)"
+    },
+    {
+      "sentence": "Die Schüler arbeiten leider vergebens",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3], "correct": "MO — Modaladverbiale" },
+        { "indices": [4], "correct": "MO — Modaladverbiale" }
+      ],
+      "explanation": "**Die Schüler** → Wer? → S (Subjekt)\n**arbeiten** → Was tun sie? → P (Prädikat)\n**leider** → Wie? (Bewertung) → MO (Modaladverbiale)\n**vergebens** → Wie? (Art und Weise) → MO (Modaladverbiale)\n**Merke:** Ein Satz kann mehrere adverbiale Bestimmungen gleicher Art haben!"
+    },
+    {
+      "sentence": "Darum übt sie täglich Klavier",
+      "chunks": [
+        { "indices": [0], "correct": "KA — Kausaladverbiale" },
+        { "indices": [1], "correct": "P — Prädikat" },
+        { "indices": [2], "correct": "S — Subjekt" },
+        { "indices": [3], "correct": "TO — Temporaladverbiale" },
+        { "indices": [4], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "**Darum** → Warum? → KA (Kausaladverbiale)\n**übt** → Was tut sie? → P (Prädikat)\n**sie** → Wer? → S (Subjekt)\n**täglich** → Wie oft? → TO (Temporaladverbiale)\n**Klavier** → Wen/Was? → O4 (Akkusativobjekt)"
+    }
+  ]
+}

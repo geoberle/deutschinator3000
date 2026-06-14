@@ -1,0 +1,97 @@
+{
+  "id": "adverbien-frageprobe-1",
+  "name": "Adverb-Frageprobe 1",
+  "goal": "Die richtige Frage zum Adverb finden — Frageprobe als Werkzeug zur Bestimmung der Adverb-Art.",
+  "authoring": {
+    "rationale": "Die Frageprobe ist das zentrale Werkzeug zur Bestimmung der Adverb-Art. Dieses Set trainiert die Zuordnung von Adverb zur passenden Frage, ohne dass das Kind zuerst das Adverb im Satz suchen muss.",
+    "constraints": "Nur die vier Grundarten (LA/TA/MA/KA). Adverb wird im Satz hervorgehoben (reveal)."
+  },
+  "rules": ["adverb-grundlagen"],
+  "question": "Welche Frage passt zum hervorgehobenen Adverb?",
+  "exercises": [
+    {
+      "sentence": "Der Hund schläft draußen im Garten.",
+      "reveal": [3],
+      "options": ["Wo? / Wohin? / Woher?", "Wann? / Wie oft? / Wie lange?", "Warum? / Weshalb?", "Wie? / Auf welche Art?"],
+      "correct": 0,
+      "explanation": "«draußen» → Wo schläft der Hund? → Draußen.\n**Merke:** Wo/Wohin/Woher → Lokaladverb."
+    },
+    {
+      "sentence": "Wir fahren morgen in die Berge.",
+      "reveal": [2],
+      "options": ["Wo? / Wohin? / Woher?", "Wann? / Wie oft? / Wie lange?", "Warum? / Weshalb?", "Wie? / Auf welche Art?"],
+      "correct": 1,
+      "explanation": "«morgen» → Wann fahren wir? → Morgen.\n**Merke:** Wann/Wie oft/Wie lange → Temporaladverb."
+    },
+    {
+      "sentence": "Er hat deshalb nicht teilgenommen.",
+      "reveal": [2],
+      "options": ["Wo? / Wohin? / Woher?", "Wann? / Wie oft? / Wie lange?", "Warum? / Weshalb?", "Wie? / Auf welche Art?"],
+      "correct": 2,
+      "explanation": "«deshalb» → Warum hat er nicht teilgenommen? → Deshalb.\n**Merke:** Warum/Weshalb → Kausaladverb."
+    },
+    {
+      "sentence": "Anna singt gerne im Chor.",
+      "reveal": [2],
+      "options": ["Wo? / Wohin? / Woher?", "Wann? / Wie oft? / Wie lange?", "Warum? / Weshalb?", "Wie? / Auf welche Art?"],
+      "correct": 3,
+      "explanation": "«gerne» → Wie singt Anna? → Gerne.\n**Merke:** Wie/Auf welche Art → Modaladverb."
+    },
+    {
+      "sentence": "Die Katze klettert dorthin auf den Baum.",
+      "reveal": [3],
+      "options": ["Wo? / Wohin? / Woher?", "Wann? / Wie oft? / Wie lange?", "Warum? / Weshalb?", "Wie? / Auf welche Art?"],
+      "correct": 0,
+      "explanation": "«dorthin» → Wohin klettert die Katze? → Dorthin.\n**Merke:** Wo/Wohin/Woher → Lokaladverb."
+    },
+    {
+      "sentence": "Meine Schwester kommt täglich zu Besuch.",
+      "reveal": [3],
+      "options": ["Wo? / Wohin? / Woher?", "Wann? / Wie oft? / Wie lange?", "Warum? / Weshalb?", "Wie? / Auf welche Art?"],
+      "correct": 1,
+      "explanation": "«täglich» → Wie oft kommt sie? → Täglich.\n**Merke:** Wann/Wie oft/Wie lange → Temporaladverb."
+    },
+    {
+      "sentence": "Sie hat dennoch weitergemacht.",
+      "reveal": [2],
+      "options": ["Wo? / Wohin? / Woher?", "Wann? / Wie oft? / Wie lange?", "Warum? / Weshalb?", "Wie? / Auf welche Art?"],
+      "correct": 2,
+      "explanation": "«dennoch» → Unter welchem Umstand hat sie weitergemacht? → Dennoch (= trotzdem).\n**Merke:** Warum/Weshalb/Trotzdem → Kausaladverb."
+    },
+    {
+      "sentence": "Das Kind spricht leider kein Französisch.",
+      "reveal": [3],
+      "options": ["Wo? / Wohin? / Woher?", "Wann? / Wie oft? / Wie lange?", "Warum? / Weshalb?", "Wie? / Auf welche Art?"],
+      "correct": 3,
+      "explanation": "«leider» → Wie sieht man das? → Leider (Bewertung).\n**Merke:** Wie/Bewertung → Modaladverb."
+    },
+    {
+      "sentence": "Die Vögel singen überall im Park.",
+      "reveal": [3],
+      "options": ["Wo? / Wohin? / Woher?", "Wann? / Wie oft? / Wie lange?", "Warum? / Weshalb?", "Wie? / Auf welche Art?"],
+      "correct": 0,
+      "explanation": "«überall» → Wo singen die Vögel? → Überall.\n**Merke:** Wo/Wohin/Woher → Lokaladverb."
+    },
+    {
+      "sentence": "Papa kommt endlich nach Hause.",
+      "reveal": [2],
+      "options": ["Wo? / Wohin? / Woher?", "Wann? / Wie oft? / Wie lange?", "Warum? / Weshalb?", "Wie? / Auf welche Art?"],
+      "correct": 1,
+      "explanation": "«endlich» → Wann kommt Papa? → Endlich (= nach langer Zeit).\n**Merke:** Wann/Wie oft/Wie lange → Temporaladverb."
+    },
+    {
+      "sentence": "Es regnet darum bleiben wir drinnen.",
+      "reveal": [2],
+      "options": ["Wo? / Wohin? / Woher?", "Wann? / Wie oft? / Wie lange?", "Warum? / Weshalb?", "Wie? / Auf welche Art?"],
+      "correct": 2,
+      "explanation": "«darum» → Warum bleiben wir drinnen? → Darum (= deshalb).\n**Merke:** Warum/Weshalb → Kausaladverb."
+    },
+    {
+      "sentence": "Er hat vergebens nach dem Schlüssel gesucht.",
+      "reveal": [2],
+      "options": ["Wo? / Wohin? / Woher?", "Wann? / Wie oft? / Wie lange?", "Warum? / Weshalb?", "Wie? / Auf welche Art?"],
+      "correct": 3,
+      "explanation": "«vergebens» → Wie hat er gesucht? → Vergebens (= ohne Erfolg).\n**Merke:** Wie/Auf welche Art → Modaladverb."
+    }
+  ]
+}

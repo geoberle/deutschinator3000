@@ -1,23 +1,23 @@
 [
   {
-    "id": "passiv-regeln",
-    "name": "Passiv-Regeln — Schritt für Schritt",
+    "id": "adverbien",
+    "name": "Adverbien — Theorie & Praxis",
     "stages": [
       {
-        "name": "Stufe 1: Präsens & Präteritum",
-        "sets": ["passiv-regeln-1"]
+        "name": "Stufe 1: Erkennen",
+        "sets": ["adverbien-1"]
       },
       {
-        "name": "Stufe 2: Perfekt & Plusquamperfekt",
-        "sets": ["passiv-regeln-2"]
+        "name": "Stufe 2: Theorie",
+        "sets": ["adverbien-frageprobe-1", "adverbien-arten-2"]
       },
       {
-        "name": "Stufe 3: Futur I",
-        "sets": ["passiv-regeln-3"]
+        "name": "Stufe 3: Funktion",
+        "sets": ["adverbien-funktion-1"]
       },
       {
-        "name": "Stufe 4: Gesamtüberblick",
-        "sets": ["passiv-regeln-4"]
+        "name": "Stufe 4: Meistern",
+        "sets": ["adverbien-satzglieder-1"]
       }
     ]
   }

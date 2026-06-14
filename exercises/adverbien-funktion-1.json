@@ -1,0 +1,103 @@
+{
+  "id": "adverbien-funktion-1",
+  "name": "Adverb-Funktion erkennen 1",
+  "goal": "Verstehen, was das Adverb im Satz beschreibt — ein Verb, ein Adjektiv oder ein anderes Adverb.",
+  "authoring": {
+    "rationale": "Aufbauend auf Adverb-Erkennung und Artbestimmung. Jetzt wird die Funktion trainiert: Was beschreibt das Adverb? Das ist der Übergang von Wortart-Wissen zu Satzanalyse.",
+    "constraints": "Adverb ist im Satz hervorgehoben (reveal). Step 1: Art bestimmen. Step 2: Bezugswort bestimmen (Verb, Adjektiv oder Adverb)."
+  },
+  "rules": ["adverb-grundlagen"],
+  "type": "classify",
+  "exercises": [
+    {
+      "sentence": "Die Kinder spielen gern im Garten.",
+      "reveal": [3],
+      "steps": [
+        { "question": "Welche Art von Adverb ist «gern»?", "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"], "correct": 2 },
+        { "question": "Was beschreibt «gern» näher?", "options": ["ein Verb", "ein Adjektiv", "ein anderes Adverb"], "correct": 0 }
+      ],
+      "explanation": "«gern» beschreibt das Verb «spielen» → Wie spielen die Kinder? → Gern.\n**Merke:** Ein Adverb, das ein Verb beschreibt, beantwortet die Frage nach der Art des Geschehens."
+    },
+    {
+      "sentence": "Anna ist ein sehr hübsches Mädchen.",
+      "reveal": [3],
+      "steps": [
+        { "question": "Welche Art von Adverb ist «sehr»?", "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"], "correct": 2 },
+        { "question": "Was beschreibt «sehr» näher?", "options": ["ein Verb", "ein Adjektiv", "ein anderes Adverb"], "correct": 1 }
+      ],
+      "explanation": "«sehr» beschreibt das Adjektiv «hübsches» → Wie hübsch? → Sehr hübsch.\n**Merke:** Adverb + Adjektiv → das Adverb verstärkt oder schwächt das Adjektiv."
+    },
+    {
+      "sentence": "Das Auto fährt extrem langsam.",
+      "reveal": [3],
+      "steps": [
+        { "question": "Welche Art von Adverb ist «extrem»?", "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"], "correct": 2 },
+        { "question": "Was beschreibt «extrem» näher?", "options": ["ein Verb", "ein Adjektiv", "ein anderes Adverb"], "correct": 2 }
+      ],
+      "explanation": "«extrem» beschreibt das Adverb «langsam» → Wie langsam? → Extrem langsam.\n**Merke:** Adverb + Adverb → das eine Adverb verstärkt das andere."
+    },
+    {
+      "sentence": "Der Hund bellt draußen laut.",
+      "reveal": [3],
+      "steps": [
+        { "question": "Welche Art von Adverb ist «draußen»?", "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"], "correct": 0 },
+        { "question": "Was beschreibt «draußen» näher?", "options": ["ein Verb", "ein Adjektiv", "ein anderes Adverb"], "correct": 0 }
+      ],
+      "explanation": "«draußen» beschreibt das Verb «bellt» → Wo bellt der Hund? → Draußen.\n**Merke:** Lokaladverbien beschreiben fast immer das Verb (Ort des Geschehens)."
+    },
+    {
+      "sentence": "Sie kommt besonders oft zu Besuch.",
+      "reveal": [2],
+      "steps": [
+        { "question": "Welche Art von Adverb ist «besonders»?", "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"], "correct": 2 },
+        { "question": "Was beschreibt «besonders» näher?", "options": ["ein Verb", "ein Adjektiv", "ein anderes Adverb"], "correct": 2 }
+      ],
+      "explanation": "«besonders» beschreibt das Adverb «oft» → Wie oft? → Besonders oft.\n**Merke:** «besonders» verstärkt «oft» — Adverb beschreibt Adverb."
+    },
+    {
+      "sentence": "Er hat gestern lange gearbeitet.",
+      "reveal": [2],
+      "steps": [
+        { "question": "Welche Art von Adverb ist «gestern»?", "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"], "correct": 1 },
+        { "question": "Was beschreibt «gestern» näher?", "options": ["ein Verb", "ein Adjektiv", "ein anderes Adverb"], "correct": 0 }
+      ],
+      "explanation": "«gestern» beschreibt das Verb «gearbeitet» → Wann hat er gearbeitet? → Gestern.\n**Merke:** Temporaladverbien beschreiben das Verb (Zeitpunkt des Geschehens)."
+    },
+    {
+      "sentence": "Das Essen war ziemlich gut.",
+      "reveal": [3],
+      "steps": [
+        { "question": "Welche Art von Adverb ist «ziemlich»?", "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"], "correct": 2 },
+        { "question": "Was beschreibt «ziemlich» näher?", "options": ["ein Verb", "ein Adjektiv", "ein anderes Adverb"], "correct": 1 }
+      ],
+      "explanation": "«ziemlich» beschreibt das Adjektiv «gut» → Wie gut? → Ziemlich gut.\n**Merke:** Gradadverbien wie «ziemlich», «sehr», «besonders» beschreiben oft Adjektive."
+    },
+    {
+      "sentence": "Wir treffen uns dort vor dem Kino.",
+      "reveal": [3],
+      "steps": [
+        { "question": "Welche Art von Adverb ist «dort»?", "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"], "correct": 0 },
+        { "question": "Was beschreibt «dort» näher?", "options": ["ein Verb", "ein Adjektiv", "ein anderes Adverb"], "correct": 0 }
+      ],
+      "explanation": "«dort» beschreibt das Verb «treffen» → Wo treffen wir uns? → Dort.\n**Merke:** Lokaladverbien beschreiben das Verb — sie geben den Ort an."
+    },
+    {
+      "sentence": "Sie singt unglaublich schön.",
+      "reveal": [2],
+      "steps": [
+        { "question": "Welche Art von Adverb ist «unglaublich»?", "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"], "correct": 2 },
+        { "question": "Was beschreibt «unglaublich» näher?", "options": ["ein Verb", "ein Adjektiv", "ein anderes Adverb"], "correct": 2 }
+      ],
+      "explanation": "«unglaublich» beschreibt «schön» (Adjektiv als Adverb) → Wie schön? → Unglaublich schön.\n**Merke:** «unglaublich» verstärkt das adverbiell gebrauchte Adjektiv «schön»."
+    },
+    {
+      "sentence": "Er hat deshalb den Test wiederholt.",
+      "reveal": [2],
+      "steps": [
+        { "question": "Welche Art von Adverb ist «deshalb»?", "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"], "correct": 3 },
+        { "question": "Was beschreibt «deshalb» näher?", "options": ["ein Verb", "ein Adjektiv", "ein anderes Adverb"], "correct": 0 }
+      ],
+      "explanation": "«deshalb» beschreibt das Verb «wiederholt» → Warum hat er wiederholt? → Deshalb.\n**Merke:** Kausaladverbien beschreiben das Verb — sie geben den Grund an."
+    }
+  ]
+}

@@ -126,6 +126,42 @@
     "category": "Adverb"
   },
   {
+    "id": "adverbien-frageprobe-1",
+    "name": "Adverb-Frageprobe 1",
+    "goal": "Die richtige Frage zum Adverb finden — Frageprobe als Werkzeug zur Bestimmung der Adverb-Art.",
+    "description": "Welche Frage passt zum hervorgehobenen Adverb?",
+    "file": "adverbien-frageprobe-1.json",
+    "count": 12,
+    "category": "Adverb"
+  },
+  {
+    "id": "adverbien-arten-2",
+    "name": "Adverbien erkennen 2",
+    "goal": "Adverbien auch in schwierigeren Sätzen sicher finden und die Art bestimmen.",
+    "description": "Finde das Adverb im Satz — schwierigere Sätze",
+    "file": "adverbien-arten-2.json",
+    "count": 10,
+    "category": "Adverb"
+  },
+  {
+    "id": "adverbien-funktion-1",
+    "name": "Adverb-Funktion erkennen 1",
+    "goal": "Verstehen, was das Adverb im Satz beschreibt — ein Verb, ein Adjektiv oder ein anderes Adverb.",
+    "description": "Bestimme die Art des Adverbs und was es beschreibt",
+    "file": "adverbien-funktion-1.json",
+    "count": 10,
+    "category": "Adverb"
+  },
+  {
+    "id": "adverbien-satzglieder-1",
+    "name": "Adverbiale Bestimmungen im Satz 1",
+    "goal": "Satzglieder bestimmen mit Fokus auf adverbiale Bestimmungen (TO/LO/MO/KA).",
+    "description": "Bestimme die Satzglieder — Fokus auf adverbiale Bestimmungen",
+    "file": "adverbien-satzglieder-1.json",
+    "count": 8,
+    "category": "Adverb"
+  },
+  {
     "id": "passiv-hilfsverb-1",
     "name": "Baustein-Suche: Hilfsverb finden 1",
     "goal": "Das Hilfsverb im Passivsatz sicher erkennen — Schlüssel zu VP vs. ZP.",

@@ -1,0 +1,114 @@
+{
+  "id": "adverbien-arten-2",
+  "name": "Adverbien erkennen 2",
+  "goal": "Adverbien auch in schwierigeren Sätzen sicher finden und die Art bestimmen.",
+  "authoring": {
+    "rationale": "Aufbau auf adverbien-1 mit komplexeren Sätzen: mehrere Adverb-Kandidaten, Adjektive als Ablenkung, Adverbien an ungewöhnlichen Positionen.",
+    "constraints": "Nur die vier Grundarten (LA/TA/MA/KA). Schwieriger als adverbien-1: Sätze mit Adjektiven neben Adverbien, weniger offensichtliche Adverbien."
+  },
+  "rules": ["adverb-grundlagen"],
+  "type": "word-tap",
+  "question": "Welches Wort ist das Adverb?",
+  "exercises": [
+    {
+      "words": ["Die", "kleine", "Katze", "schläft", "oben", "auf", "dem", "Schrank."],
+      "correct": [4],
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"],
+        "correct": 0
+      },
+      "explanation": "«oben» beantwortet: Wo schläft die Katze?\n**Merke:** «kleine» ist ein Adjektiv (beschreibt die Katze), «oben» ist das Adverb (beschreibt den Ort)."
+    },
+    {
+      "words": ["Er", "ist", "folglich", "durchgefallen."],
+      "correct": [2],
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"],
+        "correct": 3
+      },
+      "explanation": "«folglich» beantwortet: Warum ist er durchgefallen?\n**Merke:** Warum/Weshalb/Folglich → Kausaladverb."
+    },
+    {
+      "words": ["Das", "neue", "Auto", "fährt", "umsonst", "durch", "die", "Stadt."],
+      "correct": [4],
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"],
+        "correct": 2
+      },
+      "explanation": "«umsonst» beantwortet: Wie/Auf welche Art fährt es?\n**Merke:** «neue» ist ein Adjektiv (beschreibt das Auto), «umsonst» ist das Adverb."
+    },
+    {
+      "words": ["Bald", "beginnen", "die", "langen", "Sommerferien."],
+      "correct": [0],
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"],
+        "correct": 1
+      },
+      "explanation": "«Bald» beantwortet: Wann beginnen die Ferien?\n**Merke:** «langen» ist ein Adjektiv, «bald» ist das Temporaladverb."
+    },
+    {
+      "words": ["Wir", "spielen", "gern", "im", "großen", "Garten."],
+      "correct": [2],
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"],
+        "correct": 2
+      },
+      "explanation": "«gern» beantwortet: Wie spielen wir?\n**Merke:** «großen» ist ein Adjektiv, «gern» ist das Modaladverb."
+    },
+    {
+      "words": ["Die", "Kinder", "rennen", "dahin", "zum", "Spielplatz."],
+      "correct": [3],
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"],
+        "correct": 0
+      },
+      "explanation": "«dahin» beantwortet: Wohin rennen die Kinder?\n**Merke:** Wo/Wohin/Woher → Lokaladverb."
+    },
+    {
+      "words": ["Sie", "hat", "daher", "den", "Zug", "verpasst."],
+      "correct": [2],
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"],
+        "correct": 3
+      },
+      "explanation": "«daher» beantwortet: Warum hat sie den Zug verpasst?\n**Merke:** Warum/Weshalb/Daher → Kausaladverb."
+    },
+    {
+      "words": ["Der", "alte", "Mann", "geht", "langsam", "schließlich", "nach", "Hause."],
+      "correct": [5],
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"],
+        "correct": 1
+      },
+      "explanation": "«schließlich» beantwortet: Wann geht er nach Hause?\n**Merke:** «langsam» ist hier ein Adjektiv als Adverb (Wie?), «schließlich» ist das echte Temporaladverb."
+    },
+    {
+      "words": ["Mein", "Bruder", "wohnt", "hier", "in", "der", "Nähe."],
+      "correct": [3],
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"],
+        "correct": 0
+      },
+      "explanation": "«hier» beantwortet: Wo wohnt er?\n**Merke:** Wo/Wohin/Woher → Lokaladverb."
+    },
+    {
+      "words": ["Er", "lernt", "deswegen", "jeden", "Tag."],
+      "correct": [2],
+      "classify": {
+        "question": "Welche Art von Adverb ist das?",
+        "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"],
+        "correct": 3
+      },
+      "explanation": "«deswegen» beantwortet: Warum lernt er?\n**Merke:** Warum/Weshalb/Deswegen → Kausaladverb."
+    }
+  ]
+}

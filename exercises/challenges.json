@@ -20,5 +20,41 @@
         "sets": ["adverbien-satzglieder-1"]
       }
     ]
+  },
+  {
+    "id": "zeiten-basis",
+    "name": "Zeiten-Basis: Gegenwart und Vergangenheit",
+    "stages": [
+      {
+        "name": "Stufe 1: Zeiten-Detektiv",
+        "sets": ["zeiten-basis-erkennen-1"]
+      },
+      {
+        "name": "Stufe 2: Zeitmaschine",
+        "sets": ["zeiten-basis-umformen-1"]
+      },
+      {
+        "name": "Stufe 3: Bauplan-Profi",
+        "sets": ["zeiten-basis-bauplan-1"]
+      }
+    ]
+  },
+  {
+    "id": "zeiten-zukunft",
+    "name": "Zeiten-Zukunft: Alles im Blick",
+    "stages": [
+      {
+        "name": "Stufe 1: Schnell-Check",
+        "sets": ["zeiten-gesamt-erkennen-1"]
+      },
+      {
+        "name": "Stufe 2: Zukunfts-Zeitmaschine",
+        "sets": ["zeiten-zukunft-umformen-1"]
+      },
+      {
+        "name": "Stufe 3: Bauplan-Meisterin",
+        "sets": ["zeiten-gesamt-bauplan-1"]
+      }
+    ]
   }
 ]

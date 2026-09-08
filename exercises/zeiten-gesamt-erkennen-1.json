@@ -1,0 +1,25 @@
+{
+  "id": "zeiten-gesamt-erkennen-1",
+  "name": "Schnell-Check: Alle Zeiten 1",
+  "goal": "Alle sechs Zeitformen in aktiven Sätzen sicher unterscheiden.",
+  "rules": ["zeiten-grundlagen"],
+  "authoring": {
+    "rationale": "Die Wiederholung der Basis wird direkt mit den beiden Zukunftsformen verbunden, damit die neuen Muster nicht isoliert bleiben.",
+    "constraints": "Aktive Sätze. Präsens, Präteritum, Perfekt, Plusquamperfekt, Futur I und Futur II jeweils zweimal."
+  },
+  "question": "In welcher Zeitform steht der Satz?",
+  "exercises": [
+    {"sentence": "Morgen wird Mia ihren Koffer packen.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 4, "explanation": "«wird ... packen» beschreibt die Zukunft.\n**Merke:** Futur I: werden + Infinitiv."},
+    {"sentence": "Bis morgen wird Mia ihren Koffer gepackt haben.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 5, "explanation": "Morgen wird das Packen schon abgeschlossen sein.\n**Merke:** Futur II: werden + Partizip II + haben/sein."},
+    {"sentence": "Der Hamster frisst eine Karotte.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 0, "explanation": "«frisst» passiert jetzt.\n**Merke:** Präsens beschreibt Gegenwart."},
+    {"sentence": "Die Ritterin fand den Schlüssel.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 1, "explanation": "«fand» ist ein einzelnes Verb in der Vergangenheit.\n**Merke:** Präteritum ist die einfache Vergangenheit."},
+    {"sentence": "Wir haben den Turm gebaut.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 2, "explanation": "«haben ... gebaut» bildet das Perfekt.\n**Merke:** Perfekt: haben/sein + Partizip II."},
+    {"sentence": "Vor dem Ausflug hatte Leo die Karte gelesen.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 3, "explanation": "Leo hatte die Karte schon vor dem Ausflug gelesen.\n**Merke:** Plusquamperfekt zeigt Vorvergangenheit."},
+    {"sentence": "Im Sommer werden wir ans Meer fahren.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 4, "explanation": "«werden ... fahren» beschreibt etwas Zukünftiges.\n**Merke:** Futur I: werden + Infinitiv."},
+    {"sentence": "Bis zum Abend werden wir die Aufgabe beendet haben.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 5, "explanation": "Am Abend wird die Aufgabe schon fertig sein.\n**Merke:** Futur II: werden + Partizip II + haben/sein."},
+    {"sentence": "Die Sonne scheint durch das Fenster.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 0, "explanation": "«scheint» passiert gerade.\n**Merke:** Präsens beschreibt Gegenwart."},
+    {"sentence": "Der Zauberer verwandelte den Stein.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 1, "explanation": "«verwandelte» ist die einfache Vergangenheit.\n**Merke:** Präteritum ist die einfache Vergangenheit."},
+    {"sentence": "Nora ist schnell nach Hause gelaufen.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 2, "explanation": "«ist ... gelaufen» bildet das Perfekt.\n**Merke:** Bewegungsverben haben im Perfekt oft «sein»."},
+    {"sentence": "Bevor der Unterricht begann, war die Lehrerin schon angekommen.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 3, "explanation": "Die Ankunft lag vor dem Unterricht.\n**Merke:** Plusquamperfekt: hatte/war + Partizip II."}
+  ]
+}

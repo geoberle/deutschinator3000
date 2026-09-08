@@ -1,0 +1,25 @@
+{
+  "id": "zeiten-basis-erkennen-1",
+  "name": "Zeiten-Detektiv: Basis 1",
+  "goal": "Präsens, Präteritum, Perfekt und Plusquamperfekt in aktiven Sätzen sicher erkennen.",
+  "rules": ["zeiten-grundlagen"],
+  "authoring": {
+    "rationale": "Der Einstieg trennt vier Grundzeiten klar voneinander, bevor die Zukunftsformen dazukommen.",
+    "constraints": "Nur aktive Sätze. Je drei Beispiele für Präsens, Präteritum, Perfekt und Plusquamperfekt."
+  },
+  "question": "In welcher Zeitform steht der Satz?",
+  "exercises": [
+    {"sentence": "Mia zeichnet einen Drachen.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt"], "correct": 0, "explanation": "«zeichnet» passiert jetzt.\n**Merke:** Präsens beschreibt Gegenwart."},
+    {"sentence": "Jonas las das spannende Buch.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt"], "correct": 1, "explanation": "«las» ist ein einzelnes Verb in der Vergangenheit.\n**Merke:** Präteritum ist die einfache Vergangenheit."},
+    {"sentence": "Wir haben den Kuchen gegessen.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt"], "correct": 2, "explanation": "«haben» + «gegessen» sind zwei Verbteile.\n**Merke:** Perfekt: haben/sein + Partizip II."},
+    {"sentence": "Die Klasse hatte die Aufgabe schon gelöst.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt"], "correct": 3, "explanation": "«hatte» + «gelöst» zeigt etwas, das früher schon fertig war.\n**Merke:** Plusquamperfekt: hatte/war + Partizip II."},
+    {"sentence": "Der Hund schläft auf dem Sofa.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt"], "correct": 0, "explanation": "«schläft» geschieht gerade.\n**Merke:** Präsens beschreibt Gegenwart."},
+    {"sentence": "Oma backte einen Apfelstrudel.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt"], "correct": 1, "explanation": "«backte» ist ein einzelnes Vergangenheitsverb.\n**Merke:** Präteritum ist die einfache Vergangenheit."},
+    {"sentence": "Der Zug ist pünktlich angekommen.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt"], "correct": 2, "explanation": "«ist» + «angekommen» bildet das Perfekt.\n**Merke:** Bewegungsverben haben im Perfekt oft «sein»."},
+    {"sentence": "Vor dem Film hatten wir noch Popcorn gekauft.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt"], "correct": 3, "explanation": "Das Popcorn war vor dem Film schon gekauft.\n**Merke:** Plusquamperfekt zeigt Vorvergangenheit."},
+    {"sentence": "Ich räume mein Zimmer auf.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt"], "correct": 0, "explanation": "«räume ... auf» passiert jetzt.\n**Merke:** Präsens beschreibt Gegenwart."},
+    {"sentence": "Die Kinder sangen laut im Chor.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt"], "correct": 1, "explanation": "«sangen» ist ein einzelnes Verb in der Vergangenheit.\n**Merke:** Präteritum ist die einfache Vergangenheit."},
+    {"sentence": "Papa hat das Fahrrad repariert.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt"], "correct": 2, "explanation": "«hat» + «repariert» bildet das Perfekt.\n**Merke:** Perfekt: haben/sein + Partizip II."},
+    {"sentence": "Bevor es regnete, war ich schon nach Hause gegangen.", "options": ["Präsens", "Präteritum", "Perfekt", "Plusquamperfekt"], "correct": 3, "explanation": "Ich war schon zu Hause, bevor der Regen begann.\n**Merke:** Plusquamperfekt zeigt, was vorher passiert war."}
+  ]
+}

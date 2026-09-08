@@ -1,0 +1,21 @@
+{
+  "id": "zeiten-gesamt-bauplan-1",
+  "name": "Bauplan-Meisterin: Alle Zeiten 1",
+  "goal": "Die Bildungsvorschriften aller sechs Zeitformen aus Wortchips zusammensetzen.",
+  "type": "word-bank",
+  "rules": ["zeiten-grundlagen"],
+  "authoring": {
+    "rationale": "Die Baupläne der bekannten Zeiten werden wiederholt; Futur I und Futur II kommen als neue, klar sichtbare Wortchip-Reihen hinzu.",
+    "constraints": "Alle sechs Zeitformen. Jede Aufgabe enthält genau eine Bildungsvorschrift ohne Distraktoren; Schwerpunkt auf Futur I und Futur II."
+  },
+  "exercises": [
+    {"sentence": "Welche Bildungsvorschrift passt?", "steps": [{"question": "Baue den Bauplan für Futur I:", "answer": ["Futur", "I:", "werden", "+", "Infinitiv"]}], "explanation": "«wird spielen» besteht aus «werden» und dem Infinitiv.\n**Merke:** Futur I: werden + Infinitiv."},
+    {"sentence": "Welche Bildungsvorschrift passt?", "steps": [{"question": "Baue den Bauplan für Futur II:", "answer": ["Futur II:", "werden", "+", "Partizip II", "+ haben/sein"]}], "explanation": "«wird gespielt haben» und «wird gefahren sein» sind Futur II.\n**Merke:** Futur II: werden + Partizip II + haben/sein."},
+    {"sentence": "Welche Bildungsvorschrift passt?", "steps": [{"question": "Baue den Bauplan für das Präsens:", "answer": ["Präsens:", "Verb", "in", "der", "Gegenwart"]}], "explanation": "Im Präsens passiert etwas jetzt.\n**Merke:** Präsens = Verb in der Gegenwart."},
+    {"sentence": "Welche Bildungsvorschrift passt?", "steps": [{"question": "Baue den Bauplan für das Präteritum:", "answer": ["Präteritum:", "Verb", "in", "der", "einfachen", "Vergangenheit"]}], "explanation": "Das Präteritum erzählt von früher mit einem Verb.\n**Merke:** Präteritum = einfache Vergangenheit."},
+    {"sentence": "Welche Bildungsvorschrift passt?", "steps": [{"question": "Baue den Bauplan für das Perfekt:", "answer": ["Perfekt:", "haben/sein", "+", "Partizip", "II"]}], "explanation": "«hat gespielt» besteht aus Hilfsverb und Partizip II.\n**Merke:** Perfekt: haben/sein + Partizip II."},
+    {"sentence": "Welche Bildungsvorschrift passt?", "steps": [{"question": "Baue den Bauplan für das Plusquamperfekt:", "answer": ["Plusquamperfekt:", "hatte/war", "+", "Partizip", "II"]}], "explanation": "«hatte gespielt» zeigt etwas, das schon vorher fertig war.\n**Merke:** Plusquamperfekt: hatte/war + Partizip II."},
+    {"sentence": "Futur I oder Futur II?", "steps": [{"question": "Baue das sichere Zeichen für Futur I:", "answer": ["Futur", "I:", "endet", "mit", "dem", "Infinitiv"]}], "explanation": "Im Futur I steht am Ende der Infinitiv.\n**Merke:** Futur I endet mit dem Infinitiv."},
+    {"sentence": "Futur I oder Futur II?", "steps": [{"question": "Baue das sichere Zeichen für Futur II:", "answer": ["Futur", "II:", "endet", "mit", "haben/sein"]}], "explanation": "Im Futur II folgt am Ende «haben» oder «sein».\n**Merke:** Futur II endet auf haben oder sein."}
+  ]
+}

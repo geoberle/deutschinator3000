@@ -1,0 +1,21 @@
+{
+  "id": "zeiten-basis-umformen-1",
+  "name": "Zeitmaschine: Basis 1",
+  "goal": "Einfache Sätze als passende Form von Präsens, Präteritum, Perfekt oder Plusquamperfekt auswählen.",
+  "rules": ["zeiten-grundlagen"],
+  "authoring": {
+    "rationale": "Nach dem Erkennen wird dieselbe Zeitform aktiv ausgewählt, ohne dass die Satzbildung schon frei produziert werden muss.",
+    "constraints": "Nur aktive Sätze. Jede Aufgabe verlangt genau eine Zeitform; alle Antworten sind vollständige Sätze."
+  },
+  "question": "Welche Satzform passt?",
+  "exercises": [
+    {"sentence": "Mia malt ein Bild. (Präsens)", "question": "Setze den Satz ins Perfekt:", "options": ["Mia malte ein Bild.", "Mia hat ein Bild gemalt.", "Mia hatte ein Bild gemalt.", "Mia malt ein Bild."], "correct": 1, "explanation": "«hat ... gemalt» ist Perfekt.\n**Merke:** Perfekt: haben/sein + Partizip II."},
+    {"sentence": "Der Hund läuft in den Garten. (Präsens)", "question": "Setze den Satz ins Präteritum:", "options": ["Der Hund ist in den Garten gelaufen.", "Der Hund hatte in den Garten gelaufen.", "Der Hund lief in den Garten.", "Der Hund läuft in den Garten."], "correct": 2, "explanation": "«lief» ist Präteritum von «laufen».\n**Merke:** Präteritum ist die einfache Vergangenheit."},
+    {"sentence": "Wir haben ein Lied gesungen. (Perfekt)", "question": "Setze den Satz ins Präsens:", "options": ["Wir singen ein Lied.", "Wir sangen ein Lied.", "Wir hatten ein Lied gesungen.", "Wir haben ein Lied gesungen."], "correct": 0, "explanation": "«singen» passiert jetzt.\n**Merke:** Im Präsens steht das Verb in der Gegenwart."},
+    {"sentence": "Die Klasse löste die Aufgabe. (Präteritum)", "question": "Setze den Satz ins Plusquamperfekt:", "options": ["Die Klasse löst die Aufgabe.", "Die Klasse hat die Aufgabe gelöst.", "Die Klasse löste die Aufgabe.", "Die Klasse hatte die Aufgabe gelöst."], "correct": 3, "explanation": "«hatte ... gelöst» ist Plusquamperfekt.\n**Merke:** Plusquamperfekt: hatte/war + Partizip II."},
+    {"sentence": "Oma backte Kekse. (Präteritum)", "question": "Setze den Satz ins Perfekt:", "options": ["Oma hat Kekse gebacken.", "Oma hatte Kekse gebacken.", "Oma backt Kekse.", "Oma backte Kekse."], "correct": 0, "explanation": "«hat ... gebacken» ist Perfekt.\n**Merke:** Perfekt: haben/sein + Partizip II."},
+    {"sentence": "Ich hatte den Bus verpasst. (Plusquamperfekt)", "question": "Setze den Satz ins Präteritum:", "options": ["Ich verpasse den Bus.", "Ich verpasste den Bus.", "Ich habe den Bus verpasst.", "Ich hatte den Bus verpasst."], "correct": 1, "explanation": "«verpasste» ist die einfache Vergangenheit.\n**Merke:** Präteritum besteht aus einem Vergangenheitsverb."},
+    {"sentence": "Papa repariert das Fahrrad. (Präsens)", "question": "Setze den Satz ins Plusquamperfekt:", "options": ["Papa reparierte das Fahrrad.", "Papa hat das Fahrrad repariert.", "Papa hatte das Fahrrad repariert.", "Papa repariert das Fahrrad."], "correct": 2, "explanation": "«hatte ... repariert» zeigt, dass es früher schon erledigt war.\n**Merke:** Plusquamperfekt zeigt Vorvergangenheit."},
+    {"sentence": "Die Kinder haben im Park gespielt. (Perfekt)", "question": "Setze den Satz ins Präsens:", "options": ["Die Kinder spielten im Park.", "Die Kinder hatten im Park gespielt.", "Die Kinder haben im Park gespielt.", "Die Kinder spielen im Park."], "correct": 3, "explanation": "«spielen» beschreibt die Gegenwart.\n**Merke:** Präsens: Verb in der Gegenwart."}
+  ]
+}

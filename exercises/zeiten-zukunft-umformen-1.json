@@ -1,0 +1,21 @@
+{
+  "id": "zeiten-zukunft-umformen-1",
+  "name": "Zukunfts-Zeitmaschine 1",
+  "goal": "Sätze gezielt ins Futur I oder Futur II setzen und die beiden Zukunftsformen unterscheiden.",
+  "rules": ["zeiten-grundlagen"],
+  "authoring": {
+    "rationale": "Die Auswahl vollständiger Sätze konzentriert die Aufmerksamkeit auf den Unterschied zwischen Infinitiv und Partizip II plus haben/sein.",
+    "constraints": "Schwerpunkt Futur I und Futur II; zwei Wiederholungen verbinden die Zukunftsformen mit der Basis."
+  },
+  "question": "Welche Satzform passt?",
+  "exercises": [
+    {"sentence": "Mia packt ihren Koffer. (Präsens)", "question": "Setze den Satz ins Futur I:", "options": ["Mia wird ihren Koffer gepackt haben.", "Mia packte ihren Koffer.", "Mia wird ihren Koffer packen.", "Mia hat ihren Koffer gepackt."], "correct": 2, "explanation": "«wird ... packen» ist Futur I.\n**Merke:** Futur I: werden + Infinitiv."},
+    {"sentence": "Mia packt ihren Koffer. (Präsens)", "question": "Setze den Satz ins Futur II:", "options": ["Mia wird ihren Koffer gepackt haben.", "Mia wird ihren Koffer packen.", "Mia hatte ihren Koffer gepackt.", "Mia packt ihren Koffer."], "correct": 0, "explanation": "Morgen wird der Koffer schon gepackt sein.\n**Merke:** Futur II: werden + Partizip II + haben/sein."},
+    {"sentence": "Wir fahren nach Wien. (Präsens)", "question": "Setze den Satz ins Futur I:", "options": ["Wir werden nach Wien gefahren sein.", "Wir werden nach Wien fahren.", "Wir sind nach Wien gefahren.", "Wir fuhren nach Wien."], "correct": 1, "explanation": "«werden ... fahren» ist Futur I.\n**Merke:** Futur I endet mit dem Infinitiv."},
+    {"sentence": "Wir fahren nach Wien. (Präsens)", "question": "Setze den Satz ins Futur II:", "options": ["Wir werden nach Wien fahren.", "Wir sind nach Wien gefahren.", "Wir werden nach Wien gefahren sein.", "Wir waren nach Wien gefahren."], "correct": 2, "explanation": "Bis morgen wird die Fahrt schon vorbei sein.\n**Merke:** Futur II endet hier auf «gewesen sein»? Nein: «gefahren sein»."},
+    {"sentence": "Der Roboter baut ein Haus. (Präsens)", "question": "Setze den Satz ins Futur II:", "options": ["Der Roboter baut ein Haus.", "Der Roboter wird ein Haus gebaut haben.", "Der Roboter wird ein Haus bauen.", "Der Roboter hatte ein Haus gebaut."], "correct": 1, "explanation": "«wird ... gebaut haben» ist Futur II.\n**Merke:** Futur II: werden + Partizip II + haben/sein."},
+    {"sentence": "Die Kinder lösen das Rätsel. (Präsens)", "question": "Setze den Satz ins Futur I:", "options": ["Die Kinder werden das Rätsel lösen.", "Die Kinder werden das Rätsel gelöst haben.", "Die Kinder haben das Rätsel gelöst.", "Die Kinder lösten das Rätsel."], "correct": 0, "explanation": "«werden ... lösen» ist Futur I.\n**Merke:** Futur I: werden + Infinitiv."},
+    {"sentence": "Papa wird das Fahrrad reparieren. (Futur I)", "question": "Setze den Satz ins Perfekt:", "options": ["Papa repariert das Fahrrad.", "Papa reparierte das Fahrrad.", "Papa hat das Fahrrad repariert.", "Papa hatte das Fahrrad repariert."], "correct": 2, "explanation": "«hat ... repariert» ist Perfekt.\n**Merke:** Perfekt: haben/sein + Partizip II."},
+    {"sentence": "Die Katze wird auf den Baum springen. (Futur I)", "question": "Setze den Satz ins Futur II:", "options": ["Die Katze ist auf den Baum gesprungen.", "Die Katze wird auf den Baum springen.", "Die Katze war auf den Baum gesprungen.", "Die Katze wird auf den Baum gesprungen sein."], "correct": 3, "explanation": "Bis dann wird der Sprung schon passiert sein.\n**Merke:** Futur II mit Bewegung: werden + Partizip II + sein."}
+  ]
+}

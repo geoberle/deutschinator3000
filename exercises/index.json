@@ -117,6 +117,60 @@
     "category": "Zeiten"
   },
   {
+    "id": "zeiten-basis-erkennen-1",
+    "name": "Zeiten-Detektiv: Basis 1",
+    "goal": "Präsens, Präteritum, Perfekt und Plusquamperfekt in aktiven Sätzen sicher erkennen.",
+    "description": "Erkenne die vier Grundzeiten im Satz",
+    "file": "zeiten-basis-erkennen-1.json",
+    "count": 12,
+    "category": "Zeiten"
+  },
+  {
+    "id": "zeiten-basis-umformen-1",
+    "name": "Zeitmaschine: Basis 1",
+    "goal": "Einfache Sätze als passende Form von Präsens, Präteritum, Perfekt oder Plusquamperfekt auswählen.",
+    "description": "Wähle die passende Satzform für die verlangte Zeit",
+    "file": "zeiten-basis-umformen-1.json",
+    "count": 8,
+    "category": "Zeiten"
+  },
+  {
+    "id": "zeiten-basis-bauplan-1",
+    "name": "Bauplan-Profi: Basis 1",
+    "goal": "Die Bildungsvorschriften von Präsens, Präteritum, Perfekt und Plusquamperfekt ergänzen.",
+    "description": "Ergänze die Baupläne der vier Grundzeiten",
+    "file": "zeiten-basis-bauplan-1.json",
+    "count": 8,
+    "category": "Zeiten"
+  },
+  {
+    "id": "zeiten-gesamt-erkennen-1",
+    "name": "Schnell-Check: Alle Zeiten 1",
+    "goal": "Alle sechs Zeitformen in aktiven Sätzen sicher unterscheiden.",
+    "description": "Erkenne Präsens bis Futur II im Satz",
+    "file": "zeiten-gesamt-erkennen-1.json",
+    "count": 12,
+    "category": "Zeiten"
+  },
+  {
+    "id": "zeiten-zukunft-umformen-1",
+    "name": "Zukunfts-Zeitmaschine 1",
+    "goal": "Sätze gezielt ins Futur I oder Futur II setzen und die beiden Zukunftsformen unterscheiden.",
+    "description": "Wähle die passende Form von Futur I oder Futur II",
+    "file": "zeiten-zukunft-umformen-1.json",
+    "count": 8,
+    "category": "Zeiten"
+  },
+  {
+    "id": "zeiten-gesamt-bauplan-1",
+    "name": "Bauplan-Meisterin: Alle Zeiten 1",
+    "goal": "Die Bildungsvorschriften aller sechs Zeitformen gezielt ergänzen.",
+    "description": "Ergänze die Baupläne aller sechs Zeitformen",
+    "file": "zeiten-gesamt-bauplan-1.json",
+    "count": 8,
+    "category": "Zeiten"
+  },
+  {
     "id": "adverbien-1",
     "name": "Adverbien erkennen 1",
     "goal": "Adverbien im Satz erkennen und richtig einordnen.",

@@ -1,0 +1,21 @@
+{
+  "id": "zeiten-basis-bauplan-1",
+  "name": "Bauplan-Profi: Basis 1",
+  "goal": "Die Bildungsvorschriften von Präsens, Präteritum, Perfekt und Plusquamperfekt aus Wortchips zusammensetzen.",
+  "type": "word-bank",
+  "rules": ["zeiten-grundlagen"],
+  "authoring": {
+    "rationale": "Die Wortchips machen die Bausteine sichtbar: Das Kind bildet jeden Bauplan aktiv, ohne Wörter selbst schreiben zu müssen.",
+    "constraints": "Nur die vier Grundzeiten. Jede Aufgabe enthält genau eine Bildungsvorschrift ohne Distraktoren."
+  },
+  "exercises": [
+    {"sentence": "Welche Bildungsvorschrift passt?", "steps": [{"question": "Baue den Bauplan für das Präsens:", "answer": ["Präsens:", "Verb", "in", "der", "Gegenwart"]}], "explanation": "Im Präsens passiert etwas jetzt.\n**Merke:** Präsens = Verb in der Gegenwart."},
+    {"sentence": "Welche Bildungsvorschrift passt?", "steps": [{"question": "Baue den Bauplan für das Präteritum:", "answer": ["Präteritum:", "Verb", "in", "der", "einfachen", "Vergangenheit"]}], "explanation": "Das Präteritum erzählt von früher mit einem Verb.\n**Merke:** Präteritum = einfache Vergangenheit."},
+    {"sentence": "Welche Bildungsvorschrift passt?", "steps": [{"question": "Baue den Bauplan für das Perfekt:", "answer": ["Perfekt:", "haben/sein", "+", "Partizip", "II"]}], "explanation": "«hat gespielt» besteht aus Hilfsverb und Partizip II.\n**Merke:** Perfekt: haben/sein + Partizip II."},
+    {"sentence": "Welche Bildungsvorschrift passt?", "steps": [{"question": "Baue den Bauplan für das Plusquamperfekt:", "answer": ["Plusquamperfekt:", "hatte/war", "+", "Partizip", "II"]}], "explanation": "«hatte gespielt» zeigt etwas, das schon vorher fertig war.\n**Merke:** Plusquamperfekt: hatte/war + Partizip II."},
+    {"sentence": "Woran erkennst du die Zeitform?", "steps": [{"question": "Baue den Unterschied beim Perfekt:", "answer": ["Perfekt:", "Hilfsverb", "im", "Präsens", "+", "Partizip", "II"]}], "explanation": "«hat» und «ist» stehen im Präsens.\n**Merke:** Perfekt hat ein Hilfsverb im Präsens."},
+    {"sentence": "Woran erkennst du die Zeitform?", "steps": [{"question": "Baue den Unterschied beim Plusquamperfekt:", "answer": ["Plusquamperfekt:", "Hilfsverb", "im", "Präteritum", "+", "Partizip", "II"]}], "explanation": "«hatte» und «war» stehen im Präteritum.\n**Merke:** Plusquamperfekt hat ein Hilfsverb im Präteritum."},
+    {"sentence": "Welche Bildungsvorschrift passt?", "steps": [{"question": "Baue den Bauplan für Perfekt mit «sein»:", "answer": ["Perfekt:", "sein", "+", "Partizip", "II"]}], "explanation": "«ist gelaufen» bildet das Perfekt mit «sein».\n**Merke:** Bewegungsverben haben im Perfekt oft «sein»."},
+    {"sentence": "Welche Bildungsvorschrift passt?", "steps": [{"question": "Baue den Bauplan für Plusquamperfekt mit «sein»:", "answer": ["Plusquamperfekt:", "war", "+", "Partizip", "II"]}], "explanation": "«war gelaufen» bildet das Plusquamperfekt mit «sein».\n**Merke:** Plusquamperfekt: hatte/war + Partizip II."}
+  ]
+}

@@ -114,8 +114,6 @@ for entry in manifest:
                     elif sc < 0 or sc >= len(sopts):
                         err(f"{sp}correct {sc} out of range (0-{len(sopts)-1})")
         elif ex_type == "word-bank":
-            if not ex.get("sentence"):
-                err(f"{prefix}Missing 'sentence'")
             steps = ex.get("steps")
             if not steps or not isinstance(steps, list):
                 err(f"{prefix}Missing or invalid 'steps' array")
@@ -129,8 +127,23 @@ for entry in manifest:
                     err(f"{sp}missing or invalid 'answer' array")
                     continue
                 scaffold = step.get("scaffold", 0)
+                if not isinstance(scaffold, int) or scaffold < 0 or scaffold > len(answer):
+                    err(f"{sp}invalid 'scaffold'")
+                    scaffold = 0
+                fixed = step.get("fixed", [])
+                if not isinstance(fixed, list):
+                    err(f"{sp}invalid 'fixed' array")
+                    fixed = []
+                locked = set(range(scaffold))
+                for fixed_idx in fixed:
+                    if not isinstance(fixed_idx, int) or fixed_idx < 0 or fixed_idx >= len(answer):
+                        err(f"{sp}fixed index {fixed_idx} out of range (0-{len(answer)-1})")
+                    elif fixed_idx in locked:
+                        err(f"{sp}fixed index {fixed_idx} is duplicated")
+                    else:
+                        locked.add(fixed_idx)
                 distractors = step.get("distractors", [])
-                pool = answer[scaffold:] + distractors
+                pool = [word for ai, word in enumerate(answer) if ai not in locked] + distractors
                 seen = {}
                 for w in pool:
                     seen[w] = seen.get(w, 0) + 1

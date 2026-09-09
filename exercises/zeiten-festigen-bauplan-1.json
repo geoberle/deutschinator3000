@@ -6,17 +6,78 @@
   "ordered": true,
   "rules": ["zeiten-grundlagen"],
   "authoring": {
-    "rationale": "Die ersten vier Aufgaben geben den Namen der Zeitform als Stütze vor. Danach wird die ganze Vorschrift selbst zusammengesetzt.",
-    "constraints": "Nur Präteritum, Perfekt, Plusquamperfekt, Futur I und Futur II. Aufgaben 1–4 mit einem vorgegebenen ersten Wort, Aufgaben 5–8 ohne Stütze."
+    "rationale": "Die erste Aufgabe gibt ein Wort vor. In den Bauplänen danach bleiben die Pluszeichen als Orientierung stehen; die letzten drei Regeln werden ohne vorgegebene Chips gebaut.",
+    "constraints": "Nur Präteritum, Perfekt, Plusquamperfekt, Futur I und Futur II. Irreführer greifen typische Verwechslungen auf, ohne eine zweite Regel zu prüfen."
   },
   "exercises": [
-    {"sentence": "Baue die Bildungsvorschrift.", "steps": [{"question": "Präteritum — setze die Regel fertig:", "answer": ["Präteritum:", "Verb", "in", "der", "einfachen", "Vergangenheit"], "scaffold": 1}], "explanation": "«fand» und «schrieb» sind einzelne Vergangenheitsverben.\n**Merke:** Präteritum = Verb in der einfachen Vergangenheit."},
-    {"sentence": "Baue die Bildungsvorschrift.", "steps": [{"question": "Perfekt — setze die Regel fertig:", "answer": ["Perfekt:", "haben/sein", "+", "Partizip", "II"], "scaffold": 1}], "explanation": "«hat gespielt» besteht aus Hilfsverb und Partizip II.\n**Merke:** Perfekt: haben/sein + Partizip II."},
-    {"sentence": "Baue die Bildungsvorschrift.", "steps": [{"question": "Plusquamperfekt — setze die Regel fertig:", "answer": ["Plusquamperfekt:", "hatte/war", "+", "Partizip", "II"], "scaffold": 1}], "explanation": "«hatte gespielt» zeigt etwas, das vorher schon fertig war.\n**Merke:** Plusquamperfekt: hatte/war + Partizip II."},
-    {"sentence": "Baue die Bildungsvorschrift.", "steps": [{"question": "Futur I — setze die Regel fertig:", "answer": ["Futur", "I:", "werden", "+", "Infinitiv"], "scaffold": 1}], "explanation": "«wird spielen» beschreibt die Zukunft.\n**Merke:** Futur I: werden + Infinitiv."},
-    {"sentence": "Jetzt ohne vorgegebenes Wort:", "steps": [{"question": "Baue den Bauplan für Futur II:", "answer": ["Futur II:", "werden", "+", "Partizip II", "+ haben/sein"]}], "explanation": "«wird gespielt haben» und «wird gefahren sein» sind Futur II.\n**Merke:** Futur II: werden + Partizip II + haben/sein."},
-    {"sentence": "Jetzt ohne vorgegebenes Wort:", "steps": [{"question": "Baue den Bauplan für Perfekt mit «sein»:", "answer": ["Perfekt:", "sein", "+", "Partizip II"]}], "explanation": "«ist gelaufen» bildet das Perfekt mit «sein».\n**Merke:** Bewegungsverben haben im Perfekt oft «sein»."},
-    {"sentence": "Jetzt ohne vorgegebenes Wort:", "steps": [{"question": "Baue den Bauplan für Plusquamperfekt mit «sein»:", "answer": ["Plusquamperfekt:", "war", "+", "Partizip II"]}], "explanation": "«war gelaufen» zeigt Vorvergangenheit mit «sein».\n**Merke:** Plusquamperfekt: hatte/war + Partizip II."},
-    {"sentence": "Jetzt ohne vorgegebenes Wort:", "steps": [{"question": "Baue das Erkennungszeichen für Futur II:", "answer": ["Futur II:", "endet", "mit", "haben/sein"]}], "explanation": "Im Futur II steht am Ende «haben» oder «sein».\n**Merke:** Futur II endet auf haben oder sein."}
+    {
+      "steps": [{
+        "question": "Baue die Regel für Präteritum:",
+        "answer": ["Verb", "in", "der", "einfachen", "Vergangenheit"],
+        "fixed": [0],
+        "distractors": ["Partizip II", "Infinitiv"]
+      }],
+      "explanation": "«fand» und «schrieb» sind einzelne Vergangenheitsverben.\n**Merke:** Präteritum = Verb in der einfachen Vergangenheit."
+    },
+    {
+      "steps": [{
+        "question": "Baue die Regel für Perfekt:",
+        "answer": ["haben/sein", "+", "Partizip II"],
+        "fixed": [1],
+        "distractors": ["Infinitiv", "werden"]
+      }],
+      "explanation": "«hat gespielt» besteht aus Hilfsverb und Partizip II.\n**Merke:** Perfekt: haben/sein + Partizip II."
+    },
+    {
+      "steps": [{
+        "question": "Baue die Regel für Plusquamperfekt:",
+        "answer": ["hatte/war", "+", "Partizip II"],
+        "fixed": [1],
+        "distractors": ["haben/sein", "Infinitiv"]
+      }],
+      "explanation": "«hatte gespielt» zeigt etwas, das vorher schon fertig war.\n**Merke:** Plusquamperfekt: hatte/war + Partizip II."
+    },
+    {
+      "steps": [{
+        "question": "Baue die Regel für Futur I:",
+        "answer": ["werden", "+", "Infinitiv"],
+        "fixed": [1],
+        "distractors": ["Partizip II", "haben/sein"]
+      }],
+      "explanation": "«wird spielen» beschreibt die Zukunft.\n**Merke:** Futur I: werden + Infinitiv."
+    },
+    {
+      "steps": [{
+        "question": "Baue die Regel für Futur II:",
+        "answer": ["werden", "+", "Partizip II", "+", "haben/sein"],
+        "fixed": [1, 3],
+        "distractors": ["Infinitiv", "hatte/war"]
+      }],
+      "explanation": "«wird gespielt haben» und «wird gefahren sein» sind Futur II.\n**Merke:** Futur II: werden + Partizip II + haben/sein."
+    },
+    {
+      "steps": [{
+        "question": "Woran erkennst du Perfekt?",
+        "answer": ["Hilfsverb", "im", "Präsens"],
+        "distractors": ["Präteritum", "Infinitiv"]
+      }],
+      "explanation": "«hat» und «ist» stehen im Präsens.\n**Merke:** Perfekt hat ein Hilfsverb im Präsens."
+    },
+    {
+      "steps": [{
+        "question": "Woran erkennst du Plusquamperfekt?",
+        "answer": ["Hilfsverb", "im", "Präteritum"],
+        "distractors": ["Präsens", "Infinitiv"]
+      }],
+      "explanation": "«hatte» und «war» stehen im Präteritum.\n**Merke:** Plusquamperfekt hat ein Hilfsverb im Präteritum."
+    },
+    {
+      "steps": [{
+        "question": "Woran erkennst du Futur II?",
+        "answer": ["endet", "mit", "haben/sein"],
+        "distractors": ["Infinitiv", "Partizip II"]
+      }],
+      "explanation": "Im Futur II steht am Ende «haben» oder «sein».\n**Merke:** Futur II endet auf haben oder sein."
+    }
   ]
 }

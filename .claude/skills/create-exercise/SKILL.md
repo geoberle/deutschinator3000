@@ -170,6 +170,8 @@ User builds a sentence by tapping words from a shuffled pool into an answer area
 - `answer`: the correct sentence as a word array in order. **Do NOT include trailing punctuation (period) on the last word** — it reveals which word goes last. A period is auto-appended by the UI.
 - `distractors`: extra words mixed into the pool. Keep to 1-2 for ADHD-friendliness.
 - `scaffold` (optional): number of leading words from `answer` pre-placed in the answer area. These appear as muted/locked pills. Reduces working memory load.
+- `fixed` (optional): array of answer indices that stay visible in their exact position. Use it to pre-place structural signs such as `+`; all remaining word chips are selected from left to right.
+- `sentence` is optional for word-bank sets. Omit it when the step question alone should be the entire task.
 - Keep sentences short (4-5 words in answer). Fewer words = less cognitive load.
 - Scoring is binary per exercise. Answer encoding: per-step correctness (`1`/`0`/`-1`).
 

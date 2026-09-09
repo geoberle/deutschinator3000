@@ -16,6 +16,7 @@
   var wordBankStepResults = [];
   var wordBankPlaced = [];
   var wordBankPool = [];
+  var wordBankFixed = [];
   var satzgliederAnswers = [];
   var wordBankCurrentStep = 0;
 
@@ -250,7 +251,7 @@
   }
 
   function renderWordBank(ex) {
-    var html = '<div class="sentence">' + esc(ex.sentence) + "</div>" +
+    var html = (ex.sentence ? '<div class="sentence">' + esc(ex.sentence) + "</div>" : "") +
       renderHintBtn(ex) +
       '<div id="word-bank-steps"></div>' +
       '<div id="feedback"></div>';
@@ -261,13 +262,31 @@
     }};
   }
 
+  function wordBankLockedIndices(step) {
+    var locked = [];
+    var scaffold = step.scaffold || 0;
+    for (var s = 0; s < scaffold; s++) locked.push(s);
+    var fixed = step.fixed || [];
+    for (var f = 0; f < fixed.length; f++) {
+      if (locked.indexOf(fixed[f]) === -1) locked.push(fixed[f]);
+    }
+    return locked;
+  }
+
   function appendWordBankStep(ex, stepIdx) {
     var step = ex.steps[stepIdx];
     var scaffold = step.scaffold || 0;
-    var pool = step.answer.slice(scaffold).concat(step.distractors || []);
+    var fixed = step.fixed || [];
+    var locked = wordBankLockedIndices(step);
+    var pool = [];
+    for (var a = 0; a < step.answer.length; a++) {
+      if (locked.indexOf(a) === -1) pool.push(step.answer[a]);
+    }
+    pool = pool.concat(step.distractors || []);
     shuffle(pool);
     wordBankPool = pool;
     wordBankPlaced = [];
+    wordBankFixed = fixed.slice();
     wordBankCurrentStep = stepIdx;
 
     var container = document.getElementById("word-bank-steps");
@@ -282,11 +301,27 @@
     var answerDiv = document.createElement("div");
     answerDiv.className = "word-bank-answer";
     answerDiv.id = "word-bank-answer";
-    for (var s = 0; s < scaffold; s++) {
-      var sp = document.createElement("span");
-      sp.className = "word-pill word-scaffold";
-      sp.textContent = step.answer[s];
-      answerDiv.appendChild(sp);
+    if (fixed.length > 0) {
+      for (var i = 0; i < step.answer.length; i++) {
+        if (locked.indexOf(i) > -1) {
+          var lockedPill = document.createElement("span");
+          lockedPill.className = "word-pill word-scaffold";
+          lockedPill.textContent = step.answer[i];
+          answerDiv.appendChild(lockedPill);
+        } else {
+          var slot = document.createElement("span");
+          slot.className = "word-bank-slot";
+          slot.setAttribute("data-answer-idx", i);
+          answerDiv.appendChild(slot);
+        }
+      }
+    } else {
+      for (var s = 0; s < scaffold; s++) {
+        var sp = document.createElement("span");
+        sp.className = "word-pill word-scaffold";
+        sp.textContent = step.answer[s];
+        answerDiv.appendChild(sp);
+      }
     }
     var hint = document.createElement("span");
     hint.className = "word-bank-hint";
@@ -334,7 +369,13 @@
     pill.textContent = wordBankPool[poolIdx];
     pill.setAttribute("data-pool-idx", poolIdx);
     pill.addEventListener("click", onWordBankRemove);
-    answerDiv.appendChild(pill);
+    if (wordBankFixed.length > 0) {
+      var slot = answerDiv.querySelector(".word-bank-slot");
+      pill.setAttribute("data-answer-idx", slot.getAttribute("data-answer-idx"));
+      slot.parentNode.replaceChild(pill, slot);
+    } else {
+      answerDiv.appendChild(pill);
+    }
 
     wordBankPlaced.push(poolIdx);
 
@@ -345,7 +386,15 @@
   function onWordBankRemove(e) {
     if (answered) return;
     var poolIdx = parseInt(e.currentTarget.getAttribute("data-pool-idx"), 10);
-    e.currentTarget.remove();
+    var answerIdx = e.currentTarget.getAttribute("data-answer-idx");
+    if (wordBankFixed.length > 0 && answerIdx !== null) {
+      var slot = document.createElement("span");
+      slot.className = "word-bank-slot";
+      slot.setAttribute("data-answer-idx", answerIdx);
+      e.currentTarget.parentNode.replaceChild(slot, e.currentTarget);
+    } else {
+      e.currentTarget.remove();
+    }
 
     var poolPills = document.querySelectorAll("#word-bank-pool .word-pill");
     for (var i = 0; i < poolPills.length; i++) {
@@ -372,8 +421,11 @@
     var ex = exercises[index];
     var stepIdx = wordBankCurrentStep;
     var step = ex.steps[stepIdx];
-    var scaffold = step.scaffold || 0;
-    var expected = step.answer.slice(scaffold);
+    var locked = wordBankLockedIndices(step);
+    var expected = [];
+    for (var e = 0; e < step.answer.length; e++) {
+      if (locked.indexOf(e) === -1) expected.push(step.answer[e]);
+    }
 
     var correct = wordBankPlaced.length === expected.length;
     if (correct) {
@@ -1052,8 +1104,7 @@
   }
 
   function renderReviewWordBank(ex, chosen) {
-    var correct = isWordBankCorrect(chosen, ex);
-    var html = renderSentence(ex.sentence, ex.reveal, true);
+    var html = ex.sentence ? renderSentence(ex.sentence, ex.reveal, true) : "";
 
     for (var s = 0; s < ex.steps.length; s++) {
       var step = ex.steps[s];

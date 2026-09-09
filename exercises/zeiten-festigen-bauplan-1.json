@@ -6,18 +6,18 @@
   "ordered": true,
   "rules": ["zeiten-grundlagen"],
   "authoring": {
-    "rationale": "Die erste Aufgabe gibt ein Wort vor. In den Bauplänen danach bleiben die Pluszeichen als Orientierung stehen; die letzten drei Regeln werden ohne vorgegebene Chips gebaut.",
+    "rationale": "Die erste Aufgabe ist ein kurzer Einstieg mit einem vorgegebenen Wort. In den Bauplänen danach bleiben die Pluszeichen als Orientierung stehen; die letzten drei Regeln werden ohne vorgegebene Chips gebaut.",
     "constraints": "Nur Präteritum, Perfekt, Plusquamperfekt, Futur I und Futur II. Irreführer greifen typische Verwechslungen auf, ohne eine zweite Regel zu prüfen."
   },
   "exercises": [
     {
       "steps": [{
-        "question": "Baue die Regel für Präteritum:",
-        "answer": ["Verb", "in", "der", "einfachen", "Vergangenheit"],
+        "question": "Präteritum bedeutet:",
+        "answer": ["einfache", "Vergangenheit"],
         "fixed": [0],
-        "distractors": ["Partizip II", "Infinitiv"]
+        "distractors": ["Gegenwart", "Zukunft"]
       }],
-      "explanation": "«fand» und «schrieb» sind einzelne Vergangenheitsverben.\n**Merke:** Präteritum = Verb in der einfachen Vergangenheit."
+      "explanation": "«fand» und «schrieb» erzählen von früher.\\n**Merke:** Präteritum = einfache Vergangenheit."
     },
     {
       "steps": [{

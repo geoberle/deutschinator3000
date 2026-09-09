@@ -20,6 +20,6 @@
     {"sentence": "Nächste Woche wird Oma ihren Geburtstag feiern.", "options": ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 3, "explanation": "«wird ... feiern» ist Futur I.\n**Merke:** Futur I: werden + Infinitiv."},
     {"sentence": "Bis zum Abend wird der Roboter das Haus gebaut haben.", "options": ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 4, "explanation": "Am Abend wird das Haus schon fertig sein.\n**Merke:** Futur II: werden + Partizip II + haben/sein."},
     {"sentence": "Wir werden im Sommer ans Meer fahren.", "options": ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 3, "explanation": "«werden ... fahren» beschreibt die Zukunft.\n**Merke:** Futur I endet mit dem Infinitiv."},
-    {"sentence": "Sie wird bis Montag nach Hause gefahren sein.", "options": ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 4, "explanation": "Bis Montag wird die Fahrt schon abgeschlossen sein.\n**Merke:** Futur II mit Bewegung endet auf «sein»."}
+    {"sentence": "Bis 18 Uhr wird der Zug angekommen sein.", "options": ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 4, "explanation": "Um 18 Uhr wird die Ankunft schon passiert sein.\n**Merke:** Futur II mit Bewegung endet auf «sein»."}
   ]
 }

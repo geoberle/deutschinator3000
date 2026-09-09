@@ -55,6 +55,8 @@ for entry in manifest:
         err(f"Count mismatch: manifest={entry['count']}, actual={actual}")
 
     set_type = data.get("type", "multiple-choice")
+    if "ordered" in data and not isinstance(data["ordered"], bool):
+        err("Invalid 'ordered' field (expected boolean)")
 
     # Question exists (not required for classify/word-bank — steps carry their own,
     # nor for mixed-type sets where each exercise declares its own type)

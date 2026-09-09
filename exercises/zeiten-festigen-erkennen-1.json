@@ -1,0 +1,25 @@
+{
+  "id": "zeiten-festigen-erkennen-1",
+  "name": "Zeiten-Detektiv: Vergangenheit & Zukunft 1",
+  "goal": "Präteritum, Perfekt, Plusquamperfekt, Futur I und Futur II sicher unterscheiden.",
+  "rules": ["zeiten-grundlagen"],
+  "authoring": {
+    "rationale": "Die Gegenwart bleibt weg, damit die fünf ähnlich klingenden Vergangenheits- und Zukunftsformen gezielt verglichen werden.",
+    "constraints": "Nur aktive Sätze. Präteritum, Perfekt, Plusquamperfekt, Futur I und Futur II gemischt."
+  },
+  "question": "In welcher Zeitform steht der Satz?",
+  "exercises": [
+    {"sentence": "Der Zauberer fand den verlorenen Ring.", "options": ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 0, "explanation": "«fand» ist ein einzelnes Verb in der Vergangenheit.\n**Merke:** Präteritum ist die einfache Vergangenheit."},
+    {"sentence": "Mira hat den Brief geschrieben.", "options": ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 1, "explanation": "«hat ... geschrieben» bildet das Perfekt.\n**Merke:** Perfekt: haben/sein + Partizip II."},
+    {"sentence": "Vor dem Fest hatte Papa den Kuchen gebacken.", "options": ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 2, "explanation": "Der Kuchen war vor dem Fest schon fertig.\n**Merke:** Plusquamperfekt zeigt Vorvergangenheit."},
+    {"sentence": "Morgen wird die Klasse ins Museum fahren.", "options": ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 3, "explanation": "«wird ... fahren» beschreibt etwas Zukünftiges.\n**Merke:** Futur I: werden + Infinitiv."},
+    {"sentence": "Bis morgen wird die Klasse den Bericht geschrieben haben.", "options": ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 4, "explanation": "Morgen wird der Bericht schon fertig sein.\n**Merke:** Futur II: werden + Partizip II + haben/sein."},
+    {"sentence": "Die Ritterin ritt durch den Wald.", "options": ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 0, "explanation": "«ritt» ist ein einzelnes Vergangenheitsverb.\n**Merke:** Präteritum ist die einfache Vergangenheit."},
+    {"sentence": "Wir sind mit dem Zug angekommen.", "options": ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 1, "explanation": "«sind ... angekommen» bildet das Perfekt.\n**Merke:** Bewegungsverben haben im Perfekt oft «sein»."},
+    {"sentence": "Bevor der Film begann, war Leo eingeschlafen.", "options": ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 2, "explanation": "Leo war schon eingeschlafen, bevor der Film begann.\n**Merke:** Plusquamperfekt: hatte/war + Partizip II."},
+    {"sentence": "Nächste Woche wird Oma ihren Geburtstag feiern.", "options": ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 3, "explanation": "«wird ... feiern» ist Futur I.\n**Merke:** Futur I: werden + Infinitiv."},
+    {"sentence": "Bis zum Abend wird der Roboter das Haus gebaut haben.", "options": ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 4, "explanation": "Am Abend wird das Haus schon fertig sein.\n**Merke:** Futur II: werden + Partizip II + haben/sein."},
+    {"sentence": "Wir werden im Sommer ans Meer fahren.", "options": ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 3, "explanation": "«werden ... fahren» beschreibt die Zukunft.\n**Merke:** Futur I endet mit dem Infinitiv."},
+    {"sentence": "Sie wird bis Montag nach Hause gefahren sein.", "options": ["Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II"], "correct": 4, "explanation": "Bis Montag wird die Fahrt schon abgeschlossen sein.\n**Merke:** Futur II mit Bewegung endet auf «sein»."}
+  ]
+}

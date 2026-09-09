@@ -1697,7 +1697,7 @@
     for (var i = 0; i < data.exercises.length; i++) {
       exerciseOrder.push(i);
     }
-    shuffle(exerciseOrder);
+    if (!data.ordered) shuffle(exerciseOrder);
     exercises = [];
     for (var j = 0; j < exerciseOrder.length; j++) {
       exercises.push(data.exercises[exerciseOrder[j]]);

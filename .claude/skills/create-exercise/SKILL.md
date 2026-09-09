@@ -33,6 +33,10 @@ Type is resolved per exercise: `exercise.type || set.type || "multiple-choice"`.
 - Individual exercises can override with their own `type` field
 - **Mixed types in one set are supported** — e.g., some MC, some word-tap
 
+### Exercise order
+
+Exercises are shuffled by default. Add `"ordered": true` at set level only when the authored sequence is a teaching scaffold; for example, when each task intentionally removes more support than the previous one.
+
 ### Question resolution
 
 Question is resolved per exercise: `exercise.question || set.question`. This means:

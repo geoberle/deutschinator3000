@@ -171,6 +171,33 @@
     "category": "Zeiten"
   },
   {
+    "id": "zeiten-festigen-bauplan-1",
+    "name": "Bauplan-Baumeisterin 1",
+    "goal": "Die Baupläne der Vergangenheits- und Zukunftsformen aus Wortchips sicher zusammensetzen.",
+    "description": "Baue die Zeitformen-Regeln aus Wortchips",
+    "file": "zeiten-festigen-bauplan-1.json",
+    "count": 8,
+    "category": "Zeiten"
+  },
+  {
+    "id": "zeiten-festigen-erkennen-1",
+    "name": "Zeiten-Detektiv: Vergangenheit & Zukunft 1",
+    "goal": "Präteritum, Perfekt, Plusquamperfekt, Futur I und Futur II sicher unterscheiden.",
+    "description": "Erkenne die schwierigen Vergangenheits- und Zukunftsformen",
+    "file": "zeiten-festigen-erkennen-1.json",
+    "count": 12,
+    "category": "Zeiten"
+  },
+  {
+    "id": "zeiten-festigen-umformen-1",
+    "name": "Zeitmaschine: Vergangenheit & Zukunft 1",
+    "goal": "Sätze gezielt in eine vorgegebene Vergangenheits- oder Zukunftsform setzen.",
+    "description": "Wähle die passende Zielzeit im vollständigen Satz",
+    "file": "zeiten-festigen-umformen-1.json",
+    "count": 8,
+    "category": "Zeiten"
+  },
+  {
     "id": "adverbien-1",
     "name": "Adverbien erkennen 1",
     "goal": "Adverbien im Satz erkennen und richtig einordnen.",

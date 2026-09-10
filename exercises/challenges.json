@@ -1,19 +1,15 @@
 [
   {
-    "id": "zeiten-festigen",
-    "name": "Zeiten festigen: Vergangenheit & Zukunft",
+    "id": "zeiten-mix",
+    "name": "Zeiten-Mix: Alle Zeiten",
     "stages": [
       {
-        "name": "Stufe 1: Bauplan-Baumeisterin",
-        "sets": ["zeiten-festigen-bauplan-1"]
+        "name": "Stufe 1: Zeiten-Detektiv",
+        "sets": ["zeiten-mix-erkennen-1"]
       },
       {
-        "name": "Stufe 2: Zeiten-Detektiv",
-        "sets": ["zeiten-festigen-erkennen-1"]
-      },
-      {
-        "name": "Stufe 3: Zeitmaschine",
-        "sets": ["zeiten-festigen-umformen-1"]
+        "name": "Stufe 2: Zeitmaschine",
+        "sets": ["zeiten-mix-umformen-1"]
       }
     ]
   }

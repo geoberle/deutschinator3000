@@ -198,6 +198,24 @@
     "category": "Zeiten"
   },
   {
+    "id": "zeiten-mix-erkennen-1",
+    "name": "Zeiten-Mix: Alle Zeiten erkennen 1",
+    "goal": "Präsens, Präteritum, Perfekt, Plusquamperfekt, Futur I und Futur II in aktiven Sätzen sicher unterscheiden.",
+    "description": "Erkenne alle sechs Zeitformen im Satz",
+    "file": "zeiten-mix-erkennen-1.json",
+    "count": 12,
+    "category": "Zeiten"
+  },
+  {
+    "id": "zeiten-mix-umformen-1",
+    "name": "Zeitmaschine: Alle Zeiten 1",
+    "goal": "Sätze gezielt in Präsens, Präteritum, Perfekt, Plusquamperfekt, Futur I und Futur II setzen.",
+    "description": "Wähle die passende Zielzeit im vollständigen Satz",
+    "file": "zeiten-mix-umformen-1.json",
+    "count": 12,
+    "category": "Zeiten"
+  },
+  {
     "id": "adverbien-1",
     "name": "Adverbien erkennen 1",
     "goal": "Adverbien im Satz erkennen und richtig einordnen.",

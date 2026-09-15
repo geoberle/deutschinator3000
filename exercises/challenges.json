@@ -1,15 +1,15 @@
 [
   {
-    "id": "zeiten-mix",
-    "name": "Zeiten-Mix: Alle Zeiten",
+    "id": "aktiv-passiv-tageschallenge",
+    "name": "Tageschallenge: Aktiv & Passiv",
     "stages": [
       {
-        "name": "Stufe 1: Zeiten-Detektiv",
-        "sets": ["zeiten-mix-erkennen-1"]
+        "name": "Stufe 1: Passiv-Signale finden",
+        "sets": ["passiv-hilfsverb-1"]
       },
       {
-        "name": "Stufe 2: Zeitmaschine",
-        "sets": ["zeiten-mix-umformen-1"]
+        "name": "Stufe 2: Aktiv in Passiv verwandeln",
+        "sets": ["passiv-umformen-1"]
       }
     ]
   }

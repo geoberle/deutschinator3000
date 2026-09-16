@@ -1,15 +1,19 @@
 [
   {
-    "id": "aktiv-passiv-tageschallenge",
-    "name": "Tageschallenge: Aktiv & Passiv",
+    "id": "tageschallenge-2026-09-16",
+    "name": "Tageschallenge: 16. September",
     "stages": [
       {
-        "name": "Stufe 1: Passiv-Signale finden",
-        "sets": ["passiv-hilfsverb-1"]
+        "name": "Stufe 1: VP oder ZP?",
+        "sets": ["passiv-vp-zp-1"]
       },
       {
-        "name": "Stufe 2: Aktiv in Passiv verwandeln",
-        "sets": ["passiv-umformen-1"]
+        "name": "Stufe 2: Passiv + Zeitformen",
+        "sets": ["passiv-regeln-4"]
+      },
+      {
+        "name": "Stufe 3: Adverbien-Frageprobe",
+        "sets": ["adverbien-frageprobe-1"]
       }
     ]
   }

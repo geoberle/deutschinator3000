@@ -1,19 +1,23 @@
 [
   {
-    "id": "tageschallenge-2026-09-16",
-    "name": "Tageschallenge: 16. September",
+    "id": "tageschallenge-2026-09-20",
+    "name": "Tageschallenge: 20. September",
     "stages": [
       {
-        "name": "Stufe 1: VP oder ZP?",
-        "sets": ["passiv-vp-zp-1"]
+        "name": "Stufe 1: Adverbien-Steigerung",
+        "sets": ["adverbien-steigerung-1"]
       },
       {
-        "name": "Stufe 2: Passiv + Zeitformen",
-        "sets": ["passiv-regeln-4"]
+        "name": "Stufe 2: Adverb-Grammatik",
+        "sets": ["adverbien-grammatik-1"]
       },
       {
-        "name": "Stufe 3: Adverbien-Frageprobe",
-        "sets": ["adverbien-frageprobe-1"]
+        "name": "Stufe 3: Nomen + Verb — Regeln",
+        "sets": ["getrennt-zusammen-nomen-verb-regeln-1"]
+      },
+      {
+        "name": "Stufe 4: Nomen + Verb — Beispiele",
+        "sets": ["getrennt-zusammen-nomen-verb-1"]
       }
     ]
   }

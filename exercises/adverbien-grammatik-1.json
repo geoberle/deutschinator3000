@@ -1,0 +1,107 @@
+{
+  "id": "adverbien-grammatik-1",
+  "name": "Adverb-Grammatik 1",
+  "goal": "Grammatisches Wissen über Adverbien abrufen: Wortart, Eigenschaften, Funktionen.",
+  "authoring": {
+    "rationale": "Deklaratives Grammatikwissen: Was sind Adverbien, wie ordnet man sie ein, welche Eigenschaften haben sie. Prüft das Regelwissen, nicht die Anwendung.",
+    "constraints": "Nur multiple-choice. Alle Fragen beziehen sich auf adverb-grundlagen. Alle Distraktoren sind grammatisch plausible Begriffe."
+  },
+  "rules": ["adverb-grundlagen"],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "Zu welcher Wortgruppe gehören Adverbien?",
+      "options": ["Nomen", "Partikeln", "Verben", "Pronomen"],
+      "correct": 1,
+      "explanation": "Adverbien gehören zu den Partikeln — zusammen mit Präpositionen, Konjunktionen und Interjektionen."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Was bedeutet es, dass Adverbien «unveränderlich» sind?",
+      "options": [
+        "Sie können weder dekliniert noch konjugiert werden.",
+        "Sie haben immer die gleiche Bedeutung.",
+        "Sie stehen immer an derselben Stelle im Satz.",
+        "Sie können nicht verneint werden."
+      ],
+      "correct": 0,
+      "explanation": "«Unveränderlich» bedeutet: Adverbien ändern ihre Form nicht — keine Deklination, keine Konjugation."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welche Wortarten gehören — wie Adverbien — zu den Partikeln?",
+      "options": [
+        "Nomen, Verben, Adjektive",
+        "Präpositionen, Konjunktionen, Interjektionen",
+        "Pronomen, Artikel, Numerale",
+        "Subjekt, Prädikat, Objekt"
+      ],
+      "correct": 1,
+      "explanation": "Zu den Partikeln gehören: Adverbien, Präpositionen, Konjunktionen (Bindewörter) und Interjektionen (Ausrufewörter)."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Was kann ein Adverb NICHT direkt beschreiben?",
+      "options": ["ein Verb", "ein Nomen", "ein Adjektiv", "ein anderes Adverb"],
+      "correct": 1,
+      "explanation": "Ein Adverb kann ein Verb, ein Adjektiv oder ein anderes Adverb näher beschreiben — aber kein Nomen direkt."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie nennt man ein Adverb, das den Ort eines Geschehens beschreibt?",
+      "options": ["Modaladverb", "Kausaladverb", "Temporaladverb", "Lokaladverb"],
+      "correct": 3,
+      "explanation": "Lokaladverb (LA) → Fragen: Wo? Wohin? Woher?\nBeispiele: hier, dort, draußen, oben."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Mit welcher Frage findest du ein Kausaladverb?",
+      "options": ["Wo?", "Wie?", "Wann?", "Warum?"],
+      "correct": 3,
+      "explanation": "Kausaladverb (KA) → Warum? Weshalb? Wieso? Aus welchem Grund?\nBeispiele: deshalb, darum, trotzdem."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Was passiert, wenn ein Adjektiv «adverbiell gebraucht» wird?",
+      "options": [
+        "Es beschreibt ein Verb näher und steht ohne Endung.",
+        "Es wird zum Nomen.",
+        "Es wird dekliniert wie ein Artikel.",
+        "Es steht immer vor dem Subjekt."
+      ],
+      "correct": 0,
+      "explanation": "Beispiel: Lotte singt **schön**. «schön» ist ein Adjektiv, das hier adverbiell (= ohne Endung) ein Verb beschreibt."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welche Funktion hat «darüber» in: «Der Hund freut sich darüber.»?",
+      "options": [
+        "Es beschreibt das Verb näher.",
+        "Es ersetzt ein Präpositionalobjekt.",
+        "Es ist eine Umstandsergänzung.",
+        "Es ist ein Temporaladverb."
+      ],
+      "correct": 1,
+      "explanation": "«darüber» ersetzt «über die Wurst» — es übernimmt die Funktion des Präpositionalobjekts."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Ein Adverb kann als Umstandsergänzung eine ganze Wortgruppe ersetzen. Was ersetzt es dabei?",
+      "options": [
+        "Ein Subjekt",
+        "Eine Präpositionalgruppe",
+        "Ein Prädikat",
+        "Einen Nebensatz"
+      ],
+      "correct": 1,
+      "explanation": "Beispiel: «im Garten» (Präpositionalgruppe) → «dort» (Adverb).\nDas Adverb ersetzt die gesamte Umstandsergänzung."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "«gern, leider, möglicherweise, vermutlich» — welche Art von Adverb sind das?",
+      "options": ["Lokaladverb", "Temporaladverb", "Modaladverb", "Kausaladverb"],
+      "correct": 2,
+      "explanation": "Alle vier beantworten die Frage «Wie?» / «Auf welche Art und Weise?» → Modaladverb (MA)."
+    }
+  ]
+}

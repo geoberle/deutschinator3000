@@ -261,6 +261,24 @@
     "category": "Adverb"
   },
   {
+    "id": "adverbien-steigerung-1",
+    "name": "Adverb-Steigerung 1",
+    "goal": "Steigerungsformen der Ausnahme-Adverbien kennen und anwenden.",
+    "description": "Bestimme die richtige Steigerungsform von gern, oft und sehr",
+    "file": "adverbien-steigerung-1.json",
+    "count": 10,
+    "category": "Adverb"
+  },
+  {
+    "id": "adverbien-grammatik-1",
+    "name": "Adverb-Grammatik 1",
+    "goal": "Grammatisches Wissen über Adverbien abrufen: Wortart, Eigenschaften, Funktionen.",
+    "description": "Beantworte Fragen zum Grammatikwissen über Adverbien",
+    "file": "adverbien-grammatik-1.json",
+    "count": 10,
+    "category": "Adverb"
+  },
+  {
     "id": "passiv-hilfsverb-1",
     "name": "Baustein-Suche: Hilfsverb finden 1",
     "goal": "Das Hilfsverb im Passivsatz sicher erkennen — Schlüssel zu VP vs. ZP.",
@@ -322,5 +340,23 @@
     "file": "satzglieder-1.json",
     "count": 6,
     "category": "Satzglieder"
+  },
+  {
+    "id": "getrennt-zusammen-nomen-verb-regeln-1",
+    "name": "Nomen + Verb — Regeln",
+    "goal": "Die Regel «Nomen + Verb = getrennt» und die Ausnahme «Nominalisierung = zusammen» erklären können.",
+    "description": "Beantworte Fragen zur Regel Nomen + Verb",
+    "file": "getrennt-zusammen-nomen-verb-regeln-1.json",
+    "count": 10,
+    "category": "Rechtschreibung"
+  },
+  {
+    "id": "getrennt-zusammen-nomen-verb-1",
+    "name": "Nomen + Verb — Beispiele",
+    "goal": "Die Regel «Nomen + Verb» richtig anwenden: getrennt oder zusammen?",
+    "description": "Wie schreibt man richtig — getrennt oder zusammen?",
+    "file": "getrennt-zusammen-nomen-verb-1.json",
+    "count": 10,
+    "category": "Rechtschreibung"
   }
 ]

@@ -1,0 +1,127 @@
+{
+  "id": "getrennt-zusammen-nomen-verb-regeln-1",
+  "name": "Nomen + Verb — Regeln",
+  "goal": "Die Regel «Nomen + Verb = getrennt» und die Ausnahme «Nominalisierung = zusammen» erklären können.",
+  "authoring": {
+    "rationale": "Deklaratives Regelwissen zur ersten Regel der Getrennt- und Zusammenschreibung. Prüft, ob das Kind die Regel und die Ausnahme (Nominalisierung) verstanden hat.",
+    "constraints": "Nur Regel 1 (Nomen + Verb). Reine Grammatikfragen. Alle Distraktoren sind plausible grammatische Aussagen."
+  },
+  "rules": ["getrennt-und-zusammenschreibung"],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man Nomen + Verb?",
+      "options": [
+        "Immer zusammen",
+        "Immer getrennt — ohne Ausnahme",
+        "Getrennt — außer bei Nominalisierung",
+        "Man kann frei wählen"
+      ],
+      "correct": 2,
+      "explanation": "Nomen + Verb → getrennt: «Ski fahren», «Fenster putzen».\nAusnahme bei Nominalisierung → zusammen: «das Skifahren», «beim Fensterputzen»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Was ist eine Nominalisierung?",
+      "options": [
+        "Wenn aus einer Verb-Verbindung ein Nomen (Hauptwort) entsteht",
+        "Wenn ein Nomen zu einem Verb wird",
+        "Wenn ein Wort einfach großgeschrieben wird",
+        "Wenn zwei Nomen zusammengesetzt werden"
+      ],
+      "correct": 0,
+      "explanation": "Nominalisierung: «Ski fahren» → «das Skifahren».\nDie Verbindung wird zum Nomen — erkennbar am Artikel oder an der Präposition davor."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Woran erkennt man eine Nominalisierung bei Nomen + Verb?",
+      "options": [
+        "Das Verb steht am Satzende.",
+        "Das Nomen wird kleingeschrieben.",
+        "Vor der Verbindung steht ein Artikel oder eine Präposition (das, beim, zum).",
+        "Das Verb wird konjugiert."
+      ],
+      "correct": 2,
+      "explanation": "Signalwörter für Nominalisierung: «das» Skifahren, «beim» Schlangestehen, «zum» Radfahren."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welcher Satz enthält eine Nominalisierung?",
+      "options": [
+        "Ich gehe heute Ski fahren.",
+        "Das Skifahren macht mir Spaß.",
+        "Sie kann gut Ski fahren.",
+        "Wir wollen morgen Ski fahren."
+      ],
+      "correct": 1,
+      "explanation": "«Das Skifahren» → Artikel «das» davor → Nominalisierung → zusammengeschrieben."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "«Beim Schlangestehen tun mir die Füße weh.» — Warum zusammen?",
+      "options": [
+        "Weil «Schlange» und «stehen» immer zusammengehören.",
+        "Weil der Satz im Präsens steht.",
+        "Weil «Schlange» ein zusammengesetztes Wort ist.",
+        "Weil «Beim» (= bei dem) eine Nominalisierung anzeigt."
+      ],
+      "correct": 3,
+      "explanation": "«Beim» (= bei dem) → Präposition + Artikel → Signal für Nominalisierung → zusammen."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Was ist der Unterschied zwischen «Ski fahren» und «das Skifahren»?",
+      "options": [
+        "Es gibt keinen Unterschied — beides ist gleich.",
+        "«Ski fahren» beschreibt die Tätigkeit, «das Skifahren» ist die Nominalisierung.",
+        "«Ski fahren» ist falsch, man schreibt immer «Skifahren».",
+        "«Ski fahren» benutzt man nur im Plural."
+      ],
+      "correct": 1,
+      "explanation": "«Ski fahren» = Tätigkeit (Nomen + Verb → getrennt).\n«das Skifahren» = Nominalisierung (→ zusammen)."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welches Wort zeigt KEINE Nominalisierung an?",
+      "options": ["das", "beim", "zum", "weil"],
+      "correct": 3,
+      "explanation": "«das», «beim» (= bei dem), «zum» (= zu dem) zeigen Nominalisierung an.\n«weil» ist eine Konjunktion und hat nichts mit Nominalisierung zu tun."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "In welchem Satz ist die Schreibweise FALSCH?",
+      "options": [
+        "Das Skifahren macht Spaß.",
+        "Wir wollen heute Radio hören.",
+        "Beim Schlangestehen war es kalt.",
+        "Morgen will ich Skifahren."
+      ],
+      "correct": 3,
+      "explanation": "«will ich» → kein Artikel, keine Nominalisierung → Nomen + Verb getrennt: «Ski fahren».\nRichtig: «Morgen will ich Ski fahren.»"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Warum schreibt man «Fenster putzen» getrennt?",
+      "options": [
+        "Weil «Fenster» ein langes Wort ist.",
+        "Weil «putzen» im Infinitiv steht.",
+        "Weil «Fenster» ein Nomen und «putzen» ein Verb ist — Nomen + Verb = getrennt.",
+        "Weil zwischen den Wörtern eine Pause gesprochen wird."
+      ],
+      "correct": 2,
+      "explanation": "Die Regel: Nomen + Verb werden getrennt geschrieben.\n«Fenster» (Nomen) + «putzen» (Verb) → getrennt."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Stimmt diese Aussage? «Nomen + Verb werden IMMER getrennt geschrieben.»",
+      "options": [
+        "Nein — bei einer Nominalisierung werden sie zusammengeschrieben.",
+        "Ja, das stimmt — immer getrennt, keine Ausnahme.",
+        "Nein — Nomen + Verb werden immer zusammengeschrieben.",
+        "Ja — auch bei Nominalisierung bleibt es getrennt."
+      ],
+      "correct": 0,
+      "explanation": "Grundregel: Nomen + Verb → getrennt.\nAber: Nominalisierung → zusammen (das Skifahren, beim Schlangestehen, zum Radfahren)."
+    }
+  ]
+}

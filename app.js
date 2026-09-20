@@ -108,7 +108,7 @@
   }
 
   function renderMC(ex) {
-    var html = '<div class="sentence">' + esc(ex.sentence) + "</div>" +
+    var html = (ex.sentence ? '<div class="sentence">' + esc(ex.sentence) + "</div>" : "") +
       renderHintBtn(ex) +
       '<div class="options" id="options"></div>' +
       '<div id="feedback"></div>';
@@ -1022,7 +1022,7 @@
 
   function renderReviewMC(ex, chosen) {
     var correct = chosen === ex.correct;
-    var html = renderSentence(ex.sentence, ex.reveal, true) +
+    var html = (ex.sentence ? renderSentence(ex.sentence, ex.reveal, true) : "") +
       '<div class="options" id="options"></div>';
     return { html: html, correct: correct, bind: function () {
       var optionsEl = document.getElementById("options");

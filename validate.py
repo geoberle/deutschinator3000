@@ -64,6 +64,11 @@ for entry in manifest:
     if set_type not in ("classify", "word-bank") and not has_per_exercise_types and not data.get("question"):
         err("Missing 'question' field")
 
+    if set_type == "satzglieder":
+        categories = data.get("categories")
+        if not categories or not isinstance(categories, list):
+            err("Missing or invalid 'categories' array (required for type=satzglieder)")
+
     for i, ex in enumerate(data.get("exercises", [])):
         prefix = f"  Exercise {i+1}: "
         ex_type = ex.get("type", set_type)
@@ -150,9 +155,38 @@ for entry in manifest:
                 dupes = {k: v for k, v in seen.items() if v > 1}
                 if dupes:
                     err(f"{sp}duplicate words in pool: {dupes}")
-        else:
-            if not ex.get("sentence"):
+        elif ex_type == "satzglieder":
+            categories = data.get("categories") or []
+            sentence = ex.get("sentence")
+            if not sentence:
                 err(f"{prefix}Missing 'sentence'")
+                continue
+            chunks = ex.get("chunks")
+            if not chunks or not isinstance(chunks, list):
+                err(f"{prefix}Missing or invalid 'chunks' array")
+                continue
+            words = sentence.split(" ")
+            covered = {}
+            for ci, chunk in enumerate(chunks):
+                cp = f"{prefix}chunk {ci+1}: "
+                indices = chunk.get("indices")
+                if not indices or not isinstance(indices, list):
+                    err(f"{cp}missing or invalid 'indices' array")
+                    continue
+                for idx in indices:
+                    if not isinstance(idx, int) or idx < 0 or idx >= len(words):
+                        err(f"{cp}index {idx} out of range (0-{len(words)-1})")
+                    elif idx in covered:
+                        err(f"{cp}index {idx} already assigned to chunk {covered[idx]+1}")
+                    else:
+                        covered[idx] = ci
+                correct_cat = chunk.get("correct")
+                if not correct_cat or correct_cat not in categories:
+                    err(f"{cp}'correct' ({correct_cat!r}) is not one of the set's categories")
+            missing = [i for i in range(len(words)) if i not in covered]
+            if missing:
+                err(f"{prefix}word indices not covered by any chunk: {missing}")
+        else:
             options = ex.get("options")
             if not options or not isinstance(options, list):
                 err(f"{prefix}Missing or invalid 'options' array")

@@ -1,0 +1,87 @@
+{
+  "id": "adverbien-steigerung-1",
+  "name": "Adverb-Steigerung 1",
+  "goal": "Steigerungsformen der Ausnahme-Adverbien kennen und anwenden.",
+  "authoring": {
+    "rationale": "Neues Thema: Adverbien sind grundsätzlich nicht steigerbar, aber es gibt die drei Ausnahmen gern/oft/sehr. Dieses Set trainiert die Zuordnung und Anwendung der unregelmäßigen Steigerungsformen.",
+    "constraints": "Nur die drei Ausnahmen (gern, oft, sehr). Mix aus Wissensfragen und Lückentext-Übungen. Alle Distraktoren sind plausible Formen."
+  },
+  "rules": ["adverb-grundlagen"],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "Welches Adverb kann gesteigert werden?",
+      "options": ["gern", "leider", "draußen", "deshalb"],
+      "correct": 0,
+      "explanation": "«gern» → «lieber» → «am liebsten».\n**Merke:** Die meisten Adverbien haben keine Steigerung. «gern», «oft» und «sehr» sind Ausnahmen."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie lautet die richtige Steigerungsreihe von «gern»?",
+      "options": ["gern – lieber – am liebsten", "gern – gerner – am gernsten", "gern – mehr gern – am meisten gern"],
+      "correct": 0,
+      "explanation": "«gern» hat eine unregelmäßige Steigerung mit Stammwechsel: gern → lieber → am liebsten."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Was ist der Komparativ (die 2. Stufe) von «oft»?",
+      "options": ["ofter", "mehr oft", "öfter", "öfterer"],
+      "correct": 2,
+      "explanation": "«oft» → «öfter» (mit Umlaut).\n**Merke:** oft → öfter → am häufigsten."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Was ist der Superlativ (die 3. Stufe) von «oft»?",
+      "options": ["am öftesten", "am häufigsten", "am oftsten", "am mehrsten"],
+      "correct": 1,
+      "explanation": "Der Superlativ von «oft» wechselt den Wortstamm: oft → öfter → am häufigsten.\n**Merke:** «am öftesten» gibt es nicht!"
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie lautet die richtige Steigerungsreihe von «sehr»?",
+      "options": ["sehr – sehrer – am sehrsten", "sehr – viel – am vielfachsten", "sehr – mehr – am meisten", "sehr – mehrerer – am sehrsten"],
+      "correct": 2,
+      "explanation": "«sehr» → «mehr» → «am meisten».\n**Merke:** Auch «sehr» wechselt bei der Steigerung den Wortstamm."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Ich esse ___ Pizza als Nudeln.",
+      "options": ["gern", "gerner", "lieber", "am liebsten"],
+      "correct": 2,
+      "explanation": "«als» zeigt einen Vergleich → Komparativ nötig. Der Komparativ von «gern» ist «lieber»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Am ___ mag ich Schokoladeneis.",
+      "options": ["liebsten", "gernsten", "meisten gern", "lieblichsten"],
+      "correct": 0,
+      "explanation": "«Am ___» → Superlativ. Der Superlativ von «gern» ist «am liebsten»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welche Aussage über die Steigerung von Adverbien stimmt?",
+      "options": [
+        "Adverbien können grundsätzlich nicht gesteigert werden, es gibt aber Ausnahmen.",
+        "Adverbien können wie Adjektive immer gesteigert werden.",
+        "Nur Modaladverbien können gesteigert werden.",
+        "Adverbien können nur mit «mehr» und «am meisten» gesteigert werden."
+      ],
+      "correct": 0,
+      "explanation": "Adverbien sind grundsätzlich nicht steigerbar. Ausnahmen: gern, oft, sehr — diese haben besondere Steigerungsformen."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Er besucht uns jetzt ___ als früher.",
+      "options": ["oft", "am häufigsten", "mehr oft", "öfter"],
+      "correct": 3,
+      "explanation": "«als» → Vergleich → Komparativ. Der Komparativ von «oft» ist «öfter»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welches Adverb kann NICHT gesteigert werden?",
+      "options": ["gern", "oft", "sehr", "deshalb"],
+      "correct": 3,
+      "explanation": "«deshalb» ist ein Kausaladverb und hat keine Steigerungsform.\n**Merke:** Nur «gern», «oft» und «sehr» haben besondere Steigerungsformen."
+    }
+  ]
+}

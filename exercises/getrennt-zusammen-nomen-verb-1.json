@@ -1,0 +1,82 @@
+{
+  "id": "getrennt-zusammen-nomen-verb-1",
+  "name": "Nomen + Verb — Beispiele",
+  "goal": "Die Regel «Nomen + Verb» richtig anwenden: getrennt oder zusammen?",
+  "authoring": {
+    "rationale": "Praktische Anwendung von Regel 1. Das Kind muss erkennen, ob eine Nominalisierung vorliegt oder nicht, und entsprechend getrennt oder zusammen schreiben.",
+    "constraints": "Nur Nomen + Verb (Regel 1). 5 Paare je getrennt/zusammen = 10 Übungen. Correct-Index variiert. Dritter Distraktor ist eine plausible aber falsche Schreibvariante (Bindestrich)."
+  },
+  "rules": ["getrennt-und-zusammenschreibung"],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Ich möchte heute ___.» (Ski + fahren)",
+      "options": ["Ski fahren", "Skifahren", "Ski-fahren"],
+      "correct": 0,
+      "explanation": "Kein Artikel → keine Nominalisierung → getrennt: «Ski fahren»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Das ___ macht mir Spaß.» (Ski + fahren)",
+      "options": ["Ski fahren", "Skifahren", "Ski-Fahren"],
+      "correct": 1,
+      "explanation": "«Das» → Nominalisierung → zusammen: «das Skifahren»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Wir müssen noch ___.» (Fenster + putzen)",
+      "options": ["Fensterputzen", "Fenster-putzen", "Fenster putzen"],
+      "correct": 2,
+      "explanation": "Kein Artikel → keine Nominalisierung → getrennt: «Fenster putzen»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Beim ___ höre ich Musik.» (Fenster + putzen)",
+      "options": ["Fenster putzen", "Fenster-Putzen", "Fensterputzen"],
+      "correct": 2,
+      "explanation": "«Beim» (= bei dem) → Nominalisierung → zusammen: «beim Fensterputzen»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Abends möchte Oma immer ___.» (Radio + hören)",
+      "options": ["Radio-hören", "Radio hören", "Radiohören"],
+      "correct": 1,
+      "explanation": "Kein Artikel → keine Nominalisierung → getrennt: «Radio hören»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Er hat mir das ___ beigebracht.» (Rad + fahren)",
+      "options": ["Radfahren", "Rad fahren", "Rad-Fahren"],
+      "correct": 0,
+      "explanation": "«das» → Nominalisierung → zusammen: «das Radfahren»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Wir mussten lange ___.» (Schlange + stehen)",
+      "options": ["Schlange-stehen", "Schlangestehen", "Schlange stehen"],
+      "correct": 2,
+      "explanation": "Kein Artikel → keine Nominalisierung → getrennt: «Schlange stehen»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Beim ___ haben wir geplaudert.» (Schlange + stehen)",
+      "options": ["Schlange stehen", "Schlangestehen", "Schlange-Stehen"],
+      "correct": 1,
+      "explanation": "«Beim» → Nominalisierung → zusammen: «beim Schlangestehen»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Sonntags gehen wir ___.» (Walzer + tanzen)",
+      "options": ["Walzer tanzen", "Walzertanzen", "Walzer-tanzen"],
+      "correct": 0,
+      "explanation": "Kein Artikel → keine Nominalisierung → getrennt: «Walzer tanzen»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Zum ___ braucht man einen Partner.» (Walzer + tanzen)",
+      "options": ["Walzer tanzen", "Walzer-Tanzen", "Walzertanzen"],
+      "correct": 2,
+      "explanation": "«Zum» (= zu dem) → Nominalisierung → zusammen: «zum Walzertanzen»."
+    }
+  ]
+}

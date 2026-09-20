@@ -2,6 +2,10 @@
   "id": "satzglieder-1",
   "name": "Satzglieder bestimmen 1",
   "goal": "Die wichtigsten Satzglieder im Satz erkennen und benennen.",
+  "authoring": {
+    "rationale": "Grundlagen-Set zur Satzglied-Bestimmung: Subjekt, Prädikat, Akkusativ- und Dativobjekt sowie eine Temporal- und Lokaladverbiale in einfachen Aussagesätzen.",
+    "constraints": "Nur Grundsatzglieder (S, P, O4, O3, TO, LO), keine Genitiv-/Präpositionalobjekte. Einfache Satzstellung."
+  },
   "type": "satzglieder",
   "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "O2 — Genitivobjekt", "PO — Präpositionalobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KA — Kausaladverbiale"],
   "question": "Bestimme die Satzglieder",

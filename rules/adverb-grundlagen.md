@@ -2,14 +2,24 @@
 
 Adverbien beschreiben die Umstände eines Geschehens oder Seins genauer. Sie erläutern z.B. Zeitpunkt, Ort, Grund oder Art und Weise eines Sachverhalts.
 
+Das Adverb gehört neben den **Präpositionen**, **Konjunktionen (= Bindewörtern)** und **Interjektionen (= Ausrufewörtern)** zu den **Partikeln**.
+
+Adverbien sind **unveränderlich** — sie werden weder dekliniert noch konjugiert.
+
+Grundsätzlich können Adverbien auch **nicht gesteigert** werden. Es gibt aber einige besondere Steigerungs- und Vergleichsformen:
+
+- gern → lieber → am liebsten
+- oft → öfter / häufiger → am häufigsten
+- sehr → mehr → am meisten
+
 ## Vier Arten von Adverbien
 
 | Art | Frageprobe | Beispiele |
 |---|---|---|
-| **Lokaladverb (LA)** | Wo? Wohin? Woher? | hier, dort, oben, draußen, überall, dorthin, dahin |
+| **Lokaladverb (LA)** | Wo? Wohin? Woher? | hier, da, dort, dorthin, links, rechts, oben, unten, draußen, überall, dahin |
 | **Temporaladverb (TA)** | Wann? Seit wann? Bis wann? Wie oft? Wie lange? | gestern, heute, morgen, täglich, sofort, endlich, schließlich, bald |
-| **Kausaladverb (KA)** | Wieso? Weshalb? Warum? | deshalb, darum, daher, deswegen, folglich, dennoch |
-| **Modaladverb (MA)** | Wie? Auf welche Art und Weise? | gern, vergebens, umsonst, leider |
+| **Kausaladverb (KA)** | Wieso? Weshalb? Warum? Aus welchem Grund? Wozu? Wodurch? | deshalb, darum, daher, deswegen, dafür, trotzdem, folglich, dennoch |
+| **Modaladverb (MA)** | Wie? Auf welche Art und Weise? | gern, sehr, besonders, leider, möglicherweise, vermutlich, recht, vergebens, umsonst |
 
 ## Funktionen des Adverbs
 
@@ -43,10 +53,19 @@ Beantwortet: *Wie geschieht etwas?*
 Auch Adjektive können adverbiell gebraucht werden (ADJ als ADV).
 
 - *Dieses Auto fährt **extrem** langsam.* (ADV beschreibt ADV)
-- *Leo läuft **übrigens** schnell.* (ADJ als ADV)
+- *Leo läuft **überaus** schnell.* (ADV beschreibt ADV)
 
 ## Merke
 
 - Adverbien sind **unveränderlich** — sie werden nicht dekliniert
 - Adjektive können **adverbiell gebraucht** werden (dann ohne Endung)
 - Ein Adverb kann ein Verb, ein Adjektiv oder ein anderes Adverb näher beschreiben
+
+**Adverbien sagen genauer, wo, wann, warum oder wie etwas geschieht.**
+
+Mit den richtigen Fragen kannst du herausfinden, um welche Art von Adverb es sich handelt:
+
+- **Wo? → lokal**
+- **Warum? → kausal**
+- **Wie? → modal**
+- **Wann? → temporal**

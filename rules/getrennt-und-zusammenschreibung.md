@@ -23,20 +23,21 @@ z. B.:
 
 ## 2) Verb + Verb
 
-**Zwei Verben hintereinander werden getrennt geschrieben.**
+**Zwei Verben werden normalerweise getrennt geschrieben.**
 
 z. B.:
 - schreiben lernen
 - spazieren gehen
 - liegen bleiben
 
-### Ausnahme
+### Manchmal sind beide Schreibweisen richtig
 
-Wenn sich durch die Zusammenschreibung eine **neue bzw. übertragene Bedeutung** ergibt, wird zusammengeschrieben.
+Bei **bleiben** und **lassen** als zweitem Verb darf man in übertragener Bedeutung auch zusammenschreiben.
 
 z. B.:
-- **sitzen bleiben** = auf einem Stuhl
-- **sitzenbleiben** = die Klasse wiederholen
+- **sitzen bleiben** = auf einem Stuhl bleiben (nur getrennt)
+- **sitzen bleiben / sitzenbleiben** = die Klasse wiederholen (beides richtig)
+- **liegen bleiben / liegenbleiben** = unerledigt bleiben (beides richtig)
 
 
 ## 3) Weitere Beispiele
@@ -54,26 +55,25 @@ Manchmal entscheidet die **Bedeutung**, ob getrennt oder zusammengeschrieben wir
 
 ## 4) Adjektiv + Verb
 
-**Adjektiv + Verb wird getrennt geschrieben, wenn das Adjektiv gesteigert oder erweitert werden kann.**
+**Beschreibt das Adjektiv, wie jemand etwas tut, schreibt man getrennt.**
 
 z. B.:
-- klein schneiden → kleiner schneiden
-- laut lachen → lauter lachen
-- schön schreiben → schöner schreiben
+- laut lachen
+- schön schreiben
 
-**Ist das Adjektiv nicht steigerbar, wird zusammengeschrieben.**
-
-z. B.:
-- freisprechen
-- krankschreiben
-
-### Achtung!
-
-Wenn das Adjektiv das **Ergebnis einer Handlung** bezeichnet, kann getrennt **oder** zusammengeschrieben werden.
+**Hat die Verbindung eine besondere Gesamtbedeutung, schreibt man zusammen.**
 
 z. B.:
-- klein schneiden / kleinschneiden
+- freisprechen = vor Gericht von einer Anklage befreien
+- krankschreiben = ärztlich bestätigen, dass jemand wegen Krankheit nicht arbeiten kann
+
+**Beschreibt ein einfaches Adjektiv das Ergebnis der Handlung, sind oft beide Schreibweisen richtig.**
+
+z. B.:
+- klein schneiden / kleinschneiden = durch Schneiden klein machen
 - kaputt machen / kaputtmachen
+
+**Merke:** Die Steigerungsprobe allein reicht nicht. «klein» kann man steigern, trotzdem sind «klein schneiden» und «kleinschneiden» beide richtig.
 
 
 ## 5) Verbindungen mit „sein“

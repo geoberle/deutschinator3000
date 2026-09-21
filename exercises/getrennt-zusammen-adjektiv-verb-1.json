@@ -1,82 +1,82 @@
 {
   "id": "getrennt-zusammen-adjektiv-verb-1",
   "name": "Adjektiv + Verb — Beispiele",
-  "goal": "Die Steigerungsprobe bei Adjektiv + Verb in echten Sätzen anwenden.",
+  "goal": "Bei Adjektiv und Verb erkennen: nur getrennt, nur zusammen oder beides richtig?",
   "authoring": {
-    "rationale": "Praktische Anwendung von Regel 4 mit den in rules/getrennt-und-zusammenschreibung.md dokumentierten Beispielen (klein schneiden, laut lachen, schön schreiben — getrennt; freisprechen, krankschreiben — zusammen). Jedes Wortpaar kommt in zwei verschiedenen Sätzen vor — Wiederholung mit Variation statt neuem Vokabular.",
-    "constraints": "Nur Regel 4 (Adjektiv + Verb), keine Duden-Doppelschreibweisen. Dritter Distraktor ist eine plausible aber falsche Schreibvariante (Bindestrich). Correct-Index variiert."
+    "rationale": "Vertraute Wortpaare in kurzen Sätzen anwenden: laut lachen und schön schreiben nur getrennt; freisprechen und krankschreiben in ihrer besonderen Bedeutung nur zusammen; klein schneiden und kleinschneiden beide richtig.",
+    "constraints": "Nur dokumentierte Wortpaare. Drei eindeutige Antworten: nur getrennt, nur zusammen oder beides richtig. Die Reihenfolge bleibt gleich."
   },
   "rules": ["getrennt-und-zusammenschreibung"],
   "exercises": [
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Kannst du die Zwiebel bitte ___?» (klein + schneiden)",
-      "options": ["klein schneiden", "kleinschneiden", "klein-schneiden"],
+      "question": "Welche Schreibweise ist erlaubt: «Kannst du die Zwiebel bitte ___?» (klein + schneiden)?",
+      "options": ["Nur «klein schneiden»", "Nur «kleinschneiden»", "Beides ist richtig"],
+      "correct": 2,
+      "explanation": "**Beide Schreibweisen sind richtig:** «klein schneiden» und «kleinschneiden».\nDie Zwiebel wird durch das Schneiden klein. Deshalb darfst du hier getrennt oder zusammenschreiben."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welche Schreibweise ist erlaubt: «Die Köchin muss die Karotten auch ___.» (klein + schneiden)?",
+      "options": ["Nur «klein schneiden»", "Nur «kleinschneiden»", "Beides ist richtig"],
+      "correct": 2,
+      "explanation": "**Beide Schreibweisen sind richtig:** «klein schneiden» und «kleinschneiden».\nDie Karotten werden durch das Schneiden klein. Deshalb darfst du hier getrennt oder zusammenschreiben."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welche Schreibweise ist erlaubt: «Über den lustigen Witz möchten die Kinder ___.» (laut + lachen)?",
+      "options": ["Nur «laut lachen»", "Nur «lautlachen»", "Beides ist richtig"],
       "correct": 0,
-      "explanation": "«klein» ist steigerbar (kleiner) → getrennt: «klein schneiden»."
+      "explanation": "«laut» beschreibt, wie die Kinder lachen. Nur «laut lachen» ist richtig."
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Die Köchin muss die Karotten auch ___.» (klein + schneiden)",
-      "options": ["klein-schneiden", "kleinschneiden", "klein schneiden"],
-      "correct": 2,
-      "explanation": "«klein» ist steigerbar (kleiner) → getrennt: «klein schneiden»."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Wie schreibt man: «Über den lustigen Witz möchten die Kinder ___.» (laut + lachen)",
-      "options": ["lautlachen", "laut-lachen", "laut lachen"],
-      "correct": 2,
-      "explanation": "«laut» ist steigerbar (lauter) → getrennt: «laut lachen»."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Wie schreibt man: «Im Kino darf man nicht ___.» (laut + lachen)",
-      "options": ["laut lachen", "lautlachen", "laut-lachen"],
+      "question": "Welche Schreibweise ist erlaubt: «Im Kino darf man nicht ___.» (laut + lachen)?",
+      "options": ["Nur «laut lachen»", "Nur «lautlachen»", "Beides ist richtig"],
       "correct": 0,
-      "explanation": "«laut» ist steigerbar (lauter) → getrennt: «laut lachen»."
+      "explanation": "«laut» beschreibt, wie jemand lacht. Nur «laut lachen» ist richtig."
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Sie will unbedingt ___.» (schön + schreiben)",
-      "options": ["schön-schreiben", "schön schreiben", "schönschreiben"],
-      "correct": 1,
-      "explanation": "«schön» ist steigerbar (schöner) → getrennt: «schön schreiben»."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Wie schreibt man: «In der ersten Klasse lernt man ___.» (schön + schreiben)",
-      "options": ["schönschreiben", "schön schreiben", "schön-schreiben"],
-      "correct": 1,
-      "explanation": "«schön» ist steigerbar (schöner) → getrennt: «schön schreiben»."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Wie schreibt man: «Der Richter konnte den Angeklagten ___.» (frei + sprechen)",
-      "options": ["frei sprechen", "freisprechen", "frei-sprechen"],
-      "correct": 1,
-      "explanation": "«frei» ist hier nicht steigerbar (feste Bedeutung: für unschuldig erklären) → zusammen: «freisprechen»."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Wie schreibt man: «Man kann einen unschuldigen Menschen vor Gericht ___.» (frei + sprechen)",
-      "options": ["frei-sprechen", "frei sprechen", "freisprechen"],
-      "correct": 2,
-      "explanation": "«frei» ist hier nicht steigerbar (feste Bedeutung: für unschuldig erklären) → zusammen: «freisprechen»."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Wie schreibt man: «Der Arzt musste mich für zwei Tage ___.» (krank + schreiben)",
-      "options": ["krankschreiben", "krank schreiben", "krank-schreiben"],
+      "question": "Welche Schreibweise ist erlaubt: «Sie will unbedingt ___.» (schön + schreiben, mit schöner Schrift)?",
+      "options": ["Nur «schön schreiben»", "Nur «schönschreiben»", "Beides ist richtig"],
       "correct": 0,
-      "explanation": "«krank» ist hier nicht steigerbar (feste Bedeutung: eine Krankmeldung ausstellen) → zusammen: «krankschreiben»."
+      "explanation": "«schön» beschreibt hier, wie sie schreibt. Nur «schön schreiben» ist richtig."
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Weil ich Fieber hatte, ließ ich mich ___.» (krank + schreiben)",
-      "options": ["krank-schreiben", "krank schreiben", "krankschreiben"],
-      "correct": 2,
-      "explanation": "«krank» ist hier nicht steigerbar (feste Bedeutung: eine Krankmeldung ausstellen) → zusammen: «krankschreiben»."
+      "question": "Welche Schreibweise ist erlaubt: «In der ersten Klasse lernt man ___.» (schön + schreiben, mit schöner Schrift)?",
+      "options": ["Nur «schön schreiben»", "Nur «schönschreiben»", "Beides ist richtig"],
+      "correct": 0,
+      "explanation": "«schön» beschreibt hier, wie man schreibt. Nur «schön schreiben» ist richtig."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welche Schreibweise ist erlaubt: «Der Richter konnte den Angeklagten ___.» (frei + sprechen, von der Anklage befreien)?",
+      "options": ["Nur «frei sprechen»", "Nur «freisprechen»", "Beides ist richtig"],
+      "correct": 1,
+      "explanation": "Gemeint ist die besondere Bedeutung vor Gericht: von einer Anklage befreien. Nur «freisprechen» ist richtig."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welche Schreibweise ist erlaubt: «Man kann einen unschuldigen Menschen vor Gericht ___.» (frei + sprechen, von der Anklage befreien)?",
+      "options": ["Nur «frei sprechen»", "Nur «freisprechen»", "Beides ist richtig"],
+      "correct": 1,
+      "explanation": "Gemeint ist die besondere Bedeutung vor Gericht: von einer Anklage befreien. Nur «freisprechen» ist richtig."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welche Schreibweise ist erlaubt: «Der Arzt musste mich für zwei Tage ___.» (krank + schreiben)?",
+      "options": ["Nur «krank schreiben»", "Nur «krankschreiben»", "Beides ist richtig"],
+      "correct": 1,
+      "explanation": "Der Arzt bestätigt, dass ich wegen Krankheit nicht arbeiten kann. In dieser Bedeutung ist nur «krankschreiben» richtig."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welche Schreibweise ist erlaubt: «Weil ich Fieber hatte, ließ ich mich ___.» (krank + schreiben)?",
+      "options": ["Nur «krank schreiben»", "Nur «krankschreiben»", "Beides ist richtig"],
+      "correct": 1,
+      "explanation": "Der Arzt bestätigt, dass ich wegen Krankheit nicht arbeiten kann. In dieser Bedeutung ist nur «krankschreiben» richtig."
     }
   ]
 }

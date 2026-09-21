@@ -1,82 +1,82 @@
 {
   "id": "getrennt-zusammen-adjektiv-verb-regeln-1",
   "name": "Adjektiv + Verb — Regeln",
-  "goal": "Die Regel «Adjektiv + Verb: getrennt, wenn steigerbar — sonst zusammen» verstehen.",
+  "goal": "Bei Adjektiv und Verb erkennen: getrennt, zusammen oder beides richtig?",
   "authoring": {
-    "rationale": "Deklaratives Regelwissen zur vierten Regel der Getrennt- und Zusammenschreibung. Die Steigerungsprobe (kann ich das Adjektiv steigern?) als einfaches, konkretes Werkzeug. Bewusst ohne die Duden-«Achtung»-Fälle, bei denen beide Schreibweisen erlaubt sind (z. B. klein schneiden/kleinschneiden) — zu unklar für ein einfaches Regelverständnis in dieser Altersstufe.",
-    "constraints": "Nur Regel 4 (Adjektiv + Verb), keine Doppel-Schreibweisen. Reine Grammatikfragen mit der Steigerungsprobe als Kernwerkzeug. Alle Distraktoren sind plausible grammatische Aussagen."
+    "rationale": "An vertrauten Beispielen drei Fälle unterscheiden: Art und Weise, besondere Gesamtbedeutung und Ergebnis einer Handlung. Doppelschreibweisen ausdrücklich als richtig vermitteln.",
+    "constraints": "Kurze, kindgerechte Erklärungen. Keine pauschale Steigerungsregel. Bei Doppelschreibweisen eindeutige Nur-Optionen und Beides ist richtig."
   },
   "rules": ["getrennt-und-zusammenschreibung"],
   "exercises": [
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man Adjektiv + Verb, wenn man das Adjektiv steigern kann (z. B. klein → kleiner)?",
-      "options": ["Zusammen", "Getrennt", "Mit Bindestrich", "Beides ist möglich"],
+      "question": "Welche Schreibweise ist erlaubt, wenn du eine Zwiebel in kleine Stücke schneidest?",
+      "options": ["Nur «kleinschneiden»", "Beides ist richtig", "Nur «klein schneiden»"],
       "correct": 1,
-      "explanation": "Ist das Adjektiv steigerbar, schreibt man getrennt: «klein schneiden» (kleiner)."
+      "explanation": "**Beide Schreibweisen sind richtig:** «klein schneiden» und «kleinschneiden».\nDie Zwiebel wird durch das Schneiden klein. «klein» beschreibt das Ergebnis."
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man Adjektiv + Verb, wenn man das Adjektiv NICHT steigern kann?",
-      "options": ["Getrennt", "Zusammen", "Mit Bindestrich", "Beides ist möglich"],
+      "question": "Warum sind «klein schneiden» und «kleinschneiden» beide erlaubt?",
+      "options": ["Weil zwei Verben vorkommen.", "Weil «klein» das Ergebnis des Schneidens beschreibt.", "Weil alle Wörter frei geschrieben werden dürfen."],
       "correct": 1,
-      "explanation": "Ist das Adjektiv nicht steigerbar, schreibt man zusammen: «freisprechen»."
+      "explanation": "Nach dem Schneiden sind die Stücke klein.\n**Merke:** Bei diesem Ergebnis sind Getrennt- und Zusammenschreibung erlaubt."
     },
     {
       "type": "multiple-choice",
       "question": "Kann man «klein» steigern (klein → kleiner → am kleinsten)?",
       "options": ["Nein", "Nur im Perfekt", "Ja", "Nur bei Nomen"],
       "correct": 2,
-      "explanation": "«klein» ist steigerbar → deshalb schreibt man «klein schneiden» getrennt."
+      "explanation": "Ja: klein → kleiner → am kleinsten.\nTrotzdem sind «klein schneiden» und «kleinschneiden» beide richtig. Die Steigerungsprobe allein reicht nicht."
     },
     {
       "type": "multiple-choice",
       "question": "Wie schreibt man richtig?",
       "options": ["lautlachen", "laut-lachen", "laut lachen"],
       "correct": 2,
-      "explanation": "«laut» ist steigerbar (lauter) → getrennt: «laut lachen»."
+      "explanation": "«laut» beschreibt, wie jemand lacht. Deshalb schreibt man «laut lachen» getrennt."
     },
     {
       "type": "multiple-choice",
       "question": "Wie schreibt man richtig?",
       "options": ["schön schreiben", "schön-schreiben", "schönschreiben"],
       "correct": 0,
-      "explanation": "«schön» ist steigerbar (schöner) → getrennt: «schön schreiben»."
+      "explanation": "«schön» beschreibt hier, wie jemand schreibt. Deshalb schreibt man «schön schreiben» getrennt."
     },
     {
       "type": "multiple-choice",
       "question": "«freisprechen» wird zusammengeschrieben. Warum?",
-      "options": ["Weil «frei» hier nicht gesteigert werden kann.", "Weil «sprechen» im Perfekt steht.", "Weil das Wort sonst zu kurz wäre.", "Weil ein Nomen davor steht."],
+      "options": ["Weil es eine besondere Bedeutung hat: vor Gericht von einer Anklage befreien.", "Weil «sprechen» im Perfekt steht.", "Weil das Wort sonst zu kurz wäre.", "Weil ein Nomen davor steht."],
       "correct": 0,
-      "explanation": "In «freisprechen» hat «frei» eine feste Bedeutung (für unschuldig erklären) und kann hier nicht gesteigert werden → zusammen."
+      "explanation": "«freisprechen» bedeutet: vor Gericht von einer Anklage befreien.\nDiese besondere Gesamtbedeutung schreibt man zusammen."
     },
     {
       "type": "multiple-choice",
       "question": "«krankschreiben» wird zusammengeschrieben. Warum?",
-      "options": ["Weil «schreiben» ein Nomen ist.", "Weil «krank» hier nicht gesteigert werden kann.", "Weil der Satz sonst falsch wäre.", "Weil «krank» ein Verb ist."],
+      "options": ["Weil «schreiben» ein Nomen ist.", "Weil es eine besondere Bedeutung hat: ärztlich die Arbeitsunfähigkeit bestätigen.", "Weil alle Adjektive mit Verben zusammengeschrieben werden.", "Weil «krank» ein Verb ist."],
       "correct": 1,
-      "explanation": "In «krankschreiben» hat «krank» eine feste Bedeutung (eine Krankmeldung ausstellen) und kann hier nicht gesteigert werden → zusammen."
+      "explanation": "Der Arzt bestätigt, dass jemand wegen Krankheit nicht arbeiten kann: Er kann ihn «krankschreiben».\nDiese besondere Gesamtbedeutung schreibt man zusammen."
     },
     {
       "type": "multiple-choice",
-      "question": "Welches Wort wird IMMER zusammengeschrieben?",
-      "options": ["klein schneiden", "laut lachen", "freisprechen", "schön schreiben"],
+      "question": "Welche Verbindung schreibt man in der genannten Bedeutung nur zusammen?",
+      "options": ["klein schneiden (Gemüse zerkleinern)", "laut lachen (mit lauter Stimme lachen)", "freisprechen (vor Gericht von einer Anklage befreien)", "schön schreiben (mit schöner Schrift schreiben)"],
       "correct": 2,
-      "explanation": "«freisprechen» ist ein festes Wort, «frei» ist hier nicht steigerbar → zusammen."
+      "explanation": "In der Bedeutung vor Gericht schreibt man «freisprechen» zusammen."
     },
     {
       "type": "multiple-choice",
-      "question": "Welches Wort wird getrennt geschrieben, weil man das Adjektiv steigern kann?",
+      "question": "Bei welcher Verbindung beschreibt das erste Wort, wie jemand lacht?",
       "options": ["freisprechen", "krankschreiben", "laut lachen", "kaputt machen"],
       "correct": 2,
-      "explanation": "«laut» ist steigerbar (lauter) → getrennt: «laut lachen»."
+      "explanation": "Wie lacht jemand? Laut.\n«laut lachen» schreibt man getrennt."
     },
     {
       "type": "multiple-choice",
-      "question": "Was ist die Eselsbrücke für Adjektiv + Verb?",
-      "options": ["Kann ich das Adjektiv steigern (z. B. mit «-er»)? Wenn ja: getrennt.", "Ist das Wort lang? Wenn ja: zusammen.", "Steht ein Artikel davor? Wenn ja: getrennt.", "Reimt sich das Wort? Wenn ja: zusammen."],
+      "question": "Welche Aussage über die Steigerungsprobe stimmt?",
+      "options": ["Sie reicht allein nicht aus: Bei «klein schneiden» ist auch «kleinschneiden» richtig.", "Steigerbare Adjektive werden mit Verben immer getrennt geschrieben.", "Nicht steigerbare Adjektive werden mit Verben immer zusammengeschrieben."],
       "correct": 0,
-      "explanation": "**Merke:** Steigerbar → getrennt. Nicht steigerbar → zusammen."
+      "explanation": "«klein» ist steigerbar, aber «klein schneiden» und «kleinschneiden» sind beide richtig.\n**Merke:** Achte auch auf die Bedeutung der Verbindung."
     }
   ]
 }

@@ -362,7 +362,7 @@
   {
     "id": "getrennt-zusammen-verb-verb-regeln-1",
     "name": "Verb + Verb — Regeln",
-    "goal": "Die Regel «Verb + Verb = getrennt» und die Ausnahme «sitzen bleiben / sitzenbleiben» verstehen.",
+    "goal": "Getrenntschreibung bei zwei Verben und erlaubte Doppelschreibweisen verstehen.",
     "description": "Beantworte Fragen zur Regel Verb + Verb",
     "file": "getrennt-zusammen-verb-verb-regeln-1.json",
     "count": 10,
@@ -371,8 +371,8 @@
   {
     "id": "getrennt-zusammen-verb-verb-1",
     "name": "Verb + Verb — Beispiele",
-    "goal": "Die Regel «Verb + Verb = getrennt» und die Ausnahme «sitzen bleiben / sitzenbleiben» in echten Sätzen richtig anwenden.",
-    "description": "Wie schreibt man richtig — getrennt oder zusammen?",
+    "goal": "Bei zwei Verben erkennen: nur getrennt oder beide Schreibweisen erlaubt?",
+    "description": "Entscheide: nur getrennt, nur zusammen oder beides richtig.",
     "file": "getrennt-zusammen-verb-verb-1.json",
     "count": 10,
     "category": "Rechtschreibung"
@@ -380,7 +380,7 @@
   {
     "id": "getrennt-zusammen-adjektiv-verb-regeln-1",
     "name": "Adjektiv + Verb — Regeln",
-    "goal": "Die Regel «Adjektiv + Verb: getrennt, wenn steigerbar — sonst zusammen» verstehen.",
+    "goal": "Bei Adjektiv und Verb erkennen: getrennt, zusammen oder beides richtig?",
     "description": "Beantworte Fragen zur Regel Adjektiv + Verb",
     "file": "getrennt-zusammen-adjektiv-verb-regeln-1.json",
     "count": 10,
@@ -389,8 +389,8 @@
   {
     "id": "getrennt-zusammen-adjektiv-verb-1",
     "name": "Adjektiv + Verb — Beispiele",
-    "goal": "Die Steigerungsprobe bei Adjektiv + Verb in echten Sätzen anwenden.",
-    "description": "Wie schreibt man richtig — getrennt oder zusammen?",
+    "goal": "Bei Adjektiv und Verb erkennen: nur getrennt, nur zusammen oder beides richtig?",
+    "description": "Entscheide: nur getrennt, nur zusammen oder beides richtig.",
     "file": "getrennt-zusammen-adjektiv-verb-1.json",
     "count": 10,
     "category": "Rechtschreibung"

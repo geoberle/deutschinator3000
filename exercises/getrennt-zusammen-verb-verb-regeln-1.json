@@ -1,19 +1,19 @@
 {
   "id": "getrennt-zusammen-verb-verb-regeln-1",
   "name": "Verb + Verb — Regeln",
-  "goal": "Die Regel «Verb + Verb = getrennt» und die Ausnahme «sitzen bleiben / sitzenbleiben» verstehen.",
+  "goal": "Getrenntschreibung bei zwei Verben und erlaubte Doppelschreibweisen verstehen.",
   "authoring": {
-    "rationale": "Deklaratives Regelwissen zur zweiten Regel der Getrennt- und Zusammenschreibung: Zwei Verben hintereinander werden getrennt geschrieben. Nutzt ausschließlich die in rules/getrennt-und-zusammenschreibung.md dokumentierten Beispiele (schreiben lernen, spazieren gehen, liegen bleiben, sitzen bleiben/sitzenbleiben) — keine erfundene Zusatzvokabel.",
-    "constraints": "Nur Regel 2 (Verb + Verb) inkl. der dort dokumentierten sitzen-bleiben-Ausnahme. Reine Grammatikfragen. Alle Distraktoren sind plausible grammatische Aussagen."
+    "rationale": "Regelwissen mit vertrauten Wortpaaren: schreiben lernen, spazieren gehen, liegen bleiben und sitzen bleiben. Bei übertragener Bedeutung von sitzen bleiben sind beide Schreibweisen erlaubt.",
+    "constraints": "Einfache Sprache. Bei Schreibentscheidungen schließen Nur-Optionen und Beides ist richtig einander aus. Wörtliche und übertragene Bedeutung ausdrücklich unterscheiden."
   },
   "rules": ["getrennt-und-zusammenschreibung"],
   "exercises": [
     {
       "type": "multiple-choice",
       "question": "Wie schreibt man zwei Verben hintereinander (z. B. «schreiben» + «lernen»)?",
-      "options": ["Immer zusammen", "Getrennt — außer bei übertragener Bedeutung", "Immer getrennt, ohne jede Ausnahme", "Man kann frei wählen"],
+      "options": ["Immer zusammen", "Normalerweise getrennt", "Immer mit Bindestrich", "Man kann immer frei wählen"],
       "correct": 1,
-      "explanation": "Zwei Verben hintereinander werden meist getrennt geschrieben: «schreiben lernen». Ausnahme: übertragene Bedeutung wie bei «sitzenbleiben».\n**Merke:** Verb + Verb = getrennt (außer bei übertragener Bedeutung)."
+      "explanation": "«schreiben lernen» schreibt man getrennt.\n**Merke:** Bei zwei Verben ist Getrenntschreibung der Normalfall."
     },
     {
       "type": "multiple-choice",
@@ -24,10 +24,10 @@
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man richtig?",
-      "options": ["liegenbleiben", "liegen-bleiben", "liegen bleiben"],
+      "question": "Welche Schreibweise ist erlaubt: «Ich möchte im Bett ___.» (liegen + bleiben)?",
+      "options": ["Nur «liegenbleiben»", "Beides ist richtig", "Nur «liegen bleiben»"],
       "correct": 2,
-      "explanation": "«liegen bleiben» — zwei Verben, getrennt geschrieben."
+      "explanation": "Hier ist wirklich Liegen im Bett gemeint. Deshalb ist nur «liegen bleiben» richtig."
     },
     {
       "type": "multiple-choice",
@@ -38,24 +38,24 @@
     },
     {
       "type": "multiple-choice",
-      "question": "Was bedeutet «sitzen bleiben» (zwei Wörter, getrennt)?",
-      "options": ["Die Klasse wiederholen.", "Auf dem Stuhl sitzen bleiben.", "Schnell aufstehen.", "Spazieren gehen."],
+      "question": "Was kann «sitzen bleiben» (getrennt geschrieben) bedeuten?",
+      "options": ["Nur die Klasse wiederholen.", "Auf dem Stuhl bleiben oder die Klasse wiederholen.", "Nur auf dem Stuhl bleiben.", "Spazieren gehen."],
       "correct": 1,
-      "explanation": "Getrennt geschrieben meint «sitzen bleiben» die wörtliche Bedeutung: auf dem Stuhl bleiben."
+      "explanation": "«sitzen bleiben» passt zu beiden Bedeutungen.\n**Merke:** Für «die Klasse wiederholen» ist zusätzlich «sitzenbleiben» erlaubt."
     },
     {
       "type": "multiple-choice",
       "question": "Was bedeutet «sitzenbleiben» (ein Wort, zusammen)?",
       "options": ["Auf dem Stuhl bleiben.", "Schnell aufstehen.", "Die Klasse wiederholen.", "Spazieren gehen."],
       "correct": 2,
-      "explanation": "Zusammengeschrieben bekommt «sitzenbleiben» eine übertragene Bedeutung: die Klasse wiederholen."
+      "explanation": "«sitzenbleiben» bedeutet hier: die Klasse wiederholen.\n**Merke:** In dieser Bedeutung ist auch «sitzen bleiben» richtig."
     },
     {
       "type": "multiple-choice",
-      "question": "Wann schreibt man Verb + Verb ausnahmsweise zusammen?",
-      "options": ["Wenn eine neue, übertragene Bedeutung entsteht.", "Wenn das Verb sehr kurz ist.", "Nie — Verb + Verb ist immer getrennt.", "Wenn ein Artikel davorsteht."],
+      "question": "Welche Aussage stimmt, wenn «sitzen bleiben» die Klassenwiederholung meint?",
+      "options": ["Getrennt und zusammen sind erlaubt.", "Nur zusammen ist erlaubt.", "Nur getrennt ist erlaubt.", "Man braucht einen Bindestrich."],
       "correct": 0,
-      "explanation": "Beispiel: «sitzen bleiben» (wörtlich, getrennt) → «sitzenbleiben» (übertragen: die Klasse wiederholen, zusammen)."
+      "explanation": "«sitzen bleiben» und «sitzenbleiben» sind beide richtig.\n**Merke:** Bei «bleiben» als zweitem Verb ist in übertragener Bedeutung auch Zusammenschreibung erlaubt."
     },
     {
       "type": "multiple-choice",
@@ -66,17 +66,17 @@
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Wegen seiner schlechten Noten muss er wahrscheinlich ___.» (sitzen + bleiben, übertragen: die Klasse wiederholen)",
-      "options": ["sitzen bleiben", "sitzenbleiben", "sitzen-bleiben"],
+      "question": "Welche Schreibweise ist erlaubt: «Wegen seiner schlechten Noten muss er wahrscheinlich ___.» (sitzen + bleiben, die Klasse wiederholen)?",
+      "options": ["Nur «sitzen bleiben»", "Beides ist richtig", "Nur «sitzenbleiben»"],
       "correct": 1,
-      "explanation": "Übertragene Bedeutung → zusammen: «sitzenbleiben»."
+      "explanation": "**Beide Schreibweisen sind richtig:** «sitzen bleiben» und «sitzenbleiben».\nGemeint ist die Klassenwiederholung. Hier darfst du getrennt oder zusammenschreiben."
     },
     {
       "type": "multiple-choice",
       "question": "Stimmt die Aussage: «Verb + Verb wird immer zusammengeschrieben.»?",
-      "options": ["Nein — Verb + Verb wird getrennt geschrieben.", "Ja, das stimmt.", "Nein — es kommt auf den Artikel an.", "Ja, aber nur bei kurzen Verben."],
+      "options": ["Nein — normalerweise schreibt man getrennt.", "Ja, das stimmt.", "Nein — es kommt auf den Artikel an.", "Ja, aber nur bei kurzen Verben."],
       "correct": 0,
-      "explanation": "Die Regel lautet genau umgekehrt: Verb + Verb wird getrennt geschrieben (Ausnahme: übertragene Bedeutung wie bei «sitzenbleiben»)."
+      "explanation": "«schreiben lernen» und «spazieren gehen» schreibt man getrennt.\nBei «sitzen bleiben» im Sinn von Klassenwiederholung sind beide Schreibweisen erlaubt."
     }
   ]
 }

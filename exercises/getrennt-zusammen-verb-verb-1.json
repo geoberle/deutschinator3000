@@ -1,82 +1,82 @@
 {
   "id": "getrennt-zusammen-verb-verb-1",
   "name": "Verb + Verb — Beispiele",
-  "goal": "Die Regel «Verb + Verb = getrennt» und die Ausnahme «sitzen bleiben / sitzenbleiben» in echten Sätzen richtig anwenden.",
+  "goal": "Bei zwei Verben erkennen: nur getrennt oder beide Schreibweisen erlaubt?",
   "authoring": {
-    "rationale": "Praktische Anwendung von Regel 2 mit den in rules/getrennt-und-zusammenschreibung.md dokumentierten Wortpaaren (schreiben lernen, spazieren gehen, liegen bleiben, sitzen bleiben/sitzenbleiben). Jedes Paar kommt in unterschiedlichen Sätzen vor — Wiederholung mit Variation statt neuem Vokabular.",
-    "constraints": "Nur Verb + Verb (Regel 2) mit der dokumentierten sitzen-bleiben-Ausnahme. Dritter Distraktor ist eine plausible aber falsche Schreibvariante (Bindestrich). Correct-Index variiert."
+    "rationale": "Vertraute Wortpaare in kurzen Sätzen anwenden. Wörtliches sitzen bleiben von der Klassenwiederholung unterscheiden, bei der beide Schreibweisen erlaubt sind.",
+    "constraints": "Nur dokumentierte Wortpaare. Drei eindeutige Antworten: nur getrennt, nur zusammen oder beides richtig. Die Reihenfolge bleibt gleich."
   },
   "rules": ["getrennt-und-zusammenschreibung"],
   "exercises": [
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Ich möchte unbedingt ___.» (schreiben + lernen)",
-      "options": ["schreiben lernen", "schreibenlernen", "schreiben-lernen"],
+      "question": "Welche Schreibweise ist erlaubt: «Ich möchte unbedingt ___.» (schreiben + lernen)?",
+      "options": ["Nur «schreiben lernen»", "Nur «schreibenlernen»", "Beides ist richtig"],
       "correct": 0,
-      "explanation": "«schreiben lernen» — zwei Verben, getrennt.\n**Merke:** Verb + Verb = getrennt."
+      "explanation": "Nur «schreiben lernen» ist richtig: Diese beiden Verben schreibt man getrennt."
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Nach dem Essen wollen wir noch ___.» (spazieren + gehen)",
-      "options": ["spazierengehen", "spazieren gehen", "spazieren-gehen"],
-      "correct": 1,
-      "explanation": "«spazieren gehen» — zwei Verben, getrennt."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Wie schreibt man: «Papa möchte heute im Bett ___.» (liegen + bleiben, wörtlich)",
-      "options": ["liegen-bleiben", "liegenbleiben", "liegen bleiben"],
-      "correct": 2,
-      "explanation": "Wörtliche Bedeutung → getrennt: «liegen bleiben»."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Wie schreibt man: «Mein kleiner Bruder will unbedingt ___.» (schreiben + lernen)",
-      "options": ["schreiben lernen", "schreibenlernen", "schreiben-lernen"],
+      "question": "Welche Schreibweise ist erlaubt: «Nach dem Essen wollen wir noch ___.» (spazieren + gehen)?",
+      "options": ["Nur «spazieren gehen»", "Nur «spazierengehen»", "Beides ist richtig"],
       "correct": 0,
-      "explanation": "«schreiben lernen» — zwei Verben, getrennt."
+      "explanation": "Nur «spazieren gehen» ist richtig: Diese beiden Verben schreibt man getrennt."
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Am Abend möchten wir gerne im Park ___.» (spazieren + gehen)",
-      "options": ["spazieren-gehen", "spazierengehen", "spazieren gehen"],
-      "correct": 2,
-      "explanation": "«spazieren gehen» — zwei Verben, getrennt."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Wie schreibt man: «Die Katze will auf dem Sofa ___.» (liegen + bleiben, wörtlich)",
-      "options": ["liegen bleiben", "liegenbleiben", "liegen-bleiben"],
+      "question": "Welche Schreibweise ist erlaubt: «Papa möchte heute im Bett ___.» (liegen + bleiben, wörtlich)?",
+      "options": ["Nur «liegen bleiben»", "Nur «liegenbleiben»", "Beides ist richtig"],
       "correct": 0,
-      "explanation": "Wörtliche Bedeutung → getrennt: «liegen bleiben»."
+      "explanation": "Hier ist wirklich Liegen im Bett gemeint. Deshalb ist nur «liegen bleiben» richtig."
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Ich will jetzt auf meinem Stuhl ___.» (sitzen + bleiben, wörtlich: nicht aufstehen)",
-      "options": ["sitzenbleiben", "sitzen-bleiben", "sitzen bleiben"],
-      "correct": 2,
-      "explanation": "Wörtliche Bedeutung → getrennt: «sitzen bleiben»."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Wie schreibt man: «Weil seine Noten schlecht waren, musste er wohl ___.» (sitzen + bleiben, übertragen: die Klasse wiederholen)",
-      "options": ["sitzen bleiben", "sitzenbleiben", "sitzen-bleiben"],
-      "correct": 1,
-      "explanation": "Übertragene Bedeutung → zusammen: «sitzenbleiben»."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Wie schreibt man: «Bitte kannst du noch kurz ___, ich komme gleich!» (sitzen + bleiben, wörtlich)",
-      "options": ["sitzen-bleiben", "sitzenbleiben", "sitzen bleiben"],
-      "correct": 2,
-      "explanation": "Wörtliche Bedeutung → getrennt: «sitzen bleiben»."
-    },
-    {
-      "type": "multiple-choice",
-      "question": "Wie schreibt man: «Weil er zu oft fehlte, musste er ___.» (sitzen + bleiben, übertragen: die Klasse wiederholen)",
-      "options": ["sitzenbleiben", "sitzen bleiben", "sitzen-bleiben"],
+      "question": "Welche Schreibweise ist erlaubt: «Mein kleiner Bruder will unbedingt ___.» (schreiben + lernen)?",
+      "options": ["Nur «schreiben lernen»", "Nur «schreibenlernen»", "Beides ist richtig"],
       "correct": 0,
-      "explanation": "Übertragene Bedeutung → zusammen: «sitzenbleiben»."
+      "explanation": "Nur «schreiben lernen» ist richtig: Diese beiden Verben schreibt man getrennt."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welche Schreibweise ist erlaubt: «Am Abend möchten wir gerne im Park ___.» (spazieren + gehen)?",
+      "options": ["Nur «spazieren gehen»", "Nur «spazierengehen»", "Beides ist richtig"],
+      "correct": 0,
+      "explanation": "Nur «spazieren gehen» ist richtig: Diese beiden Verben schreibt man getrennt."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welche Schreibweise ist erlaubt: «Die Katze will auf dem Sofa ___.» (liegen + bleiben, wörtlich)?",
+      "options": ["Nur «liegen bleiben»", "Nur «liegenbleiben»", "Beides ist richtig"],
+      "correct": 0,
+      "explanation": "Hier ist wirklich Liegen auf dem Sofa gemeint. Deshalb ist nur «liegen bleiben» richtig."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welche Schreibweise ist erlaubt: «Ich will jetzt auf meinem Stuhl ___.» (sitzen + bleiben, nicht aufstehen)?",
+      "options": ["Nur «sitzen bleiben»", "Nur «sitzenbleiben»", "Beides ist richtig"],
+      "correct": 0,
+      "explanation": "Hier ist wirklich Sitzen auf dem Stuhl gemeint. Deshalb ist nur «sitzen bleiben» richtig."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welche Schreibweise ist erlaubt: «Weil seine Noten schlecht waren, musste er wohl ___.» (sitzen + bleiben, die Klasse wiederholen)?",
+      "options": ["Nur «sitzen bleiben»", "Nur «sitzenbleiben»", "Beides ist richtig"],
+      "correct": 2,
+      "explanation": "**Beide Schreibweisen sind richtig:** «sitzen bleiben» und «sitzenbleiben».\nGemeint ist die Klassenwiederholung. Hier darfst du getrennt oder zusammenschreiben."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welche Schreibweise ist erlaubt: «Kannst du bitte noch kurz ___? Ich komme gleich!» (sitzen + bleiben, nicht aufstehen)?",
+      "options": ["Nur «sitzen bleiben»", "Nur «sitzenbleiben»", "Beides ist richtig"],
+      "correct": 0,
+      "explanation": "Hier soll jemand nicht aufstehen. Deshalb ist nur «sitzen bleiben» richtig."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welche Schreibweise ist erlaubt: «Weil er zu oft fehlte, musste er ___.» (sitzen + bleiben, die Klasse wiederholen)?",
+      "options": ["Nur «sitzen bleiben»", "Nur «sitzenbleiben»", "Beides ist richtig"],
+      "correct": 2,
+      "explanation": "**Beide Schreibweisen sind richtig:** «sitzen bleiben» und «sitzenbleiben».\nGemeint ist die Klassenwiederholung. Hier darfst du getrennt oder zusammenschreiben."
     }
   ]
 }

@@ -1,0 +1,82 @@
+{
+  "id": "getrennt-zusammen-adjektiv-verb-1",
+  "name": "Adjektiv + Verb — Beispiele",
+  "goal": "Die Steigerungsprobe bei Adjektiv + Verb in echten Sätzen anwenden.",
+  "authoring": {
+    "rationale": "Praktische Anwendung von Regel 4 mit den in rules/getrennt-und-zusammenschreibung.md dokumentierten Beispielen (klein schneiden, laut lachen, schön schreiben — getrennt; freisprechen, krankschreiben — zusammen). Jedes Wortpaar kommt in zwei verschiedenen Sätzen vor — Wiederholung mit Variation statt neuem Vokabular.",
+    "constraints": "Nur Regel 4 (Adjektiv + Verb), keine Duden-Doppelschreibweisen. Dritter Distraktor ist eine plausible aber falsche Schreibvariante (Bindestrich). Correct-Index variiert."
+  },
+  "rules": ["getrennt-und-zusammenschreibung"],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Kannst du die Zwiebel bitte ___?» (klein + schneiden)",
+      "options": ["klein schneiden", "kleinschneiden", "klein-schneiden"],
+      "correct": 0,
+      "explanation": "«klein» ist steigerbar (kleiner) → getrennt: «klein schneiden»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Die Köchin muss die Karotten auch ___.» (klein + schneiden)",
+      "options": ["klein-schneiden", "kleinschneiden", "klein schneiden"],
+      "correct": 2,
+      "explanation": "«klein» ist steigerbar (kleiner) → getrennt: «klein schneiden»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Die Kinder ___ über den Witz.» (laut + lachen)",
+      "options": ["lautlachen", "laut-lachen", "laut lachen"],
+      "correct": 2,
+      "explanation": "«laut» ist steigerbar (lauter) → getrennt: «laut lachen»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Im Kino darf man nicht ___.» (laut + lachen)",
+      "options": ["laut lachen", "lautlachen", "laut-lachen"],
+      "correct": 0,
+      "explanation": "«laut» ist steigerbar (lauter) → getrennt: «laut lachen»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Sie übt jeden Tag, ___.» (schön + schreiben)",
+      "options": ["schön-schreiben", "schön schreiben", "schönschreiben"],
+      "correct": 1,
+      "explanation": "«schön» ist steigerbar (schöner) → getrennt: «schön schreiben»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «In der ersten Klasse lernt man, ___.» (schön + schreiben)",
+      "options": ["schönschreiben", "schön schreiben", "schön-schreiben"],
+      "correct": 1,
+      "explanation": "«schön» ist steigerbar (schöner) → getrennt: «schön schreiben»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Der Richter konnte den Angeklagten ___.» (frei + sprechen)",
+      "options": ["frei sprechen", "freisprechen", "frei-sprechen"],
+      "correct": 1,
+      "explanation": "«frei» ist hier nicht steigerbar (feste Bedeutung: für unschuldig erklären) → zusammen: «freisprechen»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Nach dem Prozess wurde sie ___.» (frei + sprechen)",
+      "options": ["frei-sprechen", "frei sprechen", "freisprechen"],
+      "correct": 2,
+      "explanation": "«frei» ist hier nicht steigerbar (feste Bedeutung: für unschuldig erklären) → zusammen: «freisprechen»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Der Arzt musste mich für zwei Tage ___.» (krank + schreiben)",
+      "options": ["krankschreiben", "krank schreiben", "krank-schreiben"],
+      "correct": 0,
+      "explanation": "«krank» ist hier nicht steigerbar (feste Bedeutung: eine Krankmeldung ausstellen) → zusammen: «krankschreiben»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Weil ich Fieber hatte, ließ ich mich ___.» (krank + schreiben)",
+      "options": ["krank-schreiben", "krank schreiben", "krankschreiben"],
+      "correct": 2,
+      "explanation": "«krank» ist hier nicht steigerbar (feste Bedeutung: eine Krankmeldung ausstellen) → zusammen: «krankschreiben»."
+    }
+  ]
+}

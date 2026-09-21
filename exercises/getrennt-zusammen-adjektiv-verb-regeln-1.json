@@ -1,0 +1,82 @@
+{
+  "id": "getrennt-zusammen-adjektiv-verb-regeln-1",
+  "name": "Adjektiv + Verb — Regeln",
+  "goal": "Die Regel «Adjektiv + Verb: getrennt, wenn steigerbar — sonst zusammen» verstehen.",
+  "authoring": {
+    "rationale": "Deklaratives Regelwissen zur vierten Regel der Getrennt- und Zusammenschreibung. Die Steigerungsprobe (kann ich das Adjektiv steigern?) als einfaches, konkretes Werkzeug. Bewusst ohne die Duden-«Achtung»-Fälle, bei denen beide Schreibweisen erlaubt sind (z. B. klein schneiden/kleinschneiden) — zu unklar für ein einfaches Regelverständnis in dieser Altersstufe.",
+    "constraints": "Nur Regel 4 (Adjektiv + Verb), keine Doppel-Schreibweisen. Reine Grammatikfragen mit der Steigerungsprobe als Kernwerkzeug. Alle Distraktoren sind plausible grammatische Aussagen."
+  },
+  "rules": ["getrennt-und-zusammenschreibung"],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man Adjektiv + Verb, wenn man das Adjektiv steigern kann (z. B. klein → kleiner)?",
+      "options": ["Zusammen", "Getrennt", "Mit Bindestrich", "Beides ist möglich"],
+      "correct": 1,
+      "explanation": "Ist das Adjektiv steigerbar, schreibt man getrennt: «klein schneiden» (kleiner)."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man Adjektiv + Verb, wenn man das Adjektiv NICHT steigern kann?",
+      "options": ["Getrennt", "Zusammen", "Mit Bindestrich", "Beides ist möglich"],
+      "correct": 1,
+      "explanation": "Ist das Adjektiv nicht steigerbar, schreibt man zusammen: «freisprechen»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Kann man «klein» steigern (klein → kleiner → am kleinsten)?",
+      "options": ["Nein", "Nur im Perfekt", "Ja", "Nur bei Nomen"],
+      "correct": 2,
+      "explanation": "«klein» ist steigerbar → deshalb schreibt man «klein schneiden» getrennt."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man richtig?",
+      "options": ["lautlachen", "laut-lachen", "laut lachen"],
+      "correct": 2,
+      "explanation": "«laut» ist steigerbar (lauter) → getrennt: «laut lachen»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man richtig?",
+      "options": ["schön schreiben", "schön-schreiben", "schönschreiben"],
+      "correct": 0,
+      "explanation": "«schön» ist steigerbar (schöner) → getrennt: «schön schreiben»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "«freisprechen» wird zusammengeschrieben. Warum?",
+      "options": ["Weil «frei» hier nicht gesteigert werden kann.", "Weil «sprechen» im Perfekt steht.", "Weil das Wort sonst zu kurz wäre.", "Weil ein Nomen davor steht."],
+      "correct": 0,
+      "explanation": "In «freisprechen» hat «frei» eine feste Bedeutung (für unschuldig erklären) und kann hier nicht gesteigert werden → zusammen."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "«krankschreiben» wird zusammengeschrieben. Warum?",
+      "options": ["Weil «schreiben» ein Nomen ist.", "Weil «krank» hier nicht gesteigert werden kann.", "Weil der Satz sonst falsch wäre.", "Weil «krank» ein Verb ist."],
+      "correct": 1,
+      "explanation": "In «krankschreiben» hat «krank» eine feste Bedeutung (eine Krankmeldung ausstellen) und kann hier nicht gesteigert werden → zusammen."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welches Wort wird IMMER zusammengeschrieben?",
+      "options": ["klein schneiden", "laut lachen", "freisprechen", "schön schreiben"],
+      "correct": 2,
+      "explanation": "«freisprechen» ist ein festes Wort, «frei» ist hier nicht steigerbar → zusammen."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welches Wort wird getrennt geschrieben, weil man das Adjektiv steigern kann?",
+      "options": ["freisprechen", "krankschreiben", "laut lachen", "kaputt machen"],
+      "correct": 2,
+      "explanation": "«laut» ist steigerbar (lauter) → getrennt: «laut lachen»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Was ist die Eselsbrücke für Adjektiv + Verb?",
+      "options": ["Kann ich das Adjektiv steigern (z. B. mit «-er»)? Wenn ja: getrennt.", "Ist das Wort lang? Wenn ja: zusammen.", "Steht ein Artikel davor? Wenn ja: getrennt.", "Reimt sich das Wort? Wenn ja: zusammen."],
+      "correct": 0,
+      "explanation": "**Merke:** Steigerbar → getrennt. Nicht steigerbar → zusammen."
+    }
+  ]
+}

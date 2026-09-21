@@ -1,0 +1,82 @@
+{
+  "id": "getrennt-zusammen-verb-verb-regeln-1",
+  "name": "Verb + Verb — Regeln",
+  "goal": "Die Regel «Verb + Verb = getrennt» und die Ausnahme «sitzen bleiben / sitzenbleiben» verstehen.",
+  "authoring": {
+    "rationale": "Deklaratives Regelwissen zur zweiten Regel der Getrennt- und Zusammenschreibung: Zwei Verben hintereinander werden getrennt geschrieben. Nutzt ausschließlich die in rules/getrennt-und-zusammenschreibung.md dokumentierten Beispiele (schreiben lernen, spazieren gehen, liegen bleiben, sitzen bleiben/sitzenbleiben) — keine erfundene Zusatzvokabel.",
+    "constraints": "Nur Regel 2 (Verb + Verb) inkl. der dort dokumentierten sitzen-bleiben-Ausnahme. Reine Grammatikfragen. Alle Distraktoren sind plausible grammatische Aussagen."
+  },
+  "rules": ["getrennt-und-zusammenschreibung"],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man zwei Verben hintereinander (z. B. «schreiben» + «lernen»)?",
+      "options": ["Immer zusammen", "Je nach Länge des Wortes", "Immer getrennt", "Man kann frei wählen"],
+      "correct": 2,
+      "explanation": "Zwei Verben hintereinander werden getrennt geschrieben: «schreiben lernen».\n**Merke:** Verb + Verb = getrennt."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Welches Wortpaar besteht aus zwei Verben?",
+      "options": ["Ski fahren", "spazieren gehen", "schön schreiben", "das Schreiben"],
+      "correct": 1,
+      "explanation": "«spazieren gehen» → zwei Verben hintereinander.\n«Ski fahren» ist Nomen + Verb, «schön schreiben» ist Adjektiv + Verb."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man richtig?",
+      "options": ["liegenbleiben", "liegen-bleiben", "liegen bleiben"],
+      "correct": 2,
+      "explanation": "«liegen bleiben» — zwei Verben, getrennt geschrieben."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man richtig?",
+      "options": ["schreiben lernen", "schreibenlernen", "schreiben-lernen"],
+      "correct": 0,
+      "explanation": "«schreiben lernen» — zwei Verben, getrennt geschrieben."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Was bedeutet «sitzen bleiben» (zwei Wörter, getrennt)?",
+      "options": ["Die Klasse wiederholen.", "Auf dem Stuhl sitzen bleiben.", "Schnell aufstehen.", "Spazieren gehen."],
+      "correct": 1,
+      "explanation": "Getrennt geschrieben meint «sitzen bleiben» die wörtliche Bedeutung: auf dem Stuhl bleiben."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Was bedeutet «sitzenbleiben» (ein Wort, zusammen)?",
+      "options": ["Auf dem Stuhl bleiben.", "Schnell aufstehen.", "Die Klasse wiederholen.", "Spazieren gehen."],
+      "correct": 2,
+      "explanation": "Zusammengeschrieben bekommt «sitzenbleiben» eine übertragene Bedeutung: die Klasse wiederholen."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wann schreibt man Verb + Verb ausnahmsweise zusammen?",
+      "options": ["Wenn eine neue, übertragene Bedeutung entsteht.", "Wenn das Verb sehr kurz ist.", "Nie — Verb + Verb ist immer getrennt.", "Wenn ein Artikel davorsteht."],
+      "correct": 0,
+      "explanation": "Beispiel: «sitzen bleiben» (wörtlich, getrennt) → «sitzenbleiben» (übertragen: die Klasse wiederholen, zusammen)."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Ich will heute auf meinem Stuhl ___.» (sitzen + bleiben, wörtlich gemeint)",
+      "options": ["sitzenbleiben", "sitzen-bleiben", "sitzen bleiben"],
+      "correct": 2,
+      "explanation": "Wörtliche Bedeutung → getrennt: «sitzen bleiben»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Wegen seiner schlechten Noten ist er ___.» (sitzen + bleiben, übertragen: die Klasse wiederholen)",
+      "options": ["sitzen bleiben", "sitzenbleiben", "sitzen-bleiben"],
+      "correct": 1,
+      "explanation": "Übertragene Bedeutung → zusammen: «sitzenbleiben»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Stimmt die Aussage: «Verb + Verb wird immer zusammengeschrieben.»?",
+      "options": ["Nein — Verb + Verb wird getrennt geschrieben.", "Ja, das stimmt.", "Nein — es kommt auf den Artikel an.", "Ja, aber nur bei kurzen Verben."],
+      "correct": 0,
+      "explanation": "Die Regel lautet genau umgekehrt: Verb + Verb wird getrennt geschrieben (Ausnahme: übertragene Bedeutung wie bei «sitzenbleiben»)."
+    }
+  ]
+}

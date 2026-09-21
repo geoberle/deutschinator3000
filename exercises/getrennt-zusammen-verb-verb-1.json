@@ -1,0 +1,82 @@
+{
+  "id": "getrennt-zusammen-verb-verb-1",
+  "name": "Verb + Verb — Beispiele",
+  "goal": "Die Regel «Verb + Verb = getrennt» und die Ausnahme «sitzen bleiben / sitzenbleiben» in echten Sätzen richtig anwenden.",
+  "authoring": {
+    "rationale": "Praktische Anwendung von Regel 2 mit den in rules/getrennt-und-zusammenschreibung.md dokumentierten Wortpaaren (schreiben lernen, spazieren gehen, liegen bleiben, sitzen bleiben/sitzenbleiben). Jedes Paar kommt in unterschiedlichen Sätzen vor — Wiederholung mit Variation statt neuem Vokabular.",
+    "constraints": "Nur Verb + Verb (Regel 2) mit der dokumentierten sitzen-bleiben-Ausnahme. Dritter Distraktor ist eine plausible aber falsche Schreibvariante (Bindestrich). Correct-Index variiert."
+  },
+  "rules": ["getrennt-und-zusammenschreibung"],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Ich möchte unbedingt ___.» (schreiben + lernen)",
+      "options": ["schreiben lernen", "schreibenlernen", "schreiben-lernen"],
+      "correct": 0,
+      "explanation": "«schreiben lernen» — zwei Verben, getrennt.\n**Merke:** Verb + Verb = getrennt."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Nach dem Essen gehen wir ___.» (spazieren + gehen)",
+      "options": ["spazierengehen", "spazieren gehen", "spazieren-gehen"],
+      "correct": 1,
+      "explanation": "«spazieren gehen» — zwei Verben, getrennt."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Papa möchte heute im Bett ___.» (liegen + bleiben, wörtlich)",
+      "options": ["liegen-bleiben", "liegenbleiben", "liegen bleiben"],
+      "correct": 2,
+      "explanation": "Wörtliche Bedeutung → getrennt: «liegen bleiben»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Meine Schwester übt jeden Tag ___.» (schreiben + lernen)",
+      "options": ["schreiben lernen", "schreibenlernen", "schreiben-lernen"],
+      "correct": 0,
+      "explanation": "«schreiben lernen» — zwei Verben, getrennt."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Wir ___ am Abend gerne im Park.» (spazieren + gehen)",
+      "options": ["spazieren-gehen", "spazierengehen", "spazieren gehen"],
+      "correct": 2,
+      "explanation": "«spazieren gehen» — zwei Verben, getrennt."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Die Katze will auf dem Sofa ___.» (liegen + bleiben, wörtlich)",
+      "options": ["liegen bleiben", "liegenbleiben", "liegen-bleiben"],
+      "correct": 0,
+      "explanation": "Wörtliche Bedeutung → getrennt: «liegen bleiben»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Ich will jetzt auf meinem Stuhl ___.» (sitzen + bleiben, wörtlich: nicht aufstehen)",
+      "options": ["sitzenbleiben", "sitzen-bleiben", "sitzen bleiben"],
+      "correct": 2,
+      "explanation": "Wörtliche Bedeutung → getrennt: «sitzen bleiben»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Weil seine Noten schlecht waren, ist er ___.» (sitzen + bleiben, übertragen: die Klasse wiederholen)",
+      "options": ["sitzen bleiben", "sitzenbleiben", "sitzen-bleiben"],
+      "correct": 1,
+      "explanation": "Übertragene Bedeutung → zusammen: «sitzenbleiben»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Bitte ___ noch kurz ___, ich komme gleich!» (sitzen + bleiben, wörtlich)",
+      "options": ["sitzen-bleiben", "sitzenbleiben", "sitzen bleiben"],
+      "correct": 2,
+      "explanation": "Wörtliche Bedeutung → getrennt: «sitzen bleiben»."
+    },
+    {
+      "type": "multiple-choice",
+      "question": "Wie schreibt man: «Weil er zu oft fehlte, musste er ___.» (sitzen + bleiben, übertragen: die Klasse wiederholen)",
+      "options": ["sitzenbleiben", "sitzen bleiben", "sitzen-bleiben"],
+      "correct": 0,
+      "explanation": "Übertragene Bedeutung → zusammen: «sitzenbleiben»."
+    }
+  ]
+}

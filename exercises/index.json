@@ -358,5 +358,41 @@
     "file": "getrennt-zusammen-nomen-verb-1.json",
     "count": 10,
     "category": "Rechtschreibung"
+  },
+  {
+    "id": "getrennt-zusammen-verb-verb-regeln-1",
+    "name": "Verb + Verb — Regeln",
+    "goal": "Die Regel «Verb + Verb = getrennt» und die Ausnahme «sitzen bleiben / sitzenbleiben» verstehen.",
+    "description": "Beantworte Fragen zur Regel Verb + Verb",
+    "file": "getrennt-zusammen-verb-verb-regeln-1.json",
+    "count": 10,
+    "category": "Rechtschreibung"
+  },
+  {
+    "id": "getrennt-zusammen-verb-verb-1",
+    "name": "Verb + Verb — Beispiele",
+    "goal": "Die Regel «Verb + Verb = getrennt» und die Ausnahme «sitzen bleiben / sitzenbleiben» in echten Sätzen richtig anwenden.",
+    "description": "Wie schreibt man richtig — getrennt oder zusammen?",
+    "file": "getrennt-zusammen-verb-verb-1.json",
+    "count": 10,
+    "category": "Rechtschreibung"
+  },
+  {
+    "id": "getrennt-zusammen-adjektiv-verb-regeln-1",
+    "name": "Adjektiv + Verb — Regeln",
+    "goal": "Die Regel «Adjektiv + Verb: getrennt, wenn steigerbar — sonst zusammen» verstehen.",
+    "description": "Beantworte Fragen zur Regel Adjektiv + Verb",
+    "file": "getrennt-zusammen-adjektiv-verb-regeln-1.json",
+    "count": 10,
+    "category": "Rechtschreibung"
+  },
+  {
+    "id": "getrennt-zusammen-adjektiv-verb-1",
+    "name": "Adjektiv + Verb — Beispiele",
+    "goal": "Die Steigerungsprobe bei Adjektiv + Verb in echten Sätzen anwenden.",
+    "description": "Wie schreibt man richtig — getrennt oder zusammen?",
+    "file": "getrennt-zusammen-adjektiv-verb-1.json",
+    "count": 10,
+    "category": "Rechtschreibung"
   }
 ]

@@ -24,7 +24,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Die Kinder ___ über den Witz.» (laut + lachen)",
+      "question": "Wie schreibt man: «Über den lustigen Witz möchten die Kinder ___.» (laut + lachen)",
       "options": ["lautlachen", "laut-lachen", "laut lachen"],
       "correct": 2,
       "explanation": "«laut» ist steigerbar (lauter) → getrennt: «laut lachen»."
@@ -38,14 +38,14 @@
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Sie übt jeden Tag, ___.» (schön + schreiben)",
+      "question": "Wie schreibt man: «Sie will unbedingt ___.» (schön + schreiben)",
       "options": ["schön-schreiben", "schön schreiben", "schönschreiben"],
       "correct": 1,
       "explanation": "«schön» ist steigerbar (schöner) → getrennt: «schön schreiben»."
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «In der ersten Klasse lernt man, ___.» (schön + schreiben)",
+      "question": "Wie schreibt man: «In der ersten Klasse lernt man ___.» (schön + schreiben)",
       "options": ["schönschreiben", "schön schreiben", "schön-schreiben"],
       "correct": 1,
       "explanation": "«schön» ist steigerbar (schöner) → getrennt: «schön schreiben»."
@@ -59,7 +59,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Nach dem Prozess wurde sie ___.» (frei + sprechen)",
+      "question": "Wie schreibt man: «Man kann einen unschuldigen Menschen vor Gericht ___.» (frei + sprechen)",
       "options": ["frei-sprechen", "frei sprechen", "freisprechen"],
       "correct": 2,
       "explanation": "«frei» ist hier nicht steigerbar (feste Bedeutung: für unschuldig erklären) → zusammen: «freisprechen»."

@@ -11,9 +11,9 @@
     {
       "type": "multiple-choice",
       "question": "Wie schreibt man zwei Verben hintereinander (z. B. «schreiben» + «lernen»)?",
-      "options": ["Immer zusammen", "Je nach Länge des Wortes", "Immer getrennt", "Man kann frei wählen"],
-      "correct": 2,
-      "explanation": "Zwei Verben hintereinander werden getrennt geschrieben: «schreiben lernen».\n**Merke:** Verb + Verb = getrennt."
+      "options": ["Immer zusammen", "Getrennt — außer bei übertragener Bedeutung", "Immer getrennt, ohne jede Ausnahme", "Man kann frei wählen"],
+      "correct": 1,
+      "explanation": "Zwei Verben hintereinander werden meist getrennt geschrieben: «schreiben lernen». Ausnahme: übertragene Bedeutung wie bei «sitzenbleiben».\n**Merke:** Verb + Verb = getrennt (außer bei übertragener Bedeutung)."
     },
     {
       "type": "multiple-choice",
@@ -66,7 +66,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Wegen seiner schlechten Noten ist er ___.» (sitzen + bleiben, übertragen: die Klasse wiederholen)",
+      "question": "Wie schreibt man: «Wegen seiner schlechten Noten muss er wahrscheinlich ___.» (sitzen + bleiben, übertragen: die Klasse wiederholen)",
       "options": ["sitzen bleiben", "sitzenbleiben", "sitzen-bleiben"],
       "correct": 1,
       "explanation": "Übertragene Bedeutung → zusammen: «sitzenbleiben»."

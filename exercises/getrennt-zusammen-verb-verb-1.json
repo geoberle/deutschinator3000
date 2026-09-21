@@ -17,7 +17,7 @@
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Nach dem Essen gehen wir ___.» (spazieren + gehen)",
+      "question": "Wie schreibt man: «Nach dem Essen wollen wir noch ___.» (spazieren + gehen)",
       "options": ["spazierengehen", "spazieren gehen", "spazieren-gehen"],
       "correct": 1,
       "explanation": "«spazieren gehen» — zwei Verben, getrennt."
@@ -31,14 +31,14 @@
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Meine Schwester übt jeden Tag ___.» (schreiben + lernen)",
+      "question": "Wie schreibt man: «Mein kleiner Bruder will unbedingt ___.» (schreiben + lernen)",
       "options": ["schreiben lernen", "schreibenlernen", "schreiben-lernen"],
       "correct": 0,
       "explanation": "«schreiben lernen» — zwei Verben, getrennt."
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Wir ___ am Abend gerne im Park.» (spazieren + gehen)",
+      "question": "Wie schreibt man: «Am Abend möchten wir gerne im Park ___.» (spazieren + gehen)",
       "options": ["spazieren-gehen", "spazierengehen", "spazieren gehen"],
       "correct": 2,
       "explanation": "«spazieren gehen» — zwei Verben, getrennt."
@@ -59,14 +59,14 @@
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Weil seine Noten schlecht waren, ist er ___.» (sitzen + bleiben, übertragen: die Klasse wiederholen)",
+      "question": "Wie schreibt man: «Weil seine Noten schlecht waren, musste er wohl ___.» (sitzen + bleiben, übertragen: die Klasse wiederholen)",
       "options": ["sitzen bleiben", "sitzenbleiben", "sitzen-bleiben"],
       "correct": 1,
       "explanation": "Übertragene Bedeutung → zusammen: «sitzenbleiben»."
     },
     {
       "type": "multiple-choice",
-      "question": "Wie schreibt man: «Bitte ___ noch kurz ___, ich komme gleich!» (sitzen + bleiben, wörtlich)",
+      "question": "Wie schreibt man: «Bitte kannst du noch kurz ___, ich komme gleich!» (sitzen + bleiben, wörtlich)",
       "options": ["sitzen-bleiben", "sitzenbleiben", "sitzen bleiben"],
       "correct": 2,
       "explanation": "Wörtliche Bedeutung → getrennt: «sitzen bleiben»."

@@ -10,7 +10,7 @@ Ein Satzglied kann aus einem Wort oder einer ganzen Wortgruppe bestehen. Frage i
 | O3 | Dativobjekt | Wem hilft sie? → Sie hilft **dem Kind**. |
 | O2 | Genitivobjekt | Wessen bedarf es? → Das Tier bedarf **unserer Hilfe**. |
 | LO | Ortsergänzung / Lokaladverbiale | Wo? Wohin? Woher? → **im Garten** |
-| KA | Begründungsergänzung / Kausaladverbiale | Warum? Weshalb? → **wegen des Regens** |
+| KA | Kausalobjekt / Begründungsergänzung | Warum? Weshalb? → **wegen des Regens** |
 | MO | Artergänzung / Modaladverbiale | Wie? Auf welche Weise? → **vorsichtig** |
 | TO | Zeitergänzung / Temporaladverbiale | Wann? Wie lange? Wie oft? → **am Morgen** |
 

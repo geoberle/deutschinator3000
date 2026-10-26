@@ -6,7 +6,7 @@
     "rationale": "Meister-Stufe: Das Adverb-Wissen wird auf Satzglied-Ebene angewendet. Alle vier adverbialen Bestimmungen kommen vor, gemischt mit Subjekt, Prädikat und Objekten.",
     "constraints": "Fokus auf adverbiale Bestimmungen. Einfache Satzstrukturen mit klaren Satzgliedern."
   },
-  "rules": ["adverb-grundlagen"],
+  "rules": ["satzglieder-grundlagen"],
   "type": "satzglieder",
   "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KA — Kausaladverbiale"],
   "question": "Bestimme die Satzglieder",
@@ -53,14 +53,14 @@
       "explanation": "**Dort oben** → Wo? → LO (Lokaladverbiale)\n**wohnt** → Was tut sie? → P (Prädikat)\n**meine Großmutter** → Wer wohnt? → S (Subjekt)"
     },
     {
-      "sentence": "Er hat trotzdem den Test bestanden",
+      "sentence": "Er hat deshalb den Test bestanden",
       "chunks": [
         { "indices": [0], "correct": "S — Subjekt" },
         { "indices": [1, 5], "correct": "P — Prädikat" },
         { "indices": [2], "correct": "KA — Kausaladverbiale" },
         { "indices": [3, 4], "correct": "O4 — Akkusativobjekt" }
       ],
-      "explanation": "«Er» → Wer hat bestanden? → S; «hat … bestanden» → P; «den Test» → Was hat er bestanden? → O4.\n«trotzdem» bedeutet: Etwas sprach dagegen, aber er hat es geschafft. Das ist kein Grund für seinen Erfolg.\n**Merke:** Zu KA zählen in diesen Übungen auch Hindernisse, die etwas nicht verhindern. Deshalb gehört «trotzdem» hier zu KA."
+      "explanation": "«Er» → Wer hat bestanden? → S; «hat … bestanden» → P; «den Test» → Was hat er bestanden? → O4.\n«deshalb» → Warum hat er den Test bestanden? → KA (Kausalobjekt).\n**Merke:** Das Kausalobjekt nennt den Grund. Du fragst: Warum?"
     },
     {
       "sentence": "Heute Morgen bringt Papa dem Hund sein Futter",
@@ -74,14 +74,13 @@
       "explanation": "**Heute Morgen** → Wann? → TO (Temporaladverbiale)\n**bringt** → Was tut er? → P (Prädikat)\n**Papa** → Wer bringt? → S (Subjekt)\n**dem Hund** → Wem? → O3 (Dativobjekt)\n**sein Futter** → Wen/Was? → O4 (Akkusativobjekt)"
     },
     {
-      "sentence": "Die Schüler arbeiten leider vergebens",
+      "sentence": "Die Schüler arbeiten ruhig und konzentriert",
       "chunks": [
         { "indices": [0, 1], "correct": "S — Subjekt" },
         { "indices": [2], "correct": "P — Prädikat" },
-        { "indices": [3], "correct": "MO — Modaladverbiale" },
-        { "indices": [4], "correct": "MO — Modaladverbiale" }
+        { "indices": [3, 4, 5], "correct": "MO — Modaladverbiale" }
       ],
-      "explanation": "«Die Schüler» → Wer arbeitet? → S; «arbeiten» → P; «vergebens» → Wie arbeiten sie? Ohne Erfolg → MO.\n«leider» bedeutet: Jemand findet es schade, dass ihre Arbeit ohne Erfolg bleibt. Es sagt nicht, wie sie arbeiten.\n**Merke:** Zu MO zählt in diesen Übungen auch, wie jemand das Geschehen bewertet. Deshalb gehört «leider» hier zu MO."
+      "explanation": "«Die Schüler» → Wer arbeitet? → S; «arbeiten» → P.\n«ruhig und konzentriert» → Wie arbeiten die Schüler? → MO.\n**Merke:** Die ganze Wortgruppe «ruhig und konzentriert» beschreibt, wie die Schüler arbeiten."
     },
     {
       "sentence": "Darum übt sie täglich Klavier",

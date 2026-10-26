@@ -1,23 +1,19 @@
 [
   {
-    "id": "tageschallenge-2026-09-21-korrigiert",
-    "name": "Tageschallenge: 21. September",
+    "id": "satzglieder-tag-1-2026-10-26",
+    "name": "Satzglieder — Tag 1: Grundglieder",
     "stages": [
       {
-        "name": "Stufe 1: Verb + Verb — Regeln",
-        "sets": ["getrennt-zusammen-verb-verb-regeln-1"]
+        "name": "Stufe 1: Subjekt und Objekte erkennen",
+        "sets": ["satzglieder-basis-erkennen-1"]
       },
       {
-        "name": "Stufe 2: Verb + Verb — Beispiele",
-        "sets": ["getrennt-zusammen-verb-verb-1"]
+        "name": "Stufe 2: Mehrteilige Prädikate finden",
+        "sets": ["satzglieder-basis-erkennen-2"]
       },
       {
-        "name": "Stufe 3: Adjektiv + Verb — Regeln",
-        "sets": ["getrennt-zusammen-adjektiv-verb-regeln-1"]
-      },
-      {
-        "name": "Stufe 4: Adjektiv + Verb — Beispiele",
-        "sets": ["getrennt-zusammen-adjektiv-verb-1"]
+        "name": "Stufe 3: Grundglieder im Satzmix",
+        "sets": ["satzglieder-basis-mix-1"]
       }
     ]
   }

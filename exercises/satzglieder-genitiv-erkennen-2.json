@@ -1,0 +1,110 @@
+{
+  "id": "satzglieder-genitiv-erkennen-2",
+  "name": "Tag 3 · Genitivobjekte erkennen 2",
+  "goal": "Genitivobjekte auch bei mehrteiligen Prädikaten sicher bestimmen.",
+  "authoring": {
+    "rationale": "Sieben Genitivobjekt-Sätze verbinden die verbabhängige Wessen-Frage mit mehrteiligen Prädikaten. Drei Wiederholungen mit Dativ- und Akkusativobjekten verhindern eine automatische O2-Zuordnung.",
+    "constraints": "Nur S, P, O4, O3 und O2. Perfekt, Futur und Modalverben; alle Prädikatsteile bilden einen Chunk. Keine Adverbialien, Präpositionalobjekte, reflexiven Verben oder Nebensätze."
+  },
+  "type": "satzglieder",
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "O2 — Genitivobjekt"],
+  "question": "Bestimme die Satzglieder. Beachte alle Teile des Prädikats.",
+  "rules": ["satzglieder-grundlagen", "genitivobjekt-grundlagen"],
+  "exercises": [
+    {
+      "sentence": "Der Garten wird deiner Pflege bedürfen",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2, 5], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "«Der Garten» → S; «wird … bedürfen» → P im Futur.\nWessen wird der Garten bedürfen? «deiner Pflege» → O2.\n**Merke:** Das gehobene Verb «bedürfen» verlangt auch im Futur den Genitiv."
+    },
+    {
+      "sentence": "Die Klasse möchte der Schulgründerin gedenken",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2, 5], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "«Die Klasse» → S; «möchte … gedenken» → P.\nWessen möchte die Klasse gedenken? «der Schulgründerin» → O2.\n**Merke:** «der» kann auch Genitiv sein. Hier verlangt «gedenken» diesen Fall."
+    },
+    {
+      "sentence": "Die Jury hat den Spieler des Schummelns beschuldigt",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2, 7], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [5, 6], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "«Die Jury» → S; «hat … beschuldigt» → P im Perfekt.\nWen hat sie beschuldigt? «den Spieler» → O4; wessen hat sie ihn beschuldigt? «des Schummelns» → O2.\n**Merke:** Beide Verbteile gehören zum Prädikat; die Objekte behalten ihren Fall."
+    },
+    {
+      "sentence": "Lea hat ihren Bruder der Lüge bezichtigt",
+      "chunks": [
+        { "indices": [0], "correct": "S — Subjekt" },
+        { "indices": [1, 6], "correct": "P — Prädikat" },
+        { "indices": [2, 3], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [4, 5], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "«Lea» → S; «hat … bezichtigt» → P.\nWen hat Lea bezichtigt? «ihren Bruder» → O4; wessen hat sie ihn bezichtigt? «der Lüge» → O2.\n**Merke:** Das gehobene «bezichtigen» verbindet eine Person im Akkusativ mit einem Vorwurf im Genitiv."
+    },
+    {
+      "sentence": "Der Schiedsrichter hat den Spieler des Betrugs überführt",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2, 7], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [5, 6], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "«Der Schiedsrichter» → S; «hat … überführt» → P.\nWen hat er überführt? «den Spieler» → O4; wessen hat er ihn überführt? «des Betrugs» → O2.\n**Merke:** «jemanden einer Sache überführen» bedeutet, jemandem einen Verstoß nachzuweisen."
+    },
+    {
+      "sentence": "Der Lärm hat die Kinder des Schlafes beraubt",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2, 7], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [5, 6], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "«Der Lärm» → S; «hat … beraubt» → P.\nWen hat der Lärm des Schlafes beraubt? «die Kinder» → O4; wessen hat er sie beraubt? «des Schlafes» → O2.\n**Merke:** Die gehobene Wendung bedeutet: Der Lärm hat den Kindern den Schlaf genommen."
+    },
+    {
+      "sentence": "Dieser Vorschlag wird einer Erklärung bedürfen",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2, 5], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "«Dieser Vorschlag» → S; «wird … bedürfen» → P.\nWessen wird dieser Vorschlag bedürfen? «einer Erklärung» → O2.\n**Merke:** Das Genitivobjekt ergänzt «bedürfen», auch wenn es zwischen den Prädikatsteilen steht."
+    },
+    {
+      "sentence": "Emil hat seiner Schwester einen Comic geliehen",
+      "chunks": [
+        { "indices": [0], "correct": "S — Subjekt" },
+        { "indices": [1, 6], "correct": "P — Prädikat" },
+        { "indices": [2, 3], "correct": "O3 — Dativobjekt" },
+        { "indices": [4, 5], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "«Emil» → S; «hat … geliehen» → P.\nWem hat Emil einen Comic geliehen? «seiner Schwester» → O3; was hat er ihr geliehen? «einen Comic» → O4.\n**Merke:** «seiner Schwester» ist hier Dativ: Die Frage zum Verb lautet Wem?"
+    },
+    {
+      "sentence": "Dem Nachbarn wird Nora helfen",
+      "chunks": [
+        { "indices": [0, 1], "correct": "O3 — Dativobjekt" },
+        { "indices": [2, 4], "correct": "P — Prädikat" },
+        { "indices": [3], "correct": "S — Subjekt" }
+      ],
+      "explanation": "Wer wird helfen? «Nora» → S; «wird … helfen» → P.\nWem wird Nora helfen? «Dem Nachbarn» → O3.\n**Merke:** «helfen» verlangt den Dativ, auch wenn das Objekt am Satzanfang steht."
+    },
+    {
+      "sentence": "Das Modell hat Jonas gebaut",
+      "chunks": [
+        { "indices": [0, 1], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [2, 4], "correct": "P — Prädikat" },
+        { "indices": [3], "correct": "S — Subjekt" }
+      ],
+      "explanation": "Wer hat gebaut? «Jonas» → S; «hat … gebaut» → P.\nWas hat Jonas gebaut? «Das Modell» → O4.\n**Merke:** Frage nach der Rolle im Satz, nicht nur nach dem Artikel oder der Position."
+    }
+  ]
+}

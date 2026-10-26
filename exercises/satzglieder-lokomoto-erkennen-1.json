@@ -1,0 +1,111 @@
+{
+  "id": "satzglieder-lokomoto-erkennen-1",
+  "name": "Tag 2: LO-KO-MO-TO – eine Angabe erkennen",
+  "goal": "Zeit, Ort, Art und Weise sowie Grund mit der passenden Frage unterscheiden.",
+  "authoring": {
+    "rationale": "Je eine adverbiale Bestimmung lenkt den Blick auf die Frageprobe; vertraute Subjekte, Prädikate und einzelne Objekte sichern die Grundlagen.",
+    "constraints": "10 Hauptsätze mit genau einer Adverbiale: dreimal TO, dreimal LO, zweimal MO und zweimal KA. Keine Genitiv- oder Präpositionalobjekte. KA bezeichnet ausschließlich einen Grund."
+  },
+  "type": "satzglieder",
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KA — Kausaladverbiale"],
+  "question": "Bestimme alle Satzglieder. Frage bei der Angabe: Wann, wo, wie oder warum?",
+  "rules": ["satzglieder-grundlagen"],
+  "exercises": [
+    {
+      "sentence": "Nach der Schule liest Selma einen Comic",
+      "chunks": [
+        { "indices": [0, 1, 2], "correct": "TO — Temporaladverbiale" },
+        { "indices": [3], "correct": "P — Prädikat" },
+        { "indices": [4], "correct": "S — Subjekt" },
+        { "indices": [5, 6], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wann liest Selma? «Nach der Schule» → TO.\nWer liest? «Selma» → S; «liest» → P. Was liest sie? «einen Comic» → O4."
+    },
+    {
+      "sentence": "Unter dem Tisch schläft unsere Katze",
+      "chunks": [
+        { "indices": [0, 1, 2], "correct": "LO — Lokaladverbiale" },
+        { "indices": [3], "correct": "P — Prädikat" },
+        { "indices": [4, 5], "correct": "S — Subjekt" }
+      ],
+      "explanation": "Wo schläft die Katze? «Unter dem Tisch» → LO.\nWer schläft? «unsere Katze» → S; «schläft» → P."
+    },
+    {
+      "sentence": "Emil faltet das Papier sorgfältig",
+      "chunks": [
+        { "indices": [0], "correct": "S — Subjekt" },
+        { "indices": [1], "correct": "P — Prädikat" },
+        { "indices": [2, 3], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [4], "correct": "MO — Modaladverbiale" }
+      ],
+      "explanation": "Wie faltet Emil das Papier? «sorgfältig» → MO.\nWer faltet? «Emil» → S; «faltet» → P. Was faltet er? «das Papier» → O4."
+    },
+    {
+      "sentence": "Wegen des Regens verschieben wir das Picknick",
+      "chunks": [
+        { "indices": [0, 1, 2], "correct": "KA — Kausaladverbiale" },
+        { "indices": [3], "correct": "P — Prädikat" },
+        { "indices": [4], "correct": "S — Subjekt" },
+        { "indices": [5, 6], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Warum verschieben wir das Picknick? «Wegen des Regens» → KA.\nWer verschiebt? «wir» → S; «verschieben» → P. Was verschieben wir? «das Picknick» → O4."
+    },
+    {
+      "sentence": "Am Samstag hilft Jakob seinem Opa",
+      "chunks": [
+        { "indices": [0, 1], "correct": "TO — Temporaladverbiale" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3], "correct": "S — Subjekt" },
+        { "indices": [4, 5], "correct": "O3 — Dativobjekt" }
+      ],
+      "explanation": "Wann hilft Jakob? «Am Samstag» → TO.\nWer hilft? «Jakob» → S; «hilft» → P. Wem hilft er? «seinem Opa» → O3."
+    },
+    {
+      "sentence": "Die Freundinnen lachen im Schulhof",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "LO — Lokaladverbiale" }
+      ],
+      "explanation": "Wo lachen die Freundinnen? «im Schulhof» → LO.\nWer lacht? «Die Freundinnen» → S; «lachen» → P."
+    },
+    {
+      "sentence": "Leise schließt Mira die Tür",
+      "chunks": [
+        { "indices": [0], "correct": "MO — Modaladverbiale" },
+        { "indices": [1], "correct": "P — Prädikat" },
+        { "indices": [2], "correct": "S — Subjekt" },
+        { "indices": [3, 4], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wie schließt Mira die Tür? «Leise» → MO.\nWer schließt? «Mira» → S; «schließt» → P. Was schließt sie? «die Tür» → O4."
+    },
+    {
+      "sentence": "Aus Hunger isst der Bub eine Banane",
+      "chunks": [
+        { "indices": [0, 1], "correct": "KA — Kausaladverbiale" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "S — Subjekt" },
+        { "indices": [5, 6], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Warum isst der Bub? «Aus Hunger» → KA.\nWer isst? «der Bub» → S; «isst» → P. Was isst er? «eine Banane» → O4."
+    },
+    {
+      "sentence": "Heute übt unsere Klasse",
+      "chunks": [
+        { "indices": [0], "correct": "TO — Temporaladverbiale" },
+        { "indices": [1], "correct": "P — Prädikat" },
+        { "indices": [2, 3], "correct": "S — Subjekt" }
+      ],
+      "explanation": "Wann übt die Klasse? «Heute» → TO.\nWer übt? «unsere Klasse» → S; «übt» → P."
+    },
+    {
+      "sentence": "Im Turnsaal springt die Sportlerin",
+      "chunks": [
+        { "indices": [0, 1], "correct": "LO — Lokaladverbiale" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "S — Subjekt" }
+      ],
+      "explanation": "Wo springt die Sportlerin? «Im Turnsaal» → LO.\nWer springt? «die Sportlerin» → S; «springt» → P."
+    }
+  ]
+}

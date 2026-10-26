@@ -1,0 +1,328 @@
+{
+  "id": "satzglieder-basis-mix-1",
+  "name": "Tag 1: Grundglieder im Satzmix",
+  "goal": "Satzglieder auch bei veränderter Reihenfolge und längeren Wortgruppen bestimmen.",
+  "authoring": {
+    "rationale": "Tag 1: Grundglieder schrittweise auffrischen; erst kurze Sätze, dann mehrteilige Prädikate, zuletzt veränderte Satzstellung.",
+    "constraints": "Nur S, P, O4 und O3; keine adverbialen Bestimmungen oder Genitivobjekte. Attribute bleiben in ihrer Wortgruppe."
+  },
+  "type": "satzglieder",
+  "categories": [
+    "S — Subjekt",
+    "P — Prädikat",
+    "O4 — Akkusativobjekt",
+    "O3 — Dativobjekt"
+  ],
+  "question": "Bestimme die Satzglieder",
+  "exercises": [
+    {
+      "sentence": "Den roten Ball fängt der kleine Hund",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        },
+        {
+          "indices": [
+            3
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            4,
+            5,
+            6
+          ],
+          "correct": "S — Subjekt"
+        }
+      ],
+      "explanation": "«Den roten Ball» → Wen oder was fängt der Hund? → O4; «fängt» → P; «der kleine Hund» → Wer fängt? → S.\n**Merke:** Das erste Satzglied ist nicht automatisch das Subjekt."
+    },
+    {
+      "sentence": "Dem neuen Schüler hilft meine Freundin",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            3
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "S — Subjekt"
+        }
+      ],
+      "explanation": "«Dem neuen Schüler» → Wem hilft sie? → O3; «hilft» → P; «meine Freundin» → Wer hilft? → S.\n**Merke:** Bestimme den Fall mit der Frage, nicht mit der Position."
+    },
+    {
+      "sentence": "Ein spannendes Buch hat die Tante ihrem Neffen geschenkt",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        },
+        {
+          "indices": [
+            3,
+            8
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            6,
+            7
+          ],
+          "correct": "O3 — Dativobjekt"
+        }
+      ],
+      "explanation": "«Ein spannendes Buch» → O4; «hat … geschenkt» → P; «die Tante» → S; «ihrem Neffen» → O3.\n**Merke:** Was wurde geschenkt? → Buch; wer hat geschenkt? → Tante."
+    },
+    {
+      "sentence": "Der Bruder meiner Freundin repariert das alte Fahrrad",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            4
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            5,
+            6,
+            7
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Der Bruder meiner Freundin» → S; «repariert» → P; «das alte Fahrrad» → O4.\n**Merke:** «meiner Freundin» beschreibt den Bruder näher und bleibt Teil des Subjekts."
+    },
+    {
+      "sentence": "Unserem Trainer haben wir eine Karte geschrieben",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            2,
+            6
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Unserem Trainer» → Wem? → O3; «haben … geschrieben» → P; «wir» → Wer? → S; «eine Karte» → Was? → O4.\n**Merke:** Die Reihenfolge ändert die Aufgaben der Satzglieder nicht."
+    },
+    {
+      "sentence": "Die Tasche der Lehrerin trägt ein hilfsbereites Kind",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        },
+        {
+          "indices": [
+            4
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            5,
+            6,
+            7
+          ],
+          "correct": "S — Subjekt"
+        }
+      ],
+      "explanation": "«Die Tasche der Lehrerin» → Was trägt das Kind? → O4; «trägt» → P; «ein hilfsbereites Kind» → S.\n**Merke:** «der Lehrerin» gehört zur Tasche, nicht als eigenes Objekt zum Verb."
+    },
+    {
+      "sentence": "Dem besten Freund kann der Junge vertrauen",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            3,
+            6
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "S — Subjekt"
+        }
+      ],
+      "explanation": "«Dem besten Freund» → Wem kann er vertrauen? → O3; «kann … vertrauen» → P; «der Junge» → S.\n**Merke:** Das Objekt kann vor beiden Teilen des Prädikats stehen."
+    },
+    {
+      "sentence": "Die Tochter des Nachbarn zeigt uns ihre Zeichnung",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            4
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            5
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            6,
+            7
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Die Tochter des Nachbarn» → S; «zeigt» → P; «uns» → Wem? → O3; «ihre Zeichnung» → Was? → O4.\n**Merke:** Die ganze Wortgruppe mit Tochter beantwortet die Frage Wer?"
+    },
+    {
+      "sentence": "Das schwere Paket hat der Bote meinem Vater gebracht",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        },
+        {
+          "indices": [
+            3,
+            8
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            6,
+            7
+          ],
+          "correct": "O3 — Dativobjekt"
+        }
+      ],
+      "explanation": "«Das schwere Paket» → O4; «hat … gebracht» → P; «der Bote» → S; «meinem Vater» → O3.\n**Merke:** Wer bringt wem was? → Bote, Vater, Paket."
+    },
+    {
+      "sentence": "Der geduldigen Lehrerin hören die Kinder zu",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            3,
+            6
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "S — Subjekt"
+        }
+      ],
+      "explanation": "«Der geduldigen Lehrerin» → Wem hören sie zu? → O3; «hören … zu» → P; «die Kinder» → Wer hört zu? → S.\n**Merke:** Die Frage Wem? zeigt den Dativ trotz des Artikels der."
+    }
+  ],
+  "rules": [
+    "satzglieder-grundlagen"
+  ]
+}

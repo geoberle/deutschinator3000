@@ -1,0 +1,109 @@
+{
+  "id": "satzglieder-genitiv-mix-1",
+  "name": "Tag 3 · Genitivobjekt oder Attribut?",
+  "goal": "Genitivobjekte von Genitivattributen innerhalb eines größeren Satzglieds unterscheiden.",
+  "authoring": {
+    "rationale": "Sieben Sätze enthalten Genitivobjekte neben Genitivattributen. Drei weitere enthalten nur Genitivattribute in Subjekt, Akkusativ- oder Dativobjekt. So wird die Wessen-Frage an das Verb von der Besitz- oder Zugehörigkeitsfrage an ein Nomen getrennt.",
+    "constraints": "Nur S, P, O4, O3 und O2; Genitivattribute bleiben im Chunk ihres Bezugsnomens. Genau drei Sätze ohne O2. Keine Adverbialien, Präpositionalobjekte, Prädikative, reflexiven Verben oder Nebensätze."
+  },
+  "type": "satzglieder",
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "O2 — Genitivobjekt"],
+  "question": "Bestimme die Satzglieder. Ein Genitivattribut bleibt Teil seines größeren Satzglieds.",
+  "rules": ["satzglieder-grundlagen", "genitivobjekt-grundlagen"],
+  "exercises": [
+    {
+      "sentence": "Das Fahrrad meines Bruders bedarf einer Reparatur",
+      "chunks": [
+        { "indices": [0, 1, 2, 3], "correct": "S — Subjekt" },
+        { "indices": [4], "correct": "P — Prädikat" },
+        { "indices": [5, 6], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "«Das Fahrrad meines Bruders» → S; «bedarf» → P; wessen bedarf es? «einer Reparatur» → O2.\n«meines Bruders» beschreibt das Nomen «Fahrrad» und bleibt als Attribut im Subjekt.\n**Merke:** Wessen Fahrrad? fragt nach dem Attribut; wessen bedarf es? nach dem Objekt."
+    },
+    {
+      "sentence": "Die Kinder der Klasse bedürfen deiner Hilfe",
+      "chunks": [
+        { "indices": [0, 1, 2, 3], "correct": "S — Subjekt" },
+        { "indices": [4], "correct": "P — Prädikat" },
+        { "indices": [5, 6], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "«Die Kinder der Klasse» → S; «bedürfen» → P; wessen bedürfen sie? «deiner Hilfe» → O2.\n«der Klasse» ergänzt das Nomen «Kinder» und ist ein Attribut innerhalb des Subjekts.\n**Merke:** Nur «deiner Hilfe» ergänzt hier das Verb «bedürfen» als Genitivobjekt."
+    },
+    {
+      "sentence": "Der Verein unserer Schule gedenkt seiner Gründerin",
+      "chunks": [
+        { "indices": [0, 1, 2, 3], "correct": "S — Subjekt" },
+        { "indices": [4], "correct": "P — Prädikat" },
+        { "indices": [5, 6], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "«Der Verein unserer Schule» → S; «gedenkt» → P; wessen gedenkt er? «seiner Gründerin» → O2.\n«unserer Schule» nennt die Zugehörigkeit des Vereins und bleibt als Attribut im Subjekt.\n**Merke:** Das Genitivobjekt hängt vom Verb ab, das Genitivattribut von einem Nomen."
+    },
+    {
+      "sentence": "Die Lehrerin beschuldigt den Freund meines Bruders des Schummelns",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4, 5, 6], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [7, 8], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "«Die Lehrerin» → S; «beschuldigt» → P; wen beschuldigt sie? «den Freund meines Bruders» → O4.\nWessen beschuldigt sie ihn? «des Schummelns» → O2.\n«meines Bruders» beschreibt «Freund» und bleibt als Genitivattribut im Akkusativobjekt."
+    },
+    {
+      "sentence": "Der Trainer verdächtigt den Spieler unserer Mannschaft des Betrugs",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4, 5, 6], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [7, 8], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "«Der Trainer» → S; «verdächtigt» → P; wen verdächtigt er? «den Spieler unserer Mannschaft» → O4.\nWessen verdächtigt er ihn? «des Betrugs» → O2.\n«unserer Mannschaft» gehört zum Nomen «Spieler»: Der ganze Ausdruck bleibt ein Akkusativobjekt."
+    },
+    {
+      "sentence": "Die Jury hat die Gewinnerin des Wettbewerbs der Täuschung überführt",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2, 9], "correct": "P — Prädikat" },
+        { "indices": [3, 4, 5, 6], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [7, 8], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "«Die Jury» → S; «hat … überführt» → P; wen hat sie überführt? «die Gewinnerin des Wettbewerbs» → O4.\nWessen hat sie die Gewinnerin überführt? «der Täuschung» → O2: Die Täuschung wurde ihr nachgewiesen.\n«des Wettbewerbs» beschreibt «Gewinnerin» und bleibt als Genitivattribut im Akkusativobjekt."
+    },
+    {
+      "sentence": "Die Antwort des Schülers wird einer Erklärung bedürfen",
+      "chunks": [
+        { "indices": [0, 1, 2, 3], "correct": "S — Subjekt" },
+        { "indices": [4, 7], "correct": "P — Prädikat" },
+        { "indices": [5, 6], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "«Die Antwort des Schülers» → S; «wird … bedürfen» → P.\nWessen wird die Antwort bedürfen? «einer Erklärung» → O2.\n«des Schülers» beantwortet Wessen Antwort? und bleibt als Attribut im Subjekt."
+    },
+    {
+      "sentence": "Der Bruder meiner Freundin hilft dem Nachbarn",
+      "chunks": [
+        { "indices": [0, 1, 2, 3], "correct": "S — Subjekt" },
+        { "indices": [4], "correct": "P — Prädikat" },
+        { "indices": [5, 6], "correct": "O3 — Dativobjekt" }
+      ],
+      "explanation": "Wer hilft? «Der Bruder meiner Freundin» → S; «hilft» → P; wem hilft er? «dem Nachbarn» → O3.\n«meiner Freundin» beschreibt «Bruder» und bleibt als Genitivattribut im Subjekt.\n**Merke:** Hier gibt es einen Genitiv, aber kein Genitivobjekt."
+    },
+    {
+      "sentence": "Mira liest den Brief ihres Großvaters",
+      "chunks": [
+        { "indices": [0], "correct": "S — Subjekt" },
+        { "indices": [1], "correct": "P — Prädikat" },
+        { "indices": [2, 3, 4, 5], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "«Mira» → S; «liest» → P; was liest Mira? «den Brief ihres Großvaters» → O4.\n«ihres Großvaters» beantwortet Wessen Brief? und bleibt als Attribut im Akkusativobjekt.\n**Merke:** Die Wessen-Frage an das Nomen «Brief» macht den Genitiv nicht zum Objekt."
+    },
+    {
+      "sentence": "Noah schenkt der Tochter des Nachbarn ein Buch",
+      "chunks": [
+        { "indices": [0], "correct": "S — Subjekt" },
+        { "indices": [1], "correct": "P — Prädikat" },
+        { "indices": [2, 3, 4, 5], "correct": "O3 — Dativobjekt" },
+        { "indices": [6, 7], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "«Noah» → S; «schenkt» → P; was schenkt er? «ein Buch» → O4.\nWem schenkt er das Buch? «der Tochter des Nachbarn» → O3.\n«des Nachbarn» beschreibt «Tochter» und bleibt als Genitivattribut im Dativobjekt; ein O2 gibt es nicht."
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "id": "satzglieder-genitiv-erkennen-1",
+  "name": "Tag 3 · Genitivobjekte erkennen 1",
+  "goal": "Genitivobjekte mit der Frage Wessen plus Verb erkennen und von anderen Objekten unterscheiden.",
+  "authoring": {
+    "rationale": "Acht einfache Sätze führen das Genitivobjekt über die vom Verb abhängige Frage ein. Zwei Wiederholungen halten Dativ- und Akkusativobjekte präsent, damit nicht jedes Objekt automatisch als O2 eingeordnet wird.",
+    "constraints": "Nur S, P, O4, O3 und O2; einfache Prädikate, keine Adverbialien, Präpositionalobjekte oder Nebensätze. Genitivobjekte nur bei Verben mit passender Rektion; gehobener Sprachgebrauch wird erklärt."
+  },
+  "type": "satzglieder",
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "O2 — Genitivobjekt"],
+  "question": "Bestimme die Satzglieder. Frage beim Genitivobjekt mit Wessen und dem Verb.",
+  "rules": ["satzglieder-grundlagen", "genitivobjekt-grundlagen"],
+  "exercises": [
+    {
+      "sentence": "Das Fahrrad bedarf einer Reparatur",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "Was bedarf einer Reparatur? «Das Fahrrad» → S; «bedarf» → P.\nWessen bedarf das Fahrrad? «einer Reparatur» → O2.\n**Merke:** «bedürfen» bedeutet «brauchen», klingt gehoben und verlangt den Genitiv."
+    },
+    {
+      "sentence": "Die Kinder bedürfen deiner Hilfe",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "Wer bedarf deiner Hilfe? «Die Kinder» → S; «bedürfen» → P.\nWessen bedürfen die Kinder? «deiner Hilfe» → O2.\n**Merke:** Die Frage gehört zum Verb: Wessen bedürfen sie?"
+    },
+    {
+      "sentence": "Die Klasse gedenkt des verstorbenen Lehrers",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4, 5], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "Wer gedenkt des Lehrers? «Die Klasse» → S; «gedenkt» → P.\nWessen gedenkt die Klasse? «des verstorbenen Lehrers» → O2.\n**Merke:** «gedenken» heißt hier, ehrend an jemanden zu denken, und verlangt den Genitiv."
+    },
+    {
+      "sentence": "Der Verein gedenkt seiner Gründerin",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "Wer gedenkt seiner Gründerin? «Der Verein» → S; «gedenkt» → P.\nWessen gedenkt der Verein? «seiner Gründerin» → O2.\n**Merke:** Auch eine Person kann ein Genitivobjekt sein. Entscheidend ist das Verb."
+    },
+    {
+      "sentence": "Lukas beschuldigt seinen Bruder des Schummelns",
+      "chunks": [
+        { "indices": [0], "correct": "S — Subjekt" },
+        { "indices": [1], "correct": "P — Prädikat" },
+        { "indices": [2, 3], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [4, 5], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "Wer beschuldigt? «Lukas» → S; «beschuldigt» → P.\nWen beschuldigt Lukas? «seinen Bruder» → O4; wessen beschuldigt er ihn? «des Schummelns» → O2.\n**Merke:** Man beschuldigt jemanden (O4) einer Sache (O2)."
+    },
+    {
+      "sentence": "Der Trainer verdächtigt den Spieler des Betrugs",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [5, 6], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "Wer verdächtigt? «Der Trainer» → S; «verdächtigt» → P.\nWen verdächtigt er? «den Spieler» → O4; wessen verdächtigt er ihn? «des Betrugs» → O2.\n**Merke:** Die verdächtigte Person steht im Akkusativ, der vermutete Verstoß im Genitiv."
+    },
+    {
+      "sentence": "Mira bezichtigt ihre Schwester der Lüge",
+      "chunks": [
+        { "indices": [0], "correct": "S — Subjekt" },
+        { "indices": [1], "correct": "P — Prädikat" },
+        { "indices": [2, 3], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [4, 5], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "«Mira» → S; «bezichtigt» → P.\nWen bezichtigt Mira? «ihre Schwester» → O4; wessen bezichtigt sie ihre Schwester? «der Lüge» → O2.\n**Merke:** «bezichtigen» ist ein gehobenes Wort für «beschuldigen»: jemanden einer Sache bezichtigen."
+    },
+    {
+      "sentence": "Diese Antwort bedarf einer Erklärung",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "Was bedarf einer Erklärung? «Diese Antwort» → S; «bedarf» → P.\nWessen bedarf diese Antwort? «einer Erklärung» → O2.\n**Merke:** «einer» allein verrät den Fall nicht: Das Verb «bedürfen» verlangt den Genitiv."
+    },
+    {
+      "sentence": "Anna leiht ihrem Freund einen Stift",
+      "chunks": [
+        { "indices": [0], "correct": "S — Subjekt" },
+        { "indices": [1], "correct": "P — Prädikat" },
+        { "indices": [2, 3], "correct": "O3 — Dativobjekt" },
+        { "indices": [4, 5], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wer leiht? «Anna» → S; «leiht» → P.\nWem leiht Anna einen Stift? «ihrem Freund» → O3; was leiht sie ihm? «einen Stift» → O4.\n**Merke:** «leihen» hat hier ein Dativ- und ein Akkusativobjekt, kein Genitivobjekt."
+    },
+    {
+      "sentence": "Dem Kind zeigt die Lehrerin ein Bild",
+      "chunks": [
+        { "indices": [0, 1], "correct": "O3 — Dativobjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "S — Subjekt" },
+        { "indices": [5, 6], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wer zeigt? «die Lehrerin» → S; «zeigt» → P.\nWem zeigt sie ein Bild? «Dem Kind» → O3; was zeigt sie ihm? «ein Bild» → O4.\n**Merke:** Das Satzglied am Anfang ist nicht automatisch das Subjekt."
+    }
+  ]
+}

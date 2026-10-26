@@ -1,0 +1,119 @@
+{
+  "id": "satzglieder-lokomoto-erkennen-2",
+  "name": "Tag 2: LO-KO-MO-TO – zwei Angaben unterscheiden",
+  "goal": "Zwei adverbiale Bestimmungen im selben Satz mit verschiedenen Fragen zuordnen.",
+  "authoring": {
+    "rationale": "Zwei Angaben pro Satz erfordern getrennte Frageproben. Alle sechs Kombinationen aus Zeit, Ort, Art und Weise und Grund kommen vor.",
+    "constraints": "10 Hauptsätze mit genau zwei Adverbialen unterschiedlicher Art. Einfache Prädikate, gelegentliche O3/O4, keine O2 oder Präpositionalobjekte. Nur echte Gründe als KA."
+  },
+  "type": "satzglieder",
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KA — Kausaladverbiale"],
+  "question": "Bestimme alle Satzglieder. Stelle für jede der beiden Angaben die passende Frage.",
+  "rules": ["satzglieder-grundlagen"],
+  "exercises": [
+    {
+      "sentence": "Am Nachmittag zeichnet Nina auf der Terrasse",
+      "chunks": [
+        { "indices": [0, 1], "correct": "TO — Temporaladverbiale" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3], "correct": "S — Subjekt" },
+        { "indices": [4, 5, 6], "correct": "LO — Lokaladverbiale" }
+      ],
+      "explanation": "Wann? «Am Nachmittag» → TO; wo? «auf der Terrasse» → LO.\nWer zeichnet? «Nina» → S; «zeichnet» → P."
+    },
+    {
+      "sentence": "Die Kinder lesen morgens im Klassenzimmer",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3], "correct": "TO — Temporaladverbiale" },
+        { "indices": [4, 5], "correct": "LO — Lokaladverbiale" }
+      ],
+      "explanation": "Wann lesen sie? «morgens» → TO; wo? «im Klassenzimmer» → LO.\nWer liest? «Die Kinder» → S; «lesen» → P."
+    },
+    {
+      "sentence": "Gestern erklärte Farid seiner Schwester geduldig die Spielregeln",
+      "chunks": [
+        { "indices": [0], "correct": "TO — Temporaladverbiale" },
+        { "indices": [1], "correct": "P — Prädikat" },
+        { "indices": [2], "correct": "S — Subjekt" },
+        { "indices": [3, 4], "correct": "O3 — Dativobjekt" },
+        { "indices": [5], "correct": "MO — Modaladverbiale" },
+        { "indices": [6, 7], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wann? «Gestern» → TO; wie erklärte Farid etwas? «geduldig» → MO.\nWer erklärte? «Farid» → S; «erklärte» → P.\nWem? «seiner Schwester» → O3; was? «die Spielregeln» → O4."
+    },
+    {
+      "sentence": "Nach dem Essen spült Leon die Teller vorsichtig",
+      "chunks": [
+        { "indices": [0, 1, 2], "correct": "TO — Temporaladverbiale" },
+        { "indices": [3], "correct": "P — Prädikat" },
+        { "indices": [4], "correct": "S — Subjekt" },
+        { "indices": [5, 6], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [7], "correct": "MO — Modaladverbiale" }
+      ],
+      "explanation": "Wann? «Nach dem Essen» → TO; wie? «vorsichtig» → MO.\nWer spült? «Leon» → S; «spült» → P. Was spült er? «die Teller» → O4."
+    },
+    {
+      "sentence": "Wegen einer Erkältung fehlt Anna heute",
+      "chunks": [
+        { "indices": [0, 1, 2], "correct": "KA — Kausaladverbiale" },
+        { "indices": [3], "correct": "P — Prädikat" },
+        { "indices": [4], "correct": "S — Subjekt" },
+        { "indices": [5], "correct": "TO — Temporaladverbiale" }
+      ],
+      "explanation": "Warum fehlt Anna? «Wegen einer Erkältung» → KA; wann? «heute» → TO.\nWer fehlt? «Anna» → S; «fehlt» → P."
+    },
+    {
+      "sentence": "Im Garten gräbt der Hund eifrig",
+      "chunks": [
+        { "indices": [0, 1], "correct": "LO — Lokaladverbiale" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "S — Subjekt" },
+        { "indices": [5], "correct": "MO — Modaladverbiale" }
+      ],
+      "explanation": "Wo gräbt der Hund? «Im Garten» → LO; wie? «eifrig» → MO.\nWer gräbt? «der Hund» → S; «gräbt» → P."
+    },
+    {
+      "sentence": "Behutsam repariert Oma in der Küche die Brille",
+      "chunks": [
+        { "indices": [0], "correct": "MO — Modaladverbiale" },
+        { "indices": [1], "correct": "P — Prädikat" },
+        { "indices": [2], "correct": "S — Subjekt" },
+        { "indices": [3, 4, 5], "correct": "LO — Lokaladverbiale" },
+        { "indices": [6, 7], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wie repariert Oma die Brille? «Behutsam» → MO; wo? «in der Küche» → LO.\nWer repariert? «Oma» → S; «repariert» → P. Was repariert sie? «die Brille» → O4."
+    },
+    {
+      "sentence": "Wegen des Lärms lernt Lukas in der Bücherei",
+      "chunks": [
+        { "indices": [0, 1, 2], "correct": "KA — Kausaladverbiale" },
+        { "indices": [3], "correct": "P — Prädikat" },
+        { "indices": [4], "correct": "S — Subjekt" },
+        { "indices": [5, 6, 7], "correct": "LO — Lokaladverbiale" }
+      ],
+      "explanation": "Warum lernt Lukas dort? «Wegen des Lärms» → KA; wo? «in der Bücherei» → LO.\nWer lernt? «Lukas» → S; «lernt» → P."
+    },
+    {
+      "sentence": "Aus Freude klatscht die Klasse laut",
+      "chunks": [
+        { "indices": [0, 1], "correct": "KA — Kausaladverbiale" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "S — Subjekt" },
+        { "indices": [5], "correct": "MO — Modaladverbiale" }
+      ],
+      "explanation": "Warum klatscht die Klasse? «Aus Freude» → KA; wie? «laut» → MO.\nWer klatscht? «die Klasse» → S; «klatscht» → P."
+    },
+    {
+      "sentence": "Wegen der Glätte geht meine Tante langsam",
+      "chunks": [
+        { "indices": [0, 1, 2], "correct": "KA — Kausaladverbiale" },
+        { "indices": [3], "correct": "P — Prädikat" },
+        { "indices": [4, 5], "correct": "S — Subjekt" },
+        { "indices": [6], "correct": "MO — Modaladverbiale" }
+      ],
+      "explanation": "Warum geht sie langsam? «Wegen der Glätte» → KA; wie geht sie? «langsam» → MO.\nWer geht? «meine Tante» → S; «geht» → P."
+    }
+  ]
+}

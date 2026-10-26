@@ -1,0 +1,119 @@
+{
+  "id": "satzglieder-gesamt-erkennen-2",
+  "name": "Tag 4: Alle Satzglieder erkennen 2",
+  "goal": "Satzglieder auch bei umgestellter Satzfolge und geteiltem Prädikat sicher erkennen.",
+  "authoring": {
+    "rationale": "Vorangestellte Objekte und Adverbialien lösen die Bestimmung von der Wortposition. Geteilte Prädikate trainieren das Zusammenfassen zusammengehöriger Verbteile.",
+    "constraints": "10 Hauptsätze mit je 4–6 Satzgliedern; vorangestelltes Objekt oder Adverbiale und geteiltes Prädikat in jedem Satz; alle neun Kategorien, drei echte Genitivobjekte; keine Präpositionalobjekte oder Prädikative."
+  },
+  "type": "satzglieder",
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "O2 — Genitivobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KA — Kausaladverbiale"],
+  "question": "Bestimme die Satzglieder. Achte auf beide Teile des Prädikats.",
+  "rules": ["satzglieder-grundlagen", "genitivobjekt-grundlagen"],
+  "exercises": [
+    {
+      "sentence": "Morgen wird Lena ihrer Freundin ein Buch bringen",
+      "chunks": [
+        { "indices": [0], "correct": "TO — Temporaladverbiale" },
+        { "indices": [1, 7], "correct": "P — Prädikat" },
+        { "indices": [2], "correct": "S — Subjekt" },
+        { "indices": [3, 4], "correct": "O3 — Dativobjekt" },
+        { "indices": [5, 6], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wann? «Morgen» → TO; wer? «Lena» → S; «wird … bringen» → P.\nWem? «ihrer Freundin» → O3; was? «ein Buch» → O4."
+    },
+    {
+      "sentence": "Den Kuchen hat mein Vater vorsichtig geschnitten",
+      "chunks": [
+        { "indices": [0, 1], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [2, 6], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "S — Subjekt" },
+        { "indices": [5], "correct": "MO — Modaladverbiale" }
+      ],
+      "explanation": "Was hat er geschnitten? «Den Kuchen» → O4; wer? «mein Vater» → S.\n«hat … geschnitten» → P; wie? «vorsichtig» → MO. Das erste Satzglied ist hier kein Subjekt."
+    },
+    {
+      "sentence": "Im Hof haben die Kinder gestern leise gespielt",
+      "chunks": [
+        { "indices": [0, 1], "correct": "LO — Lokaladverbiale" },
+        { "indices": [2, 7], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "S — Subjekt" },
+        { "indices": [5], "correct": "TO — Temporaladverbiale" },
+        { "indices": [6], "correct": "MO — Modaladverbiale" }
+      ],
+      "explanation": "Wo? «Im Hof» → LO; wer? «die Kinder» → S; «haben … gespielt» → P.\nWann? «gestern» → TO; wie? «leise» → MO."
+    },
+    {
+      "sentence": "Wegen des Schnees hat unser Bus heute angehalten",
+      "chunks": [
+        { "indices": [0, 1, 2], "correct": "KA — Kausaladverbiale" },
+        { "indices": [3, 7], "correct": "P — Prädikat" },
+        { "indices": [4, 5], "correct": "S — Subjekt" },
+        { "indices": [6], "correct": "TO — Temporaladverbiale" }
+      ],
+      "explanation": "Warum? «Wegen des Schnees» → KA; was hat angehalten? «unser Bus» → S.\n«hat … angehalten» → P; wann? «heute» → TO. «Wegen des Schnees» ist trotz Genitiv kein O2."
+    },
+    {
+      "sentence": "Sorgfältig hat Amir die Zeichnung ausgemalt",
+      "chunks": [
+        { "indices": [0], "correct": "MO — Modaladverbiale" },
+        { "indices": [1, 5], "correct": "P — Prädikat" },
+        { "indices": [2], "correct": "S — Subjekt" },
+        { "indices": [3, 4], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wie? «Sorgfältig» → MO; wer? «Amir» → S.\n«hat … ausgemalt» → P; was hat Amir ausgemalt? «die Zeichnung» → O4."
+    },
+    {
+      "sentence": "Dem Nachbarn hat Emma gestern eine Karte geschickt",
+      "chunks": [
+        { "indices": [0, 1], "correct": "O3 — Dativobjekt" },
+        { "indices": [2, 7], "correct": "P — Prädikat" },
+        { "indices": [3], "correct": "S — Subjekt" },
+        { "indices": [4], "correct": "TO — Temporaladverbiale" },
+        { "indices": [5, 6], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wem? «Dem Nachbarn» → O3; wer? «Emma» → S; «hat … geschickt» → P.\nWann? «gestern» → TO; was? «eine Karte» → O4."
+    },
+    {
+      "sentence": "Am Montag wird unsere Klasse der Verstorbenen gedenken",
+      "chunks": [
+        { "indices": [0, 1], "correct": "TO — Temporaladverbiale" },
+        { "indices": [2, 7], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "S — Subjekt" },
+        { "indices": [5, 6], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "Wann? «Am Montag» → TO; wer? «unsere Klasse» → S; «wird … gedenken» → P.\nWessen wird die Klasse gedenken? «der Verstorbenen» → O2."
+    },
+    {
+      "sentence": "Nach der Operation wird das Tier besonderer Pflege bedürfen",
+      "chunks": [
+        { "indices": [0, 1, 2], "correct": "TO — Temporaladverbiale" },
+        { "indices": [3, 8], "correct": "P — Prädikat" },
+        { "indices": [4, 5], "correct": "S — Subjekt" },
+        { "indices": [6, 7], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "Wann? «Nach der Operation» → TO; wer? «das Tier» → S; «wird … bedürfen» → P.\nWessen wird das Tier bedürfen? «besonderer Pflege» → O2. Es wird diese Pflege brauchen."
+    },
+    {
+      "sentence": "Gestern hat Jonas seinen Mitspieler des Schummelns beschuldigt",
+      "chunks": [
+        { "indices": [0], "correct": "TO — Temporaladverbiale" },
+        { "indices": [1, 7], "correct": "P — Prädikat" },
+        { "indices": [2], "correct": "S — Subjekt" },
+        { "indices": [3, 4], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [5, 6], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "Wann? «Gestern» → TO; wer? «Jonas» → S; «hat … beschuldigt» → P.\nWen? «seinen Mitspieler» → O4; wessen hat Jonas ihn beschuldigt? «des Schummelns» → O2."
+    },
+    {
+      "sentence": "Zum See sind die Kinder am Nachmittag geradelt",
+      "chunks": [
+        { "indices": [0, 1], "correct": "LO — Lokaladverbiale" },
+        { "indices": [2, 7], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "S — Subjekt" },
+        { "indices": [5, 6], "correct": "TO — Temporaladverbiale" }
+      ],
+      "explanation": "Wohin? «Zum See» → LO; wer? «die Kinder» → S.\n«sind … geradelt» → P; wann? «am Nachmittag» → TO."
+    }
+  ]
+}

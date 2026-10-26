@@ -1,0 +1,309 @@
+{
+  "id": "satzglieder-basis-erkennen-2",
+  "name": "Tag 1: Das ganze Prädikat finden",
+  "goal": "Mehrteilige Prädikate zusammen erkennen und die Objekte richtig zuordnen.",
+  "authoring": {
+    "rationale": "Tag 1: Grundglieder schrittweise auffrischen; erst kurze Sätze, dann mehrteilige Prädikate, zuletzt veränderte Satzstellung.",
+    "constraints": "Nur S, P, O4 und O3; keine adverbialen Bestimmungen oder Genitivobjekte. Attribute bleiben in ihrer Wortgruppe."
+  },
+  "type": "satzglieder",
+  "categories": [
+    "S — Subjekt",
+    "P — Prädikat",
+    "O4 — Akkusativobjekt",
+    "O3 — Dativobjekt"
+  ],
+  "question": "Bestimme die Satzglieder",
+  "exercises": [
+    {
+      "sentence": "Er hat den Hund gefüttert",
+      "chunks": [
+        {
+          "indices": [
+            0
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            1,
+            4
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            2,
+            3
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Er» → S; «hat … gefüttert» → P; «den Hund» → Wen hat er gefüttert? → O4.\n**Merke:** Im Perfekt gehören Hilfsverb und Partizip zum Prädikat."
+    },
+    {
+      "sentence": "Die Kinder haben der Nachbarin geholfen",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2,
+            5
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "O3 — Dativobjekt"
+        }
+      ],
+      "explanation": "«Die Kinder» → S; «haben … geholfen» → P; «der Nachbarin» → Wem haben sie geholfen? → O3.\n**Merke:** Auch im Perfekt verlangt helfen den Dativ."
+    },
+    {
+      "sentence": "Meine Schwester möchte ein Fahrrad kaufen",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2,
+            5
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Meine Schwester» → S; «möchte … kaufen» → P; «ein Fahrrad» → Was möchte sie kaufen? → O4.\n**Merke:** Modalverb und Infinitiv bilden gemeinsam das Prädikat."
+    },
+    {
+      "sentence": "Der Schüler hört der Lehrerin zu",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2,
+            5
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "O3 — Dativobjekt"
+        }
+      ],
+      "explanation": "«Der Schüler» → S; «hört … zu» → P; «der Lehrerin» → Wem hört er zu? → O3.\n**Merke:** Die abgetrennte Vorsilbe von zuhören gehört zum Prädikat."
+    },
+    {
+      "sentence": "Die Tante hat ihrem Neffen einen Ball geschenkt",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2,
+            7
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            5,
+            6
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Die Tante» → S; «hat … geschenkt» → P; «ihrem Neffen» → Wem? → O3; «einen Ball» → Was? → O4.\n**Merke:** Zwischen den Prädikatsteilen können mehrere Satzglieder stehen."
+    },
+    {
+      "sentence": "Wir werden das Rätsel lösen",
+      "chunks": [
+        {
+          "indices": [
+            0
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            1,
+            4
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            2,
+            3
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Wir» → S; «werden … lösen» → P; «das Rätsel» → Was werden wir lösen? → O4.\n**Merke:** Im Futur gehören werden und Infinitiv zusammen."
+    },
+    {
+      "sentence": "Die Klasse räumt das Zimmer auf",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2,
+            5
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Die Klasse» → S; «räumt … auf» → P; «das Zimmer» → Was räumt sie auf? → O4.\n**Merke:** Aufräumen ist ein trennbares Verb."
+    },
+    {
+      "sentence": "Du kannst deinem Bruder vertrauen",
+      "chunks": [
+        {
+          "indices": [
+            0
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            1,
+            4
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            2,
+            3
+          ],
+          "correct": "O3 — Dativobjekt"
+        }
+      ],
+      "explanation": "«Du» → S; «kannst … vertrauen» → P; «deinem Bruder» → Wem kannst du vertrauen? → O3.\n**Merke:** Für den Fall des Objekts ist hier vertrauen entscheidend."
+    },
+    {
+      "sentence": "Der Vater liest seinem Kind eine Geschichte vor",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2,
+            7
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            5,
+            6
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Der Vater» → S; «liest … vor» → P; «seinem Kind» → Wem? → O3; «eine Geschichte» → Was? → O4.\n**Merke:** Auch bei zwei Objekten bleibt vor ein Teil des Verbs vorlesen."
+    },
+    {
+      "sentence": "Die Freundin hat mir ihren Stift geliehen",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2,
+            6
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Die Freundin» → S; «hat … geliehen» → P; «mir» → Wem? → O3; «ihren Stift» → Was? → O4.\n**Merke:** Ein Dativobjekt kann aus nur einem Fürwort bestehen."
+    }
+  ],
+  "rules": [
+    "satzglieder-grundlagen"
+  ]
+}

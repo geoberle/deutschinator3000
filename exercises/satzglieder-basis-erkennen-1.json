@@ -1,0 +1,352 @@
+{
+  "id": "satzglieder-basis-erkennen-1",
+  "name": "Tag 1: Subjekt, Prädikat und Objekte",
+  "goal": "Subjekt, Prädikat, Akkusativobjekt und Dativobjekt in kurzen Sätzen unterscheiden.",
+  "authoring": {
+    "rationale": "Tag 1: Grundglieder schrittweise auffrischen; erst kurze Sätze, dann mehrteilige Prädikate, zuletzt veränderte Satzstellung.",
+    "constraints": "Nur S, P, O4 und O3; keine adverbialen Bestimmungen oder Genitivobjekte. Attribute bleiben in ihrer Wortgruppe."
+  },
+  "type": "satzglieder",
+  "categories": [
+    "S — Subjekt",
+    "P — Prädikat",
+    "O4 — Akkusativobjekt",
+    "O3 — Dativobjekt"
+  ],
+  "question": "Bestimme die Satzglieder",
+  "exercises": [
+    {
+      "sentence": "Der Vater liest die Zeitung",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Der Vater» → Wer liest? → S; «liest» → P; «die Zeitung» → Was liest er? → O4.\n**Merke:** Das Akkusativobjekt erfragst du mit Wen oder was?"
+    },
+    {
+      "sentence": "Die Schülerin hilft dem Jungen",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "O3 — Dativobjekt"
+        }
+      ],
+      "explanation": "«Die Schülerin» → Wer hilft? → S; «hilft» → P; «dem Jungen» → Wem hilft sie? → O3.\n**Merke:** Helfen verlangt ein Dativobjekt."
+    },
+    {
+      "sentence": "Oma schenkt ihrem Enkel ein Puzzle",
+      "chunks": [
+        {
+          "indices": [
+            0
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            1
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            2,
+            3
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Oma» → S; «schenkt» → P; «ihrem Enkel» → Wem schenkt sie etwas? → O3; «ein Puzzle» → Was schenkt sie? → O4.\n**Merke:** Ein Satz kann Dativobjekt und Akkusativobjekt enthalten."
+    },
+    {
+      "sentence": "Die Katze fängt eine Maus",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Die Katze» → Wer fängt? → S; «fängt» → P; «eine Maus» → Wen oder was fängt sie? → O4.\n**Merke:** Frage nach dem handelnden Tier mit Wer?"
+    },
+    {
+      "sentence": "Wir danken dem Lehrer",
+      "chunks": [
+        {
+          "indices": [
+            0
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            1
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            2,
+            3
+          ],
+          "correct": "O3 — Dativobjekt"
+        }
+      ],
+      "explanation": "«Wir» → Wer dankt? → S; «danken» → P; «dem Lehrer» → Wem danken wir? → O3.\n**Merke:** Auch ein Fürwort wie «wir» kann das Subjekt sein."
+    },
+    {
+      "sentence": "Der Bäcker backt frisches Brot",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Der Bäcker» → S; «backt» → P; «frisches Brot» → Was backt er? → O4.\n**Merke:** «frisches» gehört zum Brot und bleibt im selben Satzglied."
+    },
+    {
+      "sentence": "Die Mutter kocht die Suppe",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Die Mutter» → Wer kocht? → S; «kocht» → P; «die Suppe» → Was kocht sie? → O4.\n**Merke:** Die Frage bezieht sich auf das Verb: Was kocht sie?"
+    },
+    {
+      "sentence": "Das Mädchen schreibt seiner Freundin einen Brief",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            5,
+            6
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Das Mädchen» → S; «schreibt» → P; «seiner Freundin» → Wem? → O3; «einen Brief» → Was? → O4.\n**Merke:** Empfängerin und geschriebene Sache sind zwei verschiedene Satzglieder."
+    },
+    {
+      "sentence": "Der Hund gehorcht seiner Besitzerin",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "O3 — Dativobjekt"
+        }
+      ],
+      "explanation": "«Der Hund» → S; «gehorcht» → P; «seiner Besitzerin» → Wem gehorcht er? → O3.\n**Merke:** Gehorchen verlangt den Dativ."
+    },
+    {
+      "sentence": "Die Kinder bauen eine Sandburg",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Die Kinder» → Wer baut? → S; «bauen» → P; «eine Sandburg» → Was bauen sie? → O4.\n**Merke:** Ein Subjekt kann auch mehrere Personen bezeichnen."
+    },
+    {
+      "sentence": "Ich vertraue meiner Schwester",
+      "chunks": [
+        {
+          "indices": [
+            0
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            1
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            2,
+            3
+          ],
+          "correct": "O3 — Dativobjekt"
+        }
+      ],
+      "explanation": "«Ich» → S; «vertraue» → P; «meiner Schwester» → Wem vertraue ich? → O3.\n**Merke:** Die Endung allein reicht nicht: Stelle die Frage mit dem Verb."
+    },
+    {
+      "sentence": "Der Trainer zeigt der Mannschaft eine Übung",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            5,
+            6
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Der Trainer» → S; «zeigt» → P; «der Mannschaft» → Wem? → O3; «eine Übung» → Was? → O4.\n**Merke:** Frage die beiden Objekte getrennt ab."
+    }
+  ],
+  "rules": [
+    "satzglieder-grundlagen"
+  ]
+}

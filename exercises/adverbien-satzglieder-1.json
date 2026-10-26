@@ -60,7 +60,7 @@
         { "indices": [2], "correct": "KA — Kausaladverbiale" },
         { "indices": [3, 4], "correct": "O4 — Akkusativobjekt" }
       ],
-      "explanation": "**Er** → Wer? → S (Subjekt)\n**hat … bestanden** → Was geschah? → P (Prädikat, zweiteilig!)\n**trotzdem** → Unter welchem Umstand? → KA (Kausaladverbiale)\n**den Test** → Wen/Was? → O4 (Akkusativobjekt)"
+      "explanation": "«Er» → Wer hat bestanden? → S; «hat … bestanden» → P; «den Test» → Was hat er bestanden? → O4.\n«trotzdem» bedeutet: Etwas sprach dagegen, aber er hat es geschafft. Das ist kein Grund für seinen Erfolg.\n**Merke:** Zu KA zählen in diesen Übungen auch Hindernisse, die etwas nicht verhindern. Deshalb gehört «trotzdem» hier zu KA."
     },
     {
       "sentence": "Heute Morgen bringt Papa dem Hund sein Futter",
@@ -81,7 +81,7 @@
         { "indices": [3], "correct": "MO — Modaladverbiale" },
         { "indices": [4], "correct": "MO — Modaladverbiale" }
       ],
-      "explanation": "**Die Schüler** → Wer? → S (Subjekt)\n**arbeiten** → Was tun sie? → P (Prädikat)\n**leider** → Wie? (Bewertung) → MO (Modaladverbiale)\n**vergebens** → Wie? (Art und Weise) → MO (Modaladverbiale)\n**Merke:** Ein Satz kann mehrere adverbiale Bestimmungen gleicher Art haben!"
+      "explanation": "«Die Schüler» → Wer arbeitet? → S; «arbeiten» → P; «vergebens» → Wie arbeiten sie? Ohne Erfolg → MO.\n«leider» bedeutet: Jemand findet es schade, dass ihre Arbeit ohne Erfolg bleibt. Es sagt nicht, wie sie arbeiten.\n**Merke:** Zu MO zählt in diesen Übungen auch, wie jemand das Geschehen bewertet. Deshalb gehört «leider» hier zu MO."
     },
     {
       "sentence": "Darum übt sie täglich Klavier",

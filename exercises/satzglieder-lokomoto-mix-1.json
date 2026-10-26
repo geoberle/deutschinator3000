@@ -1,0 +1,131 @@
+{
+  "id": "satzglieder-lokomoto-mix-1",
+  "name": "Tag 2: LO-KO-MO-TO – Angaben und Objekte im Mix",
+  "goal": "Adverbiale Bestimmungen von Dativ- und Akkusativobjekten unterscheiden und geteilte Prädikate erkennen.",
+  "authoring": {
+    "rationale": "Die Frageprobe für Angaben wird mit Wem und Wen oder was verbunden. Sechs geteilte Prädikate festigen zugleich die Zusammengehörigkeit räumlich getrennter Verbteile.",
+    "constraints": "10 Hauptsätze mit höchstens sechs Satzgliedern. Alle vier Adverbialarten, O3/O4 und einfache oder geteilte Prädikate. Keine O2, Präpositionalobjekte, Nebensätze oder reflexiven Verben."
+  },
+  "type": "satzglieder",
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KA — Kausaladverbiale"],
+  "question": "Bestimme alle Satzglieder. Unterscheide Angaben und Objekte; beachte alle Teile des Prädikats.",
+  "rules": ["satzglieder-grundlagen"],
+  "exercises": [
+    {
+      "sentence": "Heute hat Lara ihrem Bruder leise ein Lied vorgesungen",
+      "chunks": [
+        { "indices": [0], "correct": "TO — Temporaladverbiale" },
+        { "indices": [1, 8], "correct": "P — Prädikat" },
+        { "indices": [2], "correct": "S — Subjekt" },
+        { "indices": [3, 4], "correct": "O3 — Dativobjekt" },
+        { "indices": [5], "correct": "MO — Modaladverbiale" },
+        { "indices": [6, 7], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wann? «Heute» → TO; wie? «leise» → MO.\nWer hat vorgesungen? «Lara» → S; «hat … vorgesungen» → P.\nWem? «ihrem Bruder» → O3; was? «ein Lied» → O4."
+    },
+    {
+      "sentence": "Im Werkraum zeigt Paul seiner Freundin vorsichtig das Modell",
+      "chunks": [
+        { "indices": [0, 1], "correct": "LO — Lokaladverbiale" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3], "correct": "S — Subjekt" },
+        { "indices": [4, 5], "correct": "O3 — Dativobjekt" },
+        { "indices": [6], "correct": "MO — Modaladverbiale" },
+        { "indices": [7, 8], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wo? «Im Werkraum» → LO; wie? «vorsichtig» → MO.\nWer zeigt? «Paul» → S; «zeigt» → P.\nWem? «seiner Freundin» → O3; was? «das Modell» → O4."
+    },
+    {
+      "sentence": "Wegen der Kälte hat Papa dem Baby eine Haube gegeben",
+      "chunks": [
+        { "indices": [0, 1, 2], "correct": "KA — Kausaladverbiale" },
+        { "indices": [3, 9], "correct": "P — Prädikat" },
+        { "indices": [4], "correct": "S — Subjekt" },
+        { "indices": [5, 6], "correct": "O3 — Dativobjekt" },
+        { "indices": [7, 8], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Warum hat Papa eine Haube gegeben? «Wegen der Kälte» → KA.\nWer hat gegeben? «Papa» → S; «hat … gegeben» → P.\nWem? «dem Baby» → O3; was? «eine Haube» → O4."
+    },
+    {
+      "sentence": "Gestern brachte die Nachbarin meinem Vater im Hof einen Korb",
+      "chunks": [
+        { "indices": [0], "correct": "TO — Temporaladverbiale" },
+        { "indices": [1], "correct": "P — Prädikat" },
+        { "indices": [2, 3], "correct": "S — Subjekt" },
+        { "indices": [4, 5], "correct": "O3 — Dativobjekt" },
+        { "indices": [6, 7], "correct": "LO — Lokaladverbiale" },
+        { "indices": [8, 9], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wann? «Gestern» → TO; wo? «im Hof» → LO.\nWer brachte? «die Nachbarin» → S; «brachte» → P.\nWem? «meinem Vater» → O3; was? «einen Korb» → O4."
+    },
+    {
+      "sentence": "Sorgfältig hat der Schüler am Abend die Schultasche eingepackt",
+      "chunks": [
+        { "indices": [0], "correct": "MO — Modaladverbiale" },
+        { "indices": [1, 8], "correct": "P — Prädikat" },
+        { "indices": [2, 3], "correct": "S — Subjekt" },
+        { "indices": [4, 5], "correct": "TO — Temporaladverbiale" },
+        { "indices": [6, 7], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wie? «Sorgfältig» → MO; wann? «am Abend» → TO.\nWer hat eingepackt? «der Schüler» → S; «hat … eingepackt» → P.\nWas hat er eingepackt? «die Schultasche» → O4."
+    },
+    {
+      "sentence": "Im Freibad leiht Nora ihrer Freundin heute ein Handtuch",
+      "chunks": [
+        { "indices": [0, 1], "correct": "LO — Lokaladverbiale" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3], "correct": "S — Subjekt" },
+        { "indices": [4, 5], "correct": "O3 — Dativobjekt" },
+        { "indices": [6], "correct": "TO — Temporaladverbiale" },
+        { "indices": [7, 8], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wo? «Im Freibad» → LO; wann? «heute» → TO.\nWer leiht? «Nora» → S; «leiht» → P.\nWem? «ihrer Freundin» → O3; was? «ein Handtuch» → O4."
+    },
+    {
+      "sentence": "Aus Dankbarkeit hat Ben seiner Oma gestern einen Brief geschrieben",
+      "chunks": [
+        { "indices": [0, 1], "correct": "KA — Kausaladverbiale" },
+        { "indices": [2, 9], "correct": "P — Prädikat" },
+        { "indices": [3], "correct": "S — Subjekt" },
+        { "indices": [4, 5], "correct": "O3 — Dativobjekt" },
+        { "indices": [6], "correct": "TO — Temporaladverbiale" },
+        { "indices": [7, 8], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Warum? «Aus Dankbarkeit» → KA; wann? «gestern» → TO.\nWer hat geschrieben? «Ben» → S; «hat … geschrieben» → P.\nWem? «seiner Oma» → O3; was? «einen Brief» → O4."
+    },
+    {
+      "sentence": "Die Trainerin erklärt den Kindern geduldig im Turnsaal die Übung",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "O3 — Dativobjekt" },
+        { "indices": [5], "correct": "MO — Modaladverbiale" },
+        { "indices": [6, 7], "correct": "LO — Lokaladverbiale" },
+        { "indices": [8, 9], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wie? «geduldig» → MO; wo? «im Turnsaal» → LO.\nWer erklärt? «Die Trainerin» → S; «erklärt» → P.\nWem? «den Kindern» → O3; was? «die Übung» → O4."
+    },
+    {
+      "sentence": "Wegen des starken Windes räumt Mia die Blumentöpfe vorsichtig weg",
+      "chunks": [
+        { "indices": [0, 1, 2, 3], "correct": "KA — Kausaladverbiale" },
+        { "indices": [4, 9], "correct": "P — Prädikat" },
+        { "indices": [5], "correct": "S — Subjekt" },
+        { "indices": [6, 7], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [8], "correct": "MO — Modaladverbiale" }
+      ],
+      "explanation": "Warum? «Wegen des starken Windes» → KA; wie? «vorsichtig» → MO.\nWer räumt weg? «Mia» → S; «räumt … weg» → P: Beide Teile gehören zu «wegräumen».\nWas räumt sie weg? «die Blumentöpfe» → O4."
+    },
+    {
+      "sentence": "Am Abend will Jonas seinem kleinen Bruder eine Geschichte vorlesen",
+      "chunks": [
+        { "indices": [0, 1], "correct": "TO — Temporaladverbiale" },
+        { "indices": [2, 9], "correct": "P — Prädikat" },
+        { "indices": [3], "correct": "S — Subjekt" },
+        { "indices": [4, 5, 6], "correct": "O3 — Dativobjekt" },
+        { "indices": [7, 8], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wann will Jonas vorlesen? «Am Abend» → TO.\nWer will vorlesen? «Jonas» → S; «will … vorlesen» → P.\nWem? «seinem kleinen Bruder» → O3; was? «eine Geschichte» → O4."
+    }
+  ]
+}

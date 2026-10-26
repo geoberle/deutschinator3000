@@ -1,0 +1,114 @@
+{
+  "id": "satzglieder-gesamt-erkennen-1",
+  "name": "Tag 4: Alle Satzglieder erkennen 1",
+  "goal": "Alle neun Satzgliedarten in übersichtlichen Sätzen sicher unterscheiden.",
+  "authoring": {
+    "rationale": "Der erste Gesamtmix verbindet die Satzgliedarten aus den vorherigen Tagen in kurzen Sätzen mit vertrauter Satzstellung.",
+    "constraints": "10 Hauptsätze mit je 3–5 Satzgliedern und Subjekt am Anfang; alle neun Kategorien, drei echte Genitivobjekte; keine Präpositionalobjekte oder Prädikative."
+  },
+  "type": "satzglieder",
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "O2 — Genitivobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KA — Kausaladverbiale"],
+  "question": "Bestimme die Satzglieder.",
+  "rules": ["satzglieder-grundlagen", "genitivobjekt-grundlagen"],
+  "exercises": [
+    {
+      "sentence": "Lena bringt morgen ihrer Freundin ein Buch",
+      "chunks": [
+        { "indices": [0], "correct": "S — Subjekt" },
+        { "indices": [1], "correct": "P — Prädikat" },
+        { "indices": [2], "correct": "TO — Temporaladverbiale" },
+        { "indices": [3, 4], "correct": "O3 — Dativobjekt" },
+        { "indices": [5, 6], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wer bringt? «Lena» → S; «bringt» → P; wann? «morgen» → TO.\nWem? «ihrer Freundin» → O3; was? «ein Buch» → O4."
+    },
+    {
+      "sentence": "Der Hund schläft heute im Garten",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3], "correct": "TO — Temporaladverbiale" },
+        { "indices": [4, 5], "correct": "LO — Lokaladverbiale" }
+      ],
+      "explanation": "Wer schläft? «Der Hund» → S; «schläft» → P.\nWann? «heute» → TO; wo? «im Garten» → LO."
+    },
+    {
+      "sentence": "Unser Team gewinnt wegen des Trainings",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4, 5], "correct": "KA — Kausaladverbiale" }
+      ],
+      "explanation": "Wer gewinnt? «Unser Team» → S; «gewinnt» → P.\nWarum? «wegen des Trainings» → KA. Der Genitiv nach «wegen» macht daraus kein O2."
+    },
+    {
+      "sentence": "Mila zeichnet sorgfältig eine Katze",
+      "chunks": [
+        { "indices": [0], "correct": "S — Subjekt" },
+        { "indices": [1], "correct": "P — Prädikat" },
+        { "indices": [2], "correct": "MO — Modaladverbiale" },
+        { "indices": [3, 4], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wer zeichnet? «Mila» → S; «zeichnet» → P.\nWie? «sorgfältig» → MO; was zeichnet Mila? «eine Katze» → O4."
+    },
+    {
+      "sentence": "Der alte Baum bedarf besonderer Pflege",
+      "chunks": [
+        { "indices": [0, 1, 2], "correct": "S — Subjekt" },
+        { "indices": [3], "correct": "P — Prädikat" },
+        { "indices": [4, 5], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "Was bedarf der Pflege? «Der alte Baum» → S; «bedarf» → P.\nWessen bedarf der Baum? «besonderer Pflege» → O2. «Bedürfen» bedeutet hier «brauchen»."
+    },
+    {
+      "sentence": "Die Klasse gedenkt heute der Verstorbenen",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3], "correct": "TO — Temporaladverbiale" },
+        { "indices": [4, 5], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "Wer gedenkt? «Die Klasse» → S; «gedenkt» → P; wann? «heute» → TO.\nWessen gedenkt die Klasse? «der Verstorbenen» → O2. Sie erinnert an diese Menschen."
+    },
+    {
+      "sentence": "Der Bub beschuldigt seinen Bruder der Lüge",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [5, 6], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "Wer beschuldigt? «Der Bub» → S; «beschuldigt» → P.\nWen beschuldigt er? «seinen Bruder» → O4; wessen? «der Lüge» → O2."
+    },
+    {
+      "sentence": "Die Trainerin erklärt den Kindern geduldig die Regeln",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "O3 — Dativobjekt" },
+        { "indices": [5], "correct": "MO — Modaladverbiale" },
+        { "indices": [6, 7], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wer erklärt? «Die Trainerin» → S; «erklärt» → P; wie? «geduldig» → MO.\nWem? «den Kindern» → O3; was? «die Regeln» → O4."
+    },
+    {
+      "sentence": "Die Kinder spielen nachmittags draußen",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3], "correct": "TO — Temporaladverbiale" },
+        { "indices": [4], "correct": "LO — Lokaladverbiale" }
+      ],
+      "explanation": "Wer spielt? «Die Kinder» → S; «spielen» → P.\nWann? «nachmittags» → TO; wo? «draußen» → LO."
+    },
+    {
+      "sentence": "Mein Bruder zittert vor Kälte",
+      "chunks": [
+        { "indices": [0, 1], "correct": "S — Subjekt" },
+        { "indices": [2], "correct": "P — Prädikat" },
+        { "indices": [3, 4], "correct": "KA — Kausaladverbiale" }
+      ],
+      "explanation": "Wer zittert? «Mein Bruder» → S; «zittert» → P.\nWarum zittert er? «vor Kälte» → KA: Die Kälte verursacht das Zittern."
+    }
+  ]
+}

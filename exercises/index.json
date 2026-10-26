@@ -342,6 +342,114 @@
     "category": "Satzglieder"
   },
   {
+    "id": "satzglieder-basis-erkennen-1",
+    "name": "Tag 1: Subjekt, Prädikat und Objekte",
+    "goal": "Subjekt, Prädikat, Akkusativobjekt und Dativobjekt in kurzen Sätzen unterscheiden.",
+    "description": "Bestimme die Grundglieder in kurzen Sätzen",
+    "file": "satzglieder-basis-erkennen-1.json",
+    "count": 12,
+    "category": "Satzglieder"
+  },
+  {
+    "id": "satzglieder-basis-erkennen-2",
+    "name": "Tag 1: Das ganze Prädikat finden",
+    "goal": "Mehrteilige Prädikate zusammen erkennen und die Objekte richtig zuordnen.",
+    "description": "Bestimme die Satzglieder mit mehrteiligen Prädikaten",
+    "file": "satzglieder-basis-erkennen-2.json",
+    "count": 10,
+    "category": "Satzglieder"
+  },
+  {
+    "id": "satzglieder-basis-mix-1",
+    "name": "Tag 1: Grundglieder im Satzmix",
+    "goal": "Satzglieder auch bei veränderter Reihenfolge und längeren Wortgruppen bestimmen.",
+    "description": "Bestimme die Grundglieder unabhängig von ihrer Position",
+    "file": "satzglieder-basis-mix-1.json",
+    "count": 10,
+    "category": "Satzglieder"
+  },
+  {
+    "id": "satzglieder-lokomoto-erkennen-1",
+    "name": "Tag 2: LOKOMOTO erkennen",
+    "goal": "Ort, Zeit, Art und Weise sowie Grund im Satz unterscheiden.",
+    "description": "Bestimme die Satzglieder mit einer Umstandsergänzung",
+    "file": "satzglieder-lokomoto-erkennen-1.json",
+    "count": 10,
+    "category": "Satzglieder"
+  },
+  {
+    "id": "satzglieder-lokomoto-erkennen-2",
+    "name": "Tag 2: Zwei Umstandsergänzungen",
+    "goal": "Zwei verschiedene Umstandsergänzungen im selben Satz erkennen.",
+    "description": "Unterscheide die Umstandsergänzungen im Satz",
+    "file": "satzglieder-lokomoto-erkennen-2.json",
+    "count": 10,
+    "category": "Satzglieder"
+  },
+  {
+    "id": "satzglieder-lokomoto-mix-1",
+    "name": "Tag 2: LOKOMOTO im Satzmix",
+    "goal": "Umstandsergänzungen, Objekte und mehrteilige Prädikate unterscheiden.",
+    "description": "Bestimme alle Satzglieder im LOKOMOTO-Mix",
+    "file": "satzglieder-lokomoto-mix-1.json",
+    "count": 10,
+    "category": "Satzglieder"
+  },
+  {
+    "id": "satzglieder-genitiv-erkennen-1",
+    "name": "Tag 3: Genitivobjekte erkennen",
+    "goal": "Genitivobjekte mit der Frage Wessen und dem passenden Verb erkennen.",
+    "description": "Unterscheide Genitiv-, Dativ- und Akkusativobjekte",
+    "file": "satzglieder-genitiv-erkennen-1.json",
+    "count": 10,
+    "category": "Satzglieder"
+  },
+  {
+    "id": "satzglieder-genitiv-erkennen-2",
+    "name": "Tag 3: Genitivobjekte im ganzen Satz",
+    "goal": "Genitivobjekte auch bei mehrteiligen Prädikaten bestimmen.",
+    "description": "Bestimme die Satzglieder mit Genitivobjekten",
+    "file": "satzglieder-genitiv-erkennen-2.json",
+    "count": 10,
+    "category": "Satzglieder"
+  },
+  {
+    "id": "satzglieder-genitiv-mix-1",
+    "name": "Tag 3: Genitivobjekt oder Attribut",
+    "goal": "Genitivobjekte von Genitivattributen innerhalb anderer Satzglieder unterscheiden.",
+    "description": "Prüfe, ob der Genitiv zum Verb oder zu einem Nomen gehört",
+    "file": "satzglieder-genitiv-mix-1.json",
+    "count": 10,
+    "category": "Satzglieder"
+  },
+  {
+    "id": "satzglieder-gesamt-erkennen-1",
+    "name": "Tag 4: Alle Satzglieder wiederholen",
+    "goal": "Alle neun geübten Satzgliedkategorien in gemischten Sätzen erkennen.",
+    "description": "Bestimme die Satzglieder im Gesamt-Mix",
+    "file": "satzglieder-gesamt-erkennen-1.json",
+    "count": 10,
+    "category": "Satzglieder"
+  },
+  {
+    "id": "satzglieder-gesamt-erkennen-2",
+    "name": "Tag 4: Veränderte Satzstellung meistern",
+    "goal": "Alle Satzglieder bei vorangestellten Objekten und geteilten Prädikaten bestimmen.",
+    "description": "Erkenne Satzglieder unabhängig von der Reihenfolge",
+    "file": "satzglieder-gesamt-erkennen-2.json",
+    "count": 10,
+    "category": "Satzglieder"
+  },
+  {
+    "id": "satzglieder-gesamt-pruefung-1",
+    "name": "Tag 4: Abschlussrunde",
+    "goal": "Satzglieder sicher unterscheiden und Attribute in ihrer Wortgruppe belassen.",
+    "description": "Wende alle neun Kategorien im abschließenden Satzmix an",
+    "file": "satzglieder-gesamt-pruefung-1.json",
+    "count": 10,
+    "category": "Satzglieder"
+  },
+  {
     "id": "getrennt-zusammen-nomen-verb-regeln-1",
     "name": "Nomen + Verb — Regeln",
     "goal": "Die Regel «Nomen + Verb = getrennt» und die Ausnahme «Nominalisierung = zusammen» erklären können.",

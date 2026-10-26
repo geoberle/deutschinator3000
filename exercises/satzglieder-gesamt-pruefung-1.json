@@ -1,0 +1,119 @@
+{
+  "id": "satzglieder-gesamt-pruefung-1",
+  "name": "Tag 4: Satzglieder im Prüfungsmix",
+  "goal": "Alle Satzgliedarten bestimmen und Genitivattribute von echten Genitivobjekten unterscheiden.",
+  "authoring": {
+    "rationale": "Der Transfermix verbindet wechselnde Satzstellungen, geteilte Prädikate und erweiterte Nominalgruppen. Genitivattribute bleiben beim zugehörigen Nomen, während echte Genitivobjekte vom Verb abhängen.",
+    "constraints": "10 Hauptsätze mit höchstens sechs Satzgliedern; alle neun Kategorien, drei echte Genitivobjekte; Genitivattribute innerhalb vollständiger Satzgliedblöcke und wegen mit Genitiv als Ursache; keine Präpositionalobjekte oder Prädikative."
+  },
+  "type": "satzglieder",
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "O2 — Genitivobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KA — Kausaladverbiale"],
+  "question": "Bestimme die ganzen Satzglieder. Nicht jeder Genitiv ist ein Genitivobjekt.",
+  "rules": ["satzglieder-grundlagen", "genitivobjekt-grundlagen"],
+  "exercises": [
+    {
+      "sentence": "Die Reifen des Fahrrads bedürfen einer Reparatur",
+      "chunks": [
+        { "indices": [0, 1, 2, 3], "correct": "S — Subjekt" },
+        { "indices": [4], "correct": "P — Prädikat" },
+        { "indices": [5, 6], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "Was bedarf einer Reparatur? «Die Reifen des Fahrrads» → S; «bedürfen» → P.\nWessen bedürfen die Reifen? «einer Reparatur» → O2.\n«des Fahrrads» beschreibt die Reifen näher und bleibt als Genitivattribut im Subjekt."
+    },
+    {
+      "sentence": "Die Klasse unserer Schule gedenkt heute der Opfer",
+      "chunks": [
+        { "indices": [0, 1, 2, 3], "correct": "S — Subjekt" },
+        { "indices": [4], "correct": "P — Prädikat" },
+        { "indices": [5], "correct": "TO — Temporaladverbiale" },
+        { "indices": [6, 7], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "Wer gedenkt? «Die Klasse unserer Schule» → S; «gedenkt» → P; wann? «heute» → TO.\nWessen gedenkt sie? «der Opfer» → O2.\n«unserer Schule» gehört als Attribut zu «Klasse», nicht zum Verb."
+    },
+    {
+      "sentence": "Der Bruder meiner Freundin beschuldigt den Nachbarn des Diebstahls",
+      "chunks": [
+        { "indices": [0, 1, 2, 3], "correct": "S — Subjekt" },
+        { "indices": [4], "correct": "P — Prädikat" },
+        { "indices": [5, 6], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [7, 8], "correct": "O2 — Genitivobjekt" }
+      ],
+      "explanation": "Wer beschuldigt? «Der Bruder meiner Freundin» → S; «beschuldigt» → P.\nWen? «den Nachbarn» → O4; wessen? «des Diebstahls» → O2.\n«meiner Freundin» beschreibt den Bruder näher und bleibt im Subjekt."
+    },
+    {
+      "sentence": "Am Morgen hat die Schwester meines Freundes dem Hund frisches Wasser gebracht",
+      "chunks": [
+        { "indices": [0, 1], "correct": "TO — Temporaladverbiale" },
+        { "indices": [2, 11], "correct": "P — Prädikat" },
+        { "indices": [3, 4, 5, 6], "correct": "S — Subjekt" },
+        { "indices": [7, 8], "correct": "O3 — Dativobjekt" },
+        { "indices": [9, 10], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wann? «Am Morgen» → TO; «hat … gebracht» → P; wer? «die Schwester meines Freundes» → S.\nWem? «dem Hund» → O3; was? «frisches Wasser» → O4.\n«meines Freundes» ist ein Attribut zu «Schwester», kein eigenes Satzglied."
+    },
+    {
+      "sentence": "Wegen des Regens bleiben die Kinder unserer Nachbarin heute zu Hause",
+      "chunks": [
+        { "indices": [0, 1, 2], "correct": "KA — Kausaladverbiale" },
+        { "indices": [3], "correct": "P — Prädikat" },
+        { "indices": [4, 5, 6, 7], "correct": "S — Subjekt" },
+        { "indices": [8], "correct": "TO — Temporaladverbiale" },
+        { "indices": [9, 10], "correct": "LO — Lokaladverbiale" }
+      ],
+      "explanation": "Warum? «Wegen des Regens» → KA; «bleiben» → P; wer? «die Kinder unserer Nachbarin» → S.\nWann? «heute» → TO; wo? «zu Hause» → LO.\n«des Regens» folgt auf «wegen»; «unserer Nachbarin» ist ein Attribut zu «Kinder». Keines ist ein O2."
+    },
+    {
+      "sentence": "Den Rucksack meines Bruders trägt Lea vorsichtig ins Haus",
+      "chunks": [
+        { "indices": [0, 1, 2, 3], "correct": "O4 — Akkusativobjekt" },
+        { "indices": [4], "correct": "P — Prädikat" },
+        { "indices": [5], "correct": "S — Subjekt" },
+        { "indices": [6], "correct": "MO — Modaladverbiale" },
+        { "indices": [7, 8], "correct": "LO — Lokaladverbiale" }
+      ],
+      "explanation": "Was trägt Lea? «Den Rucksack meines Bruders» → O4; «trägt» → P; wer? «Lea» → S.\nWie? «vorsichtig» → MO; wohin? «ins Haus» → LO.\n«meines Bruders» gehört zum Rucksack und bleibt im Akkusativobjekt."
+    },
+    {
+      "sentence": "Der Trainer unserer Mannschaft erklärt den Kindern geduldig die Regeln des Spiels",
+      "chunks": [
+        { "indices": [0, 1, 2, 3], "correct": "S — Subjekt" },
+        { "indices": [4], "correct": "P — Prädikat" },
+        { "indices": [5, 6], "correct": "O3 — Dativobjekt" },
+        { "indices": [7], "correct": "MO — Modaladverbiale" },
+        { "indices": [8, 9, 10, 11], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wer erklärt? «Der Trainer unserer Mannschaft» → S; «erklärt» → P; wie? «geduldig» → MO.\nWem? «den Kindern» → O3; was? «die Regeln des Spiels» → O4.\n«unserer Mannschaft» und «des Spiels» bleiben als Attribute bei ihren Nomen."
+    },
+    {
+      "sentence": "Im Garten der Großeltern haben wir gestern laut gelacht",
+      "chunks": [
+        { "indices": [0, 1, 2, 3], "correct": "LO — Lokaladverbiale" },
+        { "indices": [4, 8], "correct": "P — Prädikat" },
+        { "indices": [5], "correct": "S — Subjekt" },
+        { "indices": [6], "correct": "TO — Temporaladverbiale" },
+        { "indices": [7], "correct": "MO — Modaladverbiale" }
+      ],
+      "explanation": "Wo? «Im Garten der Großeltern» → LO; «haben … gelacht» → P; wer? «wir» → S.\nWann? «gestern» → TO; wie? «laut» → MO.\n«der Großeltern» beschreibt den Garten näher und bleibt in der Ortsangabe."
+    },
+    {
+      "sentence": "Das Dach unseres Hauses hat wegen des Sturms geknarrt",
+      "chunks": [
+        { "indices": [0, 1, 2, 3], "correct": "S — Subjekt" },
+        { "indices": [4, 8], "correct": "P — Prädikat" },
+        { "indices": [5, 6, 7], "correct": "KA — Kausaladverbiale" }
+      ],
+      "explanation": "Was hat geknarrt? «Das Dach unseres Hauses» → S; «hat … geknarrt» → P.\nWarum? «wegen des Sturms» → KA; «unseres Hauses» bleibt als Attribut beim Dach.\nBeide Genitive haben hier andere Aufgaben als ein Genitivobjekt."
+    },
+    {
+      "sentence": "Der Tochter unseres Nachbarn schenkt Oma morgen einen Schal",
+      "chunks": [
+        { "indices": [0, 1, 2, 3], "correct": "O3 — Dativobjekt" },
+        { "indices": [4], "correct": "P — Prädikat" },
+        { "indices": [5], "correct": "S — Subjekt" },
+        { "indices": [6], "correct": "TO — Temporaladverbiale" },
+        { "indices": [7, 8], "correct": "O4 — Akkusativobjekt" }
+      ],
+      "explanation": "Wem schenkt Oma etwas? «Der Tochter unseres Nachbarn» → O3; «schenkt» → P; wer? «Oma» → S.\nWann? «morgen» → TO; was? «einen Schal» → O4.\n«unseres Nachbarn» gehört zu «Tochter» und bleibt im Dativobjekt."
+    }
+  ]
+}

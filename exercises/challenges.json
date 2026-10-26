@@ -1,19 +1,19 @@
 [
   {
-    "id": "satzglieder-tag-1-2026-10-26",
-    "name": "Satzglieder — Tag 1: Grundglieder",
+    "id": "satzglieder-tag-2-2026-10-26",
+    "name": "Satzglieder — Tag 2: LOKOMOTO",
     "stages": [
       {
-        "name": "Stufe 1: Subjekt und Objekte erkennen",
-        "sets": ["satzglieder-basis-erkennen-1"]
+        "name": "Stufe 1: Umstandsergänzungen erkennen",
+        "sets": ["satzglieder-lokomoto-erkennen-1"]
       },
       {
-        "name": "Stufe 2: Mehrteilige Prädikate finden",
-        "sets": ["satzglieder-basis-erkennen-2"]
+        "name": "Stufe 2: Zwei Umstandsergänzungen verbinden",
+        "sets": ["satzglieder-lokomoto-erkennen-2"]
       },
       {
-        "name": "Stufe 3: Grundglieder im Satzmix",
-        "sets": ["satzglieder-basis-mix-1"]
+        "name": "Stufe 3: LOKOMOTO mit Objekten mischen",
+        "sets": ["satzglieder-lokomoto-mix-1"]
       }
     ]
   }

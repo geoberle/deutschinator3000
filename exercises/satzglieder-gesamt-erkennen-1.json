@@ -7,7 +7,7 @@
     "constraints": "10 Hauptsätze mit je 3–5 Satzgliedern und Subjekt am Anfang; alle neun Kategorien, drei echte Genitivobjekte; keine Präpositionalobjekte oder Prädikative."
   },
   "type": "satzglieder",
-  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "O2 — Genitivobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KA — Kausaladverbiale"],
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "O2 — Genitivobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KO — Kausalobjekt"],
   "question": "Bestimme die Satzglieder.",
   "rules": ["satzglieder-grundlagen", "genitivobjekt-grundlagen"],
   "exercises": [
@@ -37,9 +37,9 @@
       "chunks": [
         { "indices": [0, 1], "correct": "S — Subjekt" },
         { "indices": [2], "correct": "P — Prädikat" },
-        { "indices": [3, 4, 5], "correct": "KA — Kausaladverbiale" }
+        { "indices": [3, 4, 5], "correct": "KO — Kausalobjekt" }
       ],
-      "explanation": "Wer gewinnt? «Unser Team» → S; «gewinnt» → P.\nWarum? «wegen des Trainings» → KA. Der Genitiv nach «wegen» macht daraus kein O2."
+      "explanation": "Wer gewinnt? «Unser Team» → S; «gewinnt» → P.\nWarum? «wegen des Trainings» → KO. Der Genitiv nach «wegen» macht daraus kein O2."
     },
     {
       "sentence": "Mila zeichnet sorgfältig eine Katze",
@@ -106,9 +106,9 @@
       "chunks": [
         { "indices": [0, 1], "correct": "S — Subjekt" },
         { "indices": [2], "correct": "P — Prädikat" },
-        { "indices": [3, 4], "correct": "KA — Kausaladverbiale" }
+        { "indices": [3, 4], "correct": "KO — Kausalobjekt" }
       ],
-      "explanation": "Wer zittert? «Mein Bruder» → S; «zittert» → P.\nWarum zittert er? «vor Kälte» → KA: Die Kälte verursacht das Zittern."
+      "explanation": "Wer zittert? «Mein Bruder» → S; «zittert» → P.\nWarum zittert er? «vor Kälte» → KO: Die Kälte verursacht das Zittern."
     }
   ]
 }

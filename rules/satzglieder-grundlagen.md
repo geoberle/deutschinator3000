@@ -10,14 +10,14 @@ Ein Satzglied kann aus einem Wort oder einer ganzen Wortgruppe bestehen. Frage i
 | O3 | Dativobjekt | Wem hilft sie? → Sie hilft **dem Kind**. |
 | O2 | Genitivobjekt | Wessen bedarf es? → Das Tier bedarf **unserer Hilfe**. |
 | LO | Ortsergänzung / Lokaladverbiale | Wo? Wohin? Woher? → **im Garten** |
-| KA | Kausalobjekt / Begründungsergänzung | Warum? Weshalb? → **wegen des Regens** |
+| KO | Kausalobjekt / Begründungsergänzung | Warum? Weshalb? → **wegen des Regens** |
 | MO | Artergänzung / Modaladverbiale | Wie? Auf welche Weise? → **vorsichtig** |
 | TO | Zeitergänzung / Temporaladverbiale | Wann? Wie lange? Wie oft? → **am Morgen** |
 
 ## Merke
 
-- **LOKOMOTO** erinnert an die vier Umstandsergänzungen: Ort, Grund, Art und Weise, Zeit. In der App heißen sie **LO, KA, MO, TO**.
+- **LOKOMOTO** erinnert an die vier Umstandsergänzungen: Ort, Grund, Art und Weise, Zeit. In der App heißen sie **LO, KO, MO, TO**.
 - **Das ganze Prädikat finden:** *hat … gelesen*, *kann … helfen*, *räumt … auf*.
 - **Wortgruppen zusammenlassen:** In *Der Bruder meiner Freundin lacht* ist **Der Bruder meiner Freundin** das Subjekt. Die nähere Beschreibung *meiner Freundin* ist kein eigenes Satzglied.
 - **Nicht nach der Reihenfolge raten:** In *Dem Kind hilft die Lehrerin* ist **dem Kind** O3 und **die Lehrerin** S.
-- Eine Präposition macht eine Wortgruppe nicht automatisch zum Präpositionalobjekt: **im Garten** nennt einen Ort (LO), **wegen des Regens** einen Grund (KA).
+- Eine Präposition macht eine Wortgruppe nicht automatisch zum Präpositionalobjekt: **im Garten** nennt einen Ort (LO), **wegen des Regens** einen Grund (KO).

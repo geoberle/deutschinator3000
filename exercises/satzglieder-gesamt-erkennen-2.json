@@ -7,7 +7,7 @@
     "constraints": "10 Hauptsätze mit je 4–6 Satzgliedern; vorangestelltes Objekt oder Adverbiale und geteiltes Prädikat in jedem Satz; alle neun Kategorien, drei echte Genitivobjekte; keine Präpositionalobjekte oder Prädikative."
   },
   "type": "satzglieder",
-  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "O2 — Genitivobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KA — Kausaladverbiale"],
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "O2 — Genitivobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KO — Kausalobjekt"],
   "question": "Bestimme die Satzglieder. Achte auf beide Teile des Prädikats.",
   "rules": ["satzglieder-grundlagen", "genitivobjekt-grundlagen"],
   "exercises": [
@@ -46,12 +46,12 @@
     {
       "sentence": "Wegen des Schnees hat unser Bus heute angehalten",
       "chunks": [
-        { "indices": [0, 1, 2], "correct": "KA — Kausaladverbiale" },
+        { "indices": [0, 1, 2], "correct": "KO — Kausalobjekt" },
         { "indices": [3, 7], "correct": "P — Prädikat" },
         { "indices": [4, 5], "correct": "S — Subjekt" },
         { "indices": [6], "correct": "TO — Temporaladverbiale" }
       ],
-      "explanation": "Warum? «Wegen des Schnees» → KA; was hat angehalten? «unser Bus» → S.\n«hat … angehalten» → P; wann? «heute» → TO. «Wegen des Schnees» ist trotz Genitiv kein O2."
+      "explanation": "Warum? «Wegen des Schnees» → KO; was hat angehalten? «unser Bus» → S.\n«hat … angehalten» → P; wann? «heute» → TO. «Wegen des Schnees» ist trotz Genitiv kein O2."
     },
     {
       "sentence": "Sorgfältig hat Amir die Zeichnung ausgemalt",

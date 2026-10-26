@@ -254,7 +254,7 @@
   {
     "id": "adverbien-satzglieder-1",
     "name": "Adverbiale Bestimmungen im Satz 1",
-    "goal": "Satzglieder bestimmen mit Fokus auf adverbiale Bestimmungen (TO/LO/MO/KA).",
+    "goal": "Satzglieder bestimmen mit Fokus auf adverbiale Bestimmungen (TO/LO/MO/KO).",
     "description": "Bestimme die Satzglieder — Fokus auf adverbiale Bestimmungen",
     "file": "adverbien-satzglieder-1.json",
     "count": 8,

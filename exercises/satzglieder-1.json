@@ -7,7 +7,7 @@
     "constraints": "Nur Grundsatzglieder (S, P, O4, O3, TO, LO), keine Genitiv-/Präpositionalobjekte. Einfache Satzstellung."
   },
   "type": "satzglieder",
-  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "O2 — Genitivobjekt", "PO — Präpositionalobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KA — Kausaladverbiale"],
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "O2 — Genitivobjekt", "PO — Präpositionalobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KO — Kausalobjekt"],
   "question": "Bestimme die Satzglieder",
   "exercises": [
     {

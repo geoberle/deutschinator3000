@@ -1,14 +1,14 @@
 {
   "id": "adverbien-satzglieder-1",
   "name": "Adverbiale Bestimmungen im Satz 1",
-  "goal": "Satzglieder bestimmen mit Fokus auf adverbiale Bestimmungen (TO/LO/MO/KA).",
+  "goal": "Satzglieder bestimmen mit Fokus auf adverbiale Bestimmungen (TO/LO/MO/KO).",
   "authoring": {
     "rationale": "Meister-Stufe: Das Adverb-Wissen wird auf Satzglied-Ebene angewendet. Alle vier adverbialen Bestimmungen kommen vor, gemischt mit Subjekt, Prädikat und Objekten.",
     "constraints": "Fokus auf adverbiale Bestimmungen. Einfache Satzstrukturen mit klaren Satzgliedern."
   },
   "rules": ["satzglieder-grundlagen"],
   "type": "satzglieder",
-  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KA — Kausaladverbiale"],
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KO — Kausalobjekt"],
   "question": "Bestimme die Satzglieder",
   "exercises": [
     {
@@ -35,13 +35,13 @@
     {
       "sentence": "Deshalb gibt der Lehrer dem Schüler eine Aufgabe",
       "chunks": [
-        { "indices": [0], "correct": "KA — Kausaladverbiale" },
+        { "indices": [0], "correct": "KO — Kausalobjekt" },
         { "indices": [1], "correct": "P — Prädikat" },
         { "indices": [2, 3], "correct": "S — Subjekt" },
         { "indices": [4, 5], "correct": "O3 — Dativobjekt" },
         { "indices": [6, 7], "correct": "O4 — Akkusativobjekt" }
       ],
-      "explanation": "**Deshalb** → Warum? → KA (Kausaladverbiale)\n**gibt** → Was tut er? → P (Prädikat)\n**der Lehrer** → Wer gibt? → S (Subjekt)\n**dem Schüler** → Wem? → O3 (Dativobjekt)\n**eine Aufgabe** → Wen/Was? → O4 (Akkusativobjekt)"
+      "explanation": "**Deshalb** → Warum? → KO (Kausalobjekt)\n**gibt** → Was tut er? → P (Prädikat)\n**der Lehrer** → Wer gibt? → S (Subjekt)\n**dem Schüler** → Wem? → O3 (Dativobjekt)\n**eine Aufgabe** → Wen/Was? → O4 (Akkusativobjekt)"
     },
     {
       "sentence": "Dort oben wohnt meine Großmutter",
@@ -57,10 +57,10 @@
       "chunks": [
         { "indices": [0], "correct": "S — Subjekt" },
         { "indices": [1, 5], "correct": "P — Prädikat" },
-        { "indices": [2], "correct": "KA — Kausaladverbiale" },
+        { "indices": [2], "correct": "KO — Kausalobjekt" },
         { "indices": [3, 4], "correct": "O4 — Akkusativobjekt" }
       ],
-      "explanation": "«Er» → Wer hat bestanden? → S; «hat … bestanden» → P; «den Test» → Was hat er bestanden? → O4.\n«deshalb» → Warum hat er den Test bestanden? → KA (Kausalobjekt).\n**Merke:** Das Kausalobjekt nennt den Grund. Du fragst: Warum?"
+      "explanation": "«Er» → Wer hat bestanden? → S; «hat … bestanden» → P; «den Test» → Was hat er bestanden? → O4.\n«deshalb» → Warum hat er den Test bestanden? → KO (Kausalobjekt).\n**Merke:** Das Kausalobjekt nennt den Grund. Du fragst: Warum?"
     },
     {
       "sentence": "Heute Morgen bringt Papa dem Hund sein Futter",
@@ -85,13 +85,13 @@
     {
       "sentence": "Darum übt sie täglich Klavier",
       "chunks": [
-        { "indices": [0], "correct": "KA — Kausaladverbiale" },
+        { "indices": [0], "correct": "KO — Kausalobjekt" },
         { "indices": [1], "correct": "P — Prädikat" },
         { "indices": [2], "correct": "S — Subjekt" },
         { "indices": [3], "correct": "TO — Temporaladverbiale" },
         { "indices": [4], "correct": "O4 — Akkusativobjekt" }
       ],
-      "explanation": "**Darum** → Warum? → KA (Kausaladverbiale)\n**übt** → Was tut sie? → P (Prädikat)\n**sie** → Wer? → S (Subjekt)\n**täglich** → Wie oft? → TO (Temporaladverbiale)\n**Klavier** → Wen/Was? → O4 (Akkusativobjekt)"
+      "explanation": "**Darum** → Warum? → KO (Kausalobjekt)\n**übt** → Was tut sie? → P (Prädikat)\n**sie** → Wer? → S (Subjekt)\n**täglich** → Wie oft? → TO (Temporaladverbiale)\n**Klavier** → Wen/Was? → O4 (Akkusativobjekt)"
     }
   ]
 }

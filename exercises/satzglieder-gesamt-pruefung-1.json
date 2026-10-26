@@ -7,7 +7,7 @@
     "constraints": "10 Hauptsätze mit höchstens sechs Satzgliedern; alle neun Kategorien, drei echte Genitivobjekte; Genitivattribute innerhalb vollständiger Satzgliedblöcke und wegen mit Genitiv als Ursache; keine Präpositionalobjekte oder Prädikative."
   },
   "type": "satzglieder",
-  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "O2 — Genitivobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KA — Kausaladverbiale"],
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "O2 — Genitivobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KO — Kausalobjekt"],
   "question": "Bestimme die ganzen Satzglieder. Nicht jeder Genitiv ist ein Genitivobjekt.",
   "rules": ["satzglieder-grundlagen", "genitivobjekt-grundlagen"],
   "exercises": [
@@ -54,13 +54,13 @@
     {
       "sentence": "Wegen des Regens bleiben die Kinder unserer Nachbarin heute zu Hause",
       "chunks": [
-        { "indices": [0, 1, 2], "correct": "KA — Kausaladverbiale" },
+        { "indices": [0, 1, 2], "correct": "KO — Kausalobjekt" },
         { "indices": [3], "correct": "P — Prädikat" },
         { "indices": [4, 5, 6, 7], "correct": "S — Subjekt" },
         { "indices": [8], "correct": "TO — Temporaladverbiale" },
         { "indices": [9, 10], "correct": "LO — Lokaladverbiale" }
       ],
-      "explanation": "Warum? «Wegen des Regens» → KA; «bleiben» → P; wer? «die Kinder unserer Nachbarin» → S.\nWann? «heute» → TO; wo? «zu Hause» → LO.\n«des Regens» folgt auf «wegen»; «unserer Nachbarin» ist ein Attribut zu «Kinder». Keines ist ein O2."
+      "explanation": "Warum? «Wegen des Regens» → KO; «bleiben» → P; wer? «die Kinder unserer Nachbarin» → S.\nWann? «heute» → TO; wo? «zu Hause» → LO.\n«des Regens» folgt auf «wegen»; «unserer Nachbarin» ist ein Attribut zu «Kinder». Keines ist ein O2."
     },
     {
       "sentence": "Den Rucksack meines Bruders trägt Lea vorsichtig ins Haus",
@@ -100,9 +100,9 @@
       "chunks": [
         { "indices": [0, 1, 2, 3], "correct": "S — Subjekt" },
         { "indices": [4, 8], "correct": "P — Prädikat" },
-        { "indices": [5, 6, 7], "correct": "KA — Kausaladverbiale" }
+        { "indices": [5, 6, 7], "correct": "KO — Kausalobjekt" }
       ],
-      "explanation": "Was hat geknarrt? «Das Dach unseres Hauses» → S; «hat … geknarrt» → P.\nWarum? «wegen des Sturms» → KA; «unseres Hauses» bleibt als Attribut beim Dach.\nBeide Genitive haben hier andere Aufgaben als ein Genitivobjekt."
+      "explanation": "Was hat geknarrt? «Das Dach unseres Hauses» → S; «hat … geknarrt» → P.\nWarum? «wegen des Sturms» → KO; «unseres Hauses» bleibt als Attribut beim Dach.\nBeide Genitive haben hier andere Aufgaben als ein Genitivobjekt."
     },
     {
       "sentence": "Der Tochter unseres Nachbarn schenkt Oma morgen einen Schal",

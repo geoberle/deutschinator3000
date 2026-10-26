@@ -16,6 +16,6 @@ Bei **beschuldigen, bezichtigen, verdächtigen, überführen** und **berauben** 
 
 - *Das Fahrrad **meines Bruders** quietscht.* → Wessen **Fahrrad**? Die Beschreibung gehört zum Nomen. **Das Fahrrad meines Bruders** ist zusammen S.
 - *Die Pflanze bedarf **meiner Pflege**.* → Wessen **bedarf** sie? Die Ergänzung gehört zum Verb: **meiner Pflege** ist O2.
-- *Wir bleiben **wegen des Regens** zu Hause.* → Warum bleiben wir? Die ganze Wortgruppe ist KA, nicht O2.
+- *Wir bleiben **wegen des Regens** zu Hause.* → Warum bleiben wir? Die ganze Wortgruppe ist KO, nicht O2.
 
 **Merke:** Frage mit dem **Verb**, nicht nur nach einer Endung. *brauchen* verlangt O4 (*braucht Hilfe*), *bedürfen* verlangt O2 (*bedarf der Hilfe*).

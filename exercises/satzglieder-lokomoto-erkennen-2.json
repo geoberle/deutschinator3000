@@ -4,10 +4,10 @@
   "goal": "Zwei adverbiale Bestimmungen im selben Satz mit verschiedenen Fragen zuordnen.",
   "authoring": {
     "rationale": "Zwei Angaben pro Satz erfordern getrennte Frageproben. Alle sechs Kombinationen aus Zeit, Ort, Art und Weise und Grund kommen vor.",
-    "constraints": "10 Hauptsätze mit genau zwei Adverbialen unterschiedlicher Art. Einfache Prädikate, gelegentliche O3/O4, keine O2 oder Präpositionalobjekte. Nur echte Gründe als KA."
+    "constraints": "10 Hauptsätze mit genau zwei Adverbialen unterschiedlicher Art. Einfache Prädikate, gelegentliche O3/O4, keine O2 oder Präpositionalobjekte. Nur echte Gründe als KO."
   },
   "type": "satzglieder",
-  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KA — Kausaladverbiale"],
+  "categories": ["S — Subjekt", "P — Prädikat", "O4 — Akkusativobjekt", "O3 — Dativobjekt", "TO — Temporaladverbiale", "LO — Lokaladverbiale", "MO — Modaladverbiale", "KO — Kausalobjekt"],
   "question": "Bestimme alle Satzglieder. Stelle für jede der beiden Angaben die passende Frage.",
   "rules": ["satzglieder-grundlagen"],
   "exercises": [
@@ -57,12 +57,12 @@
     {
       "sentence": "Wegen einer Erkältung fehlt Anna heute",
       "chunks": [
-        { "indices": [0, 1, 2], "correct": "KA — Kausaladverbiale" },
+        { "indices": [0, 1, 2], "correct": "KO — Kausalobjekt" },
         { "indices": [3], "correct": "P — Prädikat" },
         { "indices": [4], "correct": "S — Subjekt" },
         { "indices": [5], "correct": "TO — Temporaladverbiale" }
       ],
-      "explanation": "Warum fehlt Anna? «Wegen einer Erkältung» → KA; wann? «heute» → TO.\nWer fehlt? «Anna» → S; «fehlt» → P."
+      "explanation": "Warum fehlt Anna? «Wegen einer Erkältung» → KO; wann? «heute» → TO.\nWer fehlt? «Anna» → S; «fehlt» → P."
     },
     {
       "sentence": "Im Garten gräbt der Hund eifrig",
@@ -88,32 +88,32 @@
     {
       "sentence": "Wegen des Lärms lernt Lukas in der Bücherei",
       "chunks": [
-        { "indices": [0, 1, 2], "correct": "KA — Kausaladverbiale" },
+        { "indices": [0, 1, 2], "correct": "KO — Kausalobjekt" },
         { "indices": [3], "correct": "P — Prädikat" },
         { "indices": [4], "correct": "S — Subjekt" },
         { "indices": [5, 6, 7], "correct": "LO — Lokaladverbiale" }
       ],
-      "explanation": "Warum lernt Lukas dort? «Wegen des Lärms» → KA; wo? «in der Bücherei» → LO.\nWer lernt? «Lukas» → S; «lernt» → P."
+      "explanation": "Warum lernt Lukas dort? «Wegen des Lärms» → KO; wo? «in der Bücherei» → LO.\nWer lernt? «Lukas» → S; «lernt» → P."
     },
     {
       "sentence": "Aus Freude klatscht die Klasse laut",
       "chunks": [
-        { "indices": [0, 1], "correct": "KA — Kausaladverbiale" },
+        { "indices": [0, 1], "correct": "KO — Kausalobjekt" },
         { "indices": [2], "correct": "P — Prädikat" },
         { "indices": [3, 4], "correct": "S — Subjekt" },
         { "indices": [5], "correct": "MO — Modaladverbiale" }
       ],
-      "explanation": "Warum klatscht die Klasse? «Aus Freude» → KA; wie? «laut» → MO.\nWer klatscht? «die Klasse» → S; «klatscht» → P."
+      "explanation": "Warum klatscht die Klasse? «Aus Freude» → KO; wie? «laut» → MO.\nWer klatscht? «die Klasse» → S; «klatscht» → P."
     },
     {
       "sentence": "Wegen der Glätte geht meine Tante langsam",
       "chunks": [
-        { "indices": [0, 1, 2], "correct": "KA — Kausaladverbiale" },
+        { "indices": [0, 1, 2], "correct": "KO — Kausalobjekt" },
         { "indices": [3], "correct": "P — Prädikat" },
         { "indices": [4, 5], "correct": "S — Subjekt" },
         { "indices": [6], "correct": "MO — Modaladverbiale" }
       ],
-      "explanation": "Warum geht sie langsam? «Wegen der Glätte» → KA; wie geht sie? «langsam» → MO.\nWer geht? «meine Tante» → S; «geht» → P."
+      "explanation": "Warum geht sie langsam? «Wegen der Glätte» → KO; wie geht sie? «langsam» → MO.\nWer geht? «meine Tante» → S; «geht» → P."
     }
   ]
 }

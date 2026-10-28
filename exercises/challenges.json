@@ -1,19 +1,19 @@
 [
   {
-    "id": "satzglieder-tag-2-2026-10-26",
-    "name": "Satzglieder — Tag 2: LOKOMOTO",
+    "id": "satzglieder-tag-3-2026-10-26",
+    "name": "Satzglieder — Tag 3: Genitivobjekt",
     "stages": [
       {
-        "name": "Stufe 1: Umstandsergänzungen erkennen",
-        "sets": ["satzglieder-lokomoto-erkennen-1"]
+        "name": "Stufe 1: Genitivobjekte erkennen",
+        "sets": ["satzglieder-genitiv-erkennen-1"]
       },
       {
-        "name": "Stufe 2: Zwei Umstandsergänzungen verbinden",
-        "sets": ["satzglieder-lokomoto-erkennen-2"]
+        "name": "Stufe 2: Genitivobjekte im ganzen Satz",
+        "sets": ["satzglieder-genitiv-erkennen-2"]
       },
       {
-        "name": "Stufe 3: LOKOMOTO mit Objekten mischen",
-        "sets": ["satzglieder-lokomoto-mix-1"]
+        "name": "Stufe 3: Genitivobjekt oder Attribut",
+        "sets": ["satzglieder-genitiv-mix-1"]
       }
     ]
   }

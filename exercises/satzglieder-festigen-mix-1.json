@@ -1,0 +1,386 @@
+{
+  "id": "satzglieder-festigen-mix-1",
+  "name": "Tag 5: Festigungsrunde im Gesamt-Mix",
+  "goal": "Alle bekannten Satzglieder unterscheiden und zusammengehörige Wortgruppen erkennen.",
+  "authoring": {
+    "rationale": "Tag 5 festigt die neun bekannten Satzglieder mit neuen Sätzen: Frageproben, veränderte Satzstellung und vollständige Wortgruppen. Keine neuen Grammatikthemen.",
+    "constraints": "Zehn eindeutige Hauptsätze; alle neun Kategorien kommen vor, darunter drei Genitivobjekte. KO steht für Kausalobjekt. Keine Präpositionalobjekte, keine zusätzlichen Fachbegriffe in den Erklärungen."
+  },
+  "type": "satzglieder",
+  "categories": [
+    "S — Subjekt",
+    "P — Prädikat",
+    "O4 — Akkusativobjekt",
+    "O3 — Dativobjekt",
+    "O2 — Genitivobjekt",
+    "TO — Temporaladverbiale",
+    "LO — Lokaladverbiale",
+    "MO — Modaladverbiale",
+    "KO — Kausalobjekt"
+  ],
+  "question": "Bestimme die Satzglieder. Nutze die passenden Fragen.",
+  "rules": [
+    "satzglieder-grundlagen",
+    "genitivobjekt-grundlagen"
+  ],
+  "exercises": [
+    {
+      "sentence": "Das Fahrrad meiner Cousine benötigt eine neue Kette",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            4
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            5,
+            6,
+            7
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Das Fahrrad meiner Cousine» → Was benötigt eine Kette? → S; «benötigt» → P.\nWas benötigt das Fahrrad? «eine neue Kette» → O4.\n**Merke:** «meiner Cousine» beschreibt das Fahrrad näher und bleibt im Subjekt. Hier gibt es kein O2."
+    },
+    {
+      "sentence": "Der Welpe unseres Nachbarn bedarf besonderer Aufmerksamkeit",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            4
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            5,
+            6
+          ],
+          "correct": "O2 — Genitivobjekt"
+        }
+      ],
+      "explanation": "«Der Welpe unseres Nachbarn» → Wer bedarf der Aufmerksamkeit? → S; «bedarf» → P.\nWessen bedarf der Welpe? «besonderer Aufmerksamkeit» → O2.\n**Merke:** «unseres Nachbarn» gehört zum Welpen. Nur «besonderer Aufmerksamkeit» ergänzt hier das Verb als O2."
+    },
+    {
+      "sentence": "Gestern hat der Freund meiner Schwester uns seinen Hund gezeigt",
+      "chunks": [
+        {
+          "indices": [
+            0
+          ],
+          "correct": "TO — Temporaladverbiale"
+        },
+        {
+          "indices": [
+            1,
+            9
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            6
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            7,
+            8
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "Wann? «Gestern» → TO; wer hat gezeigt? «der Freund meiner Schwester» → S; «hat … gezeigt» → P.\nWem hat er etwas gezeigt? «uns» → O3; wen oder was? «seinen Hund» → O4.\n**Merke:** «meiner Schwester» bleibt beim Freund im Subjekt."
+    },
+    {
+      "sentence": "Wegen des starken Regens trainiert die Mannschaft in der Halle",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "correct": "KO — Kausalobjekt"
+        },
+        {
+          "indices": [
+            4
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            5,
+            6
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            7,
+            8,
+            9
+          ],
+          "correct": "LO — Lokaladverbiale"
+        }
+      ],
+      "explanation": "Warum trainiert die Mannschaft dort? «Wegen des starken Regens» → KO; wo? «in der Halle» → LO.\nWer trainiert? «die Mannschaft» → S; «trainiert» → P.\n**Merke:** «wegen des starken Regens» ist zusammen KO, kein Genitivobjekt."
+    },
+    {
+      "sentence": "Den Schal ihrer Mutter faltet Lea ordentlich",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        },
+        {
+          "indices": [
+            4
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            5
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            6
+          ],
+          "correct": "MO — Modaladverbiale"
+        }
+      ],
+      "explanation": "Was faltet Lea? «Den Schal ihrer Mutter» → O4; wer faltet? «Lea» → S; «faltet» → P.\nWie faltet sie den Schal? «ordentlich» → MO.\n**Merke:** «ihrer Mutter» beschreibt den Schal näher und bleibt im Akkusativobjekt."
+    },
+    {
+      "sentence": "Der Leiter des Vereins beschuldigt den Spieler des Betrugs",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            4
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            5,
+            6
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        },
+        {
+          "indices": [
+            7,
+            8
+          ],
+          "correct": "O2 — Genitivobjekt"
+        }
+      ],
+      "explanation": "«Der Leiter des Vereins» → Wer beschuldigt? → S; «beschuldigt» → P.\nWen beschuldigt er? «den Spieler» → O4; wessen beschuldigt er ihn? «des Betrugs» → O2.\n**Merke:** «des Vereins» gehört zum Leiter; «des Betrugs» ergänzt das Verb beschuldigen."
+    },
+    {
+      "sentence": "Hinter dem Haus der Großeltern haben die Kinder am Nachmittag gespielt",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "correct": "LO — Lokaladverbiale"
+        },
+        {
+          "indices": [
+            5,
+            10
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            6,
+            7
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            8,
+            9
+          ],
+          "correct": "TO — Temporaladverbiale"
+        }
+      ],
+      "explanation": "Wo? «Hinter dem Haus der Großeltern» → LO; wann? «am Nachmittag» → TO.\nWer hat gespielt? «die Kinder» → S; «haben … gespielt» → P.\n**Merke:** «der Großeltern» gehört zum Haus und bleibt Teil der Ortsangabe."
+    },
+    {
+      "sentence": "Der Freundin meines Bruders erklärt Papa geduldig den Weg",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            4
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            5
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            6
+          ],
+          "correct": "MO — Modaladverbiale"
+        },
+        {
+          "indices": [
+            7,
+            8
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "Wem erklärt Papa etwas? «Der Freundin meines Bruders» → O3; wer erklärt? «Papa» → S; «erklärt» → P.\nWie? «geduldig» → MO; was erklärt er? «den Weg» → O4.\n**Merke:** «meines Bruders» gehört zur Freundin und bleibt im Dativobjekt."
+    },
+    {
+      "sentence": "Das Quietschen der Tür hat das Baby des Schlafes beraubt",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            4,
+            9
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            5,
+            6
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        },
+        {
+          "indices": [
+            7,
+            8
+          ],
+          "correct": "O2 — Genitivobjekt"
+        }
+      ],
+      "explanation": "Was hat das Baby des Schlafes beraubt? «Das Quietschen der Tür» → S; «hat … beraubt» → P.\nWen hat es des Schlafes beraubt? «das Baby» → O4; wessen hat es das Baby beraubt? «des Schlafes» → O2.\n**Merke:** Der Satz bedeutet: Das Baby konnte wegen des Quietschens nicht schlafen. «der Tür» bleibt beim Quietschen im Subjekt."
+    },
+    {
+      "sentence": "Nach dem Frühstück hat der Sohn der Nachbarin sorgfältig die Tassen gespült",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "correct": "TO — Temporaladverbiale"
+        },
+        {
+          "indices": [
+            3,
+            11
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            4,
+            5,
+            6,
+            7
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            8
+          ],
+          "correct": "MO — Modaladverbiale"
+        },
+        {
+          "indices": [
+            9,
+            10
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "Wann? «Nach dem Frühstück» → TO; wer hat gespült? «der Sohn der Nachbarin» → S; «hat … gespült» → P.\nWie? «sorgfältig» → MO; was hat er gespült? «die Tassen» → O4.\n**Merke:** Die ganze Wortgruppe «der Sohn der Nachbarin» beantwortet die Frage Wer?"
+    }
+  ]
+}

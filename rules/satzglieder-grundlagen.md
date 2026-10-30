@@ -21,3 +21,4 @@ Ein Satzglied kann aus einem Wort oder einer ganzen Wortgruppe bestehen. Frage i
 - **Wortgruppen zusammenlassen:** In *Der Bruder meiner Freundin lacht* ist **Der Bruder meiner Freundin** das Subjekt. Die nähere Beschreibung *meiner Freundin* ist kein eigenes Satzglied.
 - **Nicht nach der Reihenfolge raten:** In *Dem Kind hilft die Lehrerin* ist **dem Kind** O3 und **die Lehrerin** S.
 - Eine Präposition macht eine Wortgruppe nicht automatisch zum Präpositionalobjekt: **im Garten** nennt einen Ort (LO), **wegen des Regens** einen Grund (KO).
+- **So gehst du beim Wiederholen vor:** Finde zuerst das ganze Prädikat. Frage dann nach dem Subjekt, den Objekten und den Angaben zu Ort, Grund, Art und Weise und Zeit. Benutze dabei immer das Verb aus dem Satz.

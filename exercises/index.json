@@ -450,6 +450,33 @@
     "category": "Satzglieder"
   },
   {
+    "id": "satzglieder-festigen-erkennen-1",
+    "name": "Tag 5: Satzglieder sicher erkennen",
+    "goal": "Die neun bekannten Satzglieder mit passenden Fragen sicher unterscheiden.",
+    "description": "Bestimme die Satzglieder mit den passenden Fragen",
+    "file": "satzglieder-festigen-erkennen-1.json",
+    "count": 10,
+    "category": "Satzglieder"
+  },
+  {
+    "id": "satzglieder-festigen-erkennen-2",
+    "name": "Tag 5: Satzstellung und Prädikat festigen",
+    "goal": "Satzglieder auch bei veränderter Reihenfolge und mehrteiligen Prädikaten erkennen.",
+    "description": "Finde die Satzglieder auch bei veränderter Satzstellung",
+    "file": "satzglieder-festigen-erkennen-2.json",
+    "count": 10,
+    "category": "Satzglieder"
+  },
+  {
+    "id": "satzglieder-festigen-mix-1",
+    "name": "Tag 5: Festigungsrunde im Gesamt-Mix",
+    "goal": "Alle bekannten Satzglieder unterscheiden und zusammengehörige Wortgruppen erkennen.",
+    "description": "Bestimme die ganzen Satzglieder im neuen Gesamt-Mix",
+    "file": "satzglieder-festigen-mix-1.json",
+    "count": 10,
+    "category": "Satzglieder"
+  },
+  {
     "id": "getrennt-zusammen-nomen-verb-regeln-1",
     "name": "Nomen + Verb — Regeln",
     "goal": "Die Regel «Nomen + Verb = getrennt» und die Ausnahme «Nominalisierung = zusammen» erklären können.",

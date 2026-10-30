@@ -1,0 +1,378 @@
+{
+  "id": "satzglieder-festigen-erkennen-2",
+  "name": "Tag 5: Satzstellung und Prädikat festigen",
+  "goal": "Satzglieder auch bei veränderter Reihenfolge und mehrteiligen Prädikaten erkennen.",
+  "authoring": {
+    "rationale": "Tag 5 festigt die neun bekannten Satzglieder mit neuen Sätzen: Frageproben, veränderte Satzstellung und vollständige Wortgruppen. Keine neuen Grammatikthemen.",
+    "constraints": "Zehn eindeutige Hauptsätze; alle neun Kategorien kommen vor, darunter drei Genitivobjekte. KO steht für Kausalobjekt. Keine Präpositionalobjekte, keine zusätzlichen Fachbegriffe in den Erklärungen."
+  },
+  "type": "satzglieder",
+  "categories": [
+    "S — Subjekt",
+    "P — Prädikat",
+    "O4 — Akkusativobjekt",
+    "O3 — Dativobjekt",
+    "O2 — Genitivobjekt",
+    "TO — Temporaladverbiale",
+    "LO — Lokaladverbiale",
+    "MO — Modaladverbiale",
+    "KO — Kausalobjekt"
+  ],
+  "question": "Bestimme die Satzglieder. Nutze die passenden Fragen.",
+  "rules": [
+    "satzglieder-grundlagen",
+    "genitivobjekt-grundlagen"
+  ],
+  "exercises": [
+    {
+      "sentence": "Den blauen Drachen hat Pia auf der Wiese ausprobiert",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        },
+        {
+          "indices": [
+            3,
+            8
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            4
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            5,
+            6,
+            7
+          ],
+          "correct": "LO — Lokaladverbiale"
+        }
+      ],
+      "explanation": "Was hat Pia ausprobiert? «Den blauen Drachen» → O4; wer? «Pia» → S.\n«hat … ausprobiert» → P; wo? «auf der Wiese» → LO."
+    },
+    {
+      "sentence": "Am Dienstag wird Leon seiner Tante ein Foto schicken",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "TO — Temporaladverbiale"
+        },
+        {
+          "indices": [
+            2,
+            8
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            6,
+            7
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "Wann? «Am Dienstag» → TO; wer wird schicken? «Leon» → S; «wird … schicken» → P.\nWem wird er etwas schicken? «seiner Tante» → O3; was? «ein Foto» → O4."
+    },
+    {
+      "sentence": "Wegen des Nebels hat der Zug am Morgen angehalten",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "correct": "KO — Kausalobjekt"
+        },
+        {
+          "indices": [
+            3,
+            8
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            6,
+            7
+          ],
+          "correct": "TO — Temporaladverbiale"
+        }
+      ],
+      "explanation": "Warum hat der Zug angehalten? «Wegen des Nebels» → KO; wann? «am Morgen» → TO.\nWas hat angehalten? «der Zug» → S; «hat … angehalten» → P."
+    },
+    {
+      "sentence": "Seinem Team hat der Trainer herzlich gedankt",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            2,
+            6
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            5
+          ],
+          "correct": "MO — Modaladverbiale"
+        }
+      ],
+      "explanation": "Wem hat der Trainer gedankt? «Seinem Team» → O3; wer? «der Trainer» → S.\n«hat … gedankt» → P; wie hat er gedankt? «herzlich» → MO.\n**Merke:** Danken verlangt den Dativ: Wem?"
+    },
+    {
+      "sentence": "Die neue Idee wird einer Erklärung bedürfen",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            3,
+            6
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "O2 — Genitivobjekt"
+        }
+      ],
+      "explanation": "«Die neue Idee» → Was wird einer Erklärung bedürfen? → S; «wird … bedürfen» → P.\nWessen wird die Idee bedürfen? «einer Erklärung» → O2.\n**Merke:** Auch zwischen zwei Prädikatsteilen bleibt das Genitivobjekt ein O2."
+    },
+    {
+      "sentence": "Gestern hat die Lehrerin einen Schüler der Täuschung bezichtigt",
+      "chunks": [
+        {
+          "indices": [
+            0
+          ],
+          "correct": "TO — Temporaladverbiale"
+        },
+        {
+          "indices": [
+            1,
+            8
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            2,
+            3
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        },
+        {
+          "indices": [
+            6,
+            7
+          ],
+          "correct": "O2 — Genitivobjekt"
+        }
+      ],
+      "explanation": "Wann? «Gestern» → TO; wer hat bezichtigt? «die Lehrerin» → S; «hat … bezichtigt» → P.\nWen? «einen Schüler» → O4; wessen hat sie ihn bezichtigt? «der Täuschung» → O2.\n**Merke:** Bezichtigen bedeutet beschuldigen."
+    },
+    {
+      "sentence": "Im Bastelraum haben wir sorgfältig bunte Sterne ausgeschnitten",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "LO — Lokaladverbiale"
+        },
+        {
+          "indices": [
+            2,
+            7
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            4
+          ],
+          "correct": "MO — Modaladverbiale"
+        },
+        {
+          "indices": [
+            5,
+            6
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "Wo? «Im Bastelraum» → LO; wer hat ausgeschnitten? «wir» → S; «haben … ausgeschnitten» → P.\nWie? «sorgfältig» → MO; was haben wir ausgeschnitten? «bunte Sterne» → O4."
+    },
+    {
+      "sentence": "Des Diebstahls hat die Polizei den Mann verdächtigt",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "O2 — Genitivobjekt"
+        },
+        {
+          "indices": [
+            2,
+            7
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            5,
+            6
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "Wessen hat die Polizei den Mann verdächtigt? «Des Diebstahls» → O2.\nWer hat verdächtigt? «die Polizei» → S; «hat … verdächtigt» → P; wen? «den Mann» → O4.\n**Merke:** Auch ein Genitivobjekt kann am Satzanfang stehen."
+    },
+    {
+      "sentence": "Unser Onkel möchte uns sein Fernglas leihen",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2,
+            6
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Unser Onkel» → Wer möchte leihen? → S; «möchte … leihen» → P.\nWem möchte er etwas leihen? «uns» → O3; was? «sein Fernglas» → O4."
+    },
+    {
+      "sentence": "Leise hat die Schülerin das Fenster zugemacht",
+      "chunks": [
+        {
+          "indices": [
+            0
+          ],
+          "correct": "MO — Modaladverbiale"
+        },
+        {
+          "indices": [
+            1,
+            6
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            2,
+            3
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "Wie hat die Schülerin das Fenster zugemacht? «Leise» → MO.\nWer hat zugemacht? «die Schülerin» → S; «hat … zugemacht» → P; was? «das Fenster» → O4."
+    }
+  ]
+}

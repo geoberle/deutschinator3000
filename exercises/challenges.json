@@ -1,19 +1,19 @@
 [
   {
-    "id": "satzglieder-tag-4-2026-10-26",
-    "name": "Satzglieder — Tag 4: Gesamt-Mix",
+    "id": "satzglieder-tag-5-2026-10-30",
+    "name": "Satzglieder — Tag 5: Festigungsrunde",
     "stages": [
       {
-        "name": "Stufe 1: Alle Satzglieder wiederholen",
-        "sets": ["satzglieder-gesamt-erkennen-1"]
+        "name": "Stufe 1: Satzglieder sicher erkennen",
+        "sets": ["satzglieder-festigen-erkennen-1"]
       },
       {
-        "name": "Stufe 2: Veränderte Satzstellung meistern",
-        "sets": ["satzglieder-gesamt-erkennen-2"]
+        "name": "Stufe 2: Satzstellung und Prädikat festigen",
+        "sets": ["satzglieder-festigen-erkennen-2"]
       },
       {
-        "name": "Stufe 3: Abschlussrunde",
-        "sets": ["satzglieder-gesamt-pruefung-1"]
+        "name": "Stufe 3: Festigungsrunde im Gesamt-Mix",
+        "sets": ["satzglieder-festigen-mix-1"]
       }
     ]
   }

@@ -1,0 +1,336 @@
+{
+  "id": "satzglieder-festigen-erkennen-1",
+  "name": "Tag 5: Satzglieder sicher erkennen",
+  "goal": "Die neun bekannten Satzglieder mit passenden Fragen sicher unterscheiden.",
+  "authoring": {
+    "rationale": "Tag 5 festigt die neun bekannten Satzglieder mit neuen Sätzen: Frageproben, veränderte Satzstellung und vollständige Wortgruppen. Keine neuen Grammatikthemen.",
+    "constraints": "Zehn eindeutige Hauptsätze; alle neun Kategorien kommen vor, darunter drei Genitivobjekte. KO steht für Kausalobjekt. Keine Präpositionalobjekte, keine zusätzlichen Fachbegriffe in den Erklärungen."
+  },
+  "type": "satzglieder",
+  "categories": [
+    "S — Subjekt",
+    "P — Prädikat",
+    "O4 — Akkusativobjekt",
+    "O3 — Dativobjekt",
+    "O2 — Genitivobjekt",
+    "TO — Temporaladverbiale",
+    "LO — Lokaladverbiale",
+    "MO — Modaladverbiale",
+    "KO — Kausalobjekt"
+  ],
+  "question": "Bestimme die Satzglieder. Nutze die passenden Fragen.",
+  "rules": [
+    "satzglieder-grundlagen",
+    "genitivobjekt-grundlagen"
+  ],
+  "exercises": [
+    {
+      "sentence": "Opa erzählt seiner Enkelin einen Witz",
+      "chunks": [
+        {
+          "indices": [
+            0
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            1
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            2,
+            3
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Opa» → Wer erzählt? → S; «erzählt» → P.\nWem erzählt er etwas? «seiner Enkelin» → O3; was erzählt er? «einen Witz» → O4."
+    },
+    {
+      "sentence": "Jeden Abend liest Finn auf dem Balkon",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "TO — Temporaladverbiale"
+        },
+        {
+          "indices": [
+            2
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            4,
+            5,
+            6
+          ],
+          "correct": "LO — Lokaladverbiale"
+        }
+      ],
+      "explanation": "Wann liest Finn? «Jeden Abend» → TO; wo liest er? «auf dem Balkon» → LO.\n«Finn» → Wer liest? → S; «liest» → P."
+    },
+    {
+      "sentence": "Die Köchin schneidet vorsichtig das Gemüse",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3
+          ],
+          "correct": "MO — Modaladverbiale"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Die Köchin» → Wer schneidet? → S; «schneidet» → P.\nWie schneidet sie? «vorsichtig» → MO; was schneidet sie? «das Gemüse» → O4."
+    },
+    {
+      "sentence": "Aus Neugier öffnet Eva die Schachtel",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "KO — Kausalobjekt"
+        },
+        {
+          "indices": [
+            2
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "Warum öffnet Eva die Schachtel? «Aus Neugier» → KO.\n«Eva» → Wer öffnet? → S; «öffnet» → P; was öffnet sie? «die Schachtel» → O4."
+    },
+    {
+      "sentence": "Das verletzte Kaninchen bedarf ärztlicher Hilfe",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            3
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "O2 — Genitivobjekt"
+        }
+      ],
+      "explanation": "«Das verletzte Kaninchen» → Wer bedarf der Hilfe? → S; «bedarf» → P.\nWessen bedarf das Kaninchen? «ärztlicher Hilfe» → O2.\n**Merke:** «bedarf» bedeutet hier «braucht». Bei bedürfen fragst du Wessen?"
+    },
+    {
+      "sentence": "Die Klasse beschuldigt den Mitspieler des Schummelns",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3,
+            4
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        },
+        {
+          "indices": [
+            5,
+            6
+          ],
+          "correct": "O2 — Genitivobjekt"
+        }
+      ],
+      "explanation": "«Die Klasse» → Wer beschuldigt? → S; «beschuldigt» → P.\nWen beschuldigt sie? «den Mitspieler» → O4; wessen beschuldigt sie ihn? «des Schummelns» → O2."
+    },
+    {
+      "sentence": "Neben der Garage wächst ein Apfelbaum",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "correct": "LO — Lokaladverbiale"
+        },
+        {
+          "indices": [
+            3
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "S — Subjekt"
+        }
+      ],
+      "explanation": "Wo wächst der Baum? «Neben der Garage» → LO.\nWas wächst dort? «ein Apfelbaum» → S; «wächst» → P.\n**Merke:** Die Ortsangabe steht hier vor dem Subjekt."
+    },
+    {
+      "sentence": "Dem kleinen Kater hilft die Tierärztin",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1,
+            2
+          ],
+          "correct": "O3 — Dativobjekt"
+        },
+        {
+          "indices": [
+            3
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "S — Subjekt"
+        }
+      ],
+      "explanation": "Wem hilft die Tierärztin? «Dem kleinen Kater» → O3.\nWer hilft? «die Tierärztin» → S; «hilft» → P.\n**Merke:** Das erste Satzglied muss nicht das Subjekt sein."
+    },
+    {
+      "sentence": "Die Gemeinde gedenkt heute ihrer Gründer",
+      "chunks": [
+        {
+          "indices": [
+            0,
+            1
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            2
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            3
+          ],
+          "correct": "TO — Temporaladverbiale"
+        },
+        {
+          "indices": [
+            4,
+            5
+          ],
+          "correct": "O2 — Genitivobjekt"
+        }
+      ],
+      "explanation": "«Die Gemeinde» → Wer gedenkt? → S; «gedenkt» → P; wann? «heute» → TO.\nWessen gedenkt die Gemeinde? «ihrer Gründer» → O2.\n**Merke:** Gedenken bedeutet hier, ehrend an Menschen zu denken."
+    },
+    {
+      "sentence": "Emma sucht seit einer Stunde ihren Schlüssel",
+      "chunks": [
+        {
+          "indices": [
+            0
+          ],
+          "correct": "S — Subjekt"
+        },
+        {
+          "indices": [
+            1
+          ],
+          "correct": "P — Prädikat"
+        },
+        {
+          "indices": [
+            2,
+            3,
+            4
+          ],
+          "correct": "TO — Temporaladverbiale"
+        },
+        {
+          "indices": [
+            5,
+            6
+          ],
+          "correct": "O4 — Akkusativobjekt"
+        }
+      ],
+      "explanation": "«Emma» → Wer sucht? → S; «sucht» → P.\nSeit wann sucht sie? «seit einer Stunde» → TO; was sucht sie? «ihren Schlüssel» → O4."
+    }
+  ]
+}
